@@ -1,0 +1,3270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="8dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CounselingCRF1Activity">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="2.3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Is woman is still pregnant?"/>
+
+                <TextView
+                    android:layout_marginTop="3dp"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kya Woman Abhi Tak Pregnant hain?
+                     "/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"></LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.6"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_counsling_Q1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_counsling_Q1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/llForhidden"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="2.3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Is this ANC visit?"/>
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kya Yah ANC Visit h? "/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_counsling_Q2_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_counsling_Q2_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+
+
+            <LinearLayout
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Key ANC messages for household and woman"
+                        />
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\n Antenatal care k zarori messages"
+                        />
+
+
+                </LinearLayout>
+
+                 <LinearLayout
+    android:layout_weight="0.1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"></LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="2.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1. Provide Iron and folic acid tablets to pregnant woman"/>
+
+                            <TextView
+
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1. PW ko iron k kali and folic acid k peeli golian day di
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q1_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2. Counsel on Tetanus Toxoid Vaccination"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2. Tetanus k injection k maloomat day deen
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q2_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q2_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3. Recommended schedule of TT vaccination"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3. Tetanus k injection k tarteeb bata di
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q3_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q3_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4. Explain proper nutrition of pregnant woman"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4. PW ko hamaal k doran khurak k maloomat
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q4_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q4_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5.	Counsel on proper rest and workload"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5. Maloomat hamaal k foran araam n kaam k noiyat"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q5_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q5_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6.	Promoting recognition of danger signs during pregnancy"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6. Hamaal k doran khatray k aalmat k pehchaan"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q6_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q6_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7.	Counsel on safe and clean delivery place"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7. Saaf suthri jaga par delivery karwain  "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q7_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q7_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8.	Choosing a birth attendant"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8. Birth attendant ka sahi intikhaab"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q8_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q8_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="9.	Protecting the neonate from infection"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="9.  Paida honay walay bachay ho infection sa bachana"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q9_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q9_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10.	Promoting clean birth/delivery kit"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10. Delivery k liya saath delivery kit ka intikhaab"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q10_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q10_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="11.	Promoting bathing care "/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="11. Nahanay ka tareeqa
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q11_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q11_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12. Promoting cord care"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12. Naaf k saif n care
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q12_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q12_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="13. Birth notification to our health worker within 72 hours of birth"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="13. Pidaish k 72 hours k andar andar hamari team member ko aagah karna
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q13_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q13_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="14 Exclusive breastfeeding"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="14. Pidaish k baad bachay ko sirf aur sirf maa k dhoodh pilana
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q14_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q14_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15. Childhood immunization "/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15. Pidaish k baad bachay ko hifazati injection lagana
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q15_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q15_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="16. Location of vaccination center "/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="16. Hifazatai teekoun k markaz k jaga"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q16_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q16_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="17. Hygiene of mother and newborn"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="17. Maa aur bachay k safai and suthrai
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q17_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_q17_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+
+
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="Special messages related to Exclusive Breastfeeding"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Key Exclusive Breastfeeding messages"
+                        />
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\n Bachay ko sirf aur sirf Maa ka dhood pilanay k zarori maloomat"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="2.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1. Hold your newborn skin-to-skin immediately after birth. This will keep your baby warm and breathing well, help him or her reach the breast easily, and help you and your baby feel close"/>
+
+                            <TextView
+
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1. Apnay bacha ko apnay app sa jooray rakhain paidaish k foran baad. Takay app ka  bacha garam rahay and asani sa sans lay sakay, aur us ko jald sa jald ma ka dhood dain
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ1_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2. Begin breastfeeding within the first hour of birth. Early breastfeeding helps the baby learn to breastfeed while the breast is still soft, and helps reduce your bleeding."/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2. Maa ko chahiya k bachay ko apna dhood pidaish k aik ghantay k andar andar shuru karwa day takay bacha jaldi sa jaldi dhood peena seek lay, jab tak breat naram ha, and is sa maa k bleeding ma bh kami ho gee
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ2_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ2_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3. Colostrum, the thick yellowish milk, is good for your baby"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3. Ma ka pehla doodh jo k peelay rung ka hota ha, bachay k liya bay hud mufeed ha
+                     "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ3_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ3_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.  Colostrum helps protect your baby from illness and helps remove the first dark stool"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4. Ma ka pehla dodh bachay ko har tarhan k beemarioun sa mehfooz rekhta ha, and us ko pehlay pakhana jaldi a jata ha "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ4_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ4_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5.  Breastfeed frequently to help your breast milk ‘come in’ and to ensure plenty of breast milk."/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5. Maa bachay ko jitna zayda dhood peelai gee us sa dhood k miqdar ma izafa ho ga"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ5_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ5_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6.	Do not give water or other liquids/fluids to your baby during the first days after birth. They are not necessary and are dangerous for your newborn."/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="6. Bachay ko maa k dhood k ilawa koi bh dosri cheez masla pani, shaihad, juice nahi daina khuch din tak. Dhood k ilawa har cheez bachay k liya nuqsanday ha"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ6_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ6_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7.	Do not give anything else, not even water, during your baby’s first 6 months"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7. Paidaish k baad 6 mahinay tak bachay ko sirf maa ka dhood daina ha, yahan tak k pani bh nahi    "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ7_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ7_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8.	Breast milk provides all the food and water that your baby needs during the first 6 months"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8. Ma ka dhood bachay ko har tarhan k gazaiat day daita ha, har tarhan k khorak and pani jo bachay ko 6 mahinay tak chahiya  "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ8_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ8_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="9.	Even during very hot weather, breast milk will satisfy your baby’s thirst."/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="9. Sakht garmi ma bh maa ka dhood bachy k peeas bh khatam karnay k liya kafi ha"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ9_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ9_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10.	Giving your baby anything else will cause him/her to suckle less and will reduce the amount of breast milk that you produce."/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10. Agar maa baachay ko khuch aur day gee tu us sa bacha ma aka doodh kaam peeya ga and us sa dhood bh ana kaam ho jay ga "/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ10_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ10_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="11.	Water, other liquids and foods can make the baby sick"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="11. Pani, dosray mashroob and upper sa di hoi khorak app k bachay ko beemar kar day gee"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ11_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ11_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12.	You can give medicines if they are recommended by your health provider"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12. Bachay ko agar doctor k mashwaray k baad koi deewai dainay k zarorat paray tu wo di ja sakti ha"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ12_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ12_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="13.	Breastfeed on demand, both day and night (8 to 12 times) to build up your breast milk supply
+"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bachay ko maa ka dhood din ma 8 to 12 dafa daina lazmi ha, us sa maa ko dhood bh wafer miqdar ma ai ga"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ13_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"/>
+
+                                <CheckBox
+                                    android:id="@+id/cb_sQ13_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_CounSubmit"
+                android:layout_marginBottom="40dp"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_shape_color"
+                android:text="submit"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.crf3_fragments.Crf3Q24Fragment">
+
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/Tv_dummy"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reason of withdrawing consent or postponed by LW or interrupted    by Family "
+        />
+
+    <EditText
+        android:id="@+id/et_text"
+        android:hint="Enter Here"
+        android:layout_below="@+id/Tv_dummy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/et_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape_color"
+        />
+
+</RelativeLayout>

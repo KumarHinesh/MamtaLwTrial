@@ -1,0 +1,263 @@
+<resources>
+    <string name="app_name">MAAMTA LW TRIAL</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yes">Yes</string>
+    <string name="_8_oral_folic_acid">8. Oral folic acid</string>
+
+    <string-array name="select_para">
+
+        <item>Select Para</item>
+    </string-array>
+    <string-array name="site_arrays">
+        <item>CHOOSE SITE</item>
+        <item>RG</item>
+        <item>AG</item>
+        <item>BH</item>
+    </string-array>
+
+    <string-array name="RG">
+        <item>CHOOSE PARA</item>
+        <item>SD</item>
+        <item>KG</item>
+        <item>AG</item>
+        <item>AJ</item>
+        <item>BG</item>
+        <item>CG</item>
+        <item>DG</item>
+        <item>DP</item>
+        <item>IA</item>
+        <item>KA</item>
+        <item>KB</item>
+        <item>KC</item>
+        <item>KJ</item>
+        <item>LA</item>
+        <item>LB</item>
+        <item>MA</item>
+        <item>MB</item>
+        <item>MP</item>
+        <item>PP</item>
+        <item>QP</item>
+        <item>SH</item>
+        <item>SR</item>
+        <item>WP</item>
+
+    </string-array>
+
+
+    <string-array name="BH">
+        <item>CHOOSE PARA</item>
+        <item>SG</item>
+        <item>RC</item>
+        <item>PP</item>
+        <item>PG</item>
+        <item>OB</item>
+        <item>ML</item>
+        <item>LS</item>
+        <item>JH</item>
+        <item>JG</item>
+        <item>CC</item>
+        <item>BM</item>
+        <item>FG</item>
+
+    </string-array>
+
+
+    <string-array name="AG">
+        <item>CHOOSE PARA</item>
+
+        <item>AS</item>
+        <item>FC</item>
+        <item>FD</item>
+        <item>FN</item>
+        <item>FP</item>
+        <item>HN</item>
+        <item>HP</item>
+        <item>JG</item>
+        <item>LP</item>
+        <item>MP</item>
+        <item>PC</item>
+        <item>SB </item>
+        <item>SP</item>
+
+    </string-array>
+
+
+    <string-array name="crf3b_q21">
+        <item>CHOOSE SOURCE</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Other (Specify) (koi aur tu us ka naam likhain)</item>
+
+    </string-array>
+
+
+    <string-array name="crf3b_q31_q42">
+        <item>CHOOSE One</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="q37_q41">
+        <item>CHOOSE </item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="crf3b_q45">
+        <item>CHOOSE One</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item> </item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Other (specify)</item>
+    </string-array>
+
+
+    <string-array name="days">
+        <item>Don't Know</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+
+    </string-array>
+
+
+    <string-array name="minutes">
+        <item>Don't Know</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+
+    </string-array>
+
+    <string-array name="hour">
+        <item>Don't Know</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+
+    </string-array>
+
+
+</resources>

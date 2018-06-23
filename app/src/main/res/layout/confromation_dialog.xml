@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginLeft="60dp"
+    android:layout_marginRight="60dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_marginTop="25dp"
+    android:id="@+id/llFortext"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_engText"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are You Confirm The Choice?"
+        />
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_RomanEngText"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kya Ap Apny Intkhab Se Confirm hain?"
+        />
+
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/llFortext"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/btnConform"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:background="@drawable/button_shape_white"
+            android:text="cancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

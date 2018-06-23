@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CRF2DashboargActivity">
+
+
+    <LinearLayout
+        android:weightSum="5"
+        android:id="@+id/ll_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_site"
+            android:layout_weight="1"
+            android:maxLength="2"
+            android:hint="Site"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/et_para"
+            android:layout_weight="1"
+            android:maxLength="2"
+            android:hint="para"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/et_block"
+            android:maxLength="2"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:hint="Block"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:id="@+id/et_structure"
+            android:maxLength="3"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:hint="Structure"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+
+
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_search"/>
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_below="@+id/ll_temp"
+        android:id="@+id/lv_womanList"
+        android:layout_width="match_parent"
+        android:layout_height="290dp">
+
+
+    </ListView>
+
+
+
+    <Button
+
+        android:id="@+id/btn_randTeam_task"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/button_shape_color"
+        android:text="Your Task"
+
+        />
+
+    <Button
+        android:layout_below="@+id/btn_randTeam_task"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:id="@+id/btnUploadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:height="200dp"
+        android:text="Upload Data" />
+
+
+</RelativeLayout>

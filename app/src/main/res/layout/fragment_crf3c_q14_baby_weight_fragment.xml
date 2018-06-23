@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.crf2_fragments.Crf2BabyWeightFragment">
+
+    <ScrollView
+        android:layout_below="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDummy2"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="40sp"
+                android:text="Child Weight "
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_below="@+id/tvDummy2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <EditText
+                    android:id="@+id/et_readerId_1"
+                    android:hint="Code of Reader 1"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:maxLength="3"
+                    android:layout_height="50dp"
+                    />
+
+                <EditText
+                    android:id="@+id/et_readerId_2"
+                    android:hint="Code of Reader 2"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:maxLength="3"
+                    android:layout_height="50dp"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:src="@mipmap/weigth" />
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:layout_height="wrap_content"
+                            android:text="Reader 1"/>
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:layout_height="wrap_content"
+                            android:text="Reader 2"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_weight1"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <EditText
+                            android:maxLength="4"
+                            android:inputType="numberDecimal"
+                            android:id="@+id/et_r1_weight1"
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Weight 1"/>
+
+
+                        <EditText
+                            android:maxLength="4"
+                            android:inputType="numberDecimal"
+                            android:id="@+id/et_r2_weight1"
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Weight 1"/>
+
+                        <TextView
+                            android:id="@+id/tv_weight_difference1"
+                            android:text="Difference"
+                            android:layout_weight="0.4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="invisible"
+                        android:id="@+id/ll_weight2"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <EditText
+                            android:maxLength="4"
+                            android:inputType="numberDecimal"
+                            android:id="@+id/et_r1_weight2"
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Weight 2"/>
+
+
+                        <EditText
+                            android:maxLength="4"
+                            android:inputType="numberDecimal"
+                            android:id="@+id/et_r2_weight2"
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Weight 2"/>
+
+
+                        <TextView
+                            android:id="@+id/tv_weight_difference2"
+                            android:text="Difference"
+                            android:layout_weight="0.4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_weight3"
+                        android:visibility="invisible"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <EditText
+                            android:maxLength="4"
+                            android:inputType="numberDecimal"
+                            android:id="@+id/et_r1_weight3"
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Weight 3"/>
+
+
+                        <EditText
+                            android:maxLength="4"
+                            android:inputType="numberDecimal"
+                            android:id="@+id/et_r2_weight3"
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Weight 3"/>
+
+
+                        <TextView
+                            android:id="@+id/tv_weight_difference3"
+                            android:text="Difference"
+                            android:layout_weight="0.4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_weight4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="invisible"
+                        android:weightSum="2">
+
+
+                        <EditText
+                            android:id="@+id/et_r1_weight4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:hint="Enter Weight 4"
+                            android:inputType="numberDecimal"
+                            android:maxLength="4"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <EditText
+                            android:id="@+id/et_r2_weight4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:hint="Enter Weight 4"
+                            android:inputType="numberDecimal"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/tv_weight_difference4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="Difference" />
+
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btn_checkReading"
+                        android:textColor="@color/black"
+                        android:text="Check Values"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="Correct Average Child Weight "
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_averageWeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_BweightSubmit"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_shape_color"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="-40dp"
+                    android:drawableRight="@mipmap/ic_navigate_next_white_48dp"
+                    android:text="Next"
+                    />
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

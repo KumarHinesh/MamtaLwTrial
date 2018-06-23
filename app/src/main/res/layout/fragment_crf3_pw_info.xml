@@ -1,0 +1,235 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3_fragments.Crf3PwInfoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tvDummy"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:text="Woman Information "
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/llWomenInfo"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tvDummy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="Assessment ID "
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="#4756898604"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="Study ID "
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="#000000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/etPwName"
+                android:inputType="textCapCharacters"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="WOMAN`S NAME"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+            <EditText
+                android:focusable="false"
+                android:inputType="textCapCharacters"
+                android:id="@+id/etPwHusbandName"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="HUSBAND`S NAME"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:inputType="textCapCharacters"
+                android:id="@+id/etPwSite"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="SITE"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+
+            <EditText
+                android:inputType="textCapCharacters"
+                android:id="@+id/etPwPara"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="PARA"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:id="@+id/etPwBlock"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="BLOCK"
+                android:maxLength="2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:id="@+id/etPwStracture"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="STRUCTURE"
+                android:maxLength="3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:inputType="textCapCharacters"
+                android:id="@+id/etPwFamilyHousehold"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="FAMILY / HOUSEHOLD"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:id="@+id/etPwNumber"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="WOMAN NUMBER"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llWomenInfo"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <TextView
+                android:id="@+id/tvdummy1"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="If the LW is eligible for enrollment, was she successfully randomized? "
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvdummy2"
+                android:layout_below="@+id/tvdummy1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agar LW trial ma shamil k ja sakti ha tu kya us k randomization kar li gya?"
+                android:textSize="20sp"/>
+
+
+            <ListView
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tvdummy2"
+                android:id="@+id/lvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"/>
+
+
+
+            <Button
+                android:id="@+id/btnF1Register"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/lvStatus"
+                android:layout_centerHorizontal="true"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Register" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

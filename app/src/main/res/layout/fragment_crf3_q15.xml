@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.crf3_fragments.Crf3Q15Fragment">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_q17"
+        android:inputType="number"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Serial number mentioned on the envelope"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="18sp"
+                android:text="Randomization arm"               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="18sp"
+                android:text="Qura andazi wala arm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+      <RadioGroup
+          android:layout_marginLeft="50dp"
+          android:id="@+id/rg_q19"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <RadioButton
+              android:tag="a"
+              android:id="@+id/rb_q19_a"
+              android:text="Arm A – Control"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" />
+
+          <RadioButton
+              android:tag="b"
+              android:id="@+id/rb_q19_b"
+              android:text="Arm B – Maamta only"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" />
+
+          <RadioButton
+              android:tag="c"
+              android:id="@+id/rb_q19_c"
+              android:text="Arm C – Maamta + Azithromycin"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" />
+
+
+
+      </RadioGroup>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_weight="1.3"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Is LW selected for collection of specimen – Blood, Stool and Breastmilk of LW, and Stool of baby  "
+            />
+
+        <LinearLayout
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <RadioGroup
+            android:layout_gravity="center_vertical"
+            android:id="@+id/rg_q20"
+            android:layout_weight="0.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_q20_a"
+                android:tag="yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="YES"
+                />
+
+            <RadioButton
+                android:tag="yes"
+                android:id="@+id/rb_q20_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="NO"
+                />
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+       <LinearLayout
+           android:orientation="horizontal"
+           android:weightSum="2"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_weight="1.3"
+               android:layout_width="0dp"
+               android:layout_height="match_parent">
+
+               <TextView
+                   android:textSize="20sp"
+                   android:textColor="@color/black"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="If there was a delay of more than 1 hour between completing inclusion/exclusion criteria and randomization,"
+                   />
+
+               <TextView
+                   android:textSize="20sp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Agar takheer ka durania 1 ghantay sa zayda ha inlcuion/exclusion or randomization k beech ma tu us k waja likhain"
+                   />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"/>
+
+           <LinearLayout
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_weight="0.6"
+               android:orientation="vertical"
+               android:layout_height="match_parent">
+
+               <RadioGroup
+                   android:orientation="vertical"
+                   android:layout_width="match_parent"
+                   android:id="@+id/rg_q22"
+                   android:layout_height="wrap_content">
+
+                   <RadioButton
+                       android:id="@+id/rb_q22_a"
+                       android:tag="yes"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="YES"
+                       />
+
+                   <RadioButton
+                       android:tag="no"
+                       android:id="@+id/rb_q22_b"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="NO"
+                       />
+
+                   <EditText
+                       android:visibility="gone"
+                       android:id="@+id/et_q22"
+                       android:hint="Enter Here"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       />
+
+               </RadioGroup>
+
+
+
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+        <View
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/ll_q24"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/Tv_dummy"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reason of withdrawing consent or postponed by LW or interrupted    by Family "
+                />
+
+            <EditText
+                android:id="@+id/et_q24"
+                android:hint="Enter Here"
+                android:layout_below="@+id/Tv_dummy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape_color"/>
+
+    </LinearLayout>
+
+</ScrollView>
