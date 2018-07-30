@@ -24,7 +24,7 @@ public class CRF1Activity extends AppCompatActivity {
     public static int fragmentNo = 0;
     public static FormCrf1DTO formCrf1DTO;
     boolean  b;
-//, ,
+    public static String getSite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +32,15 @@ public class CRF1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_crf1);
 
 
+        Intent intent = getIntent();
+        //getSite =  intent.getStringExtra("site");
+
         TeamDTO teamDTO = new TeamDTO();
 
         teamDTO.setId(getSharedPreferences("teamId",CRF1Activity.MODE_PRIVATE).getInt("id",-1));
 
+        getSite = getSharedPreferences("site",CRF1Activity.MODE_PRIVATE).getString("val","null");
         formCrf1DTO =   new Gson().fromJson(getIntent().getStringExtra("form"),FormCrf1DTO.class) ;
-
-//        Log.d("33333333333",formCrf1DTO.getFollowUpPositionInList()+"");
 
 
         try{
@@ -52,6 +54,7 @@ public class CRF1Activity extends AppCompatActivity {
           //  formCrf1DTO.setPregnantWoman(pregnantWoman);
           //  formCrf1DTO.setFollowupId(details.getId());
             formCrf1DTO.setFollowupStatus(Constants.FOLLOWUP_COMPLETED);
+
             Fragment fragment = new PwInfoFragment1();
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_frame, fragment, fragment.getClass().getSimpleName()).addToBackStack(null).commit();

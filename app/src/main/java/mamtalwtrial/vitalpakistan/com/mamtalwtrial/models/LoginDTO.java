@@ -7,7 +7,15 @@ public class LoginDTO {
     private Integer teamId;
     private String teamType;
     private List<FollowupsDTO> followups;
+    private String site;
 
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
+    }
 
     public String getTeamType() {
         return teamType;

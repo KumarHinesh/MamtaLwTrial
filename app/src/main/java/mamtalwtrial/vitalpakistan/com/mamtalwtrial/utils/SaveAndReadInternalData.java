@@ -1,8 +1,6 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils;
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.v4.content.ContextCompat;
 
 import com.google.gson.Gson;
 
@@ -11,10 +9,10 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupDetails;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1CollectionDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf2toCrf3AllCollection;
 
 public  class SaveAndReadInternalData {
 
@@ -24,7 +22,7 @@ public  class SaveAndReadInternalData {
     static  final String TASK_COMPLETED_STATUS_FILE_NAME = "comp_task_report";
     static  final String FOLLOWUPS_FILE_NAME = "followUps";
     static  final String CRF1_FORMS_FILE_NAME = "crf1_forms";
-    static  final String CRF2_FORMS_FILE_NAME = "crf2_forms";
+    static  final String CRF2_3ALL_FORMS_FILE_NAME = "crf2_3All_forms";
 
 
     public static ArrayList<FollowupsDTO> getFollowUpsList(Context context){
@@ -118,18 +116,56 @@ public  class SaveAndReadInternalData {
     }
 
 
-    public static void saveCrf2FormInternal(Context context, String fileMessage){
-
+    public static void saveCrf2And3AllFormInternal(Context context, String fileMessage){
+//////
 
         try {
 
-            FileOutputStream outputStream = context.openFileOutput(CRF2_FORMS_FILE_NAME, Context.MODE_APPEND);
+            FileOutputStream outputStream = context.openFileOutput(CRF2_3ALL_FORMS_FILE_NAME, Context.MODE_PRIVATE);
             outputStream.write((fileMessage+"<<").getBytes());
             outputStream.close();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+
+    public static FormCrf2toCrf3AllCollection getListOfCrf2ToCrf3All(Context context){
+
+        FormCrf2toCrf3AllCollection formCrf2toCrf3AllCollection  = null;
+
+        try {
+
+            File file = new File(context.getFilesDir(), CRF2_3ALL_FORMS_FILE_NAME);
+
+            FileInputStream fin =  context.openFileInput(CRF2_3ALL_FORMS_FILE_NAME);
+
+            int c;
+            String temp="";
+            while( (c = fin.read()) != -1){
+                temp = temp + Character.toString((char)c);
+            }
+
+            Gson gson = new Gson();
+
+            if(!temp.equalsIgnoreCase("")){
+
+                  formCrf2toCrf3AllCollection = gson.fromJson(temp,FormCrf2toCrf3AllCollection.class);
+            }
+
+        }
+        catch(Exception e){
+
+        }
+        return formCrf2toCrf3AllCollection;
+    }
+
+
+    public static void uploadCrf1SavedData(Context context ,FormCrf1CollectionDTO formCrf1CollectionDTO){
+
+
 
     }
 
@@ -381,5 +417,7 @@ public  class SaveAndReadInternalData {
 
         return val+"";
     }
+
+
 
 }

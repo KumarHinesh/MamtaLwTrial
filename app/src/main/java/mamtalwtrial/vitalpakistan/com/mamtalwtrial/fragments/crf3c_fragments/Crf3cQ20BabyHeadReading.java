@@ -1,10 +1,8 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3c_fragments;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -31,11 +29,9 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CounselingCRF1Activity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf1_fragments.PwOtherDataFragment3;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.FrontHeadCircumferenceCrf3cDTO;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.MuacBabyCrf3cDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
@@ -81,6 +77,13 @@ public class Crf3cQ20BabyHeadReading extends Fragment {
         et_readerId_1 = (EditText) view.findViewById(R.id.et_readerId_1);
         et_readerId_2 = (EditText) view.findViewById(R.id.et_readerId_2);
 
+        et_readerId_1.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode1());
+        et_readerId_1.setEnabled(false);
+
+        et_readerId_2.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode2());
+        et_readerId_2.setEnabled(false);
+
+
         tv_ass_id = (TextView) view.findViewById(R.id.tv_ass_id);
 
         ll_muac1 = (LinearLayout) view.findViewById(R.id.ll_muac1);
@@ -117,7 +120,6 @@ public class Crf3cQ20BabyHeadReading extends Fragment {
 
                     dataInsertInForm();
 
-                    //   if(avrageVal!=-1 && (avrageVal>=16 && avrageVal<24)){
 
                     Crf3cQ22WeightLW crf3cQ22WeightLW = new Crf3cQ22WeightLW();
                     FragmentManager fragmentManager = getFragmentManager();
@@ -125,19 +127,6 @@ public class Crf3cQ20BabyHeadReading extends Fragment {
                     fragmentTransaction.replace(R.id.frame_layout_crf3c, crf3cQ22WeightLW);
                     fragmentTransaction.commit();
 
-                  //  PwOtherDataFragment3 pwOtherDataFragment3 = new PwOtherDataFragment3();
-  /*                      FragmentManager fragmentManager = getFragmentManager();
-                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.fragment_frame, pwOtherDataFragment3);
-                        fragmentTransaction.commit();
-*/
-                /*    }else {
-
-                        dataInsertInForm();
-                        myCustomeDialog(1);
-
-                    }
-*/
                 }
 
 
@@ -305,7 +294,7 @@ public class Crf3cQ20BabyHeadReading extends Fragment {
                 }
                 if (turn == 5) {
 
-                    myCustomeDialog(1);
+                  //  myCustomeDialog(1);
 
                 }
 
@@ -462,8 +451,8 @@ public class Crf3cQ20BabyHeadReading extends Fragment {
 
         frontHeadCircumferenceCrf3cDTO.setReader1(getTextFromField(et_1));
         frontHeadCircumferenceCrf3cDTO.setReader2(getTextFromField(et_2));
-        //  muacAssesment.setReaderCode1(et_readerId_1.getText().toString());
-        //  muacAssesment.setReaderCode2(et_readerId_2.getText().toString());
+        frontHeadCircumferenceCrf3cDTO.setReaderCode1(et_readerId_1.getText().toString());
+        frontHeadCircumferenceCrf3cDTO.setReaderCode2(et_readerId_2.getText().toString());
         frontHeadCircumferenceCrf3cDTO.setId(id);
         frontHeadCircumferenceCrf3cDTO.setDifference(getTextFromField(et_1)-getTextFromField(et_2));
 

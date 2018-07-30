@@ -98,7 +98,7 @@
                             android:id="@+id/rb_q34_a_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -106,7 +106,7 @@
                             android:id="@+id/rb_q34_a_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -170,7 +170,7 @@
                             android:id="@+id/rb_q34_b_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -178,7 +178,7 @@
                             android:id="@+id/rb_q34_b_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -235,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="0.6"
-                        android:tag="y">
+                        android:tag="1">
 
                         <RadioButton
                             android:id="@+id/rb_q34_c_a"
@@ -248,7 +248,7 @@
                             android:id="@+id/rb_q34_c_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -311,7 +311,7 @@
                             android:id="@+id/rb_q34_d_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -319,7 +319,7 @@
                             android:id="@+id/rb_q34_d_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -382,7 +382,7 @@
                             android:id="@+id/rb_q34_e_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -390,7 +390,7 @@
                             android:id="@+id/rb_q34_e_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -453,7 +453,7 @@
                             android:id="@+id/rb_q34_f_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -461,7 +461,7 @@
                             android:id="@+id/rb_q34_f_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -524,7 +524,7 @@
                             android:id="@+id/rb_q34_g_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -532,7 +532,7 @@
                             android:id="@+id/rb_q34_g_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -595,7 +595,7 @@
                             android:id="@+id/rb_q34_h_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -603,7 +603,7 @@
                             android:id="@+id/rb_q34_h_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -666,7 +666,7 @@
                             android:id="@+id/rb_q34_i_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -674,7 +674,7 @@
                             android:id="@+id/rb_q34_i_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -736,7 +736,7 @@
                             android:id="@+id/rb_q34_j_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -744,7 +744,7 @@
                             android:id="@+id/rb_q34_j_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -806,7 +806,7 @@
                             android:id="@+id/rb_q34_k_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -814,7 +814,7 @@
                             android:id="@+id/rb_q34_k_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -876,7 +876,7 @@
                             android:id="@+id/rb_q34_l_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -884,7 +884,7 @@
                             android:id="@+id/rb_q34_l_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -946,7 +946,7 @@
                             android:id="@+id/rb_q34_m_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -954,7 +954,7 @@
                             android:id="@+id/rb_q34_m_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -1022,7 +1022,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q34_n_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -1030,7 +1030,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q34_n_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -1093,7 +1093,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q34_o_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -1101,7 +1101,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q34_o_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -1164,7 +1164,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q34_p_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -1172,7 +1172,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q34_p_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -1236,7 +1236,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q34_q_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -1244,7 +1244,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q34_q_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -1354,7 +1354,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                         <RadioButton
                             android:id="@+id/rb_q35_a_a"
-                            android:tag="y"
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1363,7 +1363,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                         <RadioButton
                             android:id="@+id/rb_q35_a_b"
-                            android:tag="n"
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1428,7 +1428,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:tag="y"
+                            android:tag="1"
                             android:id="@+id/rb_q35_b_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1437,7 +1437,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q35_b_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1494,7 +1494,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q35_c"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -1509,7 +1509,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q35_c_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1625,7 +1625,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                         <RadioButton
                             android:id="@+id/rb_q36_a_a"
-                            android:tag="y"
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1634,7 +1634,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                         <RadioButton
                             android:id="@+id/rb_q36_a_b"
-                            android:tag="n"
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1699,7 +1699,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:tag="y"
+                            android:tag="1"
                             android:id="@+id/rb_q36_b_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1708,7 +1708,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q36_b_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1765,7 +1765,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q36_c"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -1780,7 +1780,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q36_c_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1844,7 +1844,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:tag="y"
+                            android:tag="1"
                             android:id="@+id/rb_q36_d_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1853,7 +1853,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q36_d_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1918,7 +1918,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:tag="y"
+                            android:tag="1"
                             android:id="@+id/rb_q36_e_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1927,7 +1927,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q36_e_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1991,7 +1991,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:tag="y"
+                            android:tag="1"
                             android:id="@+id/rb_q36_f_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -2000,7 +2000,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q36_f_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -2064,7 +2064,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:tag="y"
+                            android:tag="1"
                             android:id="@+id/rb_q36_g_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -2073,7 +2073,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q36_g_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -2188,7 +2188,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_a_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2196,7 +2196,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_a_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2260,7 +2260,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_b_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2268,7 +2268,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_b_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2325,7 +2325,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="0.6"
-                        android:tag="y">
+                        android:tag="1">
 
                         <RadioButton
                             android:id="@+id/rb_q37_c_a"
@@ -2338,7 +2338,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_c_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2401,7 +2401,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_d_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2409,7 +2409,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_d_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2472,7 +2472,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_e_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2480,7 +2480,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_e_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2543,7 +2543,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_f_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2551,7 +2551,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_f_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2614,7 +2614,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_g_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2622,7 +2622,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_g_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2685,7 +2685,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_h_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2693,7 +2693,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_h_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2756,7 +2756,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_i_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2764,7 +2764,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q37_i_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2875,7 +2875,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_a_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2883,7 +2883,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_a_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -2947,7 +2947,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_b_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -2955,7 +2955,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_b_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -3012,7 +3012,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="0.6"
-                        android:tag="y">
+                        android:tag="1">
 
                         <RadioButton
                             android:id="@+id/rb_q38_c_a"
@@ -3025,7 +3025,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_c_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -3088,7 +3088,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_d_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -3096,7 +3096,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_d_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -3159,7 +3159,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_e_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -3167,7 +3167,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_e_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -3230,7 +3230,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_f_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="y"
+                            android:tag="1"
                             android:text="YES"
                             android:textColor="@color/black" />
 
@@ -3238,7 +3238,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             android:id="@+id/rb_q38_f_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="n"
+                            android:tag="2"
                             android:text="NO"
                             android:textColor="@color/black" />
 
@@ -3347,7 +3347,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                         <RadioButton
                             android:id="@+id/rb_q39_a_a"
-                            android:tag="y"
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3356,7 +3356,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                         <RadioButton
                             android:id="@+id/rb_q39_a_b"
-                            android:tag="n"
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3421,7 +3421,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:tag="y"
+                            android:tag="1"
                             android:id="@+id/rb_q39_b_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3430,7 +3430,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_b_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3487,7 +3487,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_c"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -3502,7 +3502,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_c_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3562,7 +3562,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_d"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -3577,7 +3577,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_d_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3635,7 +3635,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_e"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -3650,7 +3650,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_e_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3708,7 +3708,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_f"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -3723,7 +3723,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_f_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3781,7 +3781,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_g"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -3796,7 +3796,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_g_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3854,7 +3854,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_h"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -3869,7 +3869,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_h_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3927,7 +3927,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_i"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -3942,7 +3942,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_i_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -4000,7 +4000,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_j"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -4015,7 +4015,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_j_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -4073,7 +4073,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_k"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -4088,7 +4088,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_k_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -4146,7 +4146,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_l"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -4161,7 +4161,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_l_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -4219,7 +4219,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_m"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -4234,7 +4234,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_m_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -4292,7 +4292,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
+                        android:tag="1"
                         android:id="@+id/rg_q39_n"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
@@ -4307,7 +4307,7 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_n_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -4365,13 +4365,13 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
 
                     <RadioGroup
                         android:layout_gravity="center_vertical"
-                        android:tag="y"
                         android:id="@+id/rg_q39_o"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:id="@+id/rb_q39_o_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -4380,154 +4380,8 @@ c.	Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga
                             />
 
                         <RadioButton
-                            android:tag="n"
+                            android:tag="2"
                             android:id="@+id/rb_q39_o_b"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="NO"
-                            />
-
-
-                    </RadioGroup>
-
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/black" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2.1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="16. "
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="3. Dhood banany k liya kisi kisam k khass khorak k zarorat nahi"
-                            android:textSize="20sp" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.1"></LinearLayout>
-
-                    <RadioGroup
-                        android:layout_gravity="center_vertical"
-                        android:tag="y"
-                        android:id="@+id/rg_q39_c"
-                        android:layout_weight="0.6"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:id="@+id/rb_q39_c_a"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="YES"
-                            />
-
-                        <RadioButton
-                            android:tag="n"
-                            android:id="@+id/rb_q39_c_b"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="NO"
-                            />
-
-
-                    </RadioGroup>
-
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/black" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2.1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="3. No special food is required to produce breast milk."
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="3. Dhood banany k liya kisi kisam k khass khorak k zarorat nahi"
-                            android:textSize="20sp" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.1"></LinearLayout>
-
-                    <RadioGroup
-                        android:layout_gravity="center_vertical"
-                        android:tag="y"
-                        android:id="@+id/rg_q39_c"
-                        android:layout_weight="0.6"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:id="@+id/rb_q39_c_a"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="YES"
-                            />
-
-                        <RadioButton
-                            android:tag="n"
-                            android:id="@+id/rb_q39_c_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"

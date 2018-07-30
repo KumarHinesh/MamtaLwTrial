@@ -1,8 +1,6 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3c_fragments;
 
 import android.app.Dialog;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,22 +19,15 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 
 import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CounselingCRF1Activity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf1_fragments.PwOtherDataFragment3;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.MuacAssesmentDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.MuacLwCrf3cDTO;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
@@ -178,7 +169,7 @@ public class Crf3cQ26LwMuac extends Fragment {
             }
         });
 
-        try{  isDataFiled = !CRF1Activity.formCrf1DTO.getMuacAssesments().isEmpty(); }catch (Exception e){}
+        /*try{  isDataFiled = !CRF1Activity.formCrf1DTO.getMuacAssesments().isEmpty(); }catch (Exception e){}
 
         if(isDataFiled){
 
@@ -212,7 +203,7 @@ public class Crf3cQ26LwMuac extends Fragment {
                 checkReadingEditText(et_r1_mauc4,et_r2_mauc4,tv_muac_difference4);
             }
         }
-
+*/
 
         return view;
     }
@@ -292,7 +283,9 @@ public class Crf3cQ26LwMuac extends Fragment {
 
                 float temp1 = (f1 + f2) / 2;
                 avrageVal = Double.parseDouble( new DecimalFormat("##.#").format(temp1));
+
                 tv_averageMAUC.setText(avrageVal + "");
+              //  CRF3cActivity.formCrf3cDTO.setQ25(avrageVal + "");
 
             } else {
 
@@ -456,7 +449,10 @@ public class Crf3cQ26LwMuac extends Fragment {
   //      muacLwCrf3cDTO.setReading2(getTextFromField(et_2));
   //      muacLwCrf3cDTO.setReaderCode1(et_readerId_1.getText().toString());
   //      muacLwCrf3cDTO.setReaderCode2(et_readerId_2.getText().toString());
+
         muacLwCrf3cDTO.setId(id);
+        muacLwCrf3cDTO.setReaderCode1(et_readerId_1.getText().toString());
+        muacLwCrf3cDTO.setReaderCode1(et_readerId_2.getText().toString());
         muacLwCrf3cDTO.setReader1(getTextFromField(et_1));
         muacLwCrf3cDTO.setReader2(getTextFromField(et_2));
         muacLwCrf3cDTO.setDifference(getTextFromField(et_1)-getTextFromField(et_2));

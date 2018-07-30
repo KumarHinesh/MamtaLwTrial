@@ -26,6 +26,25 @@ public class FormCrf3aDTO {
     private String q23;
     private String q24;
     private String q25;
+    private String q26;
+    private String q27;
+
+
+    public String getQ26() {
+        return q26;
+    }
+
+    public void setQ26(String q26) {
+        this.q26 = q26;
+    }
+
+    public String getQ27() {
+        return q27;
+    }
+
+    public void setQ27(String q27) {
+        this.q27 = q27;
+    }
 
     public PregnantWomanDTO getPregnantWoman() {
         return pregnantWoman;

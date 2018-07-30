@@ -130,7 +130,7 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
 
                 if(cb_DOB_1.isChecked()){
 
-                    CRF2Activity.formCrf2DTO.setQ23("YES");
+                    CRF2Activity.formCrf2DTO.setQ23(ContantsValues.YES);
                     Crf2Q26Fragment crf2Q26Fragment = new Crf2Q26Fragment();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -141,7 +141,7 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
                 }
                  else if(cb_DOB_2.isChecked()){
 
-                    CRF2Activity.formCrf2DTO.setQ23("NO");
+                    CRF2Activity.formCrf2DTO.setQ23(ContantsValues.NO);
                     Crf2Q24_25Fragment crf2Q24_25Fragment = new Crf2Q24_25Fragment();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

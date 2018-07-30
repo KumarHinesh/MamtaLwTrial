@@ -38,6 +38,8 @@ public class Crf2Q36Fragment extends Fragment {
 
     boolean[] Q44_fields;
 
+    int noOfCountQ44 = 0;
+
     int weekOfPregnancy;
 
     int isAllTrue = 0;
@@ -411,9 +413,9 @@ public class Crf2Q36Fragment extends Fragment {
 
     public String getCheckBoxResult(CheckBox cb1, CheckBox cb2){
 
-        if(cb1.isChecked()){return "YES";}
-        else if(cb2.isChecked()){return "NO";}
-        else {return "x";}
+        if(cb1.isChecked()){return ContantsValues.YES;}
+        else if(cb2.isChecked()){return ContantsValues.NO;}
+        else {return null;}
 
     }
 
@@ -423,9 +425,9 @@ public class Crf2Q36Fragment extends Fragment {
         CRF2Activity.formCrf2DTO.setQ37(getCheckBoxResult(cb_Q37_1,cb_Q37_2));
         CRF2Activity.formCrf2DTO.setQ38A(getCheckBoxResult(cb_Q38_1,cb_Q38_2));
         if(cb_Q38_3.isChecked()){
-            CRF2Activity.formCrf2DTO.setQ38B(et_other_masla.getText().toString());
+            CRF2Activity.formCrf2DTO.setQ38B(ContantsValues.YES+":"+et_other_masla.getText().toString());
         }else {
-            CRF2Activity.formCrf2DTO.setQ38B("NO");
+            CRF2Activity.formCrf2DTO.setQ38B(ContantsValues.NO);
         }
         CRF2Activity.formCrf2DTO.setQ39(getCheckBoxResult(cb_Q39_1,cb_Q39_2));
         CRF2Activity.formCrf2DTO.setQ40(getCheckBoxResult(cb_Q40_1,cb_Q40_2));
@@ -435,9 +437,9 @@ public class Crf2Q36Fragment extends Fragment {
         CRF2Activity.formCrf2DTO.setQ41D(getCheckBoxResult(cb_Q41_4_1,cb_Q41_4_2));
         CRF2Activity.formCrf2DTO.setQ41E(getCheckBoxResult(cb_Q41_5_1,cb_Q41_5_2));
         if(cb_Q41_6_1.isChecked()){
-            CRF2Activity.formCrf2DTO.setQ41F(et_masla_2.getText().toString());
+            CRF2Activity.formCrf2DTO.setQ41F(ContantsValues.YES+":"+et_masla_2.getText().toString());
         }else {
-            CRF2Activity.formCrf2DTO.setQ41F("NO");
+            CRF2Activity.formCrf2DTO.setQ41F(ContantsValues.NO);
         }
         CRF2Activity.formCrf2DTO.setQ42(getCheckBoxResult(cb_Q42_1,cb_Q42_2));
         CRF2Activity.formCrf2DTO.setQ43(getCheckBoxResult(cb_Q43_1,cb_Q43_2));
@@ -533,43 +535,44 @@ public class Crf2Q36Fragment extends Fragment {
         boolean b = true;
 
         // point 1
-         Q44_fields[0] = Integer.parseInt(CRF2Activity.formCrf2DTO.getQ26())<72;
+         Q44_fields[0] = Integer.parseInt(CRF2Activity.formCrf2DTO.getQ26())<168;
 
         // point 2
-        Q44_fields[1] =CRF2Activity.formCrf2DTO.getQ31().equals("YES");
+        Q44_fields[1] =CRF2Activity.formCrf2DTO.getQ31().equals(ContantsValues.YES);
 
         // point 3
         Q44_fields[2] = Double.parseDouble(CRF2Activity.formCrf2DTO.getQ32())>=32;
         //  Q44_fields[2] = ;
 
         // point 4
-        Q44_fields[3] =  CRF2Activity.formCrf2DTO.getQ35().equals("YES");
+        Q44_fields[3] =  CRF2Activity.formCrf2DTO.getQ35().equals(ContantsValues.YES);
 
         // point 5
-        Q44_fields[4] = CRF2Activity.formCrf2DTO.getQ36().equals("YES");
+        Q44_fields[4] = CRF2Activity.formCrf2DTO.getQ36().equals(ContantsValues.YES);
 
         // point 6
-        Q44_fields[5] = CRF2Activity.formCrf2DTO.getQ37().equals("YES");
+        Q44_fields[5] = CRF2Activity.formCrf2DTO.getQ37().equals(ContantsValues.YES);
 
         // point 7
-        Q44_fields[6] = CRF2Activity.formCrf2DTO.getQ38A().equals("NO") && CRF2Activity.formCrf2DTO.getQ38B().equals("NO");
+        Q44_fields[6] = CRF2Activity.formCrf2DTO.getQ38A().equals(ContantsValues.NO) && CRF2Activity.formCrf2DTO.getQ38B().equals(ContantsValues.NO);
 
         // point 8
-        Q44_fields[7] = CRF2Activity.formCrf2DTO.getQ39().equals("NO");
+        Q44_fields[7] = CRF2Activity.formCrf2DTO.getQ39().equals(ContantsValues.NO);
 
         // point 9
-        Q44_fields[8] = CRF2Activity.formCrf2DTO.getQ40().equals("YES");
+        Q44_fields[8] = CRF2Activity.formCrf2DTO.getQ40().equals(ContantsValues.YES);
 
         // point 10
-        Q44_fields[9] = CRF2Activity.formCrf2DTO.getQ41A().equals("NO") && CRF2Activity.formCrf2DTO.getQ41B().equals("NO") &&
-                CRF2Activity.formCrf2DTO.getQ41C().equals("NO") && CRF2Activity.formCrf2DTO.getQ41D().equals("NO") &&
-                CRF2Activity.formCrf2DTO.getQ41E().equals("NO") && CRF2Activity.formCrf2DTO.getQ41F().equals("NO");
+        Q44_fields[9] = CRF2Activity.formCrf2DTO.getQ41A().equals(ContantsValues.NO) && CRF2Activity.formCrf2DTO.getQ41B().equals(ContantsValues.NO) &&
+                CRF2Activity.formCrf2DTO.getQ41C().equals(ContantsValues.NO) && CRF2Activity.formCrf2DTO.getQ41D().equals(ContantsValues.NO) &&
+                CRF2Activity.formCrf2DTO.getQ41E().equals(ContantsValues.NO) && CRF2Activity.formCrf2DTO.getQ41F().equals(ContantsValues.NO);
 
         // point 11
-        Q44_fields[10] = CRF2Activity.formCrf2DTO.getQ42().equals("NO");
+        Q44_fields[10] = CRF2Activity.formCrf2DTO.getQ42().equals(ContantsValues.NO);
 
         // point 12
-        Q44_fields[11] = CRF2Activity.formCrf2DTO.getQ43().equals("NO");
+        Q44_fields[11] = CRF2Activity.formCrf2DTO.getQ43().equals(ContantsValues.NO);
+
     }
 
 
@@ -599,32 +602,69 @@ public class Crf2Q36Fragment extends Fragment {
         iv_12 = (ImageView) dialog.findViewById(R.id.iv_12);
 
 
-        if(Q44_fields[0])
+        if(Q44_fields[0]){
             iv_1.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[1])
-            iv_2.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[2])
-            iv_3.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[3])
-            iv_4.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[4])
-            iv_5.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[5])
-            iv_6.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[6])
-            iv_7.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[7])
-            iv_8.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[8])
-            iv_9.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[9])
-            iv_10.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[10])
-            iv_11.setImageResource(R.mipmap.right_ison);
-        if(Q44_fields[11])
-            iv_12.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
 
-      //  btn_checkValidation = (Button) dialog.findViewById(R.id.btn_checkValidation);
+        if(Q44_fields[1]){
+            iv_2.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++; }
+
+        if(Q44_fields[2]){
+            iv_3.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
+
+
+        if(Q44_fields[3]){
+            iv_4.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
+
+        if(Q44_fields[4]){
+            iv_5.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
+
+        if(Q44_fields[5]){
+            iv_6.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
+
+        if(Q44_fields[6]){
+            iv_7.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
+
+        if(Q44_fields[7]){
+            iv_8.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
+
+        if(Q44_fields[8]){
+            iv_9.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
+
+        if(Q44_fields[9]){
+            iv_10.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
+
+        if(Q44_fields[10]){
+            iv_11.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+
+        }
+
+        if(Q44_fields[11]){
+            iv_12.setImageResource(R.mipmap.right_ison);
+            noOfCountQ44++;
+        }
+
+        CRF2Activity.formCrf2DTO.setQ44(noOfCountQ44+"");
+
 
         btn_checkValidation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -651,10 +691,6 @@ public class Crf2Q36Fragment extends Fragment {
                     SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
 
                 }
-
-
-                  //  Toast.makeText(getContext(),"all fields ary true",Toast.LENGTH_LONG).show();
-                 //   Toast.makeText(getContext(),"all fields ary no true   "+isAllTrue,Toast.LENGTH_LONG).show();
 
             }
         });

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -95,8 +96,14 @@ public class CRF2DashboargActivity extends AppCompatActivity {
                             public void onResponse(Call<SearchResult> call, Response<SearchResult> response) {
 
                                 searchResult = response.body();
-                                            SearchIteamsAdapter searchIteamsAdapter = new SearchIteamsAdapter(CRF2DashboargActivity.this,searchResult);
-                                            lv_womanList.setAdapter(searchIteamsAdapter);
+
+                                if(searchResult!=null){
+
+                                    SearchIteamsAdapter searchIteamsAdapter = new SearchIteamsAdapter(CRF2DashboargActivity.this,searchResult);
+                                    lv_womanList.setAdapter(searchIteamsAdapter);
+
+                                }
+
 
                             }
 
@@ -122,10 +129,22 @@ public class CRF2DashboargActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                String selectedForm = new Gson().toJson(searchResult.getPregnantWomen().get(position), PregnantWomanDTO.class);
+                if(Float.parseFloat(searchResult.getPregnantWomen().get(position).getAvgMuac().toString())<24 &&
+                        searchResult.getPregnantWomen().get(position).getVisitStatus()==0){
 
-                startActivity(new Intent(CRF2DashboargActivity.this,CRF2Activity.class).putExtra("pw",selectedForm));
-                finish();
+                    String selectedForm = new Gson().toJson(searchResult.getPregnantWomen().get(position), PregnantWomanDTO.class);
+
+                    startActivity(new Intent(CRF2DashboargActivity.this,CRF2Activity.class).putExtra("pw",selectedForm));
+                    finish();
+
+                }else {
+
+
+                    Toast.makeText(CRF2DashboargActivity.this,"Sorry MAUC is Greter Then 23.9",Toast.LENGTH_LONG).show();
+
+                }
+
+
             }
         });
 
@@ -134,7 +153,7 @@ public class CRF2DashboargActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(CRF2DashboargActivity.this,TaskListActivity.class));
+         //       startActivity(new Intent(CRF2DashboargActivity.this,TaskListActivity.class));
             }
         });
 
@@ -171,4 +190,9 @@ public class CRF2DashboargActivity extends AppCompatActivity {
         return b;
     }
 
+
+    @Override
+    public void onBackPressed() {
+       // super.onBackPressed();
     }
+}

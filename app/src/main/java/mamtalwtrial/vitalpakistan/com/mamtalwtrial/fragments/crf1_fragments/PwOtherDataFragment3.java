@@ -584,7 +584,7 @@ public class PwOtherDataFragment3 extends Fragment {
 
     }
 
-    public void sendPost(String title, FormCrf1DTO body) {
+    /*public void sendPost(String title, FormCrf1DTO body) {
 
         //final FormCrf1DTO dto;
         mAPIService.sendCrf1Form(body).enqueue(new Callback<FormCrf1DTO>() {
@@ -601,6 +601,6 @@ public class PwOtherDataFragment3 extends Fragment {
                 Log.e("Geting Error", "Unable to submit post to API.");
             }
         });
-    }
+    }*/
 
 }

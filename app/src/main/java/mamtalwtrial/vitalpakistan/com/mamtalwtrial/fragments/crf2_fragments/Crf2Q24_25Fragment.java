@@ -23,6 +23,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2DashboargActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 
 public class Crf2Q24_25Fragment extends Fragment {
 
@@ -131,6 +132,7 @@ public class Crf2Q24_25Fragment extends Fragment {
                 CRF2Activity.formCrf2DTO.setFormStatus(Constants.COMPLETED);
                 CRF2Activity.formCrf2DTO.setQ24(selectedDate);
                 CRF2Activity.formCrf2DTO.setQ25(selectedTime);
+                SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
                 startActivity(new Intent(getContext(), CRF2DashboargActivity.class));
                 getActivity().finish();
             }

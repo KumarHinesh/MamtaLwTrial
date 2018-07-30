@@ -1,0 +1,4061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrolView"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.crf4a_fragments.Crf4aQ27Fragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        //Q27
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_weight="0.5"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Timming"
+                />
+
+            <LinearLayout
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+
+                <TextView
+                    android:id="@+id/tv_startTime"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:drawableLeft="@mipmap/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="6:00  "
+                    />
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" TO  "
+                    />
+
+
+
+
+                <TextView
+                    android:id="@+id/tv_endTime"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:drawableLeft="@mipmap/time"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="7:00"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black" />
+
+
+        //Q27B
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_q27_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crf4a_q27_b"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/crf4a_q27_b_roman_urdu"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"/>
+
+            <RadioGroup
+                android:id="@+id/rg_q27_b"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.6">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="1"
+                    android:text="@string/yes"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="2"
+                    android:text="@string/no"
+                    android:textColor="@color/black" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black" />
+
+
+        <!--ll_q28_to_q73-->
+        <LinearLayout
+            android:id="@+id/ll_q28_to_q73"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <!--//Q28-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q28_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q28_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q28"
+                    android:tag="0"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/yes"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/no"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+
+            <!--q29 t0 q 39-->
+            <LinearLayout
+                android:id="@+id/ll_q29_q39"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+            //Q29
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q29_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q29_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <EditText
+                    android:id="@+id/et_q29"
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:hint="Times"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q30
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q30_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q30_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/crf4a_q30_op1"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/crf4a_q30_op2"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q31
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q31_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q31_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q31"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/right"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/left"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="3"
+                        android:text="@string/both"
+                        android:textColor="@color/black" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q32
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q32_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q32_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/black" />
+
+                <RadioGroup
+                    android:id="@+id/rg_q32"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:tag="1"
+                        android:textColor="@color/black"
+                        android:text="@string/crf4a_q32_op1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:tag="2"
+                        android:textColor="@color/black"
+                        android:text="@string/crf4a_q32_op2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:tag="3"
+                        android:textColor="@color/black"
+                        android:text="@string/crf4a_q32_op3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q33
+            <LinearLayout
+                android:id="@+id/ll_q33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q33_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q33_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <EditText
+                    android:id="@+id/et_q33"
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="2"
+                    android:inputType="number"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:hint="Minutes"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q34
+            <LinearLayout
+                android:id="@+id/ll_q34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q34_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q34_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/black" />
+
+                <RadioGroup
+                    android:id="@+id/rg_q34"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:tag="1"
+                        android:textColor="@color/black"
+                        android:text="@string/crf4a_q34_option_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:tag="2"
+                        android:textColor="@color/black"
+                        android:text="@string/crf4a_q34_option_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:tag="3"
+                        android:textColor="@color/black"
+                        android:text="@string/crf4a_q34_option_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:tag="4"
+                        android:textColor="@color/black"
+                        android:text="@string/crf4a_q34_option_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:tag="9"
+                        android:textColor="@color/black"
+                        android:text="@string/dk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q35
+            <LinearLayout
+                android:id="@+id/ll_q35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q35_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q35_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <EditText
+                    android:id="@+id/et_q35"
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="2"
+                    android:inputType="number"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:hint="MILLILITER"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q36
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q73_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q73_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q36"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/yes"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/no"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q37
+            <LinearLayout
+                android:id="@+id/ll_q37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q37_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q37_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q37"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/crf4a_q37_option_1"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/crf4a_q37_option_2"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="3"
+                        android:text="@string/crf4a_q37_option_3"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="9"
+                        android:text="@string/dk"
+                        android:textColor="@color/black" />
+
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q38
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q38_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q38_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q38"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/yes"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/no"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q39
+            <LinearLayout
+                android:id="@id/ll_q39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q39_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q39_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <EditText
+                    android:id="@+id/et_q39"
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:hint="Times"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            </LinearLayout>
+
+            <!--close linearLayout q39-->
+
+
+            <!--//Q40-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q40_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q40_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q40"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/yes"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/no"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="9"
+                        android:text="@string/dk"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+
+            <!--q41 to q57-->
+
+            <LinearLayout
+                android:id="@+id/ll_q41_q57"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            //Q41
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q41_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q41_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q41"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/crf4a_q41_option_1"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/crf4a_q41_option_2"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q42
+            <LinearLayout
+                android:id="@+id/ll_q42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q42_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q42_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/et_q42"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            <!--//Q43-->
+            <LinearLayout
+                android:id="@+id/ll_q43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q43_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q43_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="4"
+                    android:id="@+id/et_q43"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            <!--//Q44-->
+            <LinearLayout
+                android:id="@+id/ll_q44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q44_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q44_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/et_q44"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            <!--//Q45-->
+            <LinearLayout
+                android:id="@+id/ll_q45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q45_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q45_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="4"
+                    android:id="@+id/et_q45"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+
+            <!--q46_q57-->
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ll_q46_q57"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            //Q46
+            <LinearLayout
+                android:id="@+id/ll_q46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q46_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q46_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q46"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/yes"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/no"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="9"
+                        android:text="@string/dk"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q47
+            <LinearLayout
+                android:id="@+id/ll_q47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q47_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q47_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q47"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/crf4a_q47_option_1"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/crf4a_q47_option_2"
+                        android:textColor="@color/black" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/ll_q48_q51"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            //Q48
+            <LinearLayout
+                android:id="@+id/ll_q48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q48_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q48_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <EditText
+                    android:id="@+id/et_q48"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="number"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q49
+            <LinearLayout
+                android:id="@+id/ll_q49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q49"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q49_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q49_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="4"
+                    android:id="@+id/et_q49"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q50
+            <LinearLayout
+                android:id="@+id/ll_q50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q50_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q50_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/et_q50"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="number"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q51
+            <LinearLayout
+                android:id="@+id/ll_q51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q51_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q51_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/et_q51"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+                <!--close q48 to q51-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q52
+            <LinearLayout
+                android:id="@+id/ll_q52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q52_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q52_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q52"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/yes"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/no"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="9"
+                        android:text="@string/dk"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+
+                <!--ll_q53_q57-->
+            <LinearLayout
+                    android:id="@+id/ll_q53_q57"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+            //Q53
+            <LinearLayout
+                android:id="@+id/ll_q53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q53_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q53_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q53"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/crf4a_q47_option_1"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/crf4a_q47_option_2"
+                        android:textColor="@color/black" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+                <!--ll_q54_q57-->
+         <LinearLayout
+             android:id="@+id/ll_q54_q57"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+
+             //Q54
+             <LinearLayout
+                 android:id="@+id/ll_q54"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3"
+                 android:baselineAligned="false">
+
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.3"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tv_q54"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q54_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q54_roman_urdu"
+                         android:textSize="20sp" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_weight="0.1"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"/>
+
+                 <EditText
+                     android:id="@+id/et_q54"
+                     android:layout_gravity="center_vertical"
+                     android:layout_weight="0.6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content" />
+
+
+             </LinearLayout>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginBottom="8dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@color/black" />
+
+             //Q55
+             <LinearLayout
+                 android:id="@+id/ll_q55"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3">
+
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.3"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tv_q55"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q55_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q55_roman_urdu"
+                         android:textSize="20sp" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.1"/>
+
+                 <EditText
+                     android:layout_gravity="center_vertical"
+                     android:maxLength="4"
+                     android:id="@+id/et_q55"
+                     android:layout_weight="0.6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginBottom="8dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@color/black" />
+             //Q56
+             <LinearLayout
+                 android:id="@+id/ll_q56"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3"
+                 android:baselineAligned="false">
+
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.3"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tv_q56"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q56_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q56_roman_urdu"
+                         android:textSize="20sp" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_weight="0.1"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"/>
+
+                 <EditText
+                     android:id="@+id/et_q56"
+                     android:layout_gravity="center_vertical"
+                     android:layout_weight="0.6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content" />
+
+
+             </LinearLayout>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginBottom="8dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@color/black" />
+
+             //Q57
+             <LinearLayout
+                 android:id="@+id/ll_q57"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3">
+
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.3"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tv_q57"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q57_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q57_roman_urdu"
+                         android:textSize="20sp" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.1"/>
+
+                 <EditText
+                     android:layout_gravity="center_vertical"
+                     android:maxLength="4"
+                     android:id="@+id/et_q57"
+                     android:layout_weight="0.6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+
+
+         </LinearLayout>
+                <!--close q54 to q57-->
+
+            </LinearLayout>
+                <!--close q46 to q57-->
+
+            </LinearLayout>
+                <!--close q53 to q57-->
+
+            </LinearLayout>
+
+
+            <!--close q41 to q57-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q58
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q58"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crf4a_q58_english"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/crf4a_q58_roman_urdu"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q58"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="1"
+                        android:text="@string/yes"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="2"
+                        android:text="@string/no"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="9"
+                        android:text="@string/dk"
+                        android:textColor="@color/black" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+            <!--ll_q59_q72-->
+
+            <LinearLayout
+             android:id="@+id/ll_q59_q72"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+
+             //Q59
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3"
+                 android:baselineAligned="false">
+
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.3"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tv_q59"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q59_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q59_roman_urdu"
+                         android:textSize="20sp" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_weight="0.1"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"/>
+
+                 <EditText
+                     android:id="@+id/et_q59"
+                     android:layout_gravity="center_vertical"
+                     android:layout_weight="0.6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content" />
+
+
+             </LinearLayout>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginBottom="8dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@color/black" />
+
+             //Q60
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3">
+
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.3"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tv_q60"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q60_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q60_roman_urdu"
+                         android:textSize="20sp" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.1"/>
+
+                 <EditText
+                     android:layout_gravity="center_vertical"
+                     android:maxLength="4"
+                     android:id="@+id/et_q60"
+                     android:layout_weight="0.6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginBottom="8dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@color/black" />
+
+             //Q61
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3"
+                 android:baselineAligned="false">
+
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.3"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tv_q61"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q61_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q61_roman_urdu"
+                         android:textSize="20sp" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_weight="0.1"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"/>
+
+                 <EditText
+                     android:id="@+id/et_q61"
+                     android:layout_gravity="center_vertical"
+                     android:layout_weight="0.6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content" />
+
+
+             </LinearLayout>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginBottom="8dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@color/black" />
+
+             //Q62
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3">
+
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.3"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tv_q62"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q62_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q62_roman_urdu"
+                         android:textSize="20sp" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.1"/>
+
+                 <EditText
+                     android:layout_gravity="center_vertical"
+                     android:maxLength="4"
+                     android:id="@+id/et_q62"
+                     android:layout_weight="0.6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginBottom="8dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@color/black" />
+
+             //Q63
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3">
+
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2.3"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tv_q63"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q63_a_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q63_a_roman_urdu"
+                         android:textSize="20sp" />
+
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/crf4a_q63_a_english"
+                         android:textColor="@color/black"
+                         android:textSize="20sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="5dp"
+                         android:text="@string/crf4a_q63_b_roman_urdu"
+                         android:textSize="20sp" />
+
+
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.1"/>
+
+                 <RadioGroup
+                     android:id="@+id/rg_q63"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:layout_weight="0.6">
+
+                     <RadioButton
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:tag="1"
+                         android:text="@string/yes"
+                         android:textColor="@color/black" />
+
+                     <RadioButton
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:tag="2"
+                         android:text="@string/no"
+                         android:textColor="@color/black" />
+
+                     <RadioButton
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:tag="9"
+                         android:text="@string/dk"
+                         android:textColor="@color/black" />
+
+                 </RadioGroup>
+
+
+             </LinearLayout>
+
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_marginBottom="8dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@color/black" />
+
+         <LinearLayout
+                   android:id="@+id/ll_q64_q72"
+                   android:orientation="vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+
+                   //Q64
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:weightSum="3"
+                       android:baselineAligned="false">
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2.3"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:id="@+id/tv_q64"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/crf4a_q64_english"
+                               android:textColor="@color/black"
+                               android:textSize="20sp" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="5dp"
+                               android:text="@string/crf4a_q64_roman_urdu"
+                               android:textSize="20sp" />
+
+
+                       </LinearLayout>
+
+                       <TextView
+                           android:layout_weight="0.1"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"/>
+
+                       <EditText
+                           android:id="@+id/et_q64"
+                           android:layout_gravity="center_vertical"
+                           android:layout_weight="0.6"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content" />
+
+
+                   </LinearLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="0.5dp"
+                       android:layout_marginBottom="8dp"
+                       android:layout_marginTop="8dp"
+                       android:background="@color/black" />
+
+                   //Q65
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:weightSum="3">
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2.3"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:id="@+id/tv_q65"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/crf4a_q65_english"
+                               android:textColor="@color/black"
+                               android:textSize="20sp" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="5dp"
+                               android:text="@string/crf4a_q65_roman_urdu"
+                               android:textSize="20sp" />
+
+
+                       </LinearLayout>
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="0.1"/>
+
+                       <EditText
+                           android:layout_gravity="center_vertical"
+                           android:maxLength="4"
+                           android:id="@+id/et_q65"
+                           android:layout_weight="0.6"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content" />
+
+                   </LinearLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="0.5dp"
+                       android:layout_marginBottom="8dp"
+                       android:layout_marginTop="8dp"
+                       android:background="@color/black" />
+
+                   //Q66
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:weightSum="3"
+                       android:baselineAligned="false">
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2.3"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:id="@+id/tv_q66"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/crf4a_q66_english"
+                               android:textColor="@color/black"
+                               android:textSize="20sp" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="5dp"
+                               android:text="@string/crf4a_q66_roman_urdu"
+                               android:textSize="20sp" />
+
+
+                       </LinearLayout>
+
+                       <TextView
+                           android:layout_weight="0.1"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"/>
+
+                       <EditText
+                           android:id="@+id/et_q66"
+                           android:layout_gravity="center_vertical"
+                           android:layout_weight="0.6"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content" />
+
+
+                   </LinearLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="0.5dp"
+                       android:layout_marginBottom="8dp"
+                       android:layout_marginTop="8dp"
+                       android:background="@color/black" />
+
+                   //Q67
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:weightSum="3">
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2.3"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:id="@+id/tv_q67"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/crf4a_q67_english"
+                               android:textColor="@color/black"
+                               android:textSize="20sp" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="5dp"
+                               android:text="@string/crf4a_q67_roman_urdu"
+                               android:textSize="20sp" />
+
+
+                       </LinearLayout>
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="0.1"/>
+
+                       <EditText
+                           android:layout_gravity="center_vertical"
+                           android:maxLength="4"
+                           android:id="@+id/et_q67"
+                           android:layout_weight="0.6"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content" />
+
+                   </LinearLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="0.5dp"
+                       android:layout_marginBottom="8dp"
+                       android:layout_marginTop="8dp"
+                       android:background="@color/black" />
+
+                   //Q68
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:weightSum="3">
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2.3"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:id="@+id/tv_q68"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/crf4a_q68_a_english"
+                               android:textColor="@color/black"
+                               android:textSize="20sp" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="5dp"
+                               android:text="@string/crf4a_q68_a_roman_urdu"
+                               android:textSize="20sp" />
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/crf4a_q68_b_english"
+                               android:textColor="@color/black"
+                               android:textSize="20sp" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="5dp"
+                               android:text="@string/crf4a_q68_b_roman_urdu"
+                               android:textSize="20sp" />
+
+
+
+
+                       </LinearLayout>
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="0.1"/>
+
+                       <RadioGroup
+                           android:id="@+id/rg_q68"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center_vertical"
+                           android:layout_weight="0.6">
+
+                           <RadioButton
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:tag="1"
+                               android:text="@string/yes"
+                               android:textColor="@color/black" />
+
+                           <RadioButton
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:tag="2"
+                               android:text="@string/no"
+                               android:textColor="@color/black" />
+
+                           <RadioButton
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:tag="9"
+                               android:text="@string/dk"
+                               android:textColor="@color/black" />
+
+                       </RadioGroup>
+
+
+                   </LinearLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="0.5dp"
+                       android:layout_marginBottom="8dp"
+                       android:layout_marginTop="8dp"
+                       android:background="@color/black" />
+
+
+             <!--ll_q69_q72-->
+             <LinearLayout
+                 android:id="@+id/ll_q69_q72"
+                 android:orientation="vertical"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+
+                 //Q69
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:weightSum="3"
+                     android:baselineAligned="false">
+
+                     <LinearLayout
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="2.3"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:id="@+id/tv_q69"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/crf4a_q69_english"
+                             android:textColor="@color/black"
+                             android:textSize="20sp" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="@string/crf4a_q69_roman_urdu"
+                             android:textSize="20sp" />
+
+
+                     </LinearLayout>
+
+                     <TextView
+                         android:layout_weight="0.1"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"/>
+
+                     <EditText
+                         android:id="@+id/et_q69"
+                         android:layout_gravity="center_vertical"
+                         android:layout_weight="0.6"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:layout_marginBottom="8dp"
+                     android:layout_marginTop="8dp"
+                     android:background="@color/black" />
+
+                 //Q70
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:weightSum="3">
+
+                     <LinearLayout
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="2.3"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:id="@+id/tv_q70"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/crf4a_q70_english"
+                             android:textColor="@color/black"
+                             android:textSize="20sp" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="@string/crf4a_q70_roman_urdu"
+                             android:textSize="20sp" />
+
+
+                     </LinearLayout>
+
+                     <TextView
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="0.1"/>
+
+                     <EditText
+                         android:layout_gravity="center_vertical"
+                         android:maxLength="4"
+                         android:id="@+id/et_q70"
+                         android:layout_weight="0.6"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content" />
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:layout_marginBottom="8dp"
+                     android:layout_marginTop="8dp"
+                     android:background="@color/black" />
+
+                 //Q71
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:weightSum="3"
+                     android:baselineAligned="false">
+
+                     <LinearLayout
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="2.3"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:id="@+id/tv_q71"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/crf4a_q71_english"
+                             android:textColor="@color/black"
+                             android:textSize="20sp" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="@string/crf4a_q71_roman_urdu"
+                             android:textSize="20sp" />
+
+
+                     </LinearLayout>
+
+                     <TextView
+                         android:layout_weight="0.1"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"/>
+
+                     <EditText
+                         android:id="@+id/et_q71"
+                         android:layout_gravity="center_vertical"
+                         android:layout_weight="0.6"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content" />
+
+
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:layout_marginBottom="8dp"
+                     android:layout_marginTop="8dp"
+                     android:background="@color/black" />
+
+                 //Q72
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:weightSum="3">
+
+                     <LinearLayout
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="2.3"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:id="@+id/tv_q72"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/crf4a_q72_english"
+                             android:textColor="@color/black"
+                             android:textSize="20sp" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="@string/crf4a_q72_roman_urdu"
+                             android:textSize="20sp" />
+
+
+                     </LinearLayout>
+
+                     <TextView
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="0.1"/>
+
+                     <EditText
+                         android:layout_gravity="center_vertical"
+                         android:maxLength="4"
+                         android:id="@+id/et_q72"
+                         android:layout_weight="0.6"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content" />
+
+                 </LinearLayout>
+
+
+
+             </LinearLayout>
+             <!--close ll_q69_q72-->
+
+
+               </LinearLayout>
+          <!--close ll_q64_q72-->
+
+
+
+         </LinearLayout>
+            <!--close ll_q59_q72-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            //Q73
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:weightSum="3">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Was the baby given any of these items (Non-food item) during this specific hour?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\n Kiya bachay ko koi aisi cheez de gaye jis main jo k Ghiza nah o, jaisay k paani, Ghutti, Gari Booti wagaira"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"/>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.2"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q73_a_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q73_a_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_a"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_a_a"
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_a_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_a_c"
+                                android:tag="9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/dk"
+                                />
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q63_b_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q63_b_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_b"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_b_a"
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_b_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_b_c"
+                                android:tag="9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/dk"
+                                />
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q73_c_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q73_c_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_c"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_c_a"
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_c_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_c_c"
+                                android:tag="9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/dk"
+                                />
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q73_d_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q73_d_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_d"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_d_a"
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_d_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_d_c"
+                                android:tag="9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/dk"
+                                />
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_e"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q73_e_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q73_e_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_e"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_e_a"
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_e_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_e_c"
+                                android:tag="9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/dk"
+                                />
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_f"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q73_f_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q73_f_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_f"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_f_a"
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_f_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_f_c"
+                                android:tag="9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/dk"
+                                />
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_g"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q73_g_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q73_g_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_g"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_g_a"
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_g_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_g_c"
+                                android:tag="9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/dk"
+                                />
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_h"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q73_h_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q73_h_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_h"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_h_a"
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_h_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_h_c"
+                                android:tag="9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/dk"
+                                />
+
+
+                        </RadioGroup>
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_i"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q73_i_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q73_i_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_i"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_i_a"
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_i_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_i_c"
+                                android:tag="9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/dk"
+                                />
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_q73_j"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crf4a_q73_j_english"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/crf4a_q73_j_roman_urdu"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"/>
+
+                        <RadioGroup
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/rg_q73_j"
+                            android:layout_weight="0.6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:tag="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/yes"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rb_q73_j_b"
+                                android:tag="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/no"
+                                />
+
+                            <EditText
+                                android:visibility="gone"
+                                android:id="@+id/et_q73_j"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="other"/>
+
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black" />
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:text="Submit"
+            android:textStyle="bold"
+            android:background="@drawable/button_shape_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -40,7 +40,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.CRF3cActivity" />
-        <activity android:name=".activities.CRF4aActivity"></activity>
+        <activity android:name=".activities.CRF4aActivity" />
+        <activity android:name=".activities.TestingActivity" />
+        <activity android:name=".activities.CRF4And5Dashboard"></activity>
     </application>
 
 </manifest>

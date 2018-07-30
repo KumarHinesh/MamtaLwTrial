@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.crf5b_fragment.Crf5bQ25Fragment">
+
+   <LinearLayout
+       android:layout_marginRight="10dp"
+       android:layout_marginLeft="10dp"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+       //Q25
+       <LinearLayout
+           android:layout_marginTop="20dp"
+           android:weightSum="2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+
+           <TextView
+               android:textStyle="bold"
+               android:textSize="20sp"
+               android:layout_weight="0.5"
+               android:textColor="@color/black"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="Timming"
+               />
+
+           <LinearLayout
+               android:layout_marginLeft="50dp"
+               android:layout_marginRight="50dp"
+               android:layout_weight="1.5"
+               android:orientation="horizontal"
+               android:layout_width="0dp"
+               android:layout_height="match_parent">
+
+
+
+               <TextView
+                   android:id="@+id/tv_startTime"
+                   android:textColor="@color/black"
+                   android:textStyle="bold"
+                   android:textSize="25sp"
+                   android:drawableLeft="@mipmap/time"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="6:00  "
+                   />
+
+               <TextView
+                   android:layout_gravity="center_horizontal"
+                   android:textColor="@color/black"
+                   android:textStyle="bold"
+                   android:textSize="25sp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text=" TO  "
+                   />
+
+
+
+
+               <TextView
+                   android:id="@+id/tv_endTime"
+                   android:textColor="@color/black"
+                   android:textStyle="bold"
+                   android:textSize="25sp"
+                   android:drawableLeft="@mipmap/time"
+                   android:layout_gravity="center_vertical"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="7:00"
+                   />
+
+
+
+
+           </LinearLayout>
+
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //Q26
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2.3"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/tv_q26"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/crf5b_q26_english"
+                   android:textColor="@color/black"
+                   android:textSize="20sp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="@string/crf5b_q26_urdu"
+                   android:textSize="20sp" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="0.1"/>
+
+           <RadioGroup
+               android:id="@+id/rg_q26"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:layout_weight="0.6">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="1"
+                   android:text="@string/yes"
+                   android:textColor="@color/black" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="2"
+                   android:text="@string/no"
+                   android:textColor="@color/black" />
+
+           </RadioGroup>
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //Q27
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2.3"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/tv_q27"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/crf5b_q27_english"
+                   android:textColor="@color/black"
+                   android:textSize="20sp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="@string/crf5b_q27_urdu"
+                   android:textSize="20sp" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="0.1"/>
+
+           <RadioGroup
+               android:id="@+id/rg_q27"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:layout_weight="0.6">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="1"
+                   android:text="@string/yes"
+                   android:textColor="@color/black" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="2"
+                   android:text="@string/no"
+                   android:textColor="@color/black" />
+
+           </RadioGroup>
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //Q28
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2.3"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/tv_q28"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/crf5b_q28_english"
+                   android:textColor="@color/black"
+                   android:textSize="20sp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="@string/crf5b_q28_urdu"
+                   android:textSize="20sp" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="0.1"/>
+
+           <RadioGroup
+               android:id="@+id/rg_q28"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:layout_weight="0.6">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="1"
+                   android:text="@string/crf5b_q28_a_english"
+                   android:textColor="@color/black" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="2"
+                   android:text="@string/crf5b_q28_b_english"
+                   android:textColor="@color/black" />
+
+           </RadioGroup>
+
+
+       </LinearLayout>
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q29
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q29"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q29_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q29_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q29"
+                   android:maxLength="2"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q30
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q30"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q30_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q30_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q30"
+                   android:maxLength="2"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q31
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q31"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q31_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q31_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q31"
+                   android:maxLength="2"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q32
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q32"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q32_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q32_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q32"
+                   android:maxLength="2"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //Q33
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2.3"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/tv_q33"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/crf5b_q33_english"
+                   android:textColor="@color/black"
+                   android:textSize="20sp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="@string/crf5b_q33_urdu"
+                   android:textSize="20sp" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="0.1"/>
+
+           <RadioGroup
+               android:id="@+id/rg_q33"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:layout_weight="0.6">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="1"
+                   android:text="@string/yes"
+                   android:textColor="@color/black" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="2"
+                   android:text="@string/no"
+                   android:textColor="@color/black" />
+
+           </RadioGroup>
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //Q34
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2.3"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/tv_q34"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/crf5b_q34_english"
+                   android:textColor="@color/black"
+                   android:textSize="20sp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="@string/crf5b_q34_urdu"
+                   android:textSize="20sp" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="0.1"/>
+
+           <RadioGroup
+               android:id="@+id/rg_q34"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:layout_weight="0.6">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="1"
+                   android:text="@string/crf5b_q34_a_english"
+                   android:textColor="@color/black" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="2"
+                   android:text="@string/crf5b_q34_b_english"
+                   android:textColor="@color/black" />
+
+           </RadioGroup>
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q35
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q35"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q35_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q35_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q35"
+                   android:maxLength="2"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q36
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q36"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q36_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q36_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q36"
+                   android:maxLength="2"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q37
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q37"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q37_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q37_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q37"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q38
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q38"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q38_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q38_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q38"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //Q39
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2.3"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/tv_q39"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/crf5b_q39_english"
+                   android:textColor="@color/black"
+                   android:textSize="20sp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="@string/crf5b_q39_urdu"
+                   android:textSize="20sp" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="0.1"/>
+
+           <RadioGroup
+               android:id="@+id/rg_q39"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:layout_weight="0.6">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="1"
+                   android:text="@string/yes"
+                   android:textColor="@color/black" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="2"
+                   android:text="@string/no"
+                   android:textColor="@color/black" />
+
+           </RadioGroup>
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q40
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q40"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q40_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q40_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q40"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q41
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q41"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q41_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q41_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q41"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q42
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q42"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q42_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q42_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q42"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q43
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q43"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q43_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q43_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q43"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //Q44
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2.3"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/tv_q44"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/crf5b_q44_english"
+                   android:textColor="@color/black"
+                   android:textSize="20sp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="@string/crf5b_q44_urdu"
+                   android:textSize="20sp" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="0.1"/>
+
+           <RadioGroup
+               android:id="@+id/rg_q44"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:layout_weight="0.6">
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="1"
+                   android:text="@string/yes"
+                   android:textColor="@color/black" />
+
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tag="2"
+                   android:text="@string/no"
+                   android:textColor="@color/black" />
+
+           </RadioGroup>
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q45
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q45"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q45_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q45_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q45"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q46
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q46"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q46_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q46_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q46"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q47
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q47"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q47_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q47_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q47"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/black" />
+
+       //q48
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_weight="1.3"
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tv_q48"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q48_english"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:textSize="20sp"
+                   android:text="@string/crf5b_q48_urdu"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_weight="0.1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+
+           <RelativeLayout
+
+               android:layout_weight="0.6"
+               android:layout_gravity="center_vertical"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content">
+
+               <EditText
+                   android:id="@+id/et_q43"
+                   android:maxLength="3"
+                   android:inputType="number"
+                   android:hint="Enter"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+
+
+
+   </LinearLayout>
+
+
+</ScrollView>

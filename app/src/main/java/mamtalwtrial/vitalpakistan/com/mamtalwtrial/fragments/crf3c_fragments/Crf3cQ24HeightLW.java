@@ -23,9 +23,10 @@ import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CounselingCRF1Activity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf1_fragments.PwOtherDataFragment3;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.HeightLwCrf3cDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.WeightLwCrf3cDTO;
 
 public class Crf3cQ24HeightLW extends Fragment {
@@ -68,6 +69,14 @@ public class Crf3cQ24HeightLW extends Fragment {
         et_readerId_1 = (EditText) view.findViewById(R.id.et_readerId_1);
         et_readerId_2 = (EditText) view.findViewById(R.id.et_readerId_2);
 
+
+        et_readerId_1.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode1());
+        et_readerId_1.setEnabled(false);
+
+        et_readerId_2.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode2());
+        et_readerId_2.setEnabled(false);
+
+
         tv_ass_id = (TextView) view.findViewById(R.id.tv_ass_id);
 
         ll_muac1 = (LinearLayout) view.findViewById(R.id.ll_muac1);
@@ -106,10 +115,10 @@ public class Crf3cQ24HeightLW extends Fragment {
 
                     //   if(avrageVal!=-1 && (avrageVal>=16 && avrageVal<24)){
 
-                    Crf3cQ26LwMuac crf3cQ26LwMuac = new Crf3cQ26LwMuac();
+                    Crf3cQ28 crf3cQ28 = new Crf3cQ28();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_layout_crf3c, crf3cQ26LwMuac);
+                    fragmentTransaction.replace(R.id.frame_layout_crf3c, crf3cQ28);
                     fragmentTransaction.commit();
 
   /*                  PwOtherDataFragment3 pwOtherDataFragment3 = new PwOtherDataFragment3();
@@ -153,7 +162,7 @@ public class Crf3cQ24HeightLW extends Fragment {
                 }
 
 
-                CRF1Activity.turnId = turn;
+           //     CRF2Activity.turnId = turn;
             }
         });
 
@@ -273,6 +282,8 @@ public class Crf3cQ24HeightLW extends Fragment {
                 avrageVal = Double.parseDouble( new DecimalFormat("##.#").format(temp1));
                 tv_averageMAUC.setText(avrageVal + "");
 
+                CRF3cActivity.formCrf3cDTO.setQ25(avrageVal + "");
+
             } else {
 
                 tv.setText(difference + "");
@@ -289,7 +300,7 @@ public class Crf3cQ24HeightLW extends Fragment {
                 }
                 if (turn == 5) {
 
-                    myCustomeDialog(1);
+                 //   myCustomeDialog(1);
 
                 }
 
@@ -420,15 +431,15 @@ public class Crf3cQ24HeightLW extends Fragment {
 
     public void dataInsertInForm(){
 
-        List<WeightLwCrf3cDTO> weightLwCrf3cDTOS = new ArrayList<WeightLwCrf3cDTO>();
+        List<HeightLwCrf3cDTO> heightLwCrf3cDTOS = new ArrayList<HeightLwCrf3cDTO>();
 
-        if(turn>=1){ weightLwCrf3cDTOS.add(getWeightLwObject(1,et_r1_mauc1,et_r2_mauc1)); }
-        if(turn>=2){ weightLwCrf3cDTOS.add(getWeightLwObject(2,et_r1_mauc2,et_r2_mauc2)); }
-        if(turn>=3){ weightLwCrf3cDTOS.add(getWeightLwObject(3,et_r1_mauc3,et_r2_mauc3)); }
-        if(turn>=4){ weightLwCrf3cDTOS.add(getWeightLwObject(4,et_r1_mauc4,et_r2_mauc4)); }
+        if(turn>=1){ heightLwCrf3cDTOS.add(getWeightLwObject(1,et_r1_mauc1,et_r2_mauc1)); }
+        if(turn>=2){ heightLwCrf3cDTOS.add(getWeightLwObject(2,et_r1_mauc2,et_r2_mauc2)); }
+        if(turn>=3){ heightLwCrf3cDTOS.add(getWeightLwObject(3,et_r1_mauc3,et_r2_mauc3)); }
+        if(turn>=4){ heightLwCrf3cDTOS.add(getWeightLwObject(4,et_r1_mauc4,et_r2_mauc4)); }
 
-        CRF3cActivity.formCrf3cDTO.setWeightLwCrf3c(weightLwCrf3cDTOS);
-        CRF3cActivity.formCrf3cDTO.setQ23(avrageVal+"");
+        CRF3cActivity.formCrf3cDTO.setHeightLwCrf3c(heightLwCrf3cDTOS);
+       // CRF3cActivity.formCrf3cDTO.setQ23(avrageVal+"");
     }
 
     public float getTextFromField(EditText et){
@@ -436,18 +447,18 @@ public class Crf3cQ24HeightLW extends Fragment {
         return  Float.parseFloat(et.getText().toString());
     }
 
-    public WeightLwCrf3cDTO getWeightLwObject(int id ,EditText et_1, EditText et_2){
+    public HeightLwCrf3cDTO getWeightLwObject(int id ,EditText et_1, EditText et_2){
 
-        WeightLwCrf3cDTO weightLwCrf3cDTO = new WeightLwCrf3cDTO();
+        HeightLwCrf3cDTO heightLwCrf3cDTO = new HeightLwCrf3cDTO();
 
-        weightLwCrf3cDTO.setReader1(getTextFromField(et_1));
-        weightLwCrf3cDTO.setReader2(getTextFromField(et_2));
-        //  muacAssesment.setReaderCode1(et_readerId_1.getText().toString());
-        //  muacAssesment.setReaderCode2(et_readerId_2.getText().toString());
-        weightLwCrf3cDTO.setId(id);
-        weightLwCrf3cDTO.setDifference(getTextFromField(et_1)-getTextFromField(et_2));
+        heightLwCrf3cDTO.setReader1(getTextFromField(et_1));
+        heightLwCrf3cDTO.setReader2(getTextFromField(et_2));
+        heightLwCrf3cDTO.setReaderCode1(et_readerId_1.getText().toString());
+        heightLwCrf3cDTO.setReaderCode2(et_readerId_2.getText().toString());
+        heightLwCrf3cDTO.setId(id);
+        heightLwCrf3cDTO.setDifference(getTextFromField(et_1)-getTextFromField(et_2));
 
-        return weightLwCrf3cDTO;
+        return heightLwCrf3cDTO;
     }
 
 

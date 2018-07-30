@@ -12,6 +12,19 @@ public class FollowupDetails {
     private String structure; //lw_crf_1_14
     private String householdOrFamily; //lw_crf_1_15
     private Integer womanNumber;//lw_crf_1_16
+    private Integer endDate;
+    private String dateOfBirth;
+    private String timeOfBirth;
+
+    private String lmp; //CRF1 q26
+
+    public String getLmp() {
+        return lmp;
+    }
+
+    public void setLmp(String lmp) {
+        this.lmp = lmp;
+    }
 
     public String getAssistId() {
         return assistId;
@@ -83,5 +96,29 @@ public class FollowupDetails {
 
     public void setWomanNumber(Integer womanNumber) {
         this.womanNumber = womanNumber;
+    }
+
+    public Integer getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Integer endDate) {
+        this.endDate = endDate;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getTimeOfBirth() {
+        return timeOfBirth;
+    }
+
+    public void setTimeOfBirth(String timeOfBirth) {
+        this.timeOfBirth = timeOfBirth;
     }
 }

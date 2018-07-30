@@ -29,6 +29,8 @@ public class DashboardActivity extends AppCompatActivity {
 
     int a =0;
 
+    String getSite;
+
     //toolbar
     TextView tv_headingText, tv_incom_form, tv_com_form, tv_com_task, tv_total_visit, tv_nEligble;
 
@@ -36,6 +38,9 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        Intent intent = getIntent();
+        getSite =  intent.getStringExtra("site");
 
         sharedPreferences1  = getSharedPreferences("incomp",DashboardActivity.MODE_PRIVATE);
         sharedPreferences2  = getSharedPreferences("comp",DashboardActivity.MODE_PRIVATE);
@@ -64,12 +69,22 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(DashboardActivity.this,CRF1Activity.class));
+                startActivity(new Intent(DashboardActivity.this,CRF1Activity.class).putExtra("site", getSite));
                  finish();
             }
         });
 
         a =  SaveAndReadInternalData.isDataAvailable(DashboardActivity.this);
+
+        if(UserLoginActivity.strUser==null){
+
+            SharedPreferences sharedPreferences = getSharedPreferences("Values",DashboardActivity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("IsLogin", false);
+            editor.commit();
+
+            startActivity(new Intent(DashboardActivity.this,UserLoginActivity.class));
+        }
 
         btnlogOut = (Button) findViewById(R.id.btnlogOut);
         btnlogOut.setText("Logout \n "+UserLoginActivity.strUser);

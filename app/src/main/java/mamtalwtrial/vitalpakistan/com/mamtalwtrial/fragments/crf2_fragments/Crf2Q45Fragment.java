@@ -30,6 +30,8 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2DashboargActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormsCrf2AndCrf3All;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 
 
@@ -42,6 +44,8 @@ public class Crf2Q45Fragment extends Fragment {
     TextView tv_engText,tv_RomanEngText;
     Dialog dialog;
 
+    EditText et_q47, et_q48;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,6 +54,9 @@ public class Crf2Q45Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_crf2_q45, container,false);
 
         btn_submitCrf2 = (Button) view.findViewById(R.id.btn_submitCrf2);
+
+        et_q47 = (EditText) view.findViewById(R.id.et_q47);
+        et_q48 = (EditText) view.findViewById(R.id.et_q48);
 
         cb_45_1 = (CheckBox) view.findViewById(R.id.cb_Q45_1);
         cb_45_2 = (CheckBox) view.findViewById(R.id.cb_Q45_2);
@@ -121,6 +128,7 @@ public class Crf2Q45Fragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
+                et_q47.setVisibility(View.GONE);
                 if(isChecked){
 
                     cb_47_2.setChecked(false);
@@ -134,6 +142,7 @@ public class Crf2Q45Fragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
+                et_q47.setVisibility(View.VISIBLE);
                 if(isChecked){
 
                     cb_47_1.setChecked(false);
@@ -147,6 +156,7 @@ public class Crf2Q45Fragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
+                et_q48.setVisibility(View.GONE);
                 if(isChecked){
 
                     cb_48_2.setChecked(false);
@@ -159,6 +169,7 @@ public class Crf2Q45Fragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
+                et_q48.setVisibility(View.VISIBLE);
                 if(isChecked){
 
                     cb_48_1.setChecked(false);
@@ -228,7 +239,18 @@ public class Crf2Q45Fragment extends Fragment {
 
                 if(validation()){
 
-                   myCustomeDialog();
+                    if(!et_q47.getText().toString().equals("") || !et_q48.getText().toString().equals("")){
+
+                        insertDataInForm();
+                        SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
+                        startActivity(new Intent(getActivity(),CRF2DashboargActivity.class));
+                        getActivity().finish();
+                    }else {
+
+                        myCustomeDialog();
+                    }
+
+
 
                 }else {
                     Log.d("00000","woring000000");
@@ -271,14 +293,39 @@ public class Crf2Q45Fragment extends Fragment {
             b = false;
         }
 
+        if(et_q47.getVisibility()==View.VISIBLE && !et_q47.getText().toString().equals("")){
+
+            if(et_q47.getText().equals("")){
+
+                et_q47.setError("Required");
+                b = false;
+            }
+
+
+
+        }
+
+        if(et_q48.getVisibility()==View.VISIBLE ){
+
+            if(et_q48.getText().toString().equals("")){
+
+                et_q48.setError("Required");
+                b = false;
+
+            }
+
+
+        }
+
+
         return b;
     }
 
     public String getCheckBoxResult(CheckBox cb1, CheckBox cb2){
 
-        if(cb1.isChecked()){return "YES";}
-        else if(cb2.isChecked()){return "NO";}
-        else {return "x";}
+        if(cb1.isChecked()){return ContantsValues.YES;}
+        else if(cb2.isChecked()){return ContantsValues.NO;}
+        else {return null;}
 
     }
 
@@ -319,8 +366,14 @@ public class Crf2Q45Fragment extends Fragment {
 
                 insertDataInForm();
 
-               SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
-                startActivity(new Intent(getContext(), CRF3Activity.class).putExtra("pwData",new Gson().toJson(CRF2Activity.formCrf2DTO.getPregnantWoman())));
+                CRF2Activity.formCrf2DTO.setTimeOfEnd(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                FormsCrf2AndCrf3All formsCrf2AndCrf3All = new FormsCrf2AndCrf3All();
+                formsCrf2AndCrf3All.setCrf2Status(Constants.COMPLETED);
+                formsCrf2AndCrf3All.setFormCrf2DTO(CRF2Activity.formCrf2DTO);
+
+                //  SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
+                startActivity(new Intent(getContext(), CRF3Activity.class).putExtra("forms",new Gson().toJson(formsCrf2AndCrf3All)));
                 getActivity().finish();
 
             }

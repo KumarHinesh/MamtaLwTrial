@@ -2,12 +2,15 @@ package mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3b;
 
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 
 public class FormCrf3bDTO {
 
     private Integer id;
     private PregnantWomanDTO pregnantWoman;
     private StudiesDTO studies;
+    private TeamDTO team;
+
 
     private String q2;
     private String q3;
@@ -32,6 +35,15 @@ public class FormCrf3bDTO {
     private String q29b;
     private String q29c;
     private String q29d;
+
+    public TeamDTO getTeam() {
+        return team;
+    }
+
+    public void setTeam(TeamDTO team) {
+        this.team = team;
+    }
+
     private String q29e;
     private String q30;
     private String q31;
@@ -215,7 +227,7 @@ public class FormCrf3bDTO {
     private String q75i;
     private String q75j;
     private String q75k;
-    private String lw_crfb_75l;
+    private String q75l;
     private String q75m;
     private String q76;
     private String q77a;
@@ -294,6 +306,14 @@ public class FormCrf3bDTO {
     private String q105c;
     private String q105d;
     private String q106;
+
+    public String getQ75l() {
+        return q75l;
+    }
+
+    public void setQ75l(String q75l) {
+        this.q75l = q75l;
+    }
 
     public Integer getId() {
         return id;
@@ -1958,14 +1978,6 @@ public class FormCrf3bDTO {
 
     public void setQ75k(String q75k) {
         this.q75k = q75k;
-    }
-
-    public String getLw_crfb_75l() {
-        return lw_crfb_75l;
-    }
-
-    public void setLw_crfb_75l(String lw_crfb_75l) {
-        this.lw_crfb_75l = lw_crfb_75l;
     }
 
     public String getQ75m() {

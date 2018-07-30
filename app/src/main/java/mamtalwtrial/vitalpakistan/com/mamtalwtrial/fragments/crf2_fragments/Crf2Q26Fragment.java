@@ -17,18 +17,22 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2DashboargActivity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf1_fragments.PwOtherDataFragment3;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf2_fragments.Crf2BabyWeightFragment;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.MuacAssesmentDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.ArmReadingDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 
 public class Crf2Q26Fragment extends Fragment {
@@ -51,7 +55,7 @@ public class Crf2Q26Fragment extends Fragment {
     Button btn_q26_maucSubmit;
 
     TextView tv_babyHour;
-    float avrageVal = -1;
+    double avrageVal = -1;
 
     LinearLayout[] listOfLayout;
     LinearLayout ll_muac1, ll_muac2, ll_muac3, ll_muac4;
@@ -63,6 +67,13 @@ public class Crf2Q26Fragment extends Fragment {
 
         et_readerId_1 = (EditText) view.findViewById(R.id.et_readerId_1);
         et_readerId_2 = (EditText) view.findViewById(R.id.et_readerId_2);
+
+      /*  et_readerId_1.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode1());
+        et_readerId_1.setEnabled(false);
+
+        et_readerId_2.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode2());
+        et_readerId_2.setEnabled(false);
+      */
 
         tv_ass_id = (TextView) view.findViewById(R.id.tv_ass_id);
 
@@ -98,7 +109,7 @@ public class Crf2Q26Fragment extends Fragment {
         et_r1_mauc1 = (EditText)  view.findViewById(R.id.et_r1_mauc1);
 
 
-        if(CRF2Activity.babyHour<=72){
+        if(CRF2Activity.babyHour<=168){
             tv_babyHour.setTextColor(Color.GREEN);
         }else {
             tv_babyHour.setTextColor(Color.RED);
@@ -114,8 +125,7 @@ public class Crf2Q26Fragment extends Fragment {
 
                     dataInsertInForm();
 
-                    if(avrageVal!=-1 && (avrageVal>=16 && avrageVal<24)){
-
+                    if(avrageVal<23){
 
                         Crf2BabyWeightFragment crf2BabyWeightFragment = new Crf2BabyWeightFragment();
                         FragmentManager fragmentManager = getFragmentManager();
@@ -132,9 +142,6 @@ public class Crf2Q26Fragment extends Fragment {
                     }
 
                 }
-
-
-
 
             }
         });
@@ -210,7 +217,6 @@ public class Crf2Q26Fragment extends Fragment {
 
         }
 
-
         return b;
     }
 
@@ -241,7 +247,12 @@ public class Crf2Q26Fragment extends Fragment {
 
                 btn_checkReading.setClickable(false);
                 btn_checkReading.setBackgroundResource(R.drawable.button_shape_green);
-                avrageVal = (f1 + f2) / 2;
+
+                float temp1 = (f1 + f2) / 2;
+
+                avrageVal = Double.parseDouble( new DecimalFormat("##.#").format(temp1));
+
+
                 tv_averageMAUC.setText(avrageVal + "");
 
 
@@ -269,7 +280,7 @@ public class Crf2Q26Fragment extends Fragment {
 
         }
 
-        if(avrageVal<23){tv_yesNO.setText("YES"); CRF2Activity.formCrf2DTO.setQ31("YES");}else {tv_yesNO.setText("NO"); CRF2Activity.formCrf2DTO.setQ31("NO");}
+        if(avrageVal<23){tv_yesNO.setText("YES"); CRF2Activity.formCrf2DTO.setQ31(ContantsValues.YES);}else {tv_yesNO.setText("NO"); CRF2Activity.formCrf2DTO.setQ31(ContantsValues.NO);}
 
     }//end CheckReadingEditText
 
@@ -313,7 +324,7 @@ public class Crf2Q26Fragment extends Fragment {
 
                 CRF2Activity.formCrf2DTO.setFormStatus(Constants.COMPLETED);
                 SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
-                startActivity(new Intent(getContext(), DashboardActivity.class));
+                startActivity(new Intent(getContext(), CRF2DashboargActivity.class));
                 getActivity().finish();
 
             }

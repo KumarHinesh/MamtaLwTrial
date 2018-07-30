@@ -27,6 +27,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2DashboargActiv
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 
 
 public class Crf2GetDeathDateFragment extends Fragment {
@@ -129,6 +130,7 @@ public class Crf2GetDeathDateFragment extends Fragment {
 
                 dialog.dismiss();
                 CRF2Activity.formCrf2DTO.setFormStatus(Constants.COMPLETED);
+                SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
                 startActivity(new Intent(getContext(), CRF2DashboargActivity.class));
                 getActivity().finish();
                 }

@@ -40,7 +40,7 @@ public class UserLoginActivity extends AppCompatActivity {
 
     ProgressDialog progressDialog;
 
-    SharedPreferences sharedpreferences1, sharedpreferences2, sharedpreferences3, sharedpreferences, sharedpreferences4, spreferencesTeamId;
+    SharedPreferences sharedpreferences1, sharedpreferences2, sharedpreferences3, sharedpreferences, sharedpreferences4, spreferencesTeamId, spreferencesTeamId5;
 
     static  String strUser;
     Button btnUserLogin;
@@ -52,15 +52,17 @@ public class UserLoginActivity extends AppCompatActivity {
     Set<String>  set;
 
     @Override
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
 
         progressDialog = new ProgressDialog(UserLoginActivity.this);
-       // startActivity(new Intent(UserLoginActivity.this,CRF3Activity.class));
+   //     startActivity(new Intent(UserLoginActivity.this,CRF3bActivity.class));
         //startActivity(new Intent(UserLoginActivity.this,CRF2DashboargActivity.class));
-       // startActivity(new Intent(UserLoginActivity.this,CRF3cActivity.class));
-     //   startActivity(new Intent(UserLoginActivity.this,CRF3bActivity.class));
+       //startActivity(new Intent(UserLoginActivity.this,CRF3cActivity.class));
+      //  startActivity(new Intent(UserLoginActivity.this,CRF4aActivity.class));
       //  this.finish();
         spreferencesTeamId = getSharedPreferences("teamId",
                 UserLoginActivity.MODE_PRIVATE);
@@ -74,7 +76,8 @@ public class UserLoginActivity extends AppCompatActivity {
                 UserLoginActivity.MODE_PRIVATE);
         sharedpreferences4 = getSharedPreferences("notEligble",
                 UserLoginActivity.MODE_PRIVATE);
-
+        spreferencesTeamId5 = getSharedPreferences("site",
+                UserLoginActivity.MODE_PRIVATE);
 
         if (sharedpreferences.getBoolean("IsLogin",false)) {
 
@@ -102,6 +105,11 @@ public class UserLoginActivity extends AppCompatActivity {
             SharedPreferences.Editor editor4 = sharedpreferences4.edit();
             editor4.putInt("val",0);
             editor4.commit();
+
+            SharedPreferences.Editor editor5 = spreferencesTeamId5.edit();
+            editor5.putString("val","");
+            editor5.commit();
+
 
         }
 
@@ -152,7 +160,6 @@ public class UserLoginActivity extends AppCompatActivity {
         //final FormCrf1DTO dto;
         mAPIService.userLogin(team).enqueue(new Callback<LoginDTO>() {
 
-
             @Override
             public void onResponse(Call<LoginDTO> call, Response<LoginDTO> response) {
 
@@ -193,7 +200,10 @@ public class UserLoginActivity extends AppCompatActivity {
                                     SharedPreferences.Editor editor = sharedpreferences.edit();
                                     editor.putBoolean("IsLogin",true);
                                     editor.commit();
-                                    startActivity(new Intent(UserLoginActivity.this,DashboardActivity.class));
+                                    SharedPreferences.Editor editor7 = spreferencesTeamId5.edit();
+                                    editor7.putString("val",loginDTO.getSite().toString());
+                                    editor7.commit();
+                                    startActivity(new Intent(UserLoginActivity.this,DashboardActivity.class).putExtra("site", loginDTO.getSite()));
                                     finish();
                                     break;
 

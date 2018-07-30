@@ -21,7 +21,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.UserLoginActivity"
@@ -49,6 +48,8 @@
         </activity>
         <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity" />
         <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.TestingActivity" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard" />
     </application>
 
 </manifest>

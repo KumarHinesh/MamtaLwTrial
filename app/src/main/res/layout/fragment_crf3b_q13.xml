@@ -307,6 +307,7 @@
             android:background="@color/black"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"/>
+
         <LinearLayout
             android:layout_marginTop="10dp"
             android:weightSum="2"
@@ -321,6 +322,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q15"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:text="How many people live in household?"
@@ -380,6 +382,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q16"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:text="How many rooms are in the household for sleeping?"
@@ -405,7 +408,7 @@
 
                 <EditText
                     android:id="@+id/et_q16"
-                    android:maxLength="1"
+                    android:maxLength="2"
                     android:inputType="number"
                     android:hint="Enter No"
                     android:layout_width="match_parent"
@@ -469,7 +472,7 @@
 
                 <RadioButton
                     android:id="@+id/rb_q17_a"
-                    android:tag="y"
+                    android:tag="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -478,7 +481,7 @@
 
                 <RadioButton
                     android:id="@+id/rb_q17_b"
-                    android:tag="n"
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -487,7 +490,7 @@
 
                 <RadioButton
                     android:id="@+id/rb_q17_c"
-                    android:tag="dk"
+                    android:tag="9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -706,14 +709,14 @@
                     android:layout_height="wrap_content" />
 
                 <RadioButton
-                    android:tag="5"
+                    android:tag="9"
                     android:id="@+id/rb_q19_e"
                     android:text="Don’t know (Pata nahi)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
-                    android:tag="6"
+                    android:tag="5"
                     android:id="@+id/rb_q19_f"
                     android:text="Other (specify)(Koi aur cheez us ka naam likhain)"
                     android:layout_width="wrap_content"
@@ -815,7 +818,7 @@
                     android:layout_height="wrap_content" />
 
                 <RadioButton
-                    android:tag="5"
+                    android:tag="9"
                     android:id="@+id/rb_q20_e"
                     android:text="Don’t know (Pata nahi)"
                     android:layout_width="wrap_content"
@@ -1062,7 +1065,8 @@
             android:layout_height="0.5dp"/>
 
         <LinearLayout
-
+            android:id="@+id/ll_q23"
+            android:visibility="gone"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -1353,7 +1357,7 @@
                 <RadioButton
                     android:tag="8"
                     android:id="@+id/rb_q24_h"
-                    android:text="Other (Specify) (Koi aur cheez us ka naam likhain)"
+                    android:text="Any Other (Specify) (Koi aur cheez us ka naam likhain)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -1395,9 +1399,11 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q25"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:text="Age of the woman in years"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -1413,6 +1419,7 @@
 
                 <EditText
                     android:id="@+id/et_q25"
+                    android:maxLength="2"
                     android:layout_weight="0.6"
                     android:inputType="number"
                     android:hint="Enter Years"
@@ -1654,27 +1661,29 @@
                     android:layout_height="wrap_content">
 
                     <RadioButton
-                        android:tag="1"
+                        android:tag="99"
                         android:id="@+id/rb_q28_a"
                         android:text="do not know (Pata nahi) "
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                     <RadioButton
-                        android:tag="2"
+                        android:tag="88"
                         android:id="@+id/rb_q28_b"
                         android:text="reluctant to respond (Jawab nahi daina chahti)"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                     <RadioButton
-                        android:tag="3"
+                        android:tag="1"
                         android:id="@+id/rb_q28_c"
                         android:text="Yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                     <EditText
+                        android:maxLength="2"
+                        android:inputType="number"
                         android:visibility="gone"
                         android:id="@+id/et_q28"
                         android:layout_width="match_parent"

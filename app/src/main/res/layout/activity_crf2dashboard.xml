@@ -38,6 +38,7 @@
             />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_block"
             android:maxLength="2"
             android:layout_weight="1"
@@ -49,6 +50,7 @@
             android:layout_height="wrap_content"
             />
         <EditText
+            android:inputType="number"
             android:id="@+id/et_structure"
             android:maxLength="3"
             android:layout_weight="1"
@@ -74,11 +76,11 @@
 
 
     <ListView
+
         android:layout_below="@+id/ll_temp"
         android:id="@+id/lv_womanList"
         android:layout_width="match_parent"
-        android:layout_height="290dp">
-
+        android:layout_height="350dp">
 
     </ListView>
 
@@ -88,6 +90,7 @@
 
         android:id="@+id/btn_randTeam_task"
         android:textStyle="bold"
+        android:enabled="false"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textSize="18sp"

@@ -3,6 +3,7 @@ package mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c;
 
 import java.util.List;
 
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3b.StudiesDTO;
 
@@ -18,7 +19,27 @@ public class FormCrf3cDTO {
     private List<MuacLwCrf3cDTO> muacLwCrf3c;
     private List<WeightLwCrf3cDTO> weightLwCrf3c;
 
+    private PregnantWomanDTO pregnantWoman;
+
+    private String counsilStartTime;
+    private String counsilEndTime;
     private Integer id;
+
+    public String getCounsilStartTime() {
+        return counsilStartTime;
+    }
+
+    public void setCounsilStartTime(String counsilStartTime) {
+        this.counsilStartTime = counsilStartTime;
+    }
+
+    public String getCounsilEndTime() {
+        return counsilEndTime;
+    }
+
+    public void setCounsilEndTime(String counsilEndTime) {
+        this.counsilEndTime = counsilEndTime;
+    }
 
     private String q2;
     private String q3;
@@ -360,5 +381,13 @@ public class FormCrf3cDTO {
 
     public void setWeightLwCrf3c(List<WeightLwCrf3cDTO> weightLwCrf3c) {
         this.weightLwCrf3c = weightLwCrf3c;
+    }
+
+    public PregnantWomanDTO getPregnantWoman() {
+        return pregnantWoman;
+    }
+
+    public void setPregnantWoman(PregnantWomanDTO pregnantWoman) {
+        this.pregnantWoman = pregnantWoman;
     }
 }

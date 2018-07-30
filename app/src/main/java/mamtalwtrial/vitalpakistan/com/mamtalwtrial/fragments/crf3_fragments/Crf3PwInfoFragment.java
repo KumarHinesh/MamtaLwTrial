@@ -72,6 +72,8 @@ public class Crf3PwInfoFragment extends Fragment {
 
         listView = (ListView) view.findViewById(R.id.lvStatus);
 
+       // CRF3Activity.formCrf3aDTO.setQ15();
+       // CRF3Activity.formCrf3aDTO.setQ16();
         listView.setAdapter(statusListAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

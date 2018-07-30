@@ -7,6 +7,14 @@
     tools:context=".activities.CRF4aActivity">
 
 
+    <FrameLayout
+        android:id="@+id/frame-layout4a"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
+
 
 
 

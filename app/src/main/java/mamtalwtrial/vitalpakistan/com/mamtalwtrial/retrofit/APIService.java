@@ -8,6 +8,8 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.SearchResult;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.FormCrf2DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3a.FormCrf3aDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3b.FormCrf3bDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.FormCrf3cDTO;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -24,6 +26,12 @@ public interface APIService {
 
     @POST("form/crf/3a/save")
     Call<FormCrf3aDTO> postCrf3a(@Body FormCrf3aDTO body);
+
+    @POST("form/crf/3b/save")
+    Call<FormCrf3bDTO> postCrf3b(@Body FormCrf3bDTO body);
+
+    @POST("form/crf/3c/save")
+    Call<FormCrf3cDTO> postCrf3c(@Body FormCrf3cDTO body);
 
     @POST("user/login")
     Call<LoginDTO> userLogin(@Body TeamDTO body);

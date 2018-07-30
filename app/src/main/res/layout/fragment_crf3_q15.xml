@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrolView"
     android:orientation="vertical"
     android:layout_marginTop="20dp"
     android:layout_marginLeft="40dp"
@@ -15,14 +16,61 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/et_q17"
-        android:inputType="number"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"
-        android:hint="Enter Serial number mentioned on the envelope"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/et_q17"
+                android:maxLength="3"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Enter Serial number mentioned on the envelope"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+
+
+
+            <EditText
+                android:id="@+id/et_q18"
+                android:maxLength="6"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Enter Randomization Id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/et_q26"
+                android:maxLength="3"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Enter Block Identifier"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/et_q27"
+                android:maxLength="3"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Enter Sequence within block"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+
+
+        </LinearLayout>
+
 
 
 
@@ -39,8 +87,10 @@
 
             <TextView
                 android:textSize="18sp"
-                android:text="Randomization arm"               android:textColor="@color/black"
-               android:layout_width="wrap_content"
+                android:id="@+id/tv_q19"
+                android:text="Randomization arm"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -109,6 +159,7 @@
 
 
         <TextView
+            android:id="@+id/tv_q20"
             android:textSize="20sp"
             android:layout_weight="1.3"
             android:textColor="@color/black"
@@ -131,7 +182,7 @@
 
             <RadioButton
                 android:id="@+id/rb_q20_a"
-                android:tag="yes"
+                android:tag="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
@@ -139,7 +190,7 @@
                 />
 
             <RadioButton
-                android:tag="yes"
+                android:tag="2"
                 android:id="@+id/rb_q20_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -161,6 +212,8 @@
         android:layout_height="0.5dp"/>
 
 
+
+
        <LinearLayout
            android:orientation="horizontal"
            android:weightSum="2"
@@ -175,6 +228,7 @@
                android:layout_height="match_parent">
 
                <TextView
+                   android:id="@+id/tv_q22"
                    android:textSize="20sp"
                    android:textColor="@color/black"
                    android:layout_width="match_parent"
@@ -211,28 +265,20 @@
 
                    <RadioButton
                        android:id="@+id/rb_q22_a"
-                       android:tag="yes"
+                       android:tag="1"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="YES"
                        />
 
                    <RadioButton
-                       android:tag="no"
+                       android:tag="2"
                        android:id="@+id/rb_q22_b"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="NO"
                        />
 
-                   <EditText
-                       android:visibility="gone"
-                       android:id="@+id/et_q22"
-                       android:hint="Enter Here"
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-
-                       />
 
                </RadioGroup>
 
@@ -251,6 +297,60 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"/>
 
+
+        <LinearLayout
+            android:id="@+id/ll_q23"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_q23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If there was a delay of more than 1 hour between completing inclusion/exclusion criteria and randomization, please give reason(s)"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agar takheer ka durania 1 ghantay sa zayda ha inlcuion/exclusion or randomization k beech ma tu us k waja likhain"
+                    />
+
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/et_q23"
+                android:hint="Enter Here"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+
+
         <LinearLayout
             android:visibility="visible"
             android:id="@+id/ll_q24"
@@ -260,7 +360,7 @@
 
             <TextView
                 android:layout_centerVertical="true"
-                android:id="@+id/Tv_dummy"
+                android:id="@+id/t"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:layout_width="match_parent"

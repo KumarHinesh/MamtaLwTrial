@@ -113,7 +113,7 @@ public class Crf2WomeninfoFragment1 extends Fragment {
 
                 if(visitStatus !=-1){
 
-
+                CRF2Activity.formCrf2DTO.setQ17(visitStatus+"");
                     if(visitStatus==0){
 
                         CRF2TypeOfPregnancyFragment crf2TypeOfPregnancyFragment = new CRF2TypeOfPregnancyFragment();
@@ -181,6 +181,7 @@ public class Crf2WomeninfoFragment1 extends Fragment {
 
                     CRF2Activity.formCrf2DTO.setFormStatus(Constants.INCOMPLETE);
                     CRF2Activity.formCrf2DTO.setVisitStatus(visitStatus);
+                   // CRF2Activity.formCrf2DTO.setVisitStatus();
                     SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
                     startActivity(new Intent(getContext(), CRF2DashboargActivity.class));
                     getActivity().finish();

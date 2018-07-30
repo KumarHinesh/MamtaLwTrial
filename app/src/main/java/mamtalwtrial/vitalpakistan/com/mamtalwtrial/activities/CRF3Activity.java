@@ -11,6 +11,7 @@ import java.util.Calendar;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3_fragments.Crf3PwInfoFragment;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormsCrf2AndCrf3All;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3a.FormCrf3aDTO;
@@ -21,13 +22,18 @@ public class CRF3Activity extends AppCompatActivity {
     public  static FormCrf3aDTO formCrf3aDTO;
     PregnantWomanDTO pregnantWomanDTO;
 
+    public static FormsCrf2AndCrf3All formsCrf2AndCrf3All;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crf3);
 
+        formsCrf2AndCrf3All = new Gson().fromJson(getIntent().getStringExtra("forms"),FormsCrf2AndCrf3All.class);
+
         formCrf3aDTO = new FormCrf3aDTO();
-        pregnantWomanDTO = new Gson().fromJson(getIntent().getStringExtra("pwData"),PregnantWomanDTO.class);
+
+        pregnantWomanDTO = formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman();
 
         formCrf3aDTO.setPregnantWoman(pregnantWomanDTO);
 

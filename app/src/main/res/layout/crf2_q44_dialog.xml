@@ -27,7 +27,7 @@
                 android:layout_weight="1.5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Live birth captured within 72 hours"/>
+                android:text="Live birth captured within 168 hours"/>
 
             <ImageView
                 android:id="@+id/iv_1"

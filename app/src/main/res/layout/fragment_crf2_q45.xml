@@ -250,7 +250,7 @@
             <LinearLayout
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0.8"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
 
@@ -259,43 +259,61 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <TextView
-                        android:textColor="@color/black"
+                    <LinearLayout
+                        android:orientation="horizontal"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes"/>
+                        android:layout_height="wrap_content">
 
-                    <CheckBox
-                        android:id="@+id/cb_Q47_1"
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_Q47_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:orientation="horizontal"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content">
 
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_Q47_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
 
 
                 </LinearLayout>
 
-                <LinearLayout
-
-                    android:orientation="horizontal"
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/et_q47"
+                    android:hint="Enter Reason"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_Q47_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-
-
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    />
 
             </LinearLayout>
+
+
 
 
         </LinearLayout>
@@ -357,50 +375,67 @@
                 <LinearLayout
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.8"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:textColor="@color/black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Yes"/>
 
-                        <CheckBox
-                            android:id="@+id/cb_Q48_1"
+                        <LinearLayout
+                            android:orientation="horizontal"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content">
 
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yes"/>
+
+                            <CheckBox
+                                android:id="@+id/cb_Q48_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"/>
+
+                            <CheckBox
+                                android:id="@+id/cb_Q48_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+
+
+                        </LinearLayout>
 
 
                     </LinearLayout>
 
-                    <LinearLayout
-
-                        android:orientation="horizontal"
+                    <EditText
+                        android:visibility="gone"
+                        android:id="@+id/et_q48"
+                        android:hint="Enter Reason"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:textColor="@color/black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="No"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_Q48_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-
-
-                    </LinearLayout>
+                        android:layout_height="wrap_content"
+                        />
 
                 </LinearLayout>
 
@@ -619,7 +654,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:text="sUBMIT"
+            android:text="sUBMIT CRF-2"
             android:background="@drawable/button_shape_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

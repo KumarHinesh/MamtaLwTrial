@@ -1,7 +1,6 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf1_fragments;
 
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,20 +9,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.AlphabetIndexer;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.fasterxml.jackson.databind.node.POJONode;
 import com.google.gson.Gson;
 
 import java.text.SimpleDateFormat;
@@ -33,7 +30,6 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.adapter.StatusListAdapter;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3b_fragments.Crf3bQ29Fragment;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.DSSAddressDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
@@ -56,26 +52,24 @@ public class PwInfoFragment1 extends Fragment {
 
     Context context;
 
-    String[] para1, para2, para3, siteArray;
+    String[]  paraArray;
     Button btnCancel,btnConform;
 
     private APIService mAPIService;
 
-    Spinner spinner_site, spinner_para_RG,spinner_para_BH , spinner_para_AG;
+    Spinner spinner_para;
 
     String pwName, pwHusbandName, pwSite, pwPara,
             pwBlock, pwStructure, pwFamilyHousehold, strPwNumber;
+
     String pwPara2=null;
     int pwNumber;
 
     Dialog dialog;
 
-
     int selectStatusItemIndex=-1;
 
-    ArrayAdapter<String> paraAdapter_RG, paraAdapter_BH, paraAdapter_AG;
-
-    EditText etPwName, etPwHusbandName, etPwPara, etPwBlock, etPwStracture, etPwFamilyHousehold, etPwNumber;
+    EditText etPwName, etPwHusbandName, etPwPara, etPwBlock, etPwStracture, etPwFamilyHousehold, etPwNumber, et_site, et_refuesd;
     ListView listView;
     Button btnF1Register;
     boolean checkFieldStatus = true;
@@ -89,25 +83,42 @@ public class PwInfoFragment1 extends Fragment {
                 container, false);
 
         CRF1Activity.fragmentNo = 1;
+        et_refuesd = (EditText) view.findViewById(R.id.et_refuesd);
+
+        if(CRF1Activity.getSite.equalsIgnoreCase("AG")){
+
+            spinner_para = (Spinner) view.findViewById(R.id.spinner_para_AG);
+            spinner_para.setVisibility(View.VISIBLE);
+            paraArray = getResources().getStringArray(R.array.AG);
+
+        }else if(CRF1Activity.getSite.equalsIgnoreCase("BH")){
+
+            spinner_para = (Spinner) view.findViewById(R.id.spinner_para_BH);
+            spinner_para.setVisibility(View.VISIBLE);
+            paraArray = getResources().getStringArray(R.array.BH);
+        }else if(CRF1Activity.getSite.equalsIgnoreCase("RG")){
+
+            spinner_para = (Spinner) view.findViewById(R.id.spinner_para_RG);
+            spinner_para.setVisibility(View.VISIBLE);
+            paraArray = getResources().getStringArray(R.array.RG);
+        }
+
 
         CRF1Activity.formCrf1DTO.setQ02(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
         CRF1Activity.formCrf1DTO.setQ03(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
         final String[] statusListItem = {"Agree for screening (Screening k liya razamand)","Not at home (Ghar par mojoud nahi)","Refused (inkar kar diya)"
-                                    ,"Wrong information (Ghalt information of PW)","Shifted out of DSS (DSS sa bahir chali gay)","PW died before the visit (PW ka intiqaal ho gaya"
+                                    ,"Wrong information (Ghalt information of PW)","wrong DSS infromation(pw not found)","woman was never found pregnent","woman was pregnanat but recently develiverd (age of child greater then 7 dasys)","Shifted out of DSS (DSS sa bahir chali gay)","PW died before the visit (PW ka intiqaal ho gaya"
                                     ,"Visitor (Mehman th and ab wapis chali gay)"};
 
 
         statusListAdapter = new StatusListAdapter(getContext(),statusListItem);
 
-        spinner_site = (Spinner) view.findViewById(R.id.spinner_site);
-        spinner_para_RG = (Spinner) view.findViewById(R.id.spinner_para_RG);
-        spinner_para_RG.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner_para.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                pwPara = para1[position];
-               // statusPara = position;
+                pwPara = paraArray[position];
 
             }
 
@@ -116,86 +127,21 @@ public class PwInfoFragment1 extends Fragment {
 
             }
         });
-
-        spinner_para_AG = (Spinner) view.findViewById(R.id.spinner_para_AG);
-        spinner_para_AG.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                pwPara = para2[position];
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
-
-        spinner_para_BH = (Spinner) view.findViewById(R.id.spinner_para_BH);
-        spinner_para_BH.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                pwPara = para3[position];
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-        siteArray = getResources().getStringArray(R.array.site_arrays);
-        para1 = getResources().getStringArray(R.array.RG);
-        para2 = getResources().getStringArray(R.array.AG);
-        para3 = getResources().getStringArray(R.array.BH);
-
 
         context = getContext();
 
-        spinner_site.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if(position==1){
-
-                    pwSite = siteArray[position];
-
-                    spinner_para_BH.setVisibility(View.INVISIBLE);
-                    spinner_para_AG.setVisibility(View.INVISIBLE);
-                    spinner_para_RG.setVisibility(View.VISIBLE);
-
-                }
-
-                if(position==2){
-
-                    pwSite = siteArray[position];
-
-                   spinner_para_BH.setVisibility(View.INVISIBLE);
-                   spinner_para_AG.setVisibility(View.VISIBLE);
-                   spinner_para_RG.setVisibility(View.INVISIBLE);
-                }
-                if(position==3){
-
-                    pwSite = siteArray[position];
-
-                    spinner_para_BH.setVisibility(View.VISIBLE);
-                    spinner_para_AG.setVisibility(View.INVISIBLE);
-                    spinner_para_RG.setVisibility(View.INVISIBLE);
-                }
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
         //edit text all field
         etPwName = (EditText) view.findViewById(R.id.etPwName);
         etPwHusbandName = (EditText) view.findViewById(R.id.etPwHusbandName);
-      //etPwSite = (EditText) view.findViewById(R.id.etPwSite);
-       // etPwPara = (EditText) view.findViewById(R.id.etPwPara);
         etPwBlock = (EditText) view.findViewById(R.id.etPwBlock);
+        et_site = (EditText) view.findViewById(R.id.et_site);
         etPwStracture = (EditText) view.findViewById(R.id.etPwStracture);
         etPwFamilyHousehold = (EditText) view.findViewById(R.id.etPwFamilyHousehold);
         etPwNumber = (EditText) view.findViewById(R.id.etPwNumber);
+
+        et_site.setText(CRF1Activity.getSite);
 
         try{
 
@@ -208,7 +154,6 @@ public class PwInfoFragment1 extends Fragment {
         if( CRF1Activity.formCrf1DTO.getFollowupId()!=0 || isDataFiled){
 
 
-
             etPwName.setText(CRF1Activity.formCrf1DTO.getPregnantWoman().getName());
             etPwHusbandName.setText(CRF1Activity.formCrf1DTO.getPregnantWoman().getHusbandName());
             //.setText(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getPara());
@@ -216,68 +161,16 @@ public class PwInfoFragment1 extends Fragment {
             etPwStracture.setText(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getStructure());
             etPwFamilyHousehold.setText(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getHouseholdOrFamily());
             etPwNumber.setText(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getWomanNumber()+"");
+            et_site.setText(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getSite()+"");
 
-            if(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getSite().equals("RG")){
+            //////////////////////////////
+            for(int i = 0; i<paraArray.length; i++){
 
-
-                spinner_site.setSelection(1);
-                pwSite = "RG";
-                spinner_para_BH.setVisibility(View.INVISIBLE);
-                spinner_para_AG.setVisibility(View.INVISIBLE);
-                spinner_para_RG.setVisibility(View.VISIBLE);
-
-               for(int i = 0; i<para1.length; i++){
-
-                   if(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getPara().equals(para1[i])){
-
-                       spinner_para_RG.setSelection(i);
-                        pwPara2 = para1[i];
-                   }
-
-               }
-
-            }
-
-            if(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getSite().equals("AG")){
-
-                spinner_site.setSelection(2);
-
-                pwSite = "AG";
-                spinner_para_BH.setVisibility(View.INVISIBLE);
-                spinner_para_AG.setVisibility(View.VISIBLE);
-                spinner_para_RG.setVisibility(View.INVISIBLE);
-
-                for(int i = 0; i<para2.length; i++){
-
-                    if(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getPara().equals(para1[i])){
-
-                        spinner_para_RG.setSelection(i);
-                        pwPara2 = para2[i];
-                    }
-
+                if(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getPara().equals(paraArray[i])){
+                    spinner_para.setSelection(i);
+                    pwPara2 = paraArray[i];
                 }
 
-            }
-            if(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getSite().equals("BH")){
-
-                spinner_site.setSelection(3);
-
-                pwSite = "BH";
-
-                spinner_para_BH.setVisibility(View.VISIBLE);
-                spinner_para_AG.setVisibility(View.INVISIBLE);
-                spinner_para_RG.setVisibility(View.INVISIBLE);
-
-                for(int i = 0; i<para3.length; i++){
-
-                    if(CRF1Activity.formCrf1DTO.getPregnantWoman().getDssAddress().getPara().equals(para1[i])){
-
-
-                        spinner_para_RG.setSelection(i);
-                        pwPara2 = para3[i];
-                    }
-
-                }
             }
 
             }else {
@@ -285,7 +178,6 @@ public class PwInfoFragment1 extends Fragment {
             CRF1Activity.formCrf1DTO.setFollowUpPositionInList(-1);
 
         }
-
 
         listView = (ListView) view.findViewById(R.id.lvStatus);
 
@@ -295,6 +187,15 @@ public class PwInfoFragment1 extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+
+                if(position==2){
+
+                    et_refuesd.setVisibility(View.VISIBLE);
+
+                }else {
+
+                    et_refuesd.setVisibility(View.GONE);
+                }
                 selectStatusItemIndex = position;
                 statusListAdapter.setChecked(position);
             }
@@ -338,6 +239,7 @@ public class PwInfoFragment1 extends Fragment {
 
                         }else {
 
+
                             CRF1Activity.formCrf1DTO.setFormStatus(Constants.INCOMPLETE);
                             CRF1Activity.formCrf1DTO.setVisitStatus(selectStatusItemIndex);
                             CRF1Activity.formCrf1DTO.setQ34( new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
@@ -363,7 +265,6 @@ public class PwInfoFragment1 extends Fragment {
             }
         });
 
-        //inflater.inflate(R.layout.fragment_pw_info_fragment1, container, false);
         return view;
     }
 
@@ -391,20 +292,22 @@ public class PwInfoFragment1 extends Fragment {
 
         }
 
+
+
         if(pwPara2!=null){
 
             pwPara = pwPara2;
         }
 
-        if(TextUtils.isEmpty(pwSite)){
+       /* if(TextUtils.isEmpty(pwSite)){
 
            Toast.makeText(getContext(),"Please Enter Site",Toast.LENGTH_SHORT).show();
-           spinner_site.setFocusable(true);
+         //  spinner_site.setFocusable(true);
 
 
             checkFieldStatus = false;
         }
-
+*/
 
 
         if(TextUtils.isEmpty(pwName)){
@@ -467,6 +370,19 @@ public class PwInfoFragment1 extends Fragment {
             checkFieldStatus = false;
         }
 
+        if(selectStatusItemIndex==2){
+
+            if(et_refuesd.getText().toString().equals("") || et_refuesd.getText().toString().isEmpty()){
+
+                et_refuesd.setError("Required");
+                checkFieldStatus = false;
+            }else {
+
+                CRF1Activity.formCrf1DTO.setRefusedReason(et_refuesd.getText().toString());
+
+            }
+
+        }
 
         return checkFieldStatus;
     }
@@ -479,7 +395,7 @@ public class PwInfoFragment1 extends Fragment {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.confromation_dialog);
         dialog.setCancelable(false);
-
+        dialog.show();
 
        // dialog = new Dialog(getContext());
         //dialog.setContentView(R.layout.fragment_pw_info_fragment1);
@@ -493,9 +409,10 @@ public class PwInfoFragment1 extends Fragment {
 
                 if(WifiConnectOrNot.haveNetworkConnection(context)){
 
-                    ProgressDialog.show(getContext(),"Sending...","Sending Form To Server");
+                 //   P.show(getContext(),"Sending...","Sending Form To Server");
 
                     SendDataToServer.sendCrf1Form(CRF1Activity.formCrf1DTO);
+
                     if(CRF1Activity.formCrf1DTO.getFollowUpPositionInList()!=-1){
                         SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF1Activity.formCrf1DTO.getFollowUpPositionInList());}
 
@@ -521,7 +438,9 @@ public class PwInfoFragment1 extends Fragment {
                 dialog.dismiss();
             }
         });
-        dialog.show();
+
+
+
     }
 
     public PregnantWomanDTO populatePwDTO(){
@@ -530,10 +449,11 @@ public class PwInfoFragment1 extends Fragment {
 
         DSSAddressDTO dssAddress = new DSSAddressDTO();
         dssAddress.setBlock(pwBlock);
+
         dssAddress.setHouseholdOrFamily(pwFamilyHousehold);
         dssAddress.setPara(pwPara);
         dssAddress.setStructure(pwStructure);
-        dssAddress.setSite(pwSite);
+        dssAddress.setSite(et_site.getText().toString());
         dssAddress.setWomanNumber(pwNumber);
 
 

@@ -8,6 +8,15 @@ import java.util.Set;
 public class FormCrf1DTO {
 
     // for my use
+
+    public String getRefusedReason() {
+        return refusedReason;
+    }
+
+    public void setRefusedReason(String refusedReason) {
+        this.refusedReason = refusedReason;
+    }
+
     private int followUpPositionInList;
 
 
@@ -16,6 +25,8 @@ public class FormCrf1DTO {
     private Integer followupStatus;
     private String counselingStartDate;
     private String counselingEndDate;
+
+    private String refusedReason;
 
     private PregnantWomanDTO pregnantWoman;
 

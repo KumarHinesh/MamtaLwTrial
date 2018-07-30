@@ -68,6 +68,7 @@
 
 
                 <EditText
+                    android:textColor="@color/black"
                     android:inputType="textCapCharacters"
                     android:id="@+id/et_readerId_1"
                     android:layout_width="match_parent"
@@ -78,6 +79,7 @@
                     android:maxLength="3" />
 
                 <EditText
+                    android:textColor="@color/black"
                     android:inputType="textCapCharacters"
                     android:id="@+id/et_readerId_2"
                     android:layout_width="match_parent"
@@ -139,7 +141,7 @@
 
 
                         <EditText
-                            android:maxLength="4"
+                            android:maxLength="5"
                             android:inputType="numberDecimal"
                             android:id="@+id/et_r1_mauc1"
                             android:layout_weight="0.8"
@@ -151,7 +153,7 @@
 
 
                         <EditText
-                            android:maxLength="4"
+                            android:maxLength="5"
                             android:inputType="numberDecimal"
                             android:id="@+id/et_r2_mauc1"
                             android:layout_weight="0.8"
@@ -180,7 +182,7 @@
 
 
                         <EditText
-                            android:maxLength="4"
+                            android:maxLength="5"
                             android:inputType="numberDecimal"
                             android:id="@+id/et_r1_mauc2"
                             android:layout_weight="0.8"
@@ -192,7 +194,7 @@
 
 
                         <EditText
-                            android:maxLength="4"
+                            android:maxLength="5"
                             android:inputType="numberDecimal"
                             android:id="@+id/et_r2_mauc2"
                             android:layout_weight="0.8"
@@ -223,7 +225,7 @@
 
 
                         <EditText
-                            android:maxLength="4"
+                            android:maxLength="5"
                             android:inputType="numberDecimal"
                             android:id="@+id/et_r1_mauc3"
                             android:layout_weight="0.8"
@@ -235,7 +237,7 @@
 
 
                         <EditText
-                            android:maxLength="4"
+                            android:maxLength="5"
                             android:inputType="numberDecimal"
                             android:id="@+id/et_r2_mauc3"
                             android:layout_weight="0.8"
@@ -267,7 +269,7 @@
 
 
                         <EditText
-                            android:maxLength="4"
+                            android:maxLength="5"
                             android:inputType="numberDecimal"
                             android:id="@+id/et_r1_mauc4"
                             android:layout_weight="0.8"
@@ -279,7 +281,7 @@
 
 
                         <EditText
-                            android:maxLength="4"
+                            android:maxLength="5"
                             android:inputType="numberDecimal"
                             android:id="@+id/et_r2_mauc4"
                             android:layout_weight="0.8"

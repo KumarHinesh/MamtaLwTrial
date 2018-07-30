@@ -20,7 +20,6 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupDetails;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.FormCrf2DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 
@@ -119,7 +118,7 @@ public class TaskListActivity extends AppCompatActivity {
 
         startActivity(new Intent(TaskListActivity.this,DashboardActivity.class));
         finish();
-        super.onBackPressed();
+      //  super.onBackPressed();
     }
 }
 

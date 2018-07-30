@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrolView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.crf3b_fragments.Crf3bQ72Fragment">
@@ -31,6 +32,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_q72"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Has the baby had any danger sign, complication, problem or disease since birth?"
@@ -60,6 +62,7 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
                     android:id="@+id/rb_q72_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -68,6 +71,7 @@
                     />
 
                 <RadioButton
+                    android:tag="2"
                     android:id="@+id/rb_q72_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -76,6 +80,7 @@
                     />
 
                 <RadioButton
+                    android:tag="9"
                     android:id="@+id/rb_q72_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -101,6 +106,7 @@
 
 
         <LinearLayout
+            android:id="@+id/ll_q73"
             android:visibility="visible"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -113,6 +119,11 @@
                 android:baselineAligned="false"
                 android:weightSum="3">
 
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"></LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -134,13 +145,7 @@
                         android:textSize="20sp" />
 
 
-
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1"></LinearLayout>
 
 
                 <LinearLayout
@@ -157,12 +162,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="1. Difficulty in feeding"
@@ -170,7 +177,6 @@
                                 android:textSize="20sp" />
 
                             <TextView
-
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
@@ -193,6 +199,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
+                                android:id="@+id/rb_q73_a_a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -200,6 +208,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q73_a_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -207,6 +217,9 @@
                                 />
 
                             <RadioButton
+
+                                android:tag="9"
+                                android:id="@+id/rb_q73_a_c"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -234,12 +247,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2. Cough"
@@ -269,6 +284,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q73_b_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -276,6 +293,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q73_b_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -283,6 +302,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q73_b_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -310,12 +331,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_c"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="3. Cold/Flu/Runny nose"
@@ -345,6 +368,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q73_c_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -352,6 +377,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q73_c_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -359,6 +386,9 @@
                                 />
 
                             <RadioButton
+
+                                android:id="@+id/rb_q73_c_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -386,12 +416,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_d"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4. Difficulty in breathing /Fast respiratory rate"
@@ -421,6 +453,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q73_d_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -428,13 +462,17 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q73_d_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
                                 android:text="NO"
                                 />
-
+////////////////////////////
                             <RadioButton
+                                android:id="@+id/rb_q73_d_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -462,12 +500,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_e"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="5. Convulsions"
@@ -497,6 +537,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -504,6 +545,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -511,6 +553,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -538,12 +581,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_f"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="6. Fever"
@@ -573,6 +618,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -580,6 +626,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -587,6 +634,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -614,12 +662,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_g"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="7. Hypothermia "
@@ -649,6 +699,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -656,6 +707,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -663,6 +715,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -690,12 +743,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_h"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8. Lethargy or no movement"
@@ -725,6 +780,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -732,6 +788,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -739,6 +796,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -767,12 +825,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_i"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="9. Pustules"
@@ -802,6 +862,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -809,6 +870,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -816,6 +878,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -842,12 +905,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_j"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="10. Jaundice"
@@ -877,6 +942,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -884,6 +950,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -891,6 +958,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -917,12 +985,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_k"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="11. Umbilical redness or discharge"
@@ -952,6 +1022,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -959,6 +1030,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -966,6 +1038,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -993,12 +1066,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_l"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="12. Vomiting"
@@ -1028,6 +1103,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1035,6 +1111,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1042,6 +1119,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1069,12 +1147,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_m"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="13. Diarrhea"
@@ -1104,6 +1184,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1111,6 +1192,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1118,6 +1200,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1146,12 +1229,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_n"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="14. Oral Thrush"
@@ -1181,6 +1266,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1188,6 +1274,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1195,6 +1282,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1222,12 +1310,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_o"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="15. Irritability or too much crying "
@@ -1257,6 +1347,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1264,6 +1355,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1271,6 +1363,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1298,12 +1391,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_p"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="16. Redness of eyes or watery discharge"
@@ -1333,6 +1428,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1340,6 +1436,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1347,6 +1444,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1374,12 +1472,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_q"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="17. Grunting"
@@ -1409,6 +1509,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1416,6 +1517,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1423,6 +1525,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1450,12 +1553,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_r"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="18. Lips / tongue turning blue or black"
@@ -1485,6 +1590,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1492,6 +1598,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1499,6 +1606,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1526,12 +1634,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_s"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="19. Peripheral cyanosis"
@@ -1561,6 +1671,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1568,6 +1679,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1575,6 +1687,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1602,12 +1715,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_t"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="20. Bleeding from nose"
@@ -1637,6 +1752,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1644,6 +1760,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1651,6 +1768,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1678,12 +1796,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_u"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="21. Constipation"
@@ -1691,6 +1811,7 @@
                                 android:textSize="20sp" />
 
                             <TextView
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
@@ -1713,6 +1834,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1720,6 +1842,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1727,6 +1850,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1754,12 +1878,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_v"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="22. Dysentery"
@@ -1789,6 +1915,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1796,6 +1923,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1803,6 +1931,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1830,12 +1959,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_w"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="23. Urine stopped"
@@ -1865,6 +1996,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1872,6 +2004,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1879,6 +2012,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1906,12 +2040,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="24. Ear discharge or pus"
@@ -1941,6 +2077,7 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1948,6 +2085,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1955,6 +2093,7 @@
                                 />
 
                             <RadioButton
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -1982,12 +2121,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_y"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="25. Chest congestion"
@@ -2017,6 +2158,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:tag="1"
+                                android:id="@+id/rb_q73_y_a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2024,6 +2167,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q73_y_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2031,6 +2176,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q73_y_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2058,12 +2205,14 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:layout_gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q73_z"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="26. Other (specify)"
@@ -2128,6 +2277,8 @@
                 </LinearLayout>
 
 
+
+
             </LinearLayout>
 
 
@@ -2157,6 +2308,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_q74"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Has the baby been taken to any health facility for care since birth?"
@@ -2186,6 +2338,8 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
+                    android:id="@+id/rb_q74_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -2193,6 +2347,8 @@
                     />
 
                 <RadioButton
+                    android:id="@+id/rb_q74_b"
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -2200,6 +2356,8 @@
                     />
 
                 <RadioButton
+                    android:id="@+id/rb_q74_c"
+                    android:tag="un"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -2221,14 +2379,10 @@
             android:layout_marginTop="8dp"
             android:background="@color/black" />
 
-        <LinearLayout
-            android:visibility="visible"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
 
             <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/ll_q75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:baselineAligned="false"
@@ -2285,6 +2439,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="1. Vital Pakistan/ Aga Khan Center"
@@ -2308,6 +2463,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_a_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2315,6 +2472,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_a_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2322,6 +2481,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_a_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2356,6 +2517,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="2. Attiya hospital"
@@ -2378,6 +2540,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_b_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2385,6 +2549,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_b_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2392,6 +2558,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_b_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2426,6 +2594,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_c"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="3. Koohi Goth Hospital"
@@ -2449,6 +2618,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_c_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2456,6 +2627,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_c_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2463,6 +2636,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_c_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2497,6 +2672,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_d"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4. Jinnah"
@@ -2519,6 +2695,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_d_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2526,6 +2704,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_d_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2533,6 +2713,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_d_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2567,6 +2749,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_e"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="5. Civil"
@@ -2590,6 +2773,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_e_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2597,6 +2782,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_e_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2604,6 +2791,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_e_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2638,6 +2827,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_f"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="6. Korangi-5 government hospital"
@@ -2659,6 +2849,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_f_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2666,6 +2858,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_f_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2673,6 +2867,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_f_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2707,6 +2903,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_g"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="7. Any other government hospital"
@@ -2730,6 +2927,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_g_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2737,6 +2936,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_g_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2744,6 +2945,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_g_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2778,6 +2981,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_h"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8. Private hospital "
@@ -2800,6 +3004,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_h_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2807,6 +3013,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_h_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2814,6 +3022,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_h_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2822,8 +3032,6 @@
 
 
                         </RadioGroup>
-
-
 
                     </LinearLayout>
 
@@ -2849,6 +3057,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_i"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="9. Clinic"
@@ -2871,6 +3080,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_i_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2878,6 +3089,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_i_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2885,6 +3098,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_i_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2918,6 +3133,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_j"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="10. Rural Health center"
@@ -2940,6 +3156,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_j_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2947,6 +3165,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_j_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2954,6 +3174,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_j_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -2987,6 +3209,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_k"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="11. Dispensary"
@@ -3009,6 +3232,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_k_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -3016,6 +3241,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_k_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -3023,6 +3250,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_k_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -3057,6 +3286,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_l"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="12. Medical store"
@@ -3080,6 +3310,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_l_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -3087,6 +3319,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_l_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -3094,6 +3328,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_l_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -3128,6 +3364,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_q75_m"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="13. Self medication"
@@ -3150,6 +3387,8 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/rb_q75_m_a"
+                                android:tag="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -3157,6 +3396,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_m_b"
+                                android:tag="2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -3164,6 +3405,8 @@
                                 />
 
                             <RadioButton
+                                android:id="@+id/rb_q75_m_c"
+                                android:tag="9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -3191,6 +3434,7 @@
                 android:background="@color/black" />
 
             <LinearLayout
+                android:id="@+id/ll_q76"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -3205,6 +3449,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_q76"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Did the baby receive any treatment during this period?"
@@ -3232,12 +3477,13 @@
 
                 <RadioGroup
 
-                    android:id="@+id/rg_q76_a"
+                    android:id="@+id/rg_q76"
                     android:layout_weight="0.6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:tag="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -3245,6 +3491,7 @@
                         />
 
                     <RadioButton
+                        android:tag="2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -3252,6 +3499,7 @@
                         />
 
                     <RadioButton
+                        android:tag="9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -3272,6 +3520,7 @@
                 android:background="@color/black" />
 
             <LinearLayout
+                android:id="@+id/ll_q77_q78"
                 android:orientation="vertical"
                 android:visibility="visible"
                 android:layout_width="match_parent"
@@ -3292,6 +3541,7 @@
                         android:orientation="vertical">
 
                         <TextView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="What was the treatment given?"
@@ -3334,6 +3584,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/tv_q77_a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="1. Kept in an incubator"
@@ -3364,6 +3615,7 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
+                                    android:tag="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3371,6 +3623,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3378,6 +3631,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="9"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3411,6 +3665,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/tv_q77_b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="2. Injectable antibiotics were administered"
@@ -3440,6 +3695,7 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
+                                    android:tag="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3447,6 +3703,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3454,6 +3711,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="9"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3487,6 +3745,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/tv_q77_c"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="3. Antibiotic syrup was given"
@@ -3516,6 +3775,7 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
+                                    android:tag="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3523,6 +3783,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3530,6 +3791,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="9"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3563,6 +3825,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/tv_q77_d"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="4. Drip was administered"
@@ -3592,6 +3855,7 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
+                                    android:tag="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3599,6 +3863,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3606,6 +3871,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="9"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3646,6 +3912,7 @@
                                     android:textSize="20sp" />
 
                                 <TextView
+                                    android:id="@+id/tv_q77_e"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
@@ -3668,6 +3935,7 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
+                                    android:tag="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3675,6 +3943,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3682,6 +3951,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="9"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3715,6 +3985,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/tv_q77_f"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="6. Kept on a ventilator"
@@ -3744,6 +4015,7 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
+                                    android:tag="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3751,6 +4023,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3758,6 +4031,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="9"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3791,6 +4065,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/tv_q77_g"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="7. Baby was kept on NG feed"
@@ -3820,6 +4095,7 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
+                                    android:tag="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3827,6 +4103,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3834,6 +4111,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="9"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3867,6 +4145,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/tv_q77_h"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="8. Some other medicine – not powdered one"
@@ -3896,6 +4175,7 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
+                                    android:tag="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3903,6 +4183,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3910,6 +4191,7 @@
                                     />
 
                                 <RadioButton
+                                    android:tag="9"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/black"
@@ -3944,6 +4226,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/tv_q77_i"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="9. Other (specify)"
@@ -3973,7 +4256,7 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
-                                    android:tag="yes"
+                                    android:tag="1"
                                     android:id="@+id/rb_q77_i_a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -3982,7 +4265,7 @@
                                     />
 
                                 <RadioButton
-                                    android:tag="no"
+                                    android:tag="2"
                                     android:id="@+id/rb_q77_i_b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -4033,6 +4316,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_q78"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="For how long was the baby admitted?"
@@ -4062,18 +4346,21 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content">
 
-                        <Spinner
-                            android:id="@+id/spacerhsa"
-                            android:entries="@array/days"
+                        <EditText
+                            android:maxLength="2"
+                            android:inputType="number"
+                            android:id="@+id/et_q78_a"
+                            android:hint="Enter days"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
-                        <Spinner
-                            android:id="@+id/spacerfghsa"
-                            android:entries="@array/hour"
+                        <EditText
+                            android:maxLength="2"
+                            android:inputType="number"
+                            android:id="@+id/et_q78_b"
+                            android:hint="Enter hours"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
-
 
                     </LinearLayout>
 
@@ -4083,8 +4370,6 @@
 
             </LinearLayout>
 
-
-        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
@@ -4106,6 +4391,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_q79"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="What is the state of baby health according to the family?"
@@ -4137,30 +4423,35 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
                     android:textColor="@color/black"
                     android:text="Well baby (Sahi ha)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
+                    android:tag="2"
                     android:textColor="@color/black"
                     android:text="Recovered from illness (beemari dur ho gay)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
+                    android:tag="3"
                     android:textColor="@color/black"
                     android:text="Still ill, but better than before (abhi bh beemar ha laikin pehlay sa behtar ha)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
+                    android:tag="4"
                     android:textColor="@color/black"
                     android:text="Condition has deteriorated (tabiyat aur kharan ho gay)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
+                    android:tag="9"
                     android:textColor="@color/black"
                     android:text="Don’t  know "
                     android:layout_width="wrap_content"

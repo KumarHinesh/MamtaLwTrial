@@ -1,7 +1,6 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3c_fragments;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,11 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf2_fragments.Crf2Q36Fragment;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.ChildWeightDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.ChildWeightCrf3cDTO;
 
 public class Crf3cQ14BabyWeightFragment extends Fragment {
@@ -325,9 +320,10 @@ public class Crf3cQ14BabyWeightFragment extends Fragment {
         if(turn>=4){ childWeightCrf3cDTOS.add(getChildLengthObject(4,et_r1_weight4,et_r2_weight4)); }
 
 
-        CRF3cActivity.formCrf3cDTO.setChildWeightCrf3c(childWeightCrf3cDTOS);
+        // check here
+     //   CRF3cActivity.formCrf3cDTO.setChildWeightCrf3c(childWeightCrf3cDTOS);
 
-        CRF3cActivity.formCrf3cDTO.setQ15(avrageWeight+"");
+       // CRF3cActivity.formCrf3cDTO.setQ15(avrageWeight+"");
 
     }
     public float getTextFromField(EditText et){

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrolView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.crf3b_fragments.Crf3b80Fragment">
@@ -27,6 +28,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_q80"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Respiratory rate  (00.0 if refused)If the respiratory rate is 60 or more, count again and note the second respiratory rate"
@@ -57,18 +59,20 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/spacerhsa"
-                    android:hint="Enter Minute"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:id="@+id/et_q80_a"
+                    android:hint="breaths per Minute"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <EditText
-                    android:hint="Enter Minute"
-                    android:id="@+id/spacerfghsa"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:hint="breaths per Minute"
+                    android:id="@+id/et_q80_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
-
 
 
             </LinearLayout>
@@ -97,6 +101,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/tv_q81"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
@@ -120,13 +125,14 @@
             android:layout_height="wrap_content"></LinearLayout>
 
         <RadioGroup
-
+            android:layout_gravity="center_vertical"
             android:id="@+id/rg_q81"
             android:layout_weight="0.6"
             android:layout_width="0dp"
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:tag="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
@@ -134,6 +140,7 @@
                 />
 
             <RadioButton
+                android:tag="2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
@@ -144,7 +151,7 @@
 
     </LinearLayout>
 
-        <View
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginBottom="8dp"
@@ -164,6 +171,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q82"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
@@ -186,13 +194,14 @@
                 android:layout_height="wrap_content"></LinearLayout>
 
             <RadioGroup
-
+                android:layout_gravity="center_vertical"
                 android:id="@+id/rg_q82"
                 android:layout_weight="0.6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -200,6 +209,7 @@
                     />
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -237,6 +247,7 @@
 
 
                 <TextView
+                    android:id="@+id/tv_q83"
                     android:textColor="@color/black"
                     android:text="Axillary temperature "
                     android:layout_width="wrap_content"
@@ -317,11 +328,17 @@
 
 
                 <EditText
+                    android:maxLength="4"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/et_q83_a"
                     android:hint="Centigrade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:maxLength="4"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/et_q83_b"
                     android:hint="Centigrade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -354,6 +371,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q84"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
@@ -384,6 +402,8 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
+                    android:id="@+id/rb_q84_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -391,6 +411,8 @@
                     />
 
                 <RadioButton
+                    android:tag="2"
+                    android:id="@+id/rb_q84_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -424,6 +446,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q85"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
@@ -441,10 +464,10 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <TextView
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"></LinearLayout>
+                android:layout_height="wrap_content"/>
 
             <RadioGroup
 
@@ -454,6 +477,8 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/rb_q85_a"
+                    android:tag="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -461,6 +486,8 @@
                     />
 
                 <RadioButton
+                    android:id="@+id/rb_q85_b"
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -494,6 +521,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_q86"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Check the movement of the baby "
@@ -525,6 +553,7 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -532,6 +561,7 @@
                     />
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -540,6 +570,7 @@
 
 
                 <RadioButton
+                    android:tag="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -572,6 +603,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_q87"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Convulsions"
@@ -603,6 +635,7 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -610,6 +643,7 @@
                     />
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -617,6 +651,7 @@
                     />
 
                 <RadioButton
+                    android:tag="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -629,7 +664,7 @@
 
         </LinearLayout>
 
-        <View
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginBottom="8dp"
@@ -649,6 +684,7 @@
 
 
                 <TextView
+                    android:id="@+id/tv_q88_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -677,6 +713,7 @@
 
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -685,6 +722,7 @@
 
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -692,11 +730,20 @@
                     android:text=" No problem with breastfeeding (Maa ka dhood peenay ma koi masla nahi)"/>
 
                 <RadioButton
+                    android:tag="3"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text=" Baby unable to feed due to illness (Bacha beemari k waja sa dhood nahi pee sak raha)"/>
+
+                <RadioButton
+                    android:tag="4"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Refused for assessment "/>
 
 
 
@@ -708,7 +755,7 @@
 
         </LinearLayout>
 
-        <View
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginBottom="8dp"
@@ -716,6 +763,7 @@
             android:background="@color/black" />
 
         <LinearLayout
+            android:id="@+id/ll_q88b"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -728,6 +776,7 @@
 
 
                 <TextView
+                    android:id="@+id/tv_q88_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -748,6 +797,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tv_q88_b_a"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:text="Position (Bachay ko kis tarhan pakra)"
@@ -765,6 +815,7 @@
 
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -773,6 +824,7 @@
 
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -780,6 +832,7 @@
                     android:text=" Incorrect or abnormal Ghalt"/>
 
                 <RadioButton
+                    android:tag="3"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -792,6 +845,7 @@
 
 
             <TextView
+                android:id="@+id/tv_q88_b_b"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:text="Attachment(Bacha ko kis tarha maa sa joray rakha)"
@@ -809,6 +863,7 @@
 
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -817,6 +872,7 @@
 
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -824,6 +880,7 @@
                     android:text=" Incorrect or abnormal Ghalt"/>
 
                 <RadioButton
+                    android:tag="3"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -835,6 +892,7 @@
             </RadioGroup>
 
             <TextView
+                android:id="@+id/tv_q88_b_c"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:text="Sucking (Bachay na kis tarhan dhood liya)"
@@ -852,6 +910,7 @@
 
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -860,6 +919,7 @@
 
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -867,6 +927,7 @@
                     android:text=" Incorrect or abnormal Ghalt"/>
 
                 <RadioButton
+                    android:tag="3"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -878,6 +939,7 @@
             </RadioGroup>
 
             <TextView
+                android:id="@+id/tv_q88_b_d"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:text="Feeding (Bacha na dhood sahi tarhan peeya)"
@@ -895,6 +957,7 @@
 
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -903,6 +966,7 @@
 
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -910,6 +974,7 @@
                     android:text=" Incorrect or abnormal Ghalt"/>
 
                 <RadioButton
+                    android:tag="3"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -937,6 +1002,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/ll_q89"
                 android:orientation="horizontal"
                 android:weightSum="3"
                 android:layout_width="match_parent"
@@ -949,6 +1015,8 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+
+                        android:id="@+id/tv_q89"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
@@ -979,6 +1047,7 @@
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:tag="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -986,6 +1055,7 @@
                         />
 
                     <RadioButton
+                        android:tag="2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -1007,6 +1077,7 @@
                 android:background="@color/black" />
 
             <LinearLayout
+                android:id="@+id/ll_q90"
                 android:orientation="horizontal"
                 android:weightSum="3"
                 android:layout_width="match_parent"
@@ -1019,6 +1090,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/tv_q90"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
@@ -1049,6 +1121,7 @@
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:tag="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -1056,13 +1129,12 @@
                         />
 
                     <RadioButton
+                        android:tag="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
                         android:text="NO"
                         />
-
-
 
                 </RadioGroup>
 
@@ -1080,11 +1152,12 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:id="@+id/q91"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/ll_q91"
                 android:orientation="horizontal"
                 android:weightSum="3"
                 android:layout_width="match_parent"
@@ -1097,6 +1170,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/tv_q91"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
@@ -1127,6 +1201,7 @@
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:tag="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -1134,6 +1209,7 @@
                         />
 
                     <RadioButton
+                        android:tag="2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -1158,7 +1234,7 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:id="@+id/q92"
+            android:id="@+id/ll_q92"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -1175,6 +1251,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/tv_q92"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
@@ -1205,6 +1282,7 @@
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:tag="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -1212,6 +1290,7 @@
                         />
 
                     <RadioButton
+                        android:tag="2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -1247,6 +1326,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/tv_q93"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
@@ -1277,6 +1357,7 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -1284,6 +1365,7 @@
                     />
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -1317,6 +1399,7 @@
 
 
                 <TextView
+                    android:id="@+id/tv_q94"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -1345,6 +1428,7 @@
 
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1353,6 +1437,7 @@
 
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1360,6 +1445,7 @@
                     android:text=" Redness is present (Jaga par soojan ha)"/>
 
                 <RadioButton
+                    android:tag="3"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1368,6 +1454,7 @@
 
 
                 <RadioButton
+                    android:tag="4"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1403,6 +1490,7 @@
 
 
                 <TextView
+                    android:id="@+id/tv_q95"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -1424,13 +1512,14 @@
 
 
             <RadioGroup
-                android:id="@+id/q95"
+                android:id="@+id/rg_q95"
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1439,6 +1528,7 @@
 
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1446,6 +1536,7 @@
                     android:text=" Mild jaundice (halka ha)"/>
 
                 <RadioButton
+                    android:tag="3"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1454,6 +1545,7 @@
 
 
                 <RadioButton
+                    android:tag="4"
                     android:layout_marginTop="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1532,6 +1624,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_a"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -1563,6 +1656,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1570,6 +1664,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1605,6 +1700,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_b"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -1635,6 +1731,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1642,6 +1739,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1677,6 +1775,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_c"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -1707,6 +1806,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1714,6 +1814,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1750,6 +1851,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_d"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -1780,6 +1882,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1787,6 +1890,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1824,6 +1928,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_e"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -1854,6 +1959,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1861,6 +1967,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1896,6 +2003,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_f"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -1926,6 +2034,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1933,6 +2042,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -1968,6 +2078,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_g"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -1998,6 +2109,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2005,6 +2117,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2040,6 +2153,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_h"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -2070,6 +2184,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2077,6 +2192,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2112,6 +2228,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_i"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -2142,6 +2259,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2149,6 +2267,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2182,6 +2301,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_j"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -2212,6 +2332,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2219,6 +2340,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2253,6 +2375,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_k"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -2283,6 +2406,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2290,6 +2414,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2325,6 +2450,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_l"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -2355,6 +2481,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2362,12 +2489,12 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
                             android:text="NO"
                             />
-
 
 
 
@@ -2397,6 +2524,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_m"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -2427,6 +2555,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2434,6 +2563,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2469,6 +2599,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_n"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -2499,6 +2630,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2506,6 +2638,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2541,6 +2674,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_o"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -2571,6 +2705,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2578,13 +2713,12 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
                             android:text="NO"
                             />
-
-
 
 
                     </RadioGroup>
@@ -2613,6 +2747,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q96_p"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -2644,7 +2779,7 @@
 
                         <RadioButton
                             android:id="@+id/rg_q96_p_a"
-                            android:tag="yes"
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2653,7 +2788,7 @@
 
                         <RadioButton
                             android:id="@+id/rg_q96_p_b"
-                            android:tag="no"
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -2661,6 +2796,7 @@
                             />
 
                         <EditText
+                            android:visibility="gone"
                             android:id="@+id/et_q96_p"
                             android:hint="Enter Here"
                             android:layout_width="match_parent"
@@ -2691,6 +2827,7 @@
             android:background="@color/black" />
 
         <LinearLayout
+            android:id="@+id/ll_q97"
             android:orientation="horizontal"
             android:weightSum="3"
             android:layout_width="match_parent"
@@ -2703,6 +2840,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q97"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
@@ -2732,6 +2870,7 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -2739,6 +2878,7 @@
                     />
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -2766,6 +2906,7 @@
 
 
             <LinearLayout
+                android:id="@+id/ll_q98"
                 android:orientation="horizontal"
                 android:weightSum="3"
                 android:layout_width="match_parent"
@@ -2778,6 +2919,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/tv_q98"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
@@ -2807,6 +2949,7 @@
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:tag="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -2814,6 +2957,7 @@
                         />
 
                     <RadioButton
+                        android:tag="2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -2834,6 +2978,7 @@
                 android:background="@color/black" />
 
             <LinearLayout
+                android:id="@+id/ll_q99"
                 android:orientation="horizontal"
                 android:weightSum="3"
                 android:layout_width="match_parent"
@@ -2846,6 +2991,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/tv_q99"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
@@ -2875,6 +3021,7 @@
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:tag="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -2882,6 +3029,7 @@
                         />
 
                     <RadioButton
+                        android:tag="2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -2904,6 +3052,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_q100"
             android:orientation="horizontal"
             android:weightSum="3"
             android:layout_width="match_parent"
@@ -2916,6 +3065,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q100"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
@@ -2931,6 +3081,7 @@
 
 
                 <TextView
+
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
@@ -2960,6 +3111,7 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -2967,6 +3119,7 @@
                     />
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -2987,6 +3140,7 @@
             android:background="@color/black" />
 
         <LinearLayout
+            android:id="@+id/ll_q101"
             android:weightSum="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -2999,6 +3153,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -3042,6 +3197,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_a"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3073,6 +3229,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3080,6 +3237,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3113,6 +3271,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_b"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3143,6 +3302,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3150,6 +3310,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3183,6 +3344,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_c"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3213,6 +3375,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3220,6 +3383,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3254,6 +3418,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_d"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3284,6 +3449,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3291,6 +3457,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3326,6 +3493,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_e"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3356,6 +3524,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3363,6 +3532,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3396,6 +3566,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_f"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3426,6 +3597,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3433,6 +3605,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3466,6 +3639,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_g"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3496,6 +3670,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3503,6 +3678,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3536,6 +3712,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_h"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3566,6 +3743,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3573,6 +3751,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3606,6 +3785,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_i"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3618,7 +3798,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="9. Bachay ko jo masla ha wo riwayti tareeqay sa theek ho jay ga"/>
-
 
 
                     </LinearLayout>
@@ -3636,6 +3815,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3643,6 +3823,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3675,6 +3856,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_j"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3705,6 +3887,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3712,6 +3895,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3744,6 +3928,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_k"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3774,6 +3959,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3781,6 +3967,7 @@
                             />
 
                         <RadioButton
+                            android:tag="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
@@ -3814,6 +4001,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q101_l"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:layout_width="wrap_content"
@@ -3845,7 +4033,7 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:tag="yes"
+                            android:tag="1"
                             android:id="@+id/rb_q101_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3854,7 +4042,7 @@
                             />
 
                         <RadioButton
-                            android:tag="no"
+                            android:tag="2"
                             android:id="@+id/rb_q101_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -3893,6 +4081,7 @@
             android:background="@color/black" />
 
         <LinearLayout
+            android:id="@+id/ll_q102"
             android:orientation="horizontal"
             android:weightSum="3"
             android:layout_width="match_parent"
@@ -3905,11 +4094,12 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q102"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Is this your first pregnancy?"/>
+                    android:text="Is this your first pregnancy?"
+                    android:layout_width="wrap_content" />
 
                 <TextView
                     android:layout_marginTop="3dp"
@@ -3935,6 +4125,7 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:tag="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -3942,6 +4133,7 @@
                     />
 
                 <RadioButton
+                    android:tag="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -3960,6 +4152,262 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/ll_q103_105"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:baselineAligned="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_q103"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Including this pregnancy, how many times in your life have you been pregnant?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <EditText
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:id="@+id/et_q103"
+                        android:hint="No/pregnancy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:baselineAligned="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tv_q104"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What were your pregnancy outcomes, including this outcome as well?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <EditText
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:id="@+id/et_q104_a"
+                        android:hint="Number of alive births "
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+                    <EditText
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:id="@+id/et_q104_b"
+                        android:hint="Number of stillbirths "
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+                    <EditText
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:id="@+id/et_q104_c"
+                        android:hint="Number of miscarriages or abortions "
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:baselineAligned="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tv_q105"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age of children currently alive, including this baby"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <EditText
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:id="@+id/et_q105_a"
+                        android:hint="0-11 months of age "
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+                    <EditText
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:id="@+id/et_q105_b"
+                        android:hint="2-23 months"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+                    <EditText
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:id="@+id/et_q105_c"
+                        android:hint="24-59 months"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+                    <EditText
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:id="@+id/et_q105_d"
+                        android:hint="Greater than 59 months"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
 
 
         <Button

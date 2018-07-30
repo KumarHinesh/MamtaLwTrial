@@ -11,7 +11,7 @@
         android:layout_marginTop="10dp"
         android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         card_view:cardCornerRadius="4dp"
         android:orientation="horizontal">
 
@@ -22,7 +22,8 @@
             android:layout_height="wrap_content">
 
             <ImageView
-
+                android:id="@+id/iv_1"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="5dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -43,7 +44,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Womsn Name:  "
+                        android:text="Woman Name:  "
                         android:textSize="18sp"
                         android:textStyle="bold"
                         />
@@ -68,7 +69,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Womsn AstID :  "
+                        android:text="Woman AstID :  "
                         android:textSize="18sp"
                         android:textStyle="bold"
                         />
@@ -93,7 +94,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Womsn DSS    :  "
+                        android:text="Woman DSS    :  "
                         android:textSize="18sp"
                         android:textStyle="bold"
                         />
@@ -111,6 +112,87 @@
 
                 </LinearLayout>
 
+
+
+                <LinearLayout
+                    android:id="@+id/ll_visitStatus"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Visit Status     :  "
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_visitStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/ll_muac"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MUAC               :  "
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_muac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="muac"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_contacts"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contacts         :  "
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
 
 
 

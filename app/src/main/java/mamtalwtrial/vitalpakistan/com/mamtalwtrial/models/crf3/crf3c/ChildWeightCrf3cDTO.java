@@ -7,7 +7,8 @@ public class ChildWeightCrf3cDTO {
     private Float reader1;
 
     private Float reader2;
-
+    private String readerCode1;
+    private String readerCode2;
     private Float difference;
 
     public Integer getId() {
@@ -40,5 +41,21 @@ public class ChildWeightCrf3cDTO {
 
     public void setDifference(Float difference) {
         this.difference = difference;
+    }
+
+    public String getReaderCode1() {
+        return readerCode1;
+    }
+
+    public void setReaderCode1(String readerCode1) {
+        this.readerCode1 = readerCode1;
+    }
+
+    public String getReaderCode2() {
+        return readerCode2;
+    }
+
+    public void setReaderCode2(String readerCode2) {
+        this.readerCode2 = readerCode2;
     }
 }

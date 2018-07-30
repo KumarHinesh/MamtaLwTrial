@@ -24,6 +24,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.ChildWeightDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 
 public class Crf2BabyWeightFragment extends Fragment {
 
@@ -58,6 +59,11 @@ public class Crf2BabyWeightFragment extends Fragment {
         tv_weekOfPregnancy.setText(CRF2Activity.formCrf2DTO.getQ32());
         et_readerId_1 = (EditText) view.findViewById(R.id.et_readerId_1);
         et_readerId_2 = (EditText) view.findViewById(R.id.et_readerId_2);
+
+        et_readerId_1.setText(CRF2Activity.formCrf2DTO.getArmReadings().get(0).getReaderCode1());
+        et_readerId_1.setEnabled(false);
+        et_readerId_2.setText(CRF2Activity.formCrf2DTO.getArmReadings().get(0).getReaderCode2());
+        et_readerId_2.setEnabled(false);
 
         ll_weight1 = (LinearLayout) view.findViewById(R.id.ll_weight1);
         ll_weight2 = (LinearLayout) view.findViewById(R.id.ll_weight2);
@@ -183,10 +189,10 @@ public class Crf2BabyWeightFragment extends Fragment {
 
             if(avrageWeight>=1500){
                 tv_lessOrNot.setText("YES");
-                CRF2Activity.formCrf2DTO.setQ35("YES");
+                CRF2Activity.formCrf2DTO.setQ35(ContantsValues.YES);
             }else {
                 tv_lessOrNot.setText("NO");
-                CRF2Activity.formCrf2DTO.setQ35("NO");
+                CRF2Activity.formCrf2DTO.setQ35(ContantsValues.NO);
             }
         }
     }

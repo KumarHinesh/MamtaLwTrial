@@ -54,12 +54,13 @@
                 />
 
 
-            <Spinner
+            <EditText
+                android:textColor="@color/black"
                 android:inputType="textCapCharacters"
-                android:id="@+id/spinner_site"
+                android:id="@+id/et_site"
+                android:hint="YOUR SITE"
+                android:enabled="false"
                 android:layout_width="match_parent"
-                android:entries="@array/site_arrays"
-                style="@style/spinnerStyle"
                 android:layout_height="50dp"
                 />
 
@@ -69,6 +70,7 @@
                 android:layout_height="wrap_content">
 
                 <Spinner
+                    android:visibility="invisible"
                     android:inputType="textCapCharacters"
                     android:id="@+id/spinner_para_RG"
                     android:entries="@array/RG"
@@ -174,8 +176,20 @@
              android:layout_below="@id/tvdummy1"
              android:id="@+id/lvStatus"
              android:layout_width="match_parent"
-             android:layout_height="230dp"/>
+             android:layout_height="270dp"/>
 
+
+            <EditText
+                android:visibility="gone"
+                android:layout_below="@+id/lvStatus"
+                android:id="@+id/et_refuesd"
+                android:inputType="textCapCharacters"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="ENTER REASON"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
 
 
             <Button

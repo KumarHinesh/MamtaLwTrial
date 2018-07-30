@@ -2,10 +2,15 @@ package mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils;
 
 import android.util.Log;
 
+import com.google.gson.Gson;
+
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CounselingCRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1CollectionDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.FormCrf2DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3a.FormCrf3aDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3b.FormCrf3bDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.FormCrf3cDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import retrofit2.Call;
@@ -28,14 +33,21 @@ public class SendDataToServer {
                 @Override
                 public void onResponse(Call<FormCrf1DTO> call, Response<FormCrf1DTO> response) {
 
-                  /*  if(response.body().getPregnantWoman()!=null) {
+                    if(response.code()==200){
 
-                        b = true;
 
-                    }*/
+                    }else {
+
+
+                      //  SaveAndReadInternalData.saveCrf1FormInternal(,new Gson().toJson(formCrf1DTO, FormCrf1DTO.class));\
+                    }
+
+
                 }
                 @Override
                 public void onFailure(Call<FormCrf1DTO> call, Throwable t) {
+
+
 
                 }
             });
@@ -113,9 +125,48 @@ public class SendDataToServer {
             }
         });
 
+
     }
 
 
+
+    public  static  void sendCrf3bForm(FormCrf3bDTO body){
+
+        APIService mAPIService = ApiUtils.getAPIService();
+
+        //final FormCrf2DTO dto;
+        mAPIService.postCrf3b(body).enqueue(new Callback<FormCrf3bDTO>() {
+            @Override
+            public void onResponse(Call<FormCrf3bDTO> call, Response<FormCrf3bDTO> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<FormCrf3bDTO> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+
+    public  static  void sendCrf3cForm(FormCrf3cDTO body){
+
+        APIService mAPIService = ApiUtils.getAPIService();
+
+        mAPIService.postCrf3c(body).enqueue(new Callback<FormCrf3cDTO>() {
+            @Override
+            public void onResponse(Call<FormCrf3cDTO> call, Response<FormCrf3cDTO> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<FormCrf3cDTO> call, Throwable t) {
+
+            }
+        });
+
+    }
 
 
 

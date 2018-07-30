@@ -3,8 +3,1091 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="yes">Yes</string>
     <string name="_8_oral_folic_acid">8. Oral folic acid</string>
+
+
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="dk">DON`T KNOW</string>
+    <string name="right">RIGHT</string>
+    <string name="left">LEFT</string>
+    <string name="both">BOTh</string>
+    <string name="unnecessary">Unnecessary</string>
+
+
+    <string name="crf4a_q20_english">Is LW alive?</string>
+    <string name="crf4a_q20_roman_urdu">LW zinda ha</string>
+
+    <string name="crf4a_q21_english">Date of death</string>
+    <string name="crf4a_q21_roman_urdu">Agar LW ka intiqaal ho gaya tu us k tareekh</string>
+
+    <string name="crf4a_q22_english">Time of death</string>
+    <string name="crf4a_q22_roman_urdu">Intiqaal ka waqt</string>
+
+    <string name="crf4a_q23_english">Is baby alive?</string>
+    <string name="crf4a_q23_roman_urdu">Bacha zinda ha</string>
+
+    <string name="crf4a_q24_english">Date of death</string>
+    <string name="crf4a_q24_roman_urdu">Agar bachay ka intiqaal ho gaya tu us k tareekh</string>
+
+    <string name="crf4a_q25_english">Time of death</string>
+    <string name="crf4a_q25_roman_urdu">Intiqaal ka waqt</string>
+
+    <string name="crf4a_q26_english">Age of the baby on day of visit System generated</string>
+    <string name="crf4a_q26_roman_urdu">Jis din visit k ha bachay ko us din bachay k umer dinoun ma Yeh system khud fill karay ga</string>
+    1
+
+    <string name="crf4a_q27_b">Did you give anything to drink or eat during this hour to the baby?</string>
+    <string name="crf4a_q27_b_roman_urdu">Kya is ganty k doran apny bachay ko kuch peene ya khanay ko dia?</string>
+
+
+    <string name="crf4a_q33_english">Total time duration, the baby was breastfed at this specific time</string>
+    <string name="crf4a_q33_roman_urdu">Muqarar waqt pay bachay na kitni dair k dhood peeya</string>
+
+    <string name="crf4a_q34_english">Type of spoon used</string>
+    <string name="crf4a_q34_roman_urdu">Agar bachay ko chamchay sa dhood diya ha tu wo kon sa tha</string>
+    <string name="crf4a_q34_option_1">Tea spoon (Chai wala chamcha)</string>
+    <string name="crf4a_q34_option_2">Tablespoon (Chawal khanay wala chamcha)</string>
+    <string name="crf4a_q34_option_3">Cotton piece (Roi ka tukray sa)</string>
+    <string name="crf4a_q34_option_4">Dropper (Qatray peelnay walay sa)</string>
+
+
+    <string name="crf4a_q35_english">How much amount is given (Approximate)</string>
+    <string name="crf4a_q35_roman_urdu">Kitni miqdar ma dhood diya</string>
+
+    <string name="crf4a_q36_english">Did the enrolled baby vomit immediately (Half an hour) after feeding?</string>
+    <string name="crf4a_q36_roman_urdu">Kya bachay ko ulti tu nahi hoi dhood pilanay k foran baad</string>
+
+    <string name="crf4a_q37_english">How much feed did the baby vomit?</string>
+    <string name="crf4a_q37_roman_urdu">Agar bachay ko ulti hoi tu kitni dair baad hoi dhood pilanay k baad</string>
+    <string name="crf4a_q37_option_1">All of the feed</string>
+    <string name="crf4a_q37_option_3">Small amount</string>
+    <string name="crf4a_q37_option_2">Half of the feed</string>
+
+    <string name="crf4a_q38_english">Was there any other baby (specifically ask for other siblings or children at home) who was breastfed by this enrolled LW during this specific hour? There is a chance that mother is also breastfeeding her other under-five children or other kids at home.(DO NOT INCLUDE AN ENROLLED BABY)</string>
+    <string name="crf4a_q38_roman_urdu">Kya is bachay k saaath saath maa na kisi aur ko bh dhood pilaya ha jis k umer 5 saal sa kaam ho, yeh us maa and bachay k liya ha jo hamari study ma enrolled han</string>
+
+    <string name="crf4a_q39_english">Number of children who were breastfed by the enrolled LW at this specific hour (DO NOT INCLUDE AN ENROLLED BABY)</string>
+    <string name="crf4a_q39_roman_urdu">LW na kitnay bachoun ko dhood pilaya ha pichaly 1 ghantay ma</string>
+
+
+    <string name="crf4a_q40_english">During this specific hour, was baby given anything which was cooked at home (A recipe) For example , Soji ka Halwa, Sagoo danay Ke Kheer, EXCEPT breast milk? If same thing give more than two times, count it a one.</string>
+    <string name="crf4a_q40_roman_urdu">Is khas ghantay main, kiya bachay ko ghar pe kuch paka k khanay ya peenay k liye diya giya. Jaisay k: Soji ka Halwa, Sagoo danay Ke Kheer. Ager aik he cheez aik khas ghantay main aik se ziyda baar degaye hai, to usko aik ke baar ginti man laayen.</string>
+
+    <string name="crf4a_q41_english">Where this recipe was made or cooked?</string>
+    <string name="crf4a_q41_roman_urdu">Bachay ko khilay Janay wali cheez kahan tayar k gay th</string>
+    <string name="crf4a_q41_option_1">Own home (apna ghar ma)</string>
+    <string name="crf4a_q41_option_2">Somewhere else (ya Kahin aur)</string>
+
+    <string name="crf4a_q42_english">Recipe name/description which was given to a baby during this specific hour?</string>
+    <string name="crf4a_q42_roman_urdu">Us cheez ka naam jo paka k dee gaye</string>
+
+    <string name="crf4a_q43_english">Code of the recipe used</string>
+    <string name="crf4a_q43_roman_urdu">Uss cheez ka code jo paka k dee gaye</string>
+
+    <string name="crf4a_q44_english">Portion size description</string>
+    <string name="crf4a_q44_roman_urdu">Kis cheez se wo cheez khilaye ya pilaaye gaye</string>
+
+    <string name="crf4a_q45_english">Amount used in gram</string>
+    <string name="crf4a_q45_roman_urdu">Kitni Mikqaar main de gaye</string>
+
+    <string name="crf4a_q46_english">During this specific hour, was baby given any other thing which was cooked at home (A recipe) For example , Soji ka Halwa, Sagoo danay Ke Kheer, EXCEPT breast milk? If same thing was given more than two times, count it a one. EXCEPT breast milk, which is different from Q42?There is a chance that mother gave the same thing more than once within this specific hour, count it as one and right cumulative quantity.</string>
+    <string name="crf4a_q46_roman_urdu">Is khas ghantay main, kiya bachay ko ghar pe kuch paka k khanay ya peenay k liye diya giya. Jaisay k: Soji ka Halwa, Sagoo danay Ke Kheer. Ager aik he cheez aik khas ghantay main aik se ziyda baar degaye hai, to usko aik ke baar ginti man laayen. Jo ka Q42 se mukhtalif ho Aaisa mumkin hai k maan ne bachay ko kuch aur bhe paka k diya h Agar aik he cheez aik he ghantay mai aik se ziyada baar de gaye to jama karlain</string>
+
+    <string name="crf4a_q47_english">Where this recipe was made or cooked?</string>
+    <string name="crf4a_q47_roman_urdu">Bachay ko khilay Janay wali cheez kahan tayar k gay th</string>
+    <string name="crf4a_q47_option_1">Own home (apna ghar ma)</string>
+    <string name="crf4a_q47_option_2">Somewhere else(ya Kahin aur)</string>
+
+    <string name="crf4a_q48_english">Recipe name/description which was given to a baby during this specific hour?</string>
+    <string name="crf4a_q48_roman_urdu">Us cheez ka naam jo paka k dee gaye</string>
+
+    <string name="crf4a_q49_english">Code of the recipe used (Use codes from the manual)</string>
+    <string name="crf4a_q49_roman_urdu">Uss cheez ka code jo paka k dee gaye(code manual s istmal kare)</string>
+
+    <string name="crf4a_q50_english">Portion size description (Use terms as per manual. Like bottle, ml teaspoon, tablespoon etc)</string>
+    <string name="crf4a_q50_roman_urdu">Kis cheez se wo cheez khilaye ya pilaaye gaye (jo manual m terms h wo user kare. Jese k bottle, teaspoon, tablespoon etc)</string>
+
+    <string name="crf4a_q51_english">Amount used in gram</string>
+    <string name="crf4a_q51_roman_urdu">Kitni Mikqaar main de gaye grams m likhy</string>
+
+    <string name="crf4a_q52_english">During this specific hour, was baby given any other thing which was cooked at home (A recipe) For example , Soji ka Halwa, Sagoo danay Ke Kheer, EXCEPT breast milk? If same thing was given more than two times, count it a one. EXCEPT breast milk, which is different from Q42 and Q48? There is a chance that mother gave the same thing more than once within this specific hour, count it as one and right cumulative quantity.</string>
+    <string name="crf4a_q52_roman_urdu">Is khas ghantay main, kiya bachay ko ghar pe kuch paka k khanay ya peenay k liye diya giya. Jaisay k: Soji ka Halwa, Sagoo danay Ke Kheer. Ager aik he cheez aik khas ghantay main aik se ziyda baar degaye hai, to usko aik ke baar ginti man laayen. Jo ka Q42 aur 48 se mukhtalif ho Aaisa mumkin hai k maan ne bachay ko kuch aur bhe paka k diya ho Agar aik he cheez aik he ghantay mai aik se ziyada baar de gaye to jama karlain</string>
+
+    <string name="crf4a_q53_english">Where this recipe was made or cooked?</string>
+    <string name="crf4a_q53_roman_urdu">Bachay ko khilay Janay wali cheez kahan tayar k gay th</string>
+
+    <string name="crf4a_q54_english">Recipe name/description which was given to a baby during this specific hour?</string>
+    <string name="crf4a_q54_roman_urdu">Us cheez ka naam jo paka k dee gaye</string>
+
+    <string name="crf4a_q55_english">Code of the recipe used</string>
+    <string name="crf4a_q55_roman_urdu">Uss cheez ka code jo paka k dee gay</string>
+
+    <string name="crf4a_q56_english">Portion size description</string>
+    <string name="crf4a_q56_roman_urdu">Kis cheez se wo cheez khilaye ya pilaaye gaye</string>
+
+    <string name="crf4a_q57_english">Amount used in gram</string>
+    <string name="crf4a_q57_roman_urdu">Kitni Mikqaar main de gaye</string>
+
+    <string name="crf4a_q58_english">Was a specific food item e.g. goat milk, juice, banana, biscuit, Fruit juice, Formula milk, Ceralac etc used? If same thing given more than once in an hour, count it as one</string>
+    <string name="crf4a_q58_roman_urdu">Kiya is khas ghantay main bachay ko koi aisi cheez de gaye jis ko pakana na parta ho, jaisay k Bakri ka doodh, formula milk, Joose, Kaila, Biscuit, Ceralac WAGAIRA.Agar aik he cheez aik he ghantay mai aik se ziyada baar de gaye to jama karlain</string>
+
+    <string name="crf4a_q59_english">Name of food item which was given to the baby during this specific hour?</string>
+    <string name="crf4a_q59_roman_urdu">Uss khanay ke cheez ka naam</string>
+
+    <string name="crf4a_q60_english">Code of food item used</string>
+    <string name="crf4a_q60_roman_urdu">Us khanay ke cheez ka code</string>
+
+    <string name="crf4a_q61_english">Portion size description</string>
+    <string name="crf4a_q61_roman_urdu">Kis size ya cheez se de gaye</string>
+
+    <string name="crf4a_q62_english">Amount used in gram</string>
+    <string name="crf4a_q62_roman_urdu">Kitni miqdaar de gaye</string>
+
+    <string name="crf4a_q63_a_english">Was any other specific food item e.g. goat milk, juice, banana, biscuit, Fruit juice, Formula milk, Ceralac etc used? If same thing given more than once in an hour, count it as one. Should be different from Q59</string>
+    <string name="crf4a_q63_a_roman_urdu">Kiya is khas ghantay main bachay ko koi aisi cheez de gaye jis ko pakana na parta ho, jaisay k Bakri ka doodh, formula milk, Joose, Kaila, Biscuit, Ceralac WAGAIRA. Q59 se mikhtalif</string>
+
+    <string name="crf4a_q63_b_english">There is a chance that mother gave the same thing more than once within this specific hour, count it as one and right cumulative quantity.</string>
+    <string name="crf4a_q63_b_roman_urdu">Agar aik he cheez aik he ghantay mai aik se ziyada baar de gaye to jama karlain</string>
+
+    <string name="crf4a_q64_english">Name of food item which was given to the baby during this specific hour?</string>
+    <string name="crf4a_q64_roman_urdu">Uss khanay ke cheez ka naam</string>
+
+    <string name="crf4a_q65_english">Code of food item used</string>
+    <string name="crf4a_q65_roman_urdu">Us khanay ke cheez ka code</string>
+
+    <string name="crf4a_q66_english">Portion size description</string>
+    <string name="crf4a_q66_roman_urdu">Kis size ya cheez se de gaye</string>
+
+    <string name="crf4a_q67_english">Amount used in gram</string>
+    <string name="crf4a_q67_roman_urdu">Kitni miqdaar de gaye</string>
+
+    <string name="crf4a_q68_a_english">Was any other specific food item e.g. goat milk, juice, banana, biscuit, Fruit juice, Formula milk, Ceralac etc used? If same thing given more than once in an hour, count it as one. Should be different from Q59 and Q64</string>
+    <string name="crf4a_q68_a_roman_urdu">Kiya is khas ghantay main bachay ko koi aisi cheez de gaye jis ko pakana na parta ho, jaisay k Bakri ka doodh, formula milk, Joose, Kaila, Biscuit, Ceralac WAGAIRA. Q59 se mikhtalif</string>
+
+    <string name="crf4a_q68_b_english">There is a chance that mother gave the same thing more than once within this specific hour, count it as one and right cumulative quantity.</string>
+    <string name="crf4a_q68_b_roman_urdu">Agar aik he cheez aik he ghantay mai aik se ziyada baar de gaye to jama karlain</string>
+
+    <string name="crf4a_q69_english">Name of food item which was given to the baby during this specific hour?</string>
+    <string name="crf4a_q69_roman_urdu">Uss khanay ke cheez ka naam</string>
+
+    <string name="crf4a_q70_english">Code of food item used</string>
+    <string name="crf4a_q70_roman_urdu">Us khanay ke cheez ka code</string>
+
+
+    <string name="crf4a_q71_english">Portion size description</string>
+    <string name="crf4a_q71_roman_urdu">Kis size ya cheez se de gaye</string>
+
+
+    <string name="crf4a_q72_english">Amount used in gram</string>
+    <string name="crf4a_q72_roman_urdu">Kitni miqdaar de gaye</string>
+
+
+    <string name="crf4a_q73_english">Was the baby given any of these items (Non-food item) during this specific hour? Multiple answer allowed</string>
+    <string name="crf4a_q73_roman_urdu">Kiya bachay ko koi aisi cheez de gaye jis main jo k Ghiza nah o, jaisay k paani, Ghutti, Gari Booti wagaira</string>
+
+    <string name="crf4a_q73_a_english">Plain water</string>
+    <string name="crf4a_q73_a_roman_urdu">sada pani</string>
+
+    <string name="crf4a_q73_b_english">Sugar water</string>
+    <string name="crf4a_q73_b_roman_urdu">Chini Wala Pani</string>
+
+    <string name="crf4a_q73_c_english">Grip water</string>
+    <string name="crf4a_q73_c_roman_urdu">Grip water</string>
+
+    <string name="crf4a_q73_d_english">Kehwa extract</string>
+    <string name="crf4a_q73_d_roman_urdu">Kehwa extract</string>
+
+    <string name="crf4a_q73_e_english">Hookah water</string>
+    <string name="crf4a_q73_e_roman_urdu">Hookah water</string>
+
+    <string name="crf4a_q73_f_english">Ghutti</string>
+    <string name="crf4a_q73_f_roman_urdu">Ghutti</string>
+
+    <string name="crf4a_q73_g_english">Rose water or similar water</string>
+    <string name="crf4a_q73_g_roman_urdu">gulab ka pani ya us jesa kuch</string>
+
+    <string name="crf4a_q73_h_english">Any herbal water</string>
+    <string name="crf4a_q73_h_roman_urdu">koi herbal pani </string>
+
+    <string name="crf4a_q73_i_english">Honey/honey water</string>
+    <string name="crf4a_q73_i_roman_urdu">shahid ya shahid wala pani</string>
+
+    <string name="crf4a_q73_j_english">Other</string>
+    <string name="crf4a_q73_j_roman_urdu">Koi or</string>
+
+
+    <!--Exclusive Breastfeeding – key counselling point of crf4a-->
+
+
+    <string name="crf4a_q79_english">Importance of Exclusive Breastfeeding</string>
+
+
+    <string name="crf4a_q79_a_english">Breast milk provides all the food and water that your baby needs during the first 6 months.</string>
+    <string name="crf4a_q79_a_roman_urdu">Maa k dhood bachay ko khuraq aur pani donoun faraham karta ha jitni bachay k zarorat hoti pehlay 6 mahinay tak</string>
+
+    <string name="crf4a_q79_b_english">Do not give anything else, not even water, during your baby’s first 6 months.</string>
+    <string name="crf4a_q79_b_roman_urdu">Pehlay 6 mahinay tak bachay ko maa k dhood k ilawa khuch aur nahi daina chahiya, yahan tak k pani bh nahi</string>
+
+    <string name="crf4a_q79_c_english">Even during very hot weather, breast milk will satisfy your baby’s thirst.</string>
+    <string name="crf4a_q79_c_roman_urdu">Shadeed garmi ma bh ma aka dhood bachay ko peeyas sa mehfooz rakhta ha</string>
+
+    <string name="crf4a_q79_d_english">Giving your baby anything else will cause him/her to suckle less and will reduce the amount of breast milk that you produce.</string>
+    <string name="crf4a_q79_d_roman_urdu">Agar maa bachay ko apnay dhood k illawa khuch aur day gee tu us sa aik tu bachy k maa ka dhood peenay k salahiyat kamzor paray gee and dosra maa ko dhood bh kaam ai ga</string>
+
+    <string name="crf4a_q79_e_english">Water, other liquids and foods can make the baby sick.</string>
+    <string name="crf4a_q79_e_roman_urdu">Pani, dosray mashroob and upper sa di hoi khorak app k bachay ko beemar kar day gee</string>
+
+    <string name="crf4a_q79_f_english">You can give medicines if they are recommended by your health provider.</string>
+    <string name="crf4a_q79_f_roman_urdu">Bachay ko agar doctor k mashwaray k baad koi deewai dainay k zarorat paray tu wo di ja sakti ha</string>
+
+    <string name="crf4a_q79_g_english">Exclusive breastfeeding means feeding your baby ONLY breast milk for the first 6 months.</string>
+    <string name="crf4a_q79_g_roman_urdu">Exclusive breastfeeding ka matlab hota ha zindagi k pehlay 6 mahinay tak bachay ko sirf aur sirf ma aka dhood pilana</string>
+
+    <string name="crf4a_q79_h_english">Exclusive breastfeeding for the first 6 months protects your baby from many illnesses, such as diarrhoea and respiratory infections.</string>
+    <string name="crf4a_q79_h_roman_urdu">Pehlay 6 mahinay tak bachay ko sirf aur sirf ma aka dhood pilanay sa bacha bhoot sari beemarioun sa mehfooz rehta ha maslan dasst aur sans k beemarian</string>
+
+    <string name="crf4a_q79_i_english">Mixed feeding means feeding your baby both breast milk and any other foods or liquids, including infant formula, animal milks, or water.</string>
+    <string name="crf4a_q79_i_roman_urdu">Mixed feeding ka matlab hota ha bachay ko maa k dhood k saath saath koi aur khoraq aur peenay k cheez maslan dabay ka dhood, gai/bakri ka dhood ya pani daina</string>
+
+    <string name="crf4a_q79_j_english">Mixed feeding before 6 months can damage your baby’s stomach.</string>
+    <string name="crf4a_q79_j_roman_urdu">6 mahinay sa pehlay mixed feeding sa bachay k pait par bura asar par sakta ha</string>
+
+    <string name="crf4a_q79_k_english">Mixed feeding increases the chances that your baby will suffer from illnesses such as diarrhoea and pneumonia, and from malnutrition.</string>
+    <string name="crf4a_q79_k_roman_urdu">Bhoot mumkin ha mixed feeding sa bachay zayda beemar rahay and us ko pait k beemarian , namoonia ka khatra ho and wo ghazai kilaat ka shikar rahay</string>
+
+    <string name="crf4a_q79_l_english">Giving your baby foods or any kind of liquids other than breast milk, including infant formula, animal milks, or water before 6 months can damage your baby’s stomach. This reduces the protection that exclusive breastfeeding gives, and all of the benefits that your baby gets from your breast milk.</string>
+    <string name="crf4a_q79_l_roman_urdu">6 mahinay sa pehlay bachay ko maa k dhood k ilawa koi aur cheez dainay sa bhoot mumkin ha bacha pait k beemarioun ma mubtila rahay. Dabay ka dhood, gai /bakri ka dhood bachay k quwat e meedafiyat ko kamzor kar daita ha, jis k waha sa bacha aksar beemar rehta ha. Ma aka dhood bachay ko bhoot c beemarioun sa mehfooz rakhta ha</string>
+
+    <string name="crf4a_q79_m_english">Breastfeed on demand, both day and night (8 to 12 times) to build up your breast milk supply</string>
+    <string name="crf4a_q79_m_roman_urdu">Bachay ko maa ka dhood din ma 8 to 12 dafa daina lazmi ha, us sa maa ko dhood bh wafer miqdar ma ai ga</string>
+
+    <string name="crf4a_q79_n_english">Crying is a late sign of hunger. Early signs that your baby wants to breastfeed include: \na)	Restlessness\nb)	Opening mouth and turning head from side-to-side\nc)	Putting tongue in and out\nd)	Suckling on fingers and fists  </string>
+    <string name="crf4a_q79_n_roman_urdu">Bachay ka rona is baat k ilammat ha k bachay ko shadeed bhoot lagi ha. Behtar ha k bacha ko ronay sa pehlay hi maa k dhood milay, aur is surat ma bacha:\na)	Baichan ho ga\nb)	Apna moun kholay ga and apna sir idhar udhar goomai ga Moun sa zeban andar bahir karay gaApni unglian and kalaiyan choosay ga</string>
+
+    <string name="crf4a_q79_o_english">Let your baby finish one breast before offering the other. Switching back and forth from one breast to the other prevents the baby from getting the nutritious ‘hind milk’. The ‘fore milk’ has more water and satisfies the baby’s thirst. The ‘hind milk’ has more fat and satisfies your baby’s hunger.</string>
+    <string name="crf4a_q79_o_roman_urdu">Bachay ko pehlay aik taraf sa poora dhood peenay dain, jaldi jaldi bachay k side change karnay sa bachay ko sahi dhood nahi milay ga jis ko baad ka dhood bola jata ha and wo dhood ghazaiyat sa bharpoor hota ha and asal ma bachay k bhook ko wohi khatam karta ha. Pehlay ana wala dhood sirf pani hota ha jis sa sirf bachay k peeyas kahatam hoti ha</string>
+
+    <string name="crf4a_q79_p_english">Do NOT use bottles, teats or spouted cups. They are difficult to clean and can cause your baby to become sick</string>
+    <string name="crf4a_q79_p_roman_urdu">Dhood k botel, choosni and cups istimaal na karain. In cheezoun k safai ka khaas khayal rakhan parta ha and sahi safai na honay k soorat ma bacha beemar par sakta ha</string>
+
+    <string name="crf4a_q79_q_english">If your baby is ill or sleepy, wake him or her to offer the breast often</string>
+    <string name="crf4a_q79_q_roman_urdu">Agar app ka bacha beemar ha ya so raha ha, tu us ko muqar waqt utha ka maa apna dhood pilai</string>
+
+
+    <!--counsling Q81 CRF4a-->
+
+    <string name="crf4a_q81_english">Key messages on good attachment</string>
+
+    <string name="crf4a_q81_a_english">Good attachment helps to ensure that your baby suckles well and helps you to produce a good supply of breast milk.</string>
+    <string name="crf4a_q81_a_roman_urdu">Bacha maa k saath sahi tarha joora rahay us sa bachay ko dhood peenay ma asani hoti ha and maa ko achi miqdar ma dhood ata ha</string>
+
+    <string name="crf4a_q81_b_english">Good attachment helps to prevent sore and cracked nipples and ensures that Breastfeeding should not be painful.</string>
+    <string name="crf4a_q81_b_roman_urdu">Is sa maa k breast ma soozish nahi hoti and nipples ma dard bh nahi hota</string>
+
+    <string name="crf4a_q81_c_english">Get help to improve the attachment if you experience pain.</string>
+    <string name="crf4a_q81_c_roman_urdu">Mahir sa rabta karain agar app ko kisi bh kisam ka dard mahsoos ho bachay ko dhood pilatay waqt</string>
+
+    <string name="crf4a_q81_d_english">There are 4 signs of good attachment:\na)	Baby’s mouth is wide open\nb)	You can see more of the darker skin (areola) above the baby’s mouth than below\nc)	Baby’s lower lip is turned outwards\nd)	Baby’s chin is touching mother’s breast</string>
+    <string name="crf4a_q81_d_roman_urdu">Achi tarhan munsaliq honay k chaar zaroroi niqaat:\na) Bachay ka moun achi tarhan khula ho\nb) Maa k breast ka jo gehra rung ka hissay ha wo bachay k moun k upper wali side sa zayda nazar ai ga nicchay wali side k muqabil\nc) Bachay k nichay ka hount bahir k janib moray ho ga\nd) Bachay k thoodi maa k breast ko touch karay gee</string>
+
+    <string name="crf4a_q81_e_english">The signs of effective suckling are:\na) a)	The baby takes slow deep suckles, sometimes pausing.\nb)	You may be able to see or hear your baby swallowing after one or two suckles.\nc)	Suckling is comfortable and pain free for you.\nd)	Your baby finishes the feed, releases the breast and looks contented and relaxed.\ne)	The breast is softer after the feed.</string>
+    <string name="crf4a_q81_e_roman_urdu">Bacha sahi tarhan dhood pee raha ha us k zarori niqaat:\na) Bacha ruk ruk k dhood peeta ha\nb) Maa ko mahsoos ho ga k bacha aik ya do dafa choosnay k baad dhood andar lay kar jata ha\nc) Bacha jab dhood pee raha ho ga tu maa ko kisi bh kisam ka dard nahi ho ga\nd) Bacha jab pait bhar k dhood pee lay ga tu khudi sa peena chor day ga\ne) Dhood peelanay ka baad breast naram ho jay ga</string>
+
+    <string name="crf4a_q81_f_english">Effective suckling helps you to produce milk and satisfy your baby</string>
+    <string name="crf4a_q81_f_roman_urdu">Agar bacha sahi tareeqay sad hood piya ga tu maa ko acha and wafir miqdar ma dhood ai ga</string>
+
+    <string name="crf4a_q81_g_english">After your baby releases one breast offer your baby the other breast. This will ensure that your baby stimulates your milk production in both breasts, and also gets the most nutritious and satisfying milk.</string>
+    <string name="crf4a_q81_g_roman_urdu">Jab bacha aik side say dhood pee lay tu us ko dosri side sa dhood pilain. Is ma maa ko doun sidoun sa wafir miqdar ma dhood ai jis sa bachay k nashurma bh achi ho gee</string>
+
+    <!--counsling Q80 CRF4a-->
+
+
+    <string name="crf4a_q80_english">Key messages on good Breastfeeding positions</string>
+
+    <string name="crf4a_q80_a_english">Good positioning helps to ensure that your baby suckles well and helps you to produce a good supply of breast milk</string>
+    <string name="crf4a_q80_a_roman_urdu">Bachay k sahi position dhood pilatay waqt is liya zarori ha takay bacha sahi tarhan dhood pee sakay and maa ko sahi miqdar ma dhood ai</string>
+
+    <string name="crf4a_q80_b_english">The four key points about your baby’s position are: straight, facing the breast, close, and supported:\na)	The baby’s body should be straight, not bent or twisted, but with the head slightly back.\nb)	The baby’s body should be facing the breast, not held flat to your chest or stomach, and he or she should be able to look up into your face.\nc)	The baby should be close to you.\nd)	You should support the baby’s whole body, not just the neck and shoulders, with your hand and arm.</string>
+    <string name="crf4a_q80_b_roman_urdu">Chaar zarori hidaayat app k bachay k position k hawalay sa: seedha, moun maa k seenay k taraf, maa k qareeb and sahi tarhan pakra howa\na) Bacha seedha honay chahiya, na jhooka howa na moora howa, and bachay ka sir thora sa pichay k taraf\nb) Bachay ka jisam thora sa upper k taraf ho takay us ka moun maa k seenay k qareeb ho, and bacha upper k taraf dheekay\nc) Bachay maa sa qareeb ho\nd) Bachay ko apnay haath and bazu k madad sa is tarhan pakray takay us k puray jisam ko sahara milay, khali garden aur kanday nahi</string>
+
+    <string name="crf4a_q80_c_english">There are different ways to position your baby:\na)	Cradle position (most commonly used)\nb)	Cross cradle position (good for small babies)\nc)	Side-lying position (use to rest while breastfeeding and at night)\nd)	Under-arm position (use after caesarean section, if your nipples are painful or if you are breastfeeding twins or a small baby)</string>
+    <string name="crf4a_q80_c_roman_urdu">Bachay ko pakarnay k mukhtalif tareeqay han:\na) Jhoolay wali position (Sab sa zayda kiya janay wala tareeqa))\nb) Cross ma jhoolay wali position (chootay size k bachoun k zayda acha tareeqa)\nc) Side pay lait k (Maa aram sa lait k bchay ko dhood pilai ya raat ma)\nd) Operation k baad, ya agar maa ko nipples ma dard ho, ya jorrwa bachay ho, ya bacha chota ho</string>
+
+
+    <!--counsling Q82 CRF4a-->
+
+    <string name="crf4a_q82_english">Exclusive breastfeeding of low birth weight babies</string>
+
+
+    <string name="crf4a_q82_a_english">Guide the mother about Skin-to-skin contact: Kangaroo mother care provides skin-to-skin contact, warmth and closeness to the mother’s Breast</string>
+    <string name="crf4a_q82_a_roman_urdu">Maa ko batain k bachay ko apnay app sa joray rakhna kitna zarori ha, jis ko hum Kangaroo care kehtay han, is sa bacha garam rehta ha and apni maa sa qareeeb bh</string>
+
+    <string name="crf4a_q82_b_english">Breast milk is especially adapted to the nutritional needs of low birth weight infants.</string>
+    <string name="crf4a_q82_b_roman_urdu">Maa ko dhood un bachoun k liya bay hud faida mund ha jin ka pidaish k waqat wazan kaam hota ha</string>
+
+    <string name="crf4a_q82_c_english">The best milk for a low birth weight infant, including babies born early, is the breast milk from the baby’s own mother</string>
+    <string name="crf4a_q82_c_roman_urdu">Wo bachay jin ka pidaish k waqt wazan kaam ho, ya jo waqt sa pehlay paida ho jain un ko maa ka dhood hi sab sa zayda faida day ga</string>
+
+    <string name="crf4a_q82_d_english">The cross cradle and underarm positions are good positions for feeding a low birth weight baby.</string>
+    <string name="crf4a_q82_d_roman_urdu">Jhoolay wali position ya under arm position sab sa behtareen tareeqa ha un bachoun k liya jin ka pidaish k waqt wazan kaam hota ha</string>
+
+    <string name="crf4a_q82_e_english">Breastfeed frequently to get baby use to the breast and to keep the milk flowing.</string>
+    <string name="crf4a_q82_e_roman_urdu">Bachay ko zayda sa zayda maa ka dhood pilain takay bacha maa k dhood peenay ka adi ho jay and maa ko zayda sa zayda dhood ai</string>
+
+    <string name="crf4a_q82_f_english">Long slow feeds are fine. It is important to keep the baby at the breast.</string>
+    <string name="crf4a_q82_f_roman_urdu">Zayda dair tak thora thora dhood ana sahi ha, zayda aham yeh ha k bacha ma aka dhood peeya</string>
+
+    <string name="crf4a_q82_g_english">If the baby sleeps for long periods of time, you may need to unwrap the baby or take off some of his or her clothes to help waken him or her for the feed.</string>
+    <string name="crf4a_q82_g_roman_urdu">Agar bacha zayda dair tak sota ha tu maa ko chahiya k us ko dhood k time par jaga k dhood pilay chahay bachay ko neend sa jagana kyoun na paray</string>
+
+    <string name="crf4a_q82_h_english">Breastfeed the baby before he or she starts to cry.</string>
+    <string name="crf4a_q82_h_roman_urdu">Bacha ko ronay sa pehlay dhood peela daina chahiya</string>
+
+    <string name="crf4a_q82_i_english">Earlier signs of hunger include a combination of the following: being alert and restless, opening mouth and turning head, putting tongue in and out, sucking on hand or fist</string>
+    <string name="crf4a_q82_i_roman_urdu">Bacha ko jab bhook tu us k nishani hoti ha: Bacha baichan hog a, ana moun kholay ga and sir idhar udhar ghoomay ga, apni zeban moun sa andar bahir karay ga and apnay haath aur unglian choosay ga</string>
+
+
+    <!--counsling Q83 CRF4a-->
+
+
+    <string name="crf4a_q83_english">Feeding the sick baby less than 6 months of age</string>
+
+    <string name="crf4a_q83_a_english">Breastfeed more frequently during illness, including diarrhoea, to help the baby fight sickness, reduce weight loss and recover more quickly.</string>
+    <string name="crf4a_q83_a_roman_urdu">Bachay ko beemari k doran zayda sa zayda dhood peelana chahiya takay wo beemari sa lar sakay, us k quwat e madafiyat bharay, and jo wazan us ka beemari sa kaam howa wo us ko kami ko poora karay</string>
+
+    <string name="crf4a_q83_b_english">Breastfeeding also provides comfort to your sick baby. If your baby refuses to breastfeed, encourage your baby until he or she takes the breast again.</string>
+    <string name="crf4a_q83_b_roman_urdu">Maa ka dhood peelanay sa beemar bachay aram sa rahay ga, aur agar bacha dhood na peeya tu phir bh maa ko chahiya k wo zabardasti maa ko apna dhood peelay</string>
+
+    <string name="crf4a_q83_c_english">Give only breast milk and medicines recommended by your doctor/ health care provider.</string>
+    <string name="crf4a_q83_c_roman_urdu">Agar bachay ko koi dewai daini tu kisi mahir doctor k mashwara k bagair nahi dainai chahiya</string>
+
+    <string name="crf4a_q83_d_english">If the baby is too weak to suckle, express breast milk to give the baby. This will help you to keep up your milk supply and prevent breast difficulties.</string>
+    <string name="crf4a_q83_d_roman_urdu">Agar bacha kamzor ha aur us ma maa ka dhood peenay k himaat nahi ho maa ko chahiya k haath sa dhood nikal k ussay pilai, is sa maa ko dhood ata rahay ga and breast ma koi masla bh nahi ho ga</string>
+
+    <string name="crf4a_q83_e_english">After each illness, increase the frequency of breastfeeding to help your baby regain health and weight.</string>
+    <string name="crf4a_q83_e_roman_urdu">Beemari k baad bachay ko maa apna dhood zayda sa zayda peelai takay bachay k sehat jaldi bahal ho jay</string>
+
+    <string name="crf4a_q83_f_english">6.	When you are sick, you can continue to breastfeed your baby. You may need extra food and support during this time.</string>
+    <string name="crf4a_q83_f_roman_urdu">Agar maa khud beemar ha tu wo bachay ko phir bh apna dhood pila sakti ha, is surat ma maa ko chahiya k wo apni giza ka khayal rakhay</string>
+
+    <!--/////////////crf4a_q28/////////////////////////-->
+
+
+    <string name="crf4a_q28_english">Was baby given a breastfeed during this specific hour?</string>
+    <string name="crf4a_q28_urdu">Kiya bachay ko is khas ghantay main ma aka doodh pilaya giya?</string>
+
+    <string name="crf4a_q29_english">Ask the mother, how many times, did baby has a breastfeed, during this specific hour, like between 06:00 am to 07:00 am. If only one time, write 1, if two times, write 2 and so on</string>
+    <string name="crf4a_q29_urdu">Maa, se poochain k is khas ghnatay main bachay ko kitni baar doodh pilaya giya. Misaal k tor pe subah 6 se 7 k darmiyan bachay ko Maa k doodh pilaya giya, to kitni baar, aik baar ya Do baar, ya teen bar, jitni baar bhe pilaya giya, jama kar k likhain</string>
+
+    <string name="crf4a_q30_english">Breast milk type</string>
+    <string name="crf4a_q30_urdu">Maa na bachay ko dhood pilaya ha tu kya wo</string>
+    <string name="crf4a_q30_op1">Mother’s own (Maa ka apna tha)</string>
+    <string name="crf4a_q30_op2">Someone else’s \nbachay ko kisi aur aurat na dhood pilaya ha</string>
+
+
+    <string name="crf4a_q31_english">Side of breast used for breastfeeding at this specific time</string>
+    <string name="crf4a_q31_urdu">Jis muqarar waqt pay dhood pilaya ha us ma maa na kis side k breast sa dhood pilaya ha</string>
+
+    <string name="crf4a_q32_english">Methods used for breastfeeding at this specific time</string>
+    <string name="crf4a_q32_urdu">Kis tarhan maa na bachay ko dhood pilaya ha</string>
+    <string name="crf4a_q32_op1">Direct from breast (breast sa)</string>
+    <string name="crf4a_q32_op2">Expressed the breast milk and given by cup and spoon(Dhood ko breast sa nikal k chamchay ya cup sa)</string>
+    <string name="crf4a_q32_op3">Expressed the breast milk and given by bottle (Dhoodh ko breast sa nikal k and feeder bottle sa diya)</string>
+
+
+    <!--/////////////crf5a_q26/////////////////////////-->
+
+
+    <string name="crf5a_q26_english">How often are you using this supplement since last visit?</string>
+    <string name="crf5a_q26_urdu">AAP kitni dafa yeh sacchet use karti ha tab sa aj tak jab hum pichli dafa ai thay</string>
+    <string name="crf5a_q26_op1">Daily (rozana)</string>
+    <string name="crf5a_q26_op2">Alternate days (har dosray din aik din chor kay)</string>
+    <string name="crf5a_q26_op3">Stopped using it (istimaal karna chor diya) </string>
+
+
+    <string name="crf5a_q27_english">System to copy date of last completely filled CRF5a</string>
+
+    <string name="crf5a_q28_english">Number of days since last visit. To be calculated from Q27 and today’s date</string>
+    <string name="crf5a_q28_urdu">Kitnay din ho gay han pichli dafa sa ab tak, yeh tareekh Q27 ma likhi gay tareekh and aj k tareekh k hisab sa likhi jay gee</string>
+
+    <string name="crf5a_q29_english">Total number of sachet supposed to be used by woman.System to calculate from Q28 multiply by 2</string>
+    <string name="crf5a_q29_urdu">Sacchet k tadad jo LW ko istimaal karnay chahiya thay Yeh system khud calculate kar lay ga Q28 k tareekh k hisab sa and us ko 2 sa zarab day ga</string>
+
+    <string name="crf5a_q30_english">Numbers of empty sachets returned by LW</string>
+    <string name="crf5a_q30_urdu">Khali sacchat k tadaad jo LW na wapis kiya</string>
+
+    <string name="crf5a_q31_english">Total amount of sachet used by LW since last visit? Probe well</string>
+    <string name="crf5a_q31_urdu">Aik dafa phir LW sa pochain k kitnay saahet use kiya pichli dafa sa lay k ab tak</string>
+
+    <string name="crf5a_q32_english">Amount of sachet which were used by someone else at home or outside the home since? Probe well</string>
+    <string name="crf5a_q32_urdu">Sacchat k taadad jo kisi aur na istimaal kiya ghar ma ya ghar ma sa bahir kisi na</string>
+
+    <string name="crf5a_q33_english">Compliance in % - System to calculate as, Value in Q31 divided by value in Q29 multiply by 100</string>
+    <string name="crf5a_q33_urdu">Compliance k % Yeh system khudi calculate kar k likh day ga Q29 and Q31 ma dali gay entries k hisab sa</string>
+
+    <string name="crf5a_q34_english">Based on Q32, was Maamta shared by any anyone else?</string>
+    <string name="crf5a_q34_urdu">Kya Maamta sachet kisi aur nab h istimaal kiya</string>
+
+    <string name="crf5a_q35_english">Whom did the woman share the Maamta sachet with?</string>
+    <string name="crf5a_q35_urdu">LW na diya gay sachet kis k saath mil k istimaal kiya</string>
+
+    <string name="crf5a_q35_a_english">Enrolled baby</string>
+    <string name="crf5a_q35_a_urdu">wo bacha jo study ma shamil ha</string>
+
+    <string name="crf5a_q35_b_english">Other siblings of enrolled baby</string>
+    <string name="crf5a_q35_b_urdu">Bachay k dosray behan bhai</string>
+
+    <string name="crf5a_q35_c_english">Other children at home</string>
+    <string name="crf5a_q35_c_urdu">Dosray bachay ghar k</string>
+
+    <string name="crf5a_q35_d_english">Other lactating woman at home</string>
+    <string name="crf5a_q35_d_urdu">koi aur dhood pilanay wali maa</string>
+
+    <string name="crf5a_q35_e_english">Other pregnant woman at home</string>
+    <string name="crf5a_q35_e_urdu">koi aur haamla aurat ghar ma</string>
+
+    <string name="crf5a_q35_f_english">Male family member</string>
+    <string name="crf5a_q35_f_urdu">ghar ka koi mard</string>
+
+    <string name="crf5a_q35_g_english">Neighbours</string>
+    <string name="crf5a_q35_g_urdu">mohalaydar</string>
+
+
+    <string name="crf5a_q36_english">Did you notice any side effects of Maamta since last visit?</string>
+    <string name="crf5a_q36_urdu">Maamta sachet sa koi bh gair zarori side effect ya aalamat zahir hoi</string>
+
+
+    <string name="crf5a_q37_english">If yes, what was/were the side effects?</string>
+    <string name="crf5a_q37_urdu">Agar howa tu wo kya tha</string>
+
+    <string name="crf5a_q37_a_english">Diarrhea</string>
+    <string name="crf5a_q37_a_urdu">Dast</string>
+
+    <string name="crf5a_q37_b_english">Vomiting</string>
+    <string name="crf5a_q37_b_urdu">ultian</string>
+
+    <string name="crf5a_q37_c_english">Abdominal pain</string>
+    <string name="crf5a_q37_c_urdu">pait ma dard</string>
+
+    <string name="crf5a_q37_d_english">Rashes</string>
+    <string name="crf5a_q37_d_urdu">jisam pay laal nishan</string>
+
+
+    <string name="crf5a_q38_english">What was/were the reasons of not using the supplement?</string>
+    <string name="crf5a_q38_urdu">Agar LW na supplement use nahi kiya tu us ka reason kya tha</string>
+
+    <string name="crf5a_q38_a_english">Taste is not good/bad taste</string>
+    <string name="crf5a_q38_a_urdu">zaiqa acha nahi ha</string>
+
+    <string name="crf5a_q38_b_english">It causes diarrhoea</string>
+    <string name="crf5a_q38_b_urdu">khana k baad motion hota ha</string>
+
+    <string name="crf5a_q38_c_english">It causes vomiting</string>
+    <string name="crf5a_q38_c_urdu">khanay k baad ulti ati ha</string>
+
+    <string name="crf5a_q38_d_english">It causes abdominal pain</string>
+    <string name="crf5a_q38_d_urdu">khanay k baad pait ma dard hoti ha</string>
+
+    <string name="crf5a_q38_e_english">It causes rashes</string>
+    <string name="crf5a_q38_e_urdu">jisam pay laal nishan ho jatay hana</string>
+
+    <string name="crf5a_q38_f_english">Other illness</string>
+    <string name="crf5a_q38_f_urdu">koi aur masla</string>
+
+    <string name="crf5a_q38_g_english">Forget to take it</string>
+    <string name="crf5a_q38_g_urdu">bhool jati ha</string>
+
+    <string name="crf5a_q38_h_english">Finished before time </string>
+    <string name="crf5a_q38_h_urdu">time sa pehlay sachet khatam ho gay thay</string>
+
+    <string name="crf5a_q38_i_english">Went somewhere</string>
+    <string name="crf5a_q38_i_urdu">kahin chali gay th and sachet pas nahi thay</string>
+
+    <string name="crf5a_q38_j_english">Other(Specify)</string>
+    <string name="crf5a_q38_j_urdu">koi aur</string>
+
+    <string name="crf5a_q39_english">Number of new sachets given today by health worker? \n Write 99 if LW refused to take. Alert for supervisor</string>
+    <string name="crf5a_q39_urdu">Aj team member na kitnay sachet LW ko diya us k tadad likhain \n Supervisor ko inform karain agar LW na sachet lainay sa inkar kar diya ha tu</string>
+
+    <string name="crf5a_q40_english">Is this 42 day visit?</string>
+    <string name="crf5a_q40_urdu">Bachay ko visit 42 day pay k gay</string>
+
+    <string name="crf5a_q41_english">Is LW enrolled in Maamta + Azithromycin Arm C</string>
+    <string name="crf5a_q41_urdu">LW ka indiraj Arm C ma howa na</string>
+
+    <string name="crf5a_q42_english">Is the child available</string>
+    <string name="crf5a_q42_urdu">Bacha khud moujod ha</string>
+
+    <string name="crf5a_q43_english">Ask the mother if the child received any powder medicine (antibiotic suspension or injection) in the last 7 days</string>
+    <string name="crf5a_q43_urdu">Maa sa pochain k kya bachay ko pichlay 7 din ma aisi koi deewai di gay ha jo k powder k shakal ma ho ya koi aisi deewai infection kaam karnay k liya</string>
+
+    <string name="crf5a_q44_english">Any prescription or wrapper of medicines which is available</string>
+    <string name="crf5a_q44_urdu">Agar koi deewai di ha tu us k khali daba ya khali bottle moujoud ha</string>
+
+    <string name="crf5a_q45_english">Name of medicines </string>
+    <string name="crf5a_q45_urdu">Di gay deewaiyoun k naam likhain aik aik kar k</string>
+
+    <string name="crf5a_q46_english">Ask mother or family, if they remember the name of medicine</string>
+    <string name="crf5a_q46_urdu">Maa ya ghar ma kisi aur afrad ko deewaiyoun ka naam yaad han</string>
+
+    <string name="crf5a_q47_english">Name of medicine if known</string>
+    <string name="crf5a_q47_urdu">Deewaiyoun k naam jo koi aur batay ga</string>
+
+    <string name="crf5a_q48_english">For how long were these medicine used?</string>
+    <string name="crf5a_q48_urdu">Kitnay din tak yeh deewaiyan istimaal ki gay han</string>
+
+    <string name="crf5a_q49_english">Are these medicines still being used </string>
+    <string name="crf5a_q49_urdu">Kya abhi tak yeh deewaioun istimaal k ja rahi han</string>
+
+    <string name="crf5a_q50_english">Consult with supervisor and discuss if any suspected medicine is Azithromycin</string>
+    <string name="crf5a_q50_urdu">Supervisor sa rabta karain and confirm karain k in ma sa koi bh deewai Azithromycin tu nahi ha</string>
+
+    <string name="crf5a_q50_a_english">Consulted and confirmed by supervisor that no Azithromycin or any other antibiotic was given to the child\nSupervisor k mashwaray k baad confirm kar liya k di gay deewaiyoun ma sa koi bh Azithromycin ya koi aur antibiotic nahi ha</string>
+
+
+    <string name="crf5a_q50_b_english">Consulted and confirmed that Azthirthomycin was given in the past few days\nSupervisor k mashwaray k baad confirm kar liya k di gay deewai Azithromycin hi th jo k pichaly khuch din ma bachay ko di gay ha</string>
+
+
+    <string name="crf5a_q51_english">Consulted and confirmed that Azthirthomycin was given in the past few days</string>
+    <string name="crf5a_q51_urdu">Supervisor k mashwaray k baad confirm kar liya k di gay deewai Azithromycin hi th jo k pichaly khuch din ma bachay ko di gay ha</string>
+
+    <string name="crf5a_q51_a_english">Decided to be administered the dose today \nAj k tareekh ma bachay ko AZ ka dose day diya jay ga</string>
+
+    <string name="crf5a_q51_b_english">Dose of Azithromycin in on hold for next seven \n AZ ka dose 7 din baad diya jay ga bachay ko</string>
+
+    <string name="crf5a_q52_english">Date when a supervisor communicated to administer the dose to the child</string>
+    <string name="crf5a_q52_urdu">Wo tareekh likhain jis din supervisor na bola ha k bachay ko AZ daini ha</string>
+
+    <string name="crf5a_q53_english">Inform and counsel the mother about Azithromycin</string>
+    <string name="crf5a_q53_urdu">Maa ko bata diya AZ k baray ma</string>
+
+    <string name="crf5a_q54_english">Weight of the child</string>
+    <string name="crf5a_q54_urdu">Bachay ka wazan</string>
+
+    <string name="crf5a_q55_english">Dose in Milligram</string>
+    <string name="crf5a_q55_urdu">AZ ka dose mg ma</string>
+
+    <string name="crf5a_q56_english">Dose in ml</string>
+    <string name="crf5a_q56_urdu">AZ ka dose ml ma</string>
+
+    <string name="crf5a_q57_english">Dose filled in the measuring oral syringe and administered? </string>
+    <string name="crf5a_q57_urdu">AZ k dose syrings ma bhar k bachay ko moun sa pila diya gaya</string>
+
+    <string name="crf5a_q58_english">Remaining amount of Azithromycin archived with the Study ID </string>
+    <string name="crf5a_q58_urdu">Jo AZ k miqdar bottle ma bach gay us ko study ID k saath mehfooz kar liya gaya</string>
+
+    <string name="crf5a_q59_english">Key messages</string>
+
+
+    <string name="crf5a_q59_a_english">Maamta product is balance protein and energy supplement for lactating women. </string>
+    <string name="crf5a_q59_a_urdu">Maamta sachet aik protein based balanced energy supplement ha jo khaas tor pay dhood pilanay wali maoun k liya ha</string>
+
+    <string name="crf5a_q59_b_english">Before use, try to press sealed sachet slowly with your fingers to soften this paste</string>
+    <string name="crf5a_q59_b_urdu">Istimaal sa pehaly sachet ko haath sa achi tarhan daba k andar mojoud paste ko naram kar lain</string>
+
+    <string name="crf5a_q59_c_english">Taste of product is sweet in nature, but consider it as a special product only design for lactating women.</string>
+    <string name="crf5a_q59_c_urdu">Andar mojoud paste ka zaiqa thora sa meetha ha, jo k sirf aur sirf dhoodh pilanay wali maoun k liya banaya gaya ha</string>
+
+    <string name="crf5a_q59_d_english">After eating this product, you may have improved breast milk to feed your child.</string>
+    <string name="crf5a_q59_d_urdu">Is ko khanay k baad, Maa k dhood ma izafa ho ga takay app apnay bachay ko acha dhood pila sakain</string>
+
+    <string name="crf5a_q59_e_english">It will only benefit, when you consume 2 complete sachets in a day for next 6 months and exclusively breastfeed your child.</string>
+    <string name="crf5a_q59_e_urdu">Is ka zayda faida tab ho ga jab app 2 sacchets 1 din ma musalsal 6 mahinay tak istimaal karain and saath ma bachay ko sirf aur sirf ma aka dhood pilain</string>
+
+    <string name="crf5a_q59_f_english">Maamta product is designed only for lactating women, it may cause side effects if children and other adult member will use it.</string>
+    <string name="crf5a_q59_f_urdu">Yeh product sirf aur sirf dhood pilanay wali maoun k liya banai gay ha, bachay ya kisi aur ko khilanay k surat ma koi bh muzir asraat ho saktay han</string>
+
+    <string name="crf5a_q59_g_english">Do not share Maamta with anyone in the family, even in a small quantity</string>
+    <string name="crf5a_q59_g_urdu">App ko jo sachet diya gaya ha us ko ghar ma kisi ko aur istimaal na karnay dain</string>
+
+
+    <string name="crf5a_q59_h_english">You can eat Maamta directly from the sachet and save the remaining amount in a covered utensil or you may completely pour the sachet in a plate and eat it with spoon. Do not forget to cover the plate if amount is left over.</string>
+    <string name="crf5a_q59_h_urdu">App Maamta sachet rookha bh kha sakti han, ya plate ma nikal k chamchay sa bh. Agar istimal k baad thori miqdar sacchay ma bach jay tu sachet ko bund kar k rakh lain ya phir plate ko dhak k rakhain</string>
+
+
+    <string name="crf5a_q59_i_english">If you develop any type of rash, diarrhea, vomiting or any other unusual sign and symptoms, please immediately contact us</string>
+    <string name="crf5a_q59_i_urdu">Agar maamta khanay k baad app ko kisi bh kisam ka masla ho maslan pait kharab, ulti, jisam pay laal nishan ana, tu foran hum sa rabta karain</string>
+
+
+    <string name="crf5a_q59_j_english">Unused portion of Maamta sachet should be consumed within a day and save the empty sachet in a bag provided to you</string>
+    <string name="crf5a_q59_j_urdu">Maamta sachay kholnay k baad aik din k andar andar istimaal kar laina chahiya, and istimal k baad khali sachet ko sambhal k rakahin appnay pass</string>
+
+
+    <string name="crf5a_q59_k_english">Our team will provide you 14 days supply, which you have to consume according to instructions</string>
+    <string name="crf5a_q59_k_urdu">Hamari team app ko 14 din k sachet faraham karay gee jo k app na di gay hidayaat k mutabiq istimal karna ha</string>
+
+
+    <string name="crf5a_q59_l_english">Empty sachet will be collected by the team</string>
+    <string name="crf5a_q59_l_urdu">Yaad rahay k khali sachet hamari team app sa jama karay gee tu un ko hifazat sa rakahin</string>
+
+
+    <!--Crf5b-->
+
+    <string name="crf5b_q26_english">Has LW eaten anything between this specific hours (For example, between 06:00 am to 07:00 am?</string>
+    <string name="crf5b_q26_urdu">Kya LW ma pichaly 24 ghantoun ma khuch khaya ha?</string>
+
+    <string name="crf5b_q27_english">Did Woman consume any cooked food or recipe during this hour? (For example Roti, Chawal, Daal k Salan. There is a great possibility that LW used two different recipes together, like route with some Salan, Rich with Daal, you need to mention both separately i.e. separate entry for both.   </string>
+    <string name="crf5b_q27_urdu">Kya LW na koi paki hoi cheez ya paka howa khana khaya ha?</string>
+
+    <string name="crf5b_q28_english">Where this was made?</string>
+    <string name="crf5b_q28_urdu">Jo LW na khaya ha wo kahan tayyar howa tha?</string>
+
+    <string name="crf5b_q28_a_english">Own home\napnay ghar ma</string>
+
+    <string name="crf5b_q28_b_english">Somewhere else\nKahin aur paka tha</string>
+
+    <string name="crf5b_q29_english">Recipe description which was consumed to a LW during this specific hour?\nStaff to write the name of the recipe, Like Daal ka Salan, Roti, Paratha etc.\nWrite single recipe name</string>
+    <string name="crf5b_q29_urdu">Jo LW na khaya ha us k pakanay k tarqeeb apna pass likhain\nRecipe ka naam likhain masla daal ka salan, roti, partha etc\nAik dafa ma aik cheez ka naam likhain</string>
+
+    <string name="crf5b_q30_english">Code of the recipe used</string>
+    <string name="crf5b_q30_urdu">Us receipe ka code manual ma sa dhek k likhain</string>
+
+    <string name="crf5b_q31_english">Portion size description If same item was consumed within same our, count it as one item</string>
+    <string name="crf5b_q31_urdu">Jo LW na khaya ha us ka size kya tha Agar aik he cheez iss ghantay main aik se ziyada baar khaye hai to aik he ginti mai shamil Karen</string>
+
+    <string name="crf5b_q32_english">Amount used in gram If same item was consumed within same hour, count it as one item</string>
+    <string name="crf5b_q32_urdu">Agar aik he cheez iss ghantay main aik se ziyada baar khaye hai to aik he ginti mai shamil karen Miqdar ko grams ma likhain</string>
+
+    <string name="crf5b_q33_english">Did Woman consume any other cooked food or recipe during this hour? (For example Roti, Chawal, Daal k Salan. There is a great possibility that LW used two different recipes together, like route with some Salan, Rich with Daal, you need to mention both separately i.e. separate entry for both.</string>
+    <string name="crf5b_q33_urdu">Kya LW na koi paki hoi cheez ya paka howa khana khaya ha?</string>
+
+    <string name="crf5b_q34_english">Where this was made?</string>
+    <string name="crf5b_q34_urdu">Jo LW na khaya ha wo kahan tayyar howa tha?</string>
+
+    <string name="crf5b_q34_a_english">Own home\napnay ghar ma </string>
+    <string name="crf5b_q34_a_urdu"></string>
+
+    <string name="crf5b_q34_b_english">Somewhere else\nKahin aur paka tha</string>
+    <string name="crf5b_q34_b_urdu"></string>
+
+    <string name="crf5b_q35_english">Recipe description which was consumed to a LW during this specific hour?</string>
+    <string name="crf5b_q35_urdu">Jo LW na khaya ha us k pakanay k tarqeeb apna pass likhain</string>
+
+    <string name="crf5b_q36_english">Code of the recipe used</string>
+    <string name="crf5b_q36_urdu">Us receipe ka code manual ma sa dhek k likhain</string>
+
+    <string name="crf5b_q37_english">Portion size description If same item was consumed within same our, count it as one item</string>
+    <string name="crf5b_q37_urdu">Jo LW na khaya ha us ka size kya tha Agar aik he cheez iss ghantay main aik se ziyada baar khaye hai to aik he ginti mai shamil Karen</string>
+
+    <string name="crf5b_q38_english">Amount used in gram If same item was consumed within same our, count it as one item</string>
+    <string name="crf5b_q38_urdu">Agar aik he cheez iss ghantay main aik se ziyada baar khaye hai to aik he ginti mai shamil karen Miqdar ko grams ma likhain</string>
+
+    <string name="crf5b_q39_english">Is there any food item which was consumed by the LW during this specific hour? Like Banana, Apple, Juice, Milk, Salad, Biscuit There may be chance LW used salad, which contains multiple items mix with each other, you need to enter all the things separately</string>
+    <string name="crf5b_q39_urdu">Koi aur khanay k cheez jo LW na khai ha pichay 24 ghantoun ma Ho sakta ha LW na koi salad ya aisi cheez jis ma bhoot sari cheezain mix houn, wo sari cheezain jo us na khai han sab k alag alag entry karain</string>
+
+    <string name="crf5b_q40_english">Name of food item</string>
+    <string name="crf5b_q40_urdu">Jo cheez LW na khai ha us k naam likhain</string>
+
+    <string name="crf5b_q41_english">Code of food item used</string>
+    <string name="crf5b_q41_urdu">Us khanay k cheez ka code likhain</string>
+
+    <string name="crf5b_q42_english">Portion size description</string>
+    <string name="crf5b_q42_urdu">Jo LW na khaya ha us ka size kya tha</string>
+
+    <string name="crf5b_q43_english">Amount used in gram</string>
+    <string name="crf5b_q43_urdu">Miqdar likhain grams ma</string>
+
+    <string name="crf5b_q44_english">Is there any other food item which was consumed? Like Banana, Apple, Juice, Milk, Salad, Biscuit There may be chance LW used salad, which contains multiple items mix with each other, you need to enter all the things separately</string>
+    <string name="crf5b_q44_urdu">Koi aur khanay k cheez jo LW na khai ha pichay 24 ghantoun ma</string>
+
+    <string name="crf5b_q45_english">Name of food item</string>
+    <string name="crf5b_q45_urdu">Jo cheez LW na khai ha us k naam likhain</string>
+
+    <string name="crf5b_q46_english">Code of food item used</string>
+    <string name="crf5b_q46_urdu">Us khanay k cheez ka code likhain</string>
+
+    <string name="crf5b_q47_english">Portion size description</string>
+    <string name="crf5b_q47_urdu">Jo LW na khaya ha us ka size kya tha</string>
+
+    <string name="crf5b_q48_english">Amount used in gram</string>
+    <string name="crf5b_q48_urdu">Midair likhain grams MA</string>
+
+
+    <!--Crf4b-->
+
+    <string name="crf4b_q20_english">Since last visit by Newborn team, was baby had any danger sign, complication, problem or disease for which he or she was take to any health facility or self treatment given or may be nothing was done?</string>
+    <string name="crf4b_q20_urdu">Pichli dafa sa lay kar ab tak jab new born team na visit kiya tha tu kya bachay ko khatray k koi aalmaat zahir hoi, ya us ko kisi aur maslay k waja sa ilaj k liya hospital jana para ya khud sa kisi na us ka ilaj kiya, ya phir khuch bh nahi kiya gaya?</string>
+
+    <string name="crf4b_q21_english">Which danger sign, complication, problem or disease, has the baby had?</string>
+    <string name="crf4b_q21_urdu">Which danger sign, complication, problem or disease, has the baby had?</string>
+
+    <string name="crf4b_q21_a_english">Difficulty in feeding</string>
+    <string name="crf4b_q21_a_urdu">Dhood peenay ma duhswari</string>
+
+    <string name="crf4b_q21_b_english">Cough</string>
+    <string name="crf4b_q21_b_urdu">Khaansi</string>
+
+    <string name="crf4b_q21_c_english">Cold/Flu/Runny nose</string>
+    <string name="crf4b_q21_c_urdu">Nazla ya behta howa naak</string>
+
+    <string name="crf4b_q21_d_english">Difficulty in breathing /Fast respiratory rate</string>
+    <string name="crf4b_q21_d_urdu">Sanns ma masla ya/taiz taiz sans ana</string>
+
+    <string name="crf4b_q21_e_english">Convulsions</string>
+    <string name="crf4b_q21_e_urdu">Jhatkay ana</string>
+
+    <string name="crf4b_q21_f_english">Fever</string>
+    <string name="crf4b_q21_f_urdu">Bhukar</string>
+
+    <string name="crf4b_q21_g_english">Hypothermia </string>
+    <string name="crf4b_q21_g_urdu">Jisam thanda par jana</string>
+
+
+    <string name="crf4b_q21_h_english">Lethargy or no movement</string>
+    <string name="crf4b_q21_h_urdu">Thakan ya koi harkat na hona</string>
+
+
+    <string name="crf4b_q21_i_english">Pustules</string>
+    <string name="crf4b_q21_i_urdu">Phoray ka phinsian hona</string>
+
+
+    <string name="crf4b_q21_j_english">Jaundice</string>
+    <string name="crf4b_q21_j_urdu">Yarkan/peelia</string>
+
+
+    <string name="crf4b_q21_k_english">Umbilical redness or discharge</string>
+    <string name="crf4b_q21_k_urdu">Naaf wali jaga par laal nishan ya wahan sa khuch nikalna</string>
+
+
+    <string name="crf4b_q21_l_english">Vomiting</string>
+    <string name="crf4b_q21_l_urdu">Ultian ana</string>
+
+
+    <string name="crf4b_q21_m_english">Diarrhea</string>
+    <string name="crf4b_q21_m_urdu">Dast </string>
+
+
+    <string name="crf4b_q21_n_english">Oral Thrush</string>
+    <string name="crf4b_q21_n_urdu">Moun aur zeban par zakham hona</string>
+
+    <string name="crf4b_q21_o_english">Irritability or too much crying </string>
+    <string name="crf4b_q21_o_urdu">Chircharapan ya bhoot zayda rona</string>
+
+    <string name="crf4b_q21_p_english">Redness of eyes or watery discharge</string>
+    <string name="crf4b_q21_p_urdu">Ankhain laal hona ya ankhoun sa pani ana</string>
+
+    <string name="crf4b_q21_q_english">Grunting</string>
+    <string name="crf4b_q21_q_urdu">Gargarana</string>
+
+    <string name="crf4b_q21_r_english">Lips / tongue turning blue or black</string>
+    <string name="crf4b_q21_r_urdu">Zeban aur hount kalay ya neelay ho jana</string>
+
+    <string name="crf4b_q21_s_english">Peripheral cyanosis</string>
+    <string name="crf4b_q21_s_urdu">Haat ya paoun neelay par jana</string>
+
+    <string name="crf4b_q21_t_english">Bleeding from nose</string>
+    <string name="crf4b_q21_t_urdu">Naak sa khoon ana</string>
+
+    <string name="crf4b_q21_u_english">Constipation</string>
+    <string name="crf4b_q21_u_urdu">Qabz hona</string>
+
+    <string name="crf4b_q21_v_english">Dysentery</string>
+    <string name="crf4b_q21_v_urdu">Paichish</string>
+
+    <string name="crf4b_q21_w_english">Urine stopped</string>
+    <string name="crf4b_q21_w_urdu">Peeshap ruk jana</string>
+
+    <string name="crf4b_q21_x_english">Ear discharge or pus</string>
+    <string name="crf4b_q21_x_urdu">Kaan sa pus nikalna</string>
+
+    <string name="crf4b_q21_y_english">Chest congestion</string>
+    <string name="crf4b_q21_y_urdu">Seenay ma jagran</string>
+
+    <string name="crf4b_q21_z_english">Other (specify)</string>
+    <string name="crf4b_q21_Z_urdu">Koi aur masla</string>
+
+
+    <string name="crf4b_q22_english">Since last visit by Newborn  team, was baby been taken to any health facility for care by family OR self treated? </string>
+    <string name="crf4b_q22_urdu">Pichli visit sa lay kar ab tak kya bachay ko kisi hospital ya sehat k markaz lay kar jana para, ya khud sa ghar ma us ka ilaj kiya gaya ho</string>
+
+    <string name="crf4b_q23_english">From where was the care was sought?</string>
+    <string name="crf4b_q23_urdu">Kis sehat k markaz ya hospital lay kar gay bachay ko</string>
+
+    <string name="crf4b_q23_a_english">Vital Pakistan/ Aga Khan Center</string>
+
+    <string name="crf4b_q23_b_english">Attiya hospital</string>
+
+    <string name="crf4b_q23_c_english">Koohi Goth Hospital</string>
+
+    <string name="crf4b_q23_d_english">Jinnah</string>
+
+    <string name="crf4b_q23_e_english">Civil</string>
+
+    <string name="crf4b_q23_f_english">Korangi-5 government hospital</string>
+
+    <string name="crf4b_q23_g_english">Any other government hospital</string>
+
+    <string name="crf4b_q23_h_english">Private hospital</string>
+
+    <string name="crf4b_q23_i_english">Clinic</string>
+
+    <string name="crf4b_q23_j_english">Rural Health center</string>
+
+    <string name="crf4b_q23_k_english">Dispensary</string>
+
+    <string name="crf4b_q23_l_english">Medical store</string>
+
+    <string name="crf4b_q23_m_english">Self medication</string>
+
+    <string name="crf4b_q24_english">Did the baby receive any treatment during this period?</string>
+    <string name="crf4b_q24_urdu">Bachay ko koi deewai ya ilaj diya gaya is doran</string>
+
+    <string name="crf4b_q25_english">What was the treatment given?</string>
+    <string name="crf4b_q25_urdu">Kon sa ilaj bachay ko diya gaya</string>
+
+    <string name="crf4b_q25_a_english">Kept in an incubator</string>
+    <string name="crf4b_q25_a_urdu">Bachay ko machine ma rakha</string>
+
+    <string name="crf4b_q25_b_english">Injectable antibiotics were administered</string>
+    <string name="crf4b_q25_b_urdu">Deewai di gay teekay k zariya</string>
+
+    <string name="crf4b_q25_c_english">Antibiotic syrup was given</string>
+    <string name="crf4b_q25_c_urdu">Deewai di gay moun k zariya</string>
+
+    <string name="crf4b_q25_d_english">Drip was administered</string>
+    <string name="crf4b_q25_d_urdu">Drip lagay gay</string>
+
+    <string name="crf4b_q25_e_english">Oxygen was given through bag, tube or mask</string>
+    <string name="crf4b_q25_e_urdu">Oxygen lagi nali ya bag k zariya</string>
+
+    <string name="crf4b_q25_f_english">Kept on a ventilator</string>
+    <string name="crf4b_q25_f_urdu">Sans wali machine lagay gay</string>
+
+    <string name="crf4b_q25_g_english">Baby was kept on NG feed</string>
+    <string name="crf4b_q25_g_urdu">Bachay ko khorak k nali lagay gay</string>
+
+    <string name="crf4b_q25_h_english">Some other medicine – not powdered one</string>
+    <string name="crf4b_q25_h_urdu">Koi aur deewai di gay, powder wali deewai k ilawa</string>
+
+    <string name="crf4b_q25_i_english">Other (specify)</string>
+    <string name="crf4b_q25_i_urdu">Koi aur ilaj</string>
+
+    <string name="crf4b_q26_english">Any prescription or bottle or wrapper of medicine/s, which is available?</string>
+    <string name="crf4b_q26_urdu">Bachay ko di gay deewai ya khali daba, ya khali bottle moujod ha</string>
+
+    <string name="crf4b_q27_english">Please mention the name of all medicine</string>
+    <string name="crf4b_q27_urdu">Sari deewaioun k naam aik aik kar k likhain</string>
+
+    <string name="crf4b_q28_english">Does anyone in the mother/family remembers the name of medicine/s the name of medicine which was prescribed?</string>
+    <string name="crf4b_q28_urdu">Maa ya ghar k kisi dosray afrad ko bachay ko di gay deewaioun ka naam yaad han </string>
+
+    <string name="crf4b_q29_english">Please mention the name of all medicines which were recalled by mother/family?</string>
+    <string name="crf4b_q29_urdu">Wo naam aik aik kar k yahan likhain</string>
+
+    <string name="crf4b_q30_english">Are the medicines still being continued untill now?</string>
+    <string name="crf4b_q30_urdu">Bachay ko di gay deewaiyan abhi bh istimaal ho rahi ha</string>
+
+    <string name="crf4b_q31_english">If powder medications were prescribed, for how many days were these given?</string>
+    <string name="crf4b_q31_urdu">Agar bachay ko koi bh powder wali deewai di gay th tu wo kitnay din tak istimaal k gay</string>
+
+    <string name="crf4b_q32_english">If baby was admitted during this period, for how long was the baby admitted?\n99 if do not know\n88 if unnecessary\n77 if not admitted</string>
+    <string name="crf4b_q32_urdu">Agar bacha is doran hosptial ma dhakil howa tu kitnay dinoun k liya</string>
+
+    <string name="crf4b_q33_english">What is the state of the baby’s health according to the family?</string>
+    <string name="crf4b_q33_urdu">Is waqt bachay k sehat kaisi ha</string>
+    <string name="crf4b_q33_option_1">Well baby (Sahi ha)</string>
+    <string name="crf4b_q33_option_2">Recovered from illness (beemari dur ho gay)</string>
+    <string name="crf4b_q33_option_3">Still ill, but better than before (abhi bh beemar ha laikin pehlay sa behtar ha)</string>
+    <string name="crf4b_q33_option_4">Condition has deteriorated (tabiyat aur kharan ho gay)</string>
+
+    <string name="crf4b_q34_english">Respiratory rate  (00.0 if refused)If the respiratory rate is 60 or more (if age is 59 days of less) OR 50 or more (if age is greater than 59 days), count again and note the second respiratory rate</string>
+    <string name="crf4b_q34_urdu">Sans lainay k raftar note karain Agar sans lainay k raftar 60 ya zayda ha tu aik daf phir note kar k likhain</string>
+
+    <string name="crf4b_q35_english">Is the respiratory rate 60 or above on two different readings (if Age is less than 59 days?\nIs the respiratory rate 50 or above on two different readings (if Age greater than 59 days?</string>
+    <string name="crf4b_q35_urdu">Uper liya janay wali sans lainay k raftar 60 ya us sa zayda ha 2 dafa ma (Agar bachay k umer 59 dinoun sa kaam ha)\nUper liya janay wali sans lainay k raftar 50 ya us sa zayda ha 2 dafa ma (Agar bachay k umer 59 dinoun sa zayda ha)</string>
+
+    <string name="crf4b_q36_english">Severe chest indrawing – Is chest indrawing on every breath?</string>
+    <string name="crf4b_q36_urdu">Shadeed sinay k harkat andar k taraf jab bacha sans laita ha</string>
+    <!--
+
+    <string name="crf4b_q37_english"></string>
+    <string name="crf4b_q37_urdu"></string>
+-->
+
+    <string name="crf4b_q38_english">Is temperature on two different readings equal or greater than 38.8</string>
+    <string name="crf4b_q38_urdu">Upper li gay doun readings 38.8 ya us sa zayda han</string>
+
+    <string name="crf4b_q39_english">Is temperature on two different readings is less than 35.5</string>
+    <string name="crf4b_q39_urdu">Upper li gay doun readings 35.5 sa kaam han</string>
+
+    <string name="crf4b_q40_english">Check the movement of the baby </string>
+    <string name="crf4b_q40_urdu">Bachay ki harkat check karain</string>
+    <string name="crf4b_q40_opt1">Normal movement (sahi harkat ha)</string>
+    <string name="crf4b_q40_opt2">Movement only on stimulation (sirf chairnay par harkat ha)</string>
+    <string name="crf4b_q40_opt3">No movement at all or unconscious  (koi harkat nahi and bacha hosh ma nahi)</string>
+
+
+    <string name="crf4b_q41_english">Convulsions</string>
+    <string name="crf4b_q41_urdu">Jhatkay</string>
+    <string name="crf4b_q41_opt1">According to the family, the baby had convulsions\n(bachay ko jhatkay partay han)</string>
+    <string name="crf4b_q41_opt2">The baby had convulsions in your (health worker’s) presence\n(Bachay ko jhatkay ain han team k mojodgi ma)</string>
+    <string name="crf4b_q41_opt3">No convulsions\nKoi jhatkay nahi</string>
+
+    <string name="crf4b_q42_a_english">Ask the mother if the baby is having problem in taking milk?</string>
+    <string name="crf4b_q42_a_urdu">Maa sa pochain k agar bachay ko maa ka dhood peenay ma koi masla tu darpaish nahi ho raha</string>
+    <string name="crf4b_q42_a_opt1">Mother has told that the baby has difficulty in breastfeeding\nMaa na bataya k bachay ko dhood peenay ma masla ha</string>
+    <string name="crf4b_q42_a_opt2">No problem with breastfeeding\nMaa ka dhood peenay ma koi masla nahi</string>
+    <string name="crf4b_q42_a_opt3">Baby unable to feed due to illness\nBacha beemari k waja sa dhood nahi pee sak raha</string>
+    <string name="crf4b_q42_a_opt4">Refused for assessment (Revisit)\nAssessment k liya mana kar diya</string>
+
+    <string name="crf4b_q42_b_english">Ask the mother to feed the baby now and you (health worker) will observe</string>
+    <string name="crf4b_q42_b_urdu">Maa ko bolain k wo bachay ko app ka samnay dhood pilai and nichay di gay bataoun ko note karain</string>
+
+    <string name="crf4b_q43_english">Has breastfeeding position been corrected by research staff?</string>
+    <string name="crf4b_q43_urdu">Bacha k position kya team member na sahi k</string>
+
+    <string name="crf4b_q44_english">Has breastfeeding attachment been corrected by research staff?</string>
+    <string name="crf4b_q44_urdu">Bacha ko maa k saath joray rakha kya team member na sahi kiya</string>
+
+    <string name="crf4b_q45_english">Does the baby have  poor sucking due to illness?</string>
+    <string name="crf4b_q45_urdu">Bachay k dhood peenay k salahiyat kaam ha beemarik waja sa</string>
+
+    <string name="crf4b_q46_english">Is the baby unable to feed?</string>
+    <string name="crf4b_q46_urdu">Bacha bilkul dhood nahi pee saka</string>
+
+    <string name="crf4b_q47_english">Any pustules on the skin?</string>
+    <string name="crf4b_q47_urdu">Bachay k jisam par kisi kisam k chalay ya phinsian han</string>
+
+    <string name="crf4b_q48_english">Umbilical redness or discharge of pus?</string>
+    <string name="crf4b_q48_urdu">Naaf ma soojan ya waha sa kisi cheez ka nikalna</string>
+    <string name="crf4b_q48_opt1">None</string>
+    <string name="crf4b_q48_opt2">Redness is present (Jaga par soojan ha)</string>
+    <string name="crf4b_q48_opt3">Discharge of pus (Pus nikal rahi ha)</string>
+    <string name="crf4b_q48_opt4">Both</string>
+
+    <string name="crf4b_q49_english">Jaundice</string>
+    <string name="crf4b_q49_urdu">Peeliya / Yarkan</string>
+    <string name="crf4b_q49_opt1">No jaundice (Nahi ha)</string>
+    <string name="crf4b_q49_opt2">Mild jaundice (halka ha)</string>
+    <string name="crf4b_q49_opt3">Moderate jaundice (Darmiyana ha)</string>
+    <string name="crf4b_q49_opt4">Severe jaundice (Shadeed ha)</string>
+
+    <string name="crf4b_q50_english">Did the health worker find any symptom, condition or problem with the baby?</string>
+    <string name="crf4b_q50_urdu">Team member na in ma koi masla bachay ka noima kartay howa note kiya</string>
+
+    <string name="crf4b_q50_a_english">Cough </string>
+    <string name="crf4b_q50_a_urdu">Khansi</string>
+
+    <string name="crf4b_q50_b_english">Cold/Flu/Runny nose</string>
+    <string name="crf4b_q50_b_urdu">Nazla ya naak behna</string>
+
+    <string name="crf4b_q50_c_english">Vomiting</string>
+    <string name="crf4b_q50_c_urdu">ultian</string>
+
+    <string name="crf4b_q50_d_english">Diarrhea</string>
+    <string name="crf4b_q50_d_urdu">Dast</string>
+
+    <string name="crf4b_q50_e_english">Oral thrush</string>
+    <string name="crf4b_q50_e_urdu">Moun aur zeban par zakham hona</string>
+
+    <string name="crf4b_q50_f_english">Irritability / excessive crying</string>
+    <string name="crf4b_q50_f_urdu">Chichirahat ya bhoot zayda rona</string>
+
+    <string name="crf4b_q50_g_english">Redness of eyes or discharge of water</string>
+    <string name="crf4b_q50_g_urdu">ankhain laal hona ya ankhoun sa pani nikalna</string>
+
+
+    <string name="crf4b_q50_h_english">Lips / tongue turning blue or blackish</string>
+    <string name="crf4b_q50_h_urdu">Hount ya zeban neeli ya kali hona</string>
+
+
+    <string name="crf4b_q50_i_english">Tips of finger/Feet turn blue</string>
+    <string name="crf4b_q50_i_urdu">haatoun k unglian ya pair neelay hona</string>
+
+
+    <string name="crf4b_q50_j_english">Some sounds present during respiration</string>
+    <string name="crf4b_q50_j_urdu">sans laitay howy awaz nikalna</string>
+
+
+    <string name="crf4b_q50_k_english">Bleeding from nose</string>
+    <string name="crf4b_q50_k_urdu">Naak sa khoon ana</string>
+
+
+    <string name="crf4b_q50_l_english">Pus in ear</string>
+    <string name="crf4b_q50_l_urdu">Kaan sa pus ana</string>
+
+
+    <string name="crf4b_q50_m_english">Chest congestion </string>
+    <string name="crf4b_q50_m_urdu">seena jagra hona</string>
+
+
+    <string name="crf4b_q50_n_english">Allergy / rash </string>
+    <string name="crf4b_q50_n_urdu">jisam par laal nishan hona</string>
+
+    <string name="crf4b_q50_o_english">Constipation</string>
+    <string name="crf4b_q50_o_urdu">Qabz</string>
+
+    <string name="crf4b_q50_p_english">Other (specify)</string>
+    <string name="crf4b_q50_p_urdu">koi aur masla</string>
+
+
+    <string name="crf4b_q51_english">According to the health worker, does the baby have any severe symptom for which immediate referral is needed or has been referred?</string>
+    <string name="crf4b_q51_urdu">Team member k mutabiq bachay ko koi aisa masla ha jis k waja sa bachay ko foran tibbi maoinay k liya lay kar jana chahiya</string>
+
+    <string name="crf4b_q52_english">Does the mother/family want a referral for their own satisfaction?</string>
+    <string name="crf4b_q52_urdu">Bachay k maa apni tasali k liya khud lay kar jana chahti ha bachay ko</string>
+
+    <string name="crf4b_q53_english">Did the health worker refer the baby based on the mother’s/ family’s concern or for her own satisfaction?</string>
+    <string name="crf4b_q53_urdu">Team meber na bachay ko tibbi noimay k liya bhejwa diya</string>
+
+    <string name="crf4b_q54_english">Did the parent/family of the baby accept the referral?\n(if the parent/family did not accept the referral, revisit the next day and guide)</string>
+    <string name="crf4b_q54_urdu">Bachay k ghar waloun na is ka qabool kar liya\nAgar bachay k ghar waloun nahi maan rahay tu dobara un k ghar jain dosray din and un k mazeed rehnumai karain</string>
+
+    <string name="crf4b_q55_english">Reason for refusing the referral?</string>
+    <string name="crf4b_q55_urdu">Mana karnay ka reason kya tha</string>
+
+    <string name="crf4b_q55_a_english">Did not think the baby was sick enough to need health care</string>
+    <string name="crf4b_q55_a_urdu">Un k mutabiq bacha itna beemar nahi ha k us ko sehat k markaz jana paray</string>
+
+    <string name="crf4b_q55_b_english">No one available to go with the caregiver</string>
+    <string name="crf4b_q55_b_urdu">Koi moujod nahi ha jo bachay k saath ja sakay</string>
+
+    <string name="crf4b_q55_c_english">Too much time from her regular duties</string>
+    <string name="crf4b_q55_c_urdu">Masroofiyat k waja sa</string>
+
+    <string name="crf4b_q55_d_english">Someone else has to decide</string>
+    <string name="crf4b_q55_d_urdu">Koi aur is baat ka faisla karay ga</string>
+
+    <string name="crf4b_q55_e_english">Too far to travel</string>
+    <string name="crf4b_q55_e_urdu">Bhoot dur jana parta ha</string>
+
+    <string name="crf4b_q55_f_english">No transportation available</string>
+    <string name="crf4b_q55_f_urdu">Kisi gari ka bandobast nahi ha</string>
+
+    <string name="crf4b_q55_g_english">Cost (transport, health care, other)</string>
+    <string name="crf4b_q55_g_urdu">Paisoun ka masla ha</string>
+
+
+    <string name="crf4b_q55_h_english">Not satisfied with the available health care</string>
+    <string name="crf4b_q55_h_urdu">Maoujooda sehat k nizam tasali baksh nahi ha</string>
+
+
+    <string name="crf4b_q55_i_english">Problem requires traditional care</string>
+    <string name="crf4b_q55_i_urdu">Bachay ko jo masla ha wo riwayti tareeqay sa theek ho jay ga</string>
+
+
+    <string name="crf4b_q55_j_english">Thought baby was too sick to travel</string>
+    <string name="crf4b_q55_j_urdu">Bacha bhoot beemar ha and dur nahi ja sakta</string>
+
+
+    <string name="crf4b_q55_k_english">Thought baby will die no matter what</string>
+    <string name="crf4b_q55_k_urdu">Bacha akhir kar mar jay ga khuch bh ho jay</string>
+
+
+    <string name="crf4b_q55_l_english">Other (specify) </string>
+    <string name="crf4b_q55_l_urdu">Koi aur masla</string>
+
+    <string name="crf4b_q56_english">Is this day 6 follow-up visit?</string>
+    <string name="crf4b_q56_urdu">Kya ya follow up ka 6th  din ha</string>
+
+
+    <string name="crf4b_q58_english">Is this day 46 visit?</string>
+    <string name="crf4b_q58_urdu">Follow up day 46 ko ha</string>
+
+    <string name="crf4b_q60_english">Is this day 74 visit?</string>
+    <string name="crf4b_q60_urdu">Follow up din 74 ko ha</string>
+
 
     <string-array name="select_para">
 
@@ -60,7 +1143,7 @@
         <item>CC</item>
         <item>BM</item>
         <item>FG</item>
-
+        <item>MB</item>
     </string-array>
 
 

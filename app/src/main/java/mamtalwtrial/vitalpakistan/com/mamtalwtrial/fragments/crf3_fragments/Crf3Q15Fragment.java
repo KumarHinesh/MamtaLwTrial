@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -27,22 +28,25 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3bActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3b_fragments.Crf3bQ44Fragment;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 
 public class Crf3Q15Fragment extends Fragment {
 
     Button btnConform, btnCancel;
-    TextView tv_engText,tv_RomanEngText;
+    TextView tv_engText,tv_RomanEngText, tv_q19, tv_q20, tv_q22, tv_q23,tv_q24 ;
     Dialog dialog;
+
+    ScrollView scrolView;
 
     RadioGroup rg_q22, rg_q19, rg_q20;
 
     RadioButton rb_q22, rb_q19, rb_q20;
 
-    EditText et_q22, et_q17, et_q24;
+    EditText  et_q17, et_q24, et_q18, et_q23 , et_q26, et_q27;
 
-    LinearLayout ll_q24;
+    LinearLayout ll_q24, ll_q23;
 
     Button btn_next;
 
@@ -52,10 +56,25 @@ public class Crf3Q15Fragment extends Fragment {
                              Bundle savedInstanceState) {
 
         final View view  = inflater.inflate(R.layout.fragment_crf3_q15, container, false);
+
+        tv_q19 = (TextView) view.findViewById(R.id.tv_q19);
+        tv_q20 = (TextView) view.findViewById(R.id.tv_q20);
+        tv_q22 = (TextView) view.findViewById(R.id.tv_q22);
+        tv_q23 = (TextView) view.findViewById(R.id.tv_q23);
+        tv_q24 = (TextView) view.findViewById(R.id.tv_q24);
+
+
         ll_q24 = (LinearLayout) view.findViewById(R.id.ll_q24);
-        et_q22 = (EditText) view.findViewById(R.id.et_q22);
+        ll_q23 = (LinearLayout) view.findViewById(R.id.ll_q23);
+
         et_q24 = (EditText) view.findViewById(R.id.et_q24);
         et_q17 = (EditText) view.findViewById(R.id.et_q17);
+        et_q18 = (EditText) view.findViewById(R.id.et_q18);
+        et_q23 = (EditText) view.findViewById(R.id.et_q23);
+        et_q26 = (EditText) view.findViewById(R.id.et_q26);
+        et_q27 = (EditText) view.findViewById(R.id.et_q27);
+
+        scrolView = (ScrollView) view.findViewById(R.id.scrolView);
 
         rg_q22 = (RadioGroup) view.findViewById(R.id.rg_q22);
         rg_q22.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -63,14 +82,14 @@ public class Crf3Q15Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 rb_q22 = (RadioButton) view.findViewById(rg_q22.getCheckedRadioButtonId());
-                if(rb_q22.getTag().toString().equalsIgnoreCase("yes")){
+                if(rb_q22.getTag().toString().equalsIgnoreCase(ContantsValues.YES)){
 
                     ll_q24.setVisibility(View.VISIBLE);
-                    et_q22.setVisibility(View.VISIBLE);
+                    ll_q23.setVisibility(View.VISIBLE);
                 }else {
 
                     ll_q24.setVisibility(View.GONE);
-                    et_q22.setVisibility(View.GONE);
+                    ll_q23.setVisibility(View.GONE);
                 }
             }
         });
@@ -81,7 +100,13 @@ public class Crf3Q15Fragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                myCustomeDialog();
+                if(validation()){
+
+                    myCustomeDialog();
+
+                }
+
+
             }
         });
 
@@ -91,7 +116,6 @@ public class Crf3Q15Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q19 = (RadioButton) view.findViewById(rg_q19.getCheckedRadioButtonId());
 
-                 CRF3Activity.formCrf3aDTO.setQ19(rb_q19.getTag().toString());
             }
         });
 
@@ -102,18 +126,91 @@ public class Crf3Q15Fragment extends Fragment {
 
                 rb_q20 = (RadioButton) view.findViewById(rg_q20.getCheckedRadioButtonId());
 
-                if(rb_q20.getTag().toString().equalsIgnoreCase("yes")){
-
-                    CRF3Activity.formCrf3aDTO.setQ20("y");
-                }
-                if(rb_q20.getTag().toString().equalsIgnoreCase("no")){
-                    CRF3Activity.formCrf3aDTO.setQ20("n");
-                }
             }
         });
 
 
         return view;
+    }
+
+
+    public boolean validation(){
+       boolean validation = true;
+
+        CRF3Activity.formCrf3aDTO.setQ15(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
+        CRF3Activity.formCrf3aDTO.setQ16(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+
+        if (et_q17.getText().toString().equals("")) {
+            validation = false;
+        } else {
+            CRF3Activity.formCrf3aDTO.setQ17(et_q17.getText().toString());
+        }
+
+        if (et_q18.getText().toString().equals("")) {
+            validation = false;
+        } else {
+            CRF3Activity.formCrf3aDTO.setQ18(et_q18.getText().toString().toUpperCase());
+        }
+
+
+        if (et_q26.getText().toString().equals("")) {
+            validation = false;
+        } else {
+            CRF3Activity.formCrf3aDTO.setQ26(et_q26.getText().toString().toUpperCase());
+        }
+
+        if (et_q27.getText().toString().equals("")) {
+            validation = false;
+        } else {
+            CRF3Activity.formCrf3aDTO.setQ27(et_q27.getText().toString().toUpperCase());
+        }
+
+
+
+        if (isRBCheckedThree(rg_q19, rb_q19, tv_q19).equals("")) {
+            validation = false;
+        } else {
+            CRF3Activity.formCrf3aDTO.setQ19(isRBCheckedThree(rg_q19, rb_q19, tv_q19));
+        }
+
+        if (isRBCheckedThree(rg_q20, rb_q20, tv_q20).equals("")) {
+            validation = false;
+        } else {
+            CRF3Activity.formCrf3aDTO.setQ20(isRBCheckedThree(rg_q20, rb_q20, tv_q20));
+        }
+
+
+        if (isRBCheckedThree(rg_q22, rb_q22, tv_q22).equals("")) {
+            validation = false;
+        } else {
+            CRF3Activity.formCrf3aDTO.setQ22(isRBCheckedThree(rg_q22, rb_q22, tv_q22));
+        }
+
+        if(ll_q23.getVisibility()==View.VISIBLE){
+
+            if(getTextFromField(et_q23,tv_q23).equals("")){
+                validation = false;
+            }else {
+
+                CRF3Activity.formCrf3aDTO.setQ23(getTextFromField(et_q23,tv_q23));
+            }
+
+        }
+
+        if(ll_q24.getVisibility()==View.VISIBLE){
+
+            if(getTextFromField(et_q24,tv_q24).equals("")){
+                validation = false;
+            }else {
+
+                CRF3Activity.formCrf3aDTO.setQ24(getTextFromField(et_q24,tv_q24));
+            }
+
+        }
+
+
+        return validation;
     }
 
     public void myCustomeDialog(){
@@ -140,19 +237,17 @@ public class Crf3Q15Fragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if(rb_q22.getTag().toString().equalsIgnoreCase("yes")){
 
-                    CRF3Activity.formCrf3aDTO.setQ22(et_q22.getText().toString());
-                    CRF3Activity.formCrf3aDTO.setQ24(et_q24.getText().toString());
-                }else {
 
-                    CRF3Activity.formCrf3aDTO.setQ22("n");
-                }
 
                 CRF3Activity.formCrf3aDTO.setQ25(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format( Calendar.getInstance().getTime()));
                 CRF3Activity.formCrf3aDTO.setQ17(et_q17.getText().toString());
-                SendDataToServer.sendCrf3aForm(CRF3Activity.formCrf3aDTO);
-                startActivity(new Intent(getContext(), CRF3bActivity.class).putExtra("pwData",new Gson().toJson(CRF3Activity.formCrf3aDTO.getPregnantWoman())));
+
+                CRF3Activity.formsCrf2AndCrf3All.setCrf3aStatus(Constants.COMPLETED);
+                CRF3Activity.formsCrf2AndCrf3All.setFormCrf3aDTO(CRF3Activity.formCrf3aDTO);
+                //SendDataToServer.sendCrf3aForm(CRF3Activity.formCrf3aDTO);
+
+                startActivity(new Intent(getContext(), CRF3bActivity.class).putExtra("forms",new Gson().toJson(CRF3Activity.formsCrf2AndCrf3All)));
                 getActivity().finish();
 
             }
@@ -161,6 +256,75 @@ public class Crf3Q15Fragment extends Fragment {
         dialog.show();
 
     }
+
+
+
+    int x,y;
+    public void setFocuseable(float x1, float y1){
+
+        x = (int) x1;
+        y = (int) y1;
+
+        scrolView.post(new Runnable() {
+            public void run() {
+                scrolView.scrollTo(x,y); // these are your x and y coordinates
+            }
+        });
+
+    }
+
+    public String isRBCheckedThree(RadioGroup rg, RadioButton rb, TextView tv){
+
+        if(rg.getCheckedRadioButtonId()==-1){
+            tv.setError("Required");
+            setFocuseable(tv.getX(),tv.getY());
+            return "";
+        }else {
+            return  rb.getTag().toString();
+        }
+    }
+
+    public String getEditText(RadioGroup rg, RadioButton rb, EditText editText ,TextView tv, String id, String id2, String id3, String id4){
+
+        if(rg.getCheckedRadioButtonId()==-1){
+            setFocuseable(tv.getX(),tv.getY());
+            tv.setError("Required");
+            return "";
+        }else {
+            if(rb.getTag().toString().equals(id) || rb.getTag().toString().equals(id2) ||
+                    rb.getTag().toString().equals(id3) || rb.getTag().toString().equals(id4)){
+
+                if(editText.getText().toString().equals("") || editText.getText().toString().isEmpty()){
+                    editText.setError("Enter Here");
+                    setFocuseable(editText.getX(),editText.getY());
+                    return "";
+                }else {
+                    return editText.getText().toString();
+                }
+            }else {
+
+                return rb.getTag().toString();
+            }
+
+        }
+    }
+
+    public String getTextFromField(EditText et, TextView tv){
+
+        if(et.getText().toString().equals("")){
+            setFocuseable(et.getX(),et.getY());
+            tv.setError("Required");
+            et.setError("Required");
+            return "";
+        }else {
+            return et.getText().toString();
+        }
+    }
+
+
+
+
+
 
 
 }

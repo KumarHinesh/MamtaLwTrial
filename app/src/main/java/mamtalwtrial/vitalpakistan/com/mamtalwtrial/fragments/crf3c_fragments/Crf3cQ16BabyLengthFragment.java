@@ -13,18 +13,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
-
 import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
@@ -32,16 +27,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CounselingCRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf1_fragments.PwOtherDataFragment3;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.MuacAssesmentDTO;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.ChildWeightDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.BabyLengthCrf3cDTO;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.ChildWeightCrf3cDTO;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
 
 
@@ -82,6 +68,12 @@ public class Crf3cQ16BabyLengthFragment extends Fragment {
 
         et_readerId_1 = (EditText) view.findViewById(R.id.et_readerId_1);
         et_readerId_2 = (EditText) view.findViewById(R.id.et_readerId_2);
+
+        et_readerId_1.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode1());
+        et_readerId_1.setEnabled(false);
+
+        et_readerId_2.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode2());
+        et_readerId_2.setEnabled(false);
 
         tv_ass_id = (TextView) view.findViewById(R.id.tv_ass_id);
 
@@ -279,6 +271,7 @@ public class Crf3cQ16BabyLengthFragment extends Fragment {
                 float temp1 = (f1 + f2) / 2;
                 avrageVal = Double.parseDouble( new DecimalFormat("##.#").format(temp1));
                 tv_averageLength.setText(avrageVal + "");
+                CRF3cActivity.formCrf3cDTO.setQ17(avrageVal + "");
 
             } else {
 
@@ -456,8 +449,8 @@ public class Crf3cQ16BabyLengthFragment extends Fragment {
 
         babyLengthCrf3cDTO.setReader1(getTextFromField(et_1));
         babyLengthCrf3cDTO.setReader2(getTextFromField(et_2));
-     //   childWeightCrf3cDTO.setReaderCode1(et_readerId_1.getText().toString());
-     //   childWeightCrf3cDTO.setReaderCode2(et_readerId_2.getText().toString());
+        babyLengthCrf3cDTO.setReaderCode1(et_readerId_1.getText().toString());
+        babyLengthCrf3cDTO.setReaderCode2(et_readerId_2.getText().toString());
         babyLengthCrf3cDTO.setId(id);
         babyLengthCrf3cDTO.setDifference(getTextFromField(et_1)-getTextFromField(et_2));
 

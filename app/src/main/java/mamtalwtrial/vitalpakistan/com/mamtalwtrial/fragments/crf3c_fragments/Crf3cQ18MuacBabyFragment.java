@@ -1,7 +1,6 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3c_fragments;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -30,11 +29,8 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CounselingCRF1Activity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf1_fragments.PwOtherDataFragment3;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.MuacAssesmentDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.MuacBabyCrf3cDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
@@ -78,6 +74,12 @@ public class Crf3cQ18MuacBabyFragment extends Fragment {
 
         et_readerId_1 = (EditText) view.findViewById(R.id.et_readerId_1);
         et_readerId_2 = (EditText) view.findViewById(R.id.et_readerId_2);
+
+        et_readerId_1.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode1());
+        et_readerId_1.setEnabled(false);
+
+        et_readerId_2.setText(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode2());
+        et_readerId_2.setEnabled(false);
 
         tv_ass_id = (TextView) view.findViewById(R.id.tv_ass_id);
 
@@ -464,8 +466,8 @@ public class Crf3cQ18MuacBabyFragment extends Fragment {
 
         muacBabyCrf3cDTO.setReader1(getTextFromField(et_1));
         muacBabyCrf3cDTO.setReader2(getTextFromField(et_2));
-      //  muacAssesment.setReaderCode1(et_readerId_1.getText().toString());
-      //  muacAssesment.setReaderCode2(et_readerId_2.getText().toString());
+        muacBabyCrf3cDTO.setReaderCode1(et_readerId_1.getText().toString());
+        muacBabyCrf3cDTO.setReaderCode2(et_readerId_2.getText().toString());
         muacBabyCrf3cDTO.setId(id);
         muacBabyCrf3cDTO.setDifference(getTextFromField(et_1)-getTextFromField(et_2));
 
