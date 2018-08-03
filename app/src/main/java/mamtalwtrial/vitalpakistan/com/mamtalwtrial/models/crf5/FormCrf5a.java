@@ -32,6 +32,35 @@ public class FormCrf5a {
 
     private Integer id;
 
+
+    private Integer followupStatus;
+    private Integer followupId;
+    private Integer formStatus;
+
+    public Integer getFollowupStatus() {
+        return followupStatus;
+    }
+
+    public void setFollowupStatus(Integer followupStatus) {
+        this.followupStatus = followupStatus;
+    }
+
+    public Integer getFollowupId() {
+        return followupId;
+    }
+
+    public void setFollowupId(Integer followupId) {
+        this.followupId = followupId;
+    }
+
+    public Integer getFormStatus() {
+        return formStatus;
+    }
+
+    public void setFormStatus(Integer formStatus) {
+        this.formStatus = formStatus;
+    }
+
     private String q19;
     private String q20;
     private String q21;
@@ -72,6 +101,7 @@ public class FormCrf5a {
     private String q38h;
     private String q38i;
     private String q38j;
+    private String q38k;
     private String q39;
     private String q40;
     private String q41;
@@ -116,6 +146,14 @@ public class FormCrf5a {
     private String q59k;
     private String q59l;
     private String q60;
+
+    public String getQ38k() {
+        return q38k;
+    }
+
+    public void setQ38k(String q38k) {
+        this.q38k = q38k;
+    }
 
     private TeamDTO team;
 

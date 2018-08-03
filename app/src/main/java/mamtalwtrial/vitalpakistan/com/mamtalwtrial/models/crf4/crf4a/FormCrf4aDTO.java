@@ -12,6 +12,34 @@ public class FormCrf4aDTO {
 
     private Integer id;
 
+    private Integer followupStatus;
+    private Integer followupId;
+    private Integer formStatus;
+
+    public Integer getFollowupStatus() {
+        return followupStatus;
+    }
+
+    public void setFollowupStatus(Integer followupStatus) {
+        this.followupStatus = followupStatus;
+    }
+
+    public Integer getFollowupId() {
+        return followupId;
+    }
+
+    public void setFollowupId(Integer followupId) {
+        this.followupId = followupId;
+    }
+
+    public Integer getFormStatus() {
+        return formStatus;
+    }
+
+    public void setFormStatus(Integer formStatus) {
+        this.formStatus = formStatus;
+    }
+
     private TeamDTO team;
     private StudiesDTO studies;
     private List<FormCrf4aDetailsDTO> details;
@@ -19,6 +47,7 @@ public class FormCrf4aDTO {
     private String dateOfAttempt;
     private String timeOfAttempt;
     private String codeOfResearhStaff;
+    private String q9;
     private String q18;
     private String q19;
     private String q20;
@@ -28,6 +57,14 @@ public class FormCrf4aDTO {
     private String q24;
     private String q25;
     private String q26;
+
+    public String getQ9() {
+        return q9;
+    }
+
+    public void setQ9(String q9) {
+        this.q9 = q9;
+    }
 
     private String q74;
     private String q75;

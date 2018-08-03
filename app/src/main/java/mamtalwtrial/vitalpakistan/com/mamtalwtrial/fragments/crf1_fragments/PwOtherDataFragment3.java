@@ -183,7 +183,6 @@ public class PwOtherDataFragment3 extends Fragment {
                         startActivity(i);
                         getActivity().finish();
 
-
                     /*
                         Gson gson = new Gson();
 
@@ -192,7 +191,6 @@ public class PwOtherDataFragment3 extends Fragment {
                         getActivity().finish();
 
                     }*/
-
 
                 }else {
 

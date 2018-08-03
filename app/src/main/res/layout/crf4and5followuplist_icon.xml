@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="4dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/green_circle"
+                />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WOMAN NAME :   "
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_showName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pregnant Woman"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WOMAN ASTID :  "
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_astId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pregnant Woman"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Woman DSS      :"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_site"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Site"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_visitStatus"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STUDY ID            :  "
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_studyId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/ll_muac"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FOLLOW UP NO:  "
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_muac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="followup"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_arm"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ARM                   :  "
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_arm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ageOfBaby"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AGE OF BABY         :  "
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_babyAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -7,6 +7,9 @@
     tools:context=".activities.CRF4And5Dashboard">
 
 
+
+
+
     <ListView
         android:id="@+id/list_item"
         android:layout_width="match_parent"
@@ -14,6 +17,5 @@
 
 
     </ListView>
-
 
 </android.support.constraint.ConstraintLayout>

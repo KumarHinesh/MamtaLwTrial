@@ -18,8 +18,12 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4b_fragments.Crf4bQ20Fragment;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf4.crf4a.FormCrf4aDetailsDTO;
 
 
@@ -28,14 +32,15 @@ public class Crf4aQ27Fragment extends Fragment {
     boolean[] allFields;
 
     EditText et_q73_j;
-    LinearLayout ll_q29_q39;
+    LinearLayout ll_q29_q39, ll_q31_q39;
 
     Button btn_submit;
 
     FormCrf4aDetailsDTO formCrf4aDetailsDTO;
+    List listOfq27Toq73;
 
     LinearLayout ll_q28_to_q73, ll_q33, ll_q34, ll_q35, ll_q37, ll_q39, ll_q41_q57, ll_q42, ll_q43, ll_q44, ll_q45,
-                     ll_q46_q57, ll_q47, ll_q48, ll_q49, ll_q50, ll_q51, ll_q52, ll_q53, ll_q54, ll_q55, ll_q56, ll_q57,
+                ll_q47_q57, ll_q47, ll_q48, ll_q49, ll_q50, ll_q51, ll_q52, ll_q53, ll_q54, ll_q55, ll_q56, ll_q57,
                       ll_q48_q51, ll_q53_q57, ll_q54_q57, ll_q59_q72, ll_q64_q72, ll_q69_q72;
 
     int start = 0;
@@ -80,7 +85,8 @@ public class Crf4aQ27Fragment extends Fragment {
 
         ll_q28_to_q73 = (LinearLayout) view.findViewById(R.id.ll_q28_to_q73);
 
-          formCrf4aDetailsDTO = new FormCrf4aDetailsDTO();
+        formCrf4aDetailsDTO = new FormCrf4aDetailsDTO();
+        listOfq27Toq73 = new ArrayList<FormCrf4aDetailsDTO>();
 
           allFields = new boolean[47];
 
@@ -106,13 +112,15 @@ public class Crf4aQ27Fragment extends Fragment {
         ll_q55 = (LinearLayout) view.findViewById(R.id.ll_q55);
         ll_q56 = (LinearLayout) view.findViewById(R.id.ll_q56);
         ll_q57 = (LinearLayout) view.findViewById(R.id.ll_q57);
-        ll_q46_q57 = (LinearLayout) view.findViewById(R.id.ll_q46_q57);
+        ll_q47_q57 = (LinearLayout) view.findViewById(R.id.ll_q47_q57);
         ll_q48_q51 = (LinearLayout) view.findViewById(R.id.ll_q48_q51);
         ll_q53_q57 = (LinearLayout) view.findViewById(R.id.ll_q53_q57);
         ll_q54_q57 = (LinearLayout) view.findViewById(R.id.ll_q54_q57);
         ll_q59_q72 = (LinearLayout) view.findViewById(R.id.ll_q59_q72);
         ll_q64_q72 = (LinearLayout) view.findViewById(R.id.ll_q64_q72);
         ll_q69_q72 = (LinearLayout) view.findViewById(R.id.ll_q69_q72);
+        ll_q31_q39 =  (LinearLayout) view.findViewById(R.id.ll_q31_q39);
+
 
         /*et_q73_j = (EditText) view.findViewById(R.id.et_73_j);*/
 
@@ -256,7 +264,6 @@ public class Crf4aQ27Fragment extends Fragment {
               end = CRF4aActivity.startHour-18;
 
 
-
           }else {
 
               start = CRF4aActivity.startHour+5;
@@ -265,19 +272,25 @@ public class Crf4aQ27Fragment extends Fragment {
 
           }
 
+          if(end==24){
+
+              end = 0;
+          }
 
             if(start==24){
 
                 start=0;
-                end = 1;
+
 
             }
-
 
 
                 tv_startTime.setText(start+"");
                 tv_endTime.setText(end+"");
 
+
+                formCrf4aDetailsDTO.setQ27From(startTime);
+                formCrf4aDetailsDTO.setQ27To(endTime);
 
 
         btn_submit = (Button) view.findViewById(R.id.btn_submit);
@@ -291,21 +304,22 @@ public class Crf4aQ27Fragment extends Fragment {
                     if(CRF4aActivity.startHour==24){
                     // if(CRF4aActivity.startHour==1){
 
-                        Crf4aCounselingQ79 fragment = new Crf4aCounselingQ79();
+
+                        CRF4aActivity.formCrf4aDTO.setDetails(CRF4aActivity.listOfq27Toq73);
+                        Crf4bQ20Fragment fragment = new Crf4bQ20Fragment();
                         FragmentManager fragmentManager = getFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout4a, fragment);
                         fragmentTransaction.commit();
 
                     }else {
+                        CRF4aActivity.listOfq27Toq73.add(formCrf4aDetailsDTO);
 
                         Crf4aQ27Fragment fragment = new Crf4aQ27Fragment();
                         FragmentManager fragmentManager = getFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout4a, fragment);
                         fragmentTransaction.commit();
-
-
 
                     }
 
@@ -357,6 +371,17 @@ public class Crf4aQ27Fragment extends Fragment {
 
                 rb_q30 = (RadioButton) view.findViewById(rg_q30.getCheckedRadioButtonId());
 
+                if(rb_q30.getTag().toString().equals("2")){
+
+                    ll_q31_q39.setVisibility(View.GONE);
+
+                }else {
+
+
+                    ll_q31_q39.setVisibility(View.VISIBLE);
+
+                }
+
             }
         });
 
@@ -377,17 +402,18 @@ public class Crf4aQ27Fragment extends Fragment {
 
                 if(rb_q32.getTag().toString().equals("2")){
 
+                    et_q33.setText("");
+                    ll_q34.setVisibility(View.VISIBLE);
                     ll_q33.setVisibility(View.GONE);
 
                 }else if(rb_q32.getTag().toString().equals("3")){
 
+                    et_q33.setText("");
                     ll_q33.setVisibility(View.GONE);
                     ll_q34.setVisibility(View.GONE);
                 }else {
-
                     ll_q33.setVisibility(View.VISIBLE);
                     ll_q34.setVisibility(View.VISIBLE);
-
                 }
 
             }
@@ -396,18 +422,17 @@ public class Crf4aQ27Fragment extends Fragment {
         et_q33.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
             public void afterTextChanged(Editable s) {
 
                 if(et_q33.getText().toString().isEmpty()){
+
 
                     ll_q34.setVisibility(View.VISIBLE);
                     ll_q35.setVisibility(View.VISIBLE);
@@ -507,7 +532,7 @@ public class Crf4aQ27Fragment extends Fragment {
                     ll_q44.setVisibility(View.GONE);
                     ll_q45.setVisibility(View.GONE);
 
-                }else {
+                }else{
 
                     ll_q42.setVisibility(View.VISIBLE);
                     ll_q43.setVisibility(View.VISIBLE);
@@ -526,12 +551,12 @@ public class Crf4aQ27Fragment extends Fragment {
                 rb_q46 = (RadioButton) view.findViewById(rg_q46.getCheckedRadioButtonId());
 
                 if(rb_q46.getTag().toString().equals("2") || rb_q46.getTag().toString().equals("9")){
-
-                    ll_q46_q57.setVisibility(View.GONE);
+//////
+                    ll_q47_q57.setVisibility(View.GONE);
 
                 }else {
 
-                    ll_q46_q57.setVisibility(View.VISIBLE);
+                    ll_q47_q57.setVisibility(View.VISIBLE);
                 }
 
             }
@@ -548,7 +573,7 @@ public class Crf4aQ27Fragment extends Fragment {
 
                 }else {
 
-                    ll_q48_q51.setVisibility(View.GONE);
+                    ll_q48_q51.setVisibility(View.VISIBLE);
 
                 }
 
@@ -560,7 +585,7 @@ public class Crf4aQ27Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q52 = (RadioButton) view.findViewById(rg_q52.getCheckedRadioButtonId());
 
-                if(rb_q52.getTag().toString().equals("")){
+                if(rb_q52.getTag().toString().equals("2") || rb_q52.getTag().toString().equals("9")){
 
                     ll_q53_q57.setVisibility(View.GONE);
 
@@ -744,61 +769,84 @@ public class Crf4aQ27Fragment extends Fragment {
                 formCrf4aDetailsDTO.setQ29(getTextFromField(et_q29, tv_q29));
             }
 
-            if (isRBCheckedThree(rg_q30, rb_q31, tv_q31).equals("")) {
+            if (isRBCheckedThree(rg_q30, rb_q30, tv_q30).equals("")) {
                 validation = false;
             } else {
                 formCrf4aDetailsDTO.setQ30(isRBCheckedThree(rg_q30, rb_q30, tv_q30));
             }
 
-            if (isRBCheckedThree(rg_q32, rb_q32, tv_q32).equals("")) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ32(isRBCheckedThree(rg_q32, rb_q32, tv_q32));
-            }
+            if(ll_q31_q39.getVisibility()==View.VISIBLE){
 
 
-          /*  if (getTextFromField(et_q33, tv_q33).equals("") && ll_q33.getVisibility()==View.VISIBLE) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ33(getTextFromField(et_q33, tv_q33));
-            }
-*/
-
-            if (isRBCheckedThree(rg_q34, rb_q34, tv_q34).equals("") && ll_q34.getVisibility()==View.VISIBLE) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ34(isRBCheckedThree(rg_q34, rb_q34, tv_q34));
-            }
-
-            if (getTextFromField(et_q35, tv_q35).equals("") && ll_q35.getVisibility()==View.VISIBLE) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ35(getTextFromField(et_q35, tv_q35));
-            }
+                if (isRBCheckedThree(rg_q31, rb_q31, tv_q31).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ31(isRBCheckedThree(rg_q31, rb_q31, tv_q31));
+                }
 
 
-            if (isRBCheckedThree(rg_q36, rb_q36, tv_q36).equals("")) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ36(isRBCheckedThree(rg_q36, rb_q36, tv_q36));
-            }
+                if (isRBCheckedThree(rg_q32, rb_q32, tv_q32).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ32(isRBCheckedThree(rg_q32, rb_q32, tv_q32));
+                }
 
-            if (isRBCheckedThree(rg_q37, rb_q37, tv_q37).equals("") && ll_q37.getVisibility()==View.VISIBLE) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ37(isRBCheckedThree(rg_q37, rb_q37, tv_q37));
-            }
 
-            if (isRBCheckedThree(rg_q38, rb_q38, tv_q38).equals("")) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ38(isRBCheckedThree(rg_q38, rb_q38, tv_q38));
-            }
+                if(ll_q33.getVisibility()==View.VISIBLE){
 
-            if (getTextFromField(et_q39, tv_q39).equals("") && ll_q39.getVisibility()==View.VISIBLE) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ39(getTextFromField(et_q39, tv_q39));
+
+                    if (getTextFromField(et_q33, tv_q33).equals("")) {
+                        validation = false;
+                    } else {
+                        formCrf4aDetailsDTO.setQ33(getTextFromField(et_q33, tv_q33));
+                    }
+
+                }
+
+
+                if(ll_q34.getVisibility()==View.VISIBLE){
+
+                    if (isRBCheckedThree(rg_q34, rb_q34, tv_q34).equals("") && ll_q34.getVisibility()==View.VISIBLE) {
+                        validation = false;
+                    } else {
+                        formCrf4aDetailsDTO.setQ34(isRBCheckedThree(rg_q34, rb_q34, tv_q34));
+                    }
+                }
+
+
+                if (getTextFromField(et_q35, tv_q35).equals("") && ll_q35.getVisibility()==View.VISIBLE) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ35(getTextFromField(et_q35, tv_q35));
+                }
+
+
+                if (isRBCheckedThree(rg_q36, rb_q36, tv_q36).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ36(isRBCheckedThree(rg_q36, rb_q36, tv_q36));
+                }
+
+                if (isRBCheckedThree(rg_q37, rb_q37, tv_q37).equals("") && ll_q37.getVisibility()==View.VISIBLE) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ37(isRBCheckedThree(rg_q37, rb_q37, tv_q37));
+                }
+
+                if (isRBCheckedThree(rg_q38, rb_q38, tv_q38).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ38(isRBCheckedThree(rg_q38, rb_q38, tv_q38));
+                }
+
+                if (getTextFromField(et_q39, tv_q39).equals("") && ll_q39.getVisibility()==View.VISIBLE) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ39(getTextFromField(et_q39, tv_q39));
+                }
+
+
+
             }
 
 
@@ -813,38 +861,52 @@ public class Crf4aQ27Fragment extends Fragment {
 
         if(ll_q41_q57.getVisibility()==View.VISIBLE){
 
-
             if (isRBCheckedThree(rg_q41, rb_q41, tv_q41).equals("")) {
                 validation = false;
             } else {
                 formCrf4aDetailsDTO.setQ41(isRBCheckedThree(rg_q41, rb_q41, tv_q41));
             }
 
-            if (getTextFromField(et_q42, tv_q42).equals("")) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ42(getTextFromField(et_q42, tv_q42));
+            if(ll_q42.getVisibility()==View.VISIBLE){
+
+                if (getTextFromField(et_q42, tv_q42).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ42(getTextFromField(et_q42, tv_q42));
+                }
             }
 
-            if (getTextFromField(et_q43, tv_q43).equals("")) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ43(getTextFromField(et_q43, tv_q43));
+            if(ll_q43.getVisibility()==View.VISIBLE){
+
+                if (getTextFromField(et_q43, tv_q43).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ43(getTextFromField(et_q43, tv_q43));
+                }
+
             }
 
-            if (getTextFromField(et_q44, tv_q44).equals("")) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ44(getTextFromField(et_q44, tv_q44));
+            if(ll_q44.getVisibility()==View.VISIBLE){
+
+                if (getTextFromField(et_q44, tv_q44).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ44(getTextFromField(et_q44, tv_q44));
+                }
+
             }
 
-            if (getTextFromField(et_q45, tv_q45).equals("")) {
-                validation = false;
-            } else {
-                formCrf4aDetailsDTO.setQ45(getTextFromField(et_q45, tv_q45));
+            if(ll_q45.getVisibility()==View.VISIBLE){
+
+                if (getTextFromField(et_q45, tv_q45).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf4aDetailsDTO.setQ45(getTextFromField(et_q45, tv_q45));
+                }
+
             }
 
-            if(ll_q46_q57.getVisibility()==View.VISIBLE){
+            if(ll_q47_q57.getVisibility()==View.VISIBLE){
 
 
                 if (isRBCheckedThree(rg_q46, rb_q46, tv_q46).equals("")) {
@@ -903,30 +965,34 @@ public class Crf4aQ27Fragment extends Fragment {
                     formCrf4aDetailsDTO.setQ53(isRBCheckedThree(rg_q53, rb_q53, tv_q53));
                 }
 
+              if(ll_q54_q57.getVisibility()==View.VISIBLE){
 
-                if (getTextFromField(et_q54, tv_q54).equals("")) {
-                    validation = false;
-                } else {
-                    formCrf4aDetailsDTO.setQ54(getTextFromField(et_q54, tv_q54));
-                }
 
-                if (getTextFromField(et_q55, tv_q55).equals("")) {
-                    validation = false;
-                } else {
-                    formCrf4aDetailsDTO.setQ55(getTextFromField(et_q55, tv_q55));
-                }
+                  if (getTextFromField(et_q54, tv_q54).equals("")) {
+                      validation = false;
+                  } else {
+                      formCrf4aDetailsDTO.setQ54(getTextFromField(et_q54, tv_q54));
+                  }
 
-                if (getTextFromField(et_q56, tv_q56).equals("")) {
-                    validation = false;
-                } else {
-                    formCrf4aDetailsDTO.setQ56(getTextFromField(et_q56, tv_q56));
-                }
+                  if (getTextFromField(et_q55, tv_q55).equals("")) {
+                      validation = false;
+                  } else {
+                      formCrf4aDetailsDTO.setQ55(getTextFromField(et_q55, tv_q55));
+                  }
 
-                if (getTextFromField(et_q57, tv_q57).equals("")) {
-                    validation = false;
-                } else {
-                    formCrf4aDetailsDTO.setQ57(getTextFromField(et_q57, tv_q57));
-                }
+                  if (getTextFromField(et_q56, tv_q56).equals("")) {
+                      validation = false;
+                  } else {
+                      formCrf4aDetailsDTO.setQ56(getTextFromField(et_q56, tv_q56));
+                  }
+
+                  if (getTextFromField(et_q57, tv_q57).equals("")) {
+                      validation = false;
+                  } else {
+                      formCrf4aDetailsDTO.setQ57(getTextFromField(et_q57, tv_q57));
+                  }
+
+              }
 
             }
 

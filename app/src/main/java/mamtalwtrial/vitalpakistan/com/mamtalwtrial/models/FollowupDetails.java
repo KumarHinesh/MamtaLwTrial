@@ -15,6 +15,13 @@ public class FollowupDetails {
     private Integer endDate;
     private String dateOfBirth;
     private String timeOfBirth;
+    private String fNum;
+
+    private String wnum;
+    private String stdyId;
+    private String arm;
+    private String age;
+    private String lastVisit;
 
     private String lmp; //CRF1 q26
 
@@ -120,5 +127,53 @@ public class FollowupDetails {
 
     public void setTimeOfBirth(String timeOfBirth) {
         this.timeOfBirth = timeOfBirth;
+    }
+
+    public String getfNum() {
+        return fNum;
+    }
+
+    public void setfNum(String fNum) {
+        this.fNum = fNum;
+    }
+
+    public String getWnum() {
+        return wnum;
+    }
+
+    public void setWnum(String wnum) {
+        this.wnum = wnum;
+    }
+
+    public String getStdyId() {
+        return stdyId;
+    }
+
+    public void setStdyId(String stdyId) {
+        this.stdyId = stdyId;
+    }
+
+    public String getArm() {
+        return arm;
+    }
+
+    public void setArm(String arm) {
+        this.arm = arm;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getLastVisit() {
+        return lastVisit;
+    }
+
+    public void setLastVisit(String lastVisit) {
+        this.lastVisit = lastVisit;
     }
 }

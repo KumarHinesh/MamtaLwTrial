@@ -170,6 +170,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="230dp"/>
 
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/et_refused2"
+                android:hint="Please Enter Refuesd Wajha"
+                android:layout_below="@+id/lvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
             <Button

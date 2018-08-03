@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrolView"
     android:layout_width="match_parent"
     android:layout_marginRight="20dp"
     android:layout_marginLeft="20dp"
@@ -29,7 +30,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_q79_b"
+                    android:id="@+id/tv_q20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/crf4a_q20_english"
@@ -136,7 +137,7 @@
                 android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Date"
+                android:hint="Date"
                 />
 
 
@@ -202,7 +203,7 @@
                 android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Time"
+                android:hint="Time"
                 />
 
 
@@ -292,6 +293,27 @@
             android:layout_marginTop="8dp"
             android:background="@color/black" />
 
+        <EditText
+            android:id="@+id/et_BabyName"
+            android:inputType="number"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="ENTER BABY NAME"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black" />
+
+
         //q24
         <LinearLayout
             android:id="@+id/ll_q24"
@@ -341,7 +363,7 @@
                 android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Date"
+                android:hint="Date"
                 />
 
 
@@ -407,7 +429,7 @@
                 android:layout_weight="0.7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Time"
+                android:hint="Time"
                 />
 
 
@@ -463,9 +485,9 @@
                 android:layout_weight="0.1"/>
 
 
-
             <TextView
 
+                android:id="@+id/tv_babyDays"
                 android:textSize="20sp"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0.7"

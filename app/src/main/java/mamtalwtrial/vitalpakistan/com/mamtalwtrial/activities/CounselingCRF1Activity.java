@@ -716,7 +716,6 @@ public class CounselingCRF1Activity extends AppCompatActivity {
                             editor.putInt("val",val);
                             editor.commit();
 
-
                         }
 
                         formCrf1DTO.setQ34(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));

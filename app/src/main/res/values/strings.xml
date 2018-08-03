@@ -504,8 +504,12 @@
     <string name="crf5a_q38_i_english">Went somewhere</string>
     <string name="crf5a_q38_i_urdu">kahin chali gay th and sachet pas nahi thay</string>
 
-    <string name="crf5a_q38_j_english">Other(Specify)</string>
-    <string name="crf5a_q38_j_urdu">koi aur</string>
+    <string name="crf5a_q38_j_english">Not Applicable</string>
+    <string name="crf5a_q38_j_urdu">ghair zarori (Orat shashey kha rahi h )</string>
+
+
+    <string name="crf5a_q38_k_english">Other(Specify)</string>
+    <string name="crf5a_q38_k_urdu">koi aur</string>
 
     <string name="crf5a_q39_english">Number of new sachets given today by health worker? \n Write 99 if LW refused to take. Alert for supervisor</string>
     <string name="crf5a_q39_urdu">Aj team member na kitnay sachet LW ko diya us k tadad likhain \n Supervisor ko inform karain agar LW na sachet lainay sa inkar kar diya ha tu</string>
@@ -706,8 +710,8 @@
 
     <!--Crf4b-->
 
-    <string name="crf4b_q20_english">Since last visit by Newborn team, was baby had any danger sign, complication, problem or disease for which he or she was take to any health facility or self treatment given or may be nothing was done?</string>
-    <string name="crf4b_q20_urdu">Pichli dafa sa lay kar ab tak jab new born team na visit kiya tha tu kya bachay ko khatray k koi aalmaat zahir hoi, ya us ko kisi aur maslay k waja sa ilaj k liya hospital jana para ya khud sa kisi na us ka ilaj kiya, ya phir khuch bh nahi kiya gaya?</string>
+    <string name="crf4b_q20_english">Since last visit by Newborn team, was baby had any danger sign, complication, problem or disease for which he or she was taken to any health facility or self treatment given?</string>
+    <string name="crf4b_q20_urdu">Pichli dafa sa lay kar ab tak jab new born team na visit kiya tha tu kya bachay ko khatray k koi aalmaat zahir hoi, ya us ko kisi aur maslay k waja sa ilaj k liya hospital jana para ya khud sa kisi na us ka ilaj kiya?</string>
 
     <string name="crf4b_q21_english">Which danger sign, complication, problem or disease, has the baby had?</string>
     <string name="crf4b_q21_urdu">Which danger sign, complication, problem or disease, has the baby had?</string>
@@ -833,7 +837,7 @@
     <string name="crf4b_q24_english">Did the baby receive any treatment during this period?</string>
     <string name="crf4b_q24_urdu">Bachay ko koi deewai ya ilaj diya gaya is doran</string>
 
-    <string name="crf4b_q25_english">What was the treatment given?</string>
+    <string name="crf4b_q25_english">What treatment was the given?</string>
     <string name="crf4b_q25_urdu">Kon sa ilaj bachay ko diya gaya</string>
 
     <string name="crf4b_q25_a_english">Kept in an incubator</string>
@@ -886,12 +890,13 @@
 
     <string name="crf4b_q33_english">What is the state of the baby’s health according to the family?</string>
     <string name="crf4b_q33_urdu">Is waqt bachay k sehat kaisi ha</string>
-    <string name="crf4b_q33_option_1">Well baby (Sahi ha)</string>
-    <string name="crf4b_q33_option_2">Recovered from illness (beemari dur ho gay)</string>
+    <string name="crf4b_q33_option_1">Well baby (Bacha sehatmand h)</string>
+    <string name="crf4b_q33_option_2">Recovered from illness (beemari dur ho gai h)</string>
     <string name="crf4b_q33_option_3">Still ill, but better than before (abhi bh beemar ha laikin pehlay sa behtar ha)</string>
-    <string name="crf4b_q33_option_4">Condition has deteriorated (tabiyat aur kharan ho gay)</string>
+    <string name="crf4b_q33_option_4">Condition has deteriorated (tabiyat aur kharab ho gay)</string>
+    <!--<string name="crf4b_q33_option_5">Dont (tabiyat aur kharab ho gay)</string>-->
 
-    <string name="crf4b_q34_english">Respiratory rate  (00.0 if refused)If the respiratory rate is 60 or more (if age is 59 days of less) OR 50 or more (if age is greater than 59 days), count again and note the second respiratory rate</string>
+    <string name="crf4b_q34_english">Respiratory rate  (000 if refused)If the respiratory rate is 60 or more (if age is 59 days of less) OR 50 or more (if age is greater than 59 days), count again and note the second respiratory rate</string>
     <string name="crf4b_q34_urdu">Sans lainay k raftar note karain Agar sans lainay k raftar 60 ya zayda ha tu aik daf phir note kar k likhain</string>
 
     <string name="crf4b_q35_english">Is the respiratory rate 60 or above on two different readings (if Age is less than 59 days?\nIs the respiratory rate 50 or above on two different readings (if Age greater than 59 days?</string>
@@ -905,8 +910,8 @@
     <string name="crf4b_q37_urdu"></string>
 -->
 
-    <string name="crf4b_q38_english">Is temperature on two different readings equal or greater than 38.8</string>
-    <string name="crf4b_q38_urdu">Upper li gay doun readings 38.8 ya us sa zayda han</string>
+    <string name="crf4b_q38_english">Is temperature on two different readings equal or greater than 38.0</string>
+    <string name="crf4b_q38_urdu">Upper li gay doun readings 38.0 ya us sa zayda han</string>
 
     <string name="crf4b_q39_english">Is temperature on two different readings is less than 35.5</string>
     <string name="crf4b_q39_urdu">Upper li gay doun readings 35.5 sa kaam han</string>
@@ -940,7 +945,7 @@
     <string name="crf4b_q44_english">Has breastfeeding attachment been corrected by research staff?</string>
     <string name="crf4b_q44_urdu">Bacha ko maa k saath joray rakha kya team member na sahi kiya</string>
 
-    <string name="crf4b_q45_english">Does the baby have  poor sucking due to illness?</string>
+    <string name="crf4b_q45_english">Does the baby have  poor sucking or poor feeding or both due to illness?</string>
     <string name="crf4b_q45_urdu">Bachay k dhood peenay k salahiyat kaam ha beemarik waja sa</string>
 
     <string name="crf4b_q46_english">Is the baby unable to feed?</string>
@@ -1078,8 +1083,8 @@
     <string name="crf4b_q55_l_english">Other (specify) </string>
     <string name="crf4b_q55_l_urdu">Koi aur masla</string>
 
-    <string name="crf4b_q56_english">Is this day 6 follow-up visit?</string>
-    <string name="crf4b_q56_urdu">Kya ya follow up ka 6th  din ha</string>
+    <string name="crf4b_q56_english">Is this day 13 follow-up visit?</string>
+    <string name="crf4b_q56_urdu">Kya ya follow up ka 13th  din ha</string>
 
 
     <string name="crf4b_q58_english">Is this day 46 visit?</string>

@@ -82,8 +82,6 @@ public class CRF2Activity extends AppCompatActivity {
 
 
 
-
-
     }
 
 

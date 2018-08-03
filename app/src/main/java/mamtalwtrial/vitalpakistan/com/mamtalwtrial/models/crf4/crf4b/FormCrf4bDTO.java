@@ -7,6 +7,35 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3b.StudiesDTO;
 
 public class FormCrf4bDTO {
 
+
+    private Integer followupStatus;
+    private Integer followupId;
+    private Integer formStatus;
+
+    public Integer getFollowupStatus() {
+        return followupStatus;
+    }
+
+    public void setFollowupStatus(Integer followupStatus) {
+        this.followupStatus = followupStatus;
+    }
+
+    public Integer getFollowupId() {
+        return followupId;
+    }
+
+    public void setFollowupId(Integer followupId) {
+        this.followupId = followupId;
+    }
+
+    public Integer getFormStatus() {
+        return formStatus;
+    }
+
+    public void setFormStatus(Integer formStatus) {
+        this.formStatus = formStatus;
+    }
+
     private String q19;
     private String q20;
     private String q21a;
@@ -134,7 +163,7 @@ public class FormCrf4bDTO {
     private String q55k;
     private String q55l;
     private String q56;
-    private String q57aa;
+    /*private String q57aa;
     private String q57ab;
     private String q57ac;
     private String q57ad;
@@ -194,7 +223,7 @@ public class FormCrf4bDTO {
     private String q63dc;
     private String q63dd;
     private String q64;
-
+*/
     private TeamDTO team;
     private StudiesDTO studies;
     private PregnantWomanDTO pregnantWoman;
@@ -1215,7 +1244,7 @@ public class FormCrf4bDTO {
         this.q56 = q56;
     }
 
-    public String getQ57aa() {
+   /* public String getQ57aa() {
         return q57aa;
     }
 
@@ -1694,7 +1723,7 @@ public class FormCrf4bDTO {
     public void setQ64(String q64) {
         this.q64 = q64;
     }
-
+*/
     public TeamDTO getTeam() {
         return team;
     }

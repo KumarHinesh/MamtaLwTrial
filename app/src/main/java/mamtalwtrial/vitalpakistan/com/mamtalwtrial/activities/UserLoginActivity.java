@@ -52,8 +52,6 @@ public class UserLoginActivity extends AppCompatActivity {
     Set<String>  set;
 
     @Override
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
@@ -62,8 +60,8 @@ public class UserLoginActivity extends AppCompatActivity {
    //     startActivity(new Intent(UserLoginActivity.this,CRF3bActivity.class));
         //startActivity(new Intent(UserLoginActivity.this,CRF2DashboargActivity.class));
        //startActivity(new Intent(UserLoginActivity.this,CRF3cActivity.class));
-      //  startActivity(new Intent(UserLoginActivity.this,CRF4aActivity.class));
-      //  this.finish();
+     //   startActivity(new Intent(UserLoginActivity.this,CRF4aActivity.class));
+     //   this.finish();
         spreferencesTeamId = getSharedPreferences("teamId",
                 UserLoginActivity.MODE_PRIVATE);
         sharedpreferences = getSharedPreferences("Values",
@@ -132,7 +130,6 @@ public class UserLoginActivity extends AppCompatActivity {
                 teamDTO.setPassword(etPass.getText().toString().trim());
                 teamDTO.setDate(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
                 teamDTO.setTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
-
 
                 if(WifiConnectOrNot.haveNetworkConnection(UserLoginActivity.this)){
 
@@ -218,6 +215,8 @@ public class UserLoginActivity extends AppCompatActivity {
                                     break;
 
                                 case "NEW BORN":
+                                    startActivity(new Intent(UserLoginActivity.this,CRF4And5Dashboard.class));
+                                    finish();
                                     Toast.makeText(getApplicationContext(), "New Born is not put",Toast.LENGTH_LONG).show();
                                     break;
 
