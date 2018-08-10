@@ -197,10 +197,21 @@ public class Crf3cQ34 extends Fragment {
             @Override
             public void onFailure(Call<FormCrf3cDTO> call, Throwable t) {
 
+                progressDialog.dismiss();
+                startActivity(new Intent(getContext(),CRF2DashboargActivity.class));
+                getActivity().finish();
+
             }
         });
 
+
+
+
+
     }
+
+
+
 
 
 }

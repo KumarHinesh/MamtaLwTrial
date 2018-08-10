@@ -57,6 +57,8 @@ public class FormCrf4aDTO {
     private String q24;
     private String q25;
     private String q26;
+    private Integer followupNumber;
+
 
     public String getQ9() {
         return q9;
@@ -265,5 +267,13 @@ public class FormCrf4aDTO {
 
     public void setCounsilEndTime(String counsilEndTime) {
         this.counsilEndTime = counsilEndTime;
+    }
+
+    public Integer getFollowupNumber() {
+        return followupNumber;
+    }
+
+    public void setFollowupNumber(Integer followupNumber) {
+        this.followupNumber = followupNumber;
     }
 }

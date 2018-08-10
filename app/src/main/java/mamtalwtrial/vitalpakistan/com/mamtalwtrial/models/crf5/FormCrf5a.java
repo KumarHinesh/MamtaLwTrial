@@ -1,41 +1,19 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf5;
 
-
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3b.StudiesDTO;
 
 public class FormCrf5a {
-    public TeamDTO getTeam() {
-        return team;
-    }
-
-    public void setTeam(TeamDTO team) {
-        this.team = team;
-    }
-
-    public StudiesDTO getStudies() {
-        return studies;
-    }
-
-    public void setStudies(StudiesDTO studies) {
-        this.studies = studies;
-    }
-
-    public PregnantWomanDTO getPregnantWoman() {
-        return pregnantWoman;
-    }
-
-    public void setPregnantWoman(PregnantWomanDTO pregnantWoman) {
-        this.pregnantWoman = pregnantWoman;
-    }
-
-    private Integer id;
 
 
+//add three field by hinesh
     private Integer followupStatus;
     private Integer followupId;
     private Integer formStatus;
+    private Integer followupNumber;
+
+
 
     public Integer getFollowupStatus() {
         return followupStatus;
@@ -60,6 +38,8 @@ public class FormCrf5a {
     public void setFormStatus(Integer formStatus) {
         this.formStatus = formStatus;
     }
+
+    private Integer id;
 
     private String q19;
     private String q20;
@@ -96,6 +76,15 @@ public class FormCrf5a {
     private String q38c;
     private String q38d;
     private String q38e;
+
+    public String getQ38k() {
+        return q38k;
+    }
+
+    public void setQ38k(String q38k) {
+        this.q38k = q38k;
+    }
+
     private String q38f;
     private String q38g;
     private String q38h;
@@ -146,14 +135,6 @@ public class FormCrf5a {
     private String q59k;
     private String q59l;
     private String q60;
-
-    public String getQ38k() {
-        return q38k;
-    }
-
-    public void setQ38k(String q38k) {
-        this.q38k = q38k;
-    }
 
     private TeamDTO team;
 
@@ -841,5 +822,35 @@ public class FormCrf5a {
         this.q60 = q60;
     }
 
+    public TeamDTO getTeam() {
+        return team;
+    }
 
+    public void setTeam(TeamDTO team) {
+        this.team = team;
+    }
+
+    public StudiesDTO getStudies() {
+        return studies;
+    }
+
+    public void setStudies(StudiesDTO studies) {
+        this.studies = studies;
+    }
+
+    public PregnantWomanDTO getPregnantWoman() {
+        return pregnantWoman;
+    }
+
+    public void setPregnantWoman(PregnantWomanDTO pregnantWoman) {
+        this.pregnantWoman = pregnantWoman;
+    }
+
+    public Integer getFollowupNumber() {
+        return followupNumber;
+    }
+
+    public void setFollowupNumber(Integer followupNumber) {
+        this.followupNumber = followupNumber;
+    }
 }

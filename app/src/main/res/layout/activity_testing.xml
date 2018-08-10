@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".activities.TestingActivity">
 
+    <FrameLayout
+        android:id="@+id/test_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    </FrameLayout>
+
 
 
 

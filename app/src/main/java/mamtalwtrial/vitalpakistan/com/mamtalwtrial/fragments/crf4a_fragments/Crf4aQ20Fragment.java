@@ -23,14 +23,18 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4b_fragments.Crf4bQ20Fragment;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf4.Crf4Complete;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -60,6 +64,9 @@ public class Crf4aQ20Fragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_crf4a_q20, container, false);
 
         scrolView = (ScrollView) view.findViewById(R.id.scrolView);
+
+        CRF4aActivity.formCrf4aDTO.setDateOfAttempt(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
+        CRF4aActivity.formCrf4aDTO.setTimeOfAttempt(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
         et_BabyName  = (EditText) view.findViewById(R.id.et_BabyName);
 
@@ -101,7 +108,7 @@ public class Crf4aQ20Fragment extends Fragment {
         tv_q23 = (TextView) view.findViewById(R.id.tv_q23);
         tv_babyDays = (TextView) view.findViewById(R.id.tv_babyDays);
 
-        tv_babyDays.setText(CRF4aActivity.followupDetails.getAge()+"");
+        tv_babyDays.setText(CRF4aActivity.followupDto.getFollowupDetails().getAge()+"");
 
         tv_dod.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -242,6 +249,9 @@ public class Crf4aQ20Fragment extends Fragment {
 
 
                      // CRF4aActivity.formCrf4bDTO.setQ64(SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance()));
+
+                     CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
+                     CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
 
                      Crf4Complete crf4Complete = new Crf4Complete();
 

@@ -35,6 +35,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4a_fragments.Crf4aCounselingQ79;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
+import okhttp3.internal.Util;
 
 public class Crf5aQ26Fragment extends Fragment {
 
@@ -66,12 +67,17 @@ public class Crf5aQ26Fragment extends Fragment {
 
     int year, month, day, min, hour;
 
-    LinearLayout ll_q35, ll_q37, ll_q38, ll_q41_q58, ll_q42_q58, ll_q44_q49, ll_q43_q58, ll_q45, ll_q47, ll_q37_q38;
+    LinearLayout ll_q35, ll_q37, ll_q38, ll_q41_q58, ll_q42_q58, ll_q44_q49, ll_q43_q58, ll_q45, ll_q47, ll_q37_q38, ll_q52, ll_q53_q58;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_crf5a_q26, container, false);
+
+     //   CRF4aActivity.formCrf5a.setQ2(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
+     //   CRF4aActivity.formCrf5a.setQ3(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+       // CRF4aActivity.formCrf5a.set
 
         scrolView = (ScrollView) view.findViewById(R.id.scrolView);
 
@@ -112,7 +118,7 @@ public class Crf5aQ26Fragment extends Fragment {
         et_q45_d = (EditText) view.findViewById(R.id.et_q45_d);
         et_q45_e = (EditText) view.findViewById(R.id.et_q45_e);
         et_q45_f = (EditText) view.findViewById(R.id.et_q45_f);
-
+        et_q37_e = (EditText) view.findViewById(R.id.et_q37_e);
 
         tv_q54_kg = (TextView) view.findViewById(R.id.tv_q54_kg);
         tv_q55_dose = (TextView) view.findViewById(R.id.tv_q55_dose);
@@ -203,7 +209,7 @@ public class Crf5aQ26Fragment extends Fragment {
         rg_q43 = (RadioGroup) view.findViewById(R.id.rg_q43);
         rg_q44 = (RadioGroup) view.findViewById(R.id.rg_q44);
         rg_q46 = (RadioGroup) view.findViewById(R.id.rg_q46);
-        rg_q48 = (RadioGroup) view.findViewById(R.id.rg_q48);
+     //   rg_q48 = (RadioGroup) view.findViewById(R.id.rg_q48);
         rg_q49 = (RadioGroup) view.findViewById(R.id.rg_q49);
         rg_q50 = (RadioGroup) view.findViewById(R.id.rg_q50);
         rg_q51 = (RadioGroup) view.findViewById(R.id.rg_q51);
@@ -221,36 +227,80 @@ public class Crf5aQ26Fragment extends Fragment {
         ll_q45 = (LinearLayout) view.findViewById(R.id.ll_q45);
         ll_q47 = (LinearLayout) view.findViewById(R.id.ll_q47);
         ll_q37_q38 = (LinearLayout) view.findViewById(R.id.ll_q37_q38);
+        ll_q52 = (LinearLayout) view.findViewById(R.id.ll_q52);
+        ll_q53_q58 = (LinearLayout) view.findViewById(R.id.ll_q53_q58);
 
-
-        if(CRF4aActivity.followupDetails.getLastVisit().equalsIgnoreCase("error") &&
-                !CRF4aActivity.followupDetails.getLastVisit().isEmpty()){
-
-
-            try{
-
-                SimpleDateFormat sdf = new SimpleDateFormat(ContantsValues.DATEFORMAT);
-
-                Date lastDate = sdf.parse(CRF4aActivity.followupDetails.getLastVisit());
-
-                Date today = sdf.parse(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
-
-                tv_q27.setText(CRF4aActivity.followupDetails.getLastVisit());
-
-                long diffInMillies = Math.abs(today.getTime() - lastDate.getTime());
-
-                diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.DAYS);
-
-                tv_q28.setText(diff+"");
-                tv_q29.setText((diff*2)+"");
-
-            }catch (Exception e) {
+        et_q31.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                if(tv_q29.getText()!=null){
+
+                    try{
+
+                        et_q33.setText(Integer.parseInt(et_q31.getText().toString())/Integer.parseInt(tv_q29.getText().toString())*100);
+
+                    }catch (Exception e){
+
+                        et_q33.setText("null");
+
+                    }
+
+                }
+
+            }
+        });
+
+        if(CRF4aActivity.followupDto.getFollowupDetails().getLastVisit()==null){
+
+
+                tv_q27.setHint("ITS YOUR 1ST FOLLOW UP");
+                tv_q28.setHint("ITS YOUR 1ST FOLLOW UP");
+                tv_q29.setHint("ITS YOUR 1ST FOLLOW UP");
 
         }else {
 
 
+            if(CRF4aActivity.followupDto.getFollowupDetails().getLastVisit().isEmpty() ||
+                    CRF4aActivity.followupDto.getFollowupDetails().getLastVisit().equalsIgnoreCase("error")){
+
+                tv_q27.setHint("ITS YOUR 1ST FOLLOW UP"+" n");
+                tv_q28.setHint("ITS YOUR 1ST FOLLOW UP"+" n");
+                tv_q29.setHint("ITS YOUR 1ST FOLLOW UP"+" n");
+
+            }else {
+
+                try {
+
+                    SimpleDateFormat sdf = new SimpleDateFormat(ContantsValues.DATEFORMAT);
+
+                    Date lastDate = sdf.parse(CRF4aActivity.followupDto.getFollowupDetails().getLastVisit());
+
+                    Date today = sdf.parse(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
+
+                    tv_q27.setText(CRF4aActivity.followupDto.getFollowupDetails().getLastVisit());
+
+                    long diffInMillies = Math.abs(today.getTime() - lastDate.getTime());
+
+                    diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.DAYS);
+
+                    tv_q28.setText(diff + "");
+                    tv_q29.setText((diff * 2) + "");
+
+                } catch (Exception e) {
+
+                }
+            }
         }
 
 
@@ -265,6 +315,8 @@ public class Crf5aQ26Fragment extends Fragment {
                         //  new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().setTime(new Date(dayOfMonth,monthOfYear,year)););
 
                         tv_q52_getdate.setText(dayOfMonth + "-" + monthOfYear + "-" + year);
+
+                        ll_q53_q58.setVisibility(View.GONE);
 
                     }
                 }, year, month, day);
@@ -443,6 +495,17 @@ public class Crf5aQ26Fragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q35_h = (RadioButton) view.findViewById(rg_q35_h.getCheckedRadioButtonId());
+
+                if(rb_q35_h.getTag().toString().equals("2")){
+
+                    et_q35_h.setVisibility(View.GONE);
+
+                }else {
+
+                    et_q35_h.setVisibility(View.VISIBLE);
+
+                }
+
             }
         });
 
@@ -495,6 +558,14 @@ public class Crf5aQ26Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 rb_q37_e = (RadioButton) view.findViewById(rg_q37_e.getCheckedRadioButtonId());
+
+
+                if(rb_q37_e.getTag().toString().equals("2")){
+
+                    et_q37_e.setVisibility(View.GONE);
+                }else {
+                    et_q37_e.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -669,12 +740,12 @@ public class Crf5aQ26Fragment extends Fragment {
             }
         });
 
-        rg_q48.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+     /*   rg_q48.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q48 = (RadioButton) view.findViewById(rg_q48.getCheckedRadioButtonId());
             }
-        });
+        });*/
 
         rg_q49.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -687,7 +758,7 @@ public class Crf5aQ26Fragment extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                rb_q49 = (RadioButton) view.findViewById(rg_q49.getCheckedRadioButtonId());
+                rb_q50 = (RadioButton) view.findViewById(rg_q50.getCheckedRadioButtonId());
             }
         });
 
@@ -696,6 +767,17 @@ public class Crf5aQ26Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 rb_q51 = (RadioButton) view.findViewById(rg_q51.getCheckedRadioButtonId());
+
+                if(rb_q51.getTag().toString().equals("1")){
+
+                    tv_q52_getdate.setText(null);
+                    ll_q53_q58.setVisibility(View.VISIBLE);
+                    ll_q52.setVisibility(View.GONE);
+
+                }else {
+
+                    ll_q52.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -859,6 +941,12 @@ public class Crf5aQ26Fragment extends Fragment {
             } else {
 
                 CRF4aActivity.formCrf5a.setQ37d(isRBCheckedThree(rg_q37_d, rb_q37_d, tv_q37_d));
+            }
+
+            if (getEditText(rg_q37_e, rb_q37_e, et_q37_e, tv_q37_e, ContantsValues.YES,"","","").equals("")) {
+                validation = false;
+            } else {
+                CRF4aActivity.formCrf5a.setQ37e(getEditText(rg_q37_e, rb_q37_e, et_q37_e, tv_q37_e, ContantsValues.YES,"","",""));
             }
 
 
@@ -1118,29 +1206,40 @@ public class Crf5aQ26Fragment extends Fragment {
                  CRF4aActivity.formCrf5a.setQ51(isRBCheckedThree(rg_q51, rb_q51, tv_q51));
              }
 
-             if(tv_q52_getdate.getText().toString().isEmpty()){
+             if(ll_q52.getVisibility()==View.VISIBLE){
 
-                 tv_q52_getdate.setError("Required");
-             }else {
 
-                 CRF4aActivity.formCrf5a.setQ52(tv_q52_getdate.getText().toString());
+                 if(tv_q52_getdate.getText().toString().isEmpty()){
+
+                     tv_q52_getdate.setError("Required");
+                 }else {
+
+                     CRF4aActivity.formCrf5a.setQ52(tv_q52_getdate.getText().toString());
+                 }
+
+
              }
 
-             if (isRBCheckedThree(rg_q53, rb_q53, tv_q53).equals("")) {
-                 validation = false;
-             } else {
+             if(ll_q53_q58.getVisibility()==View.VISIBLE) {
 
-                 CRF4aActivity.formCrf5a.setQ53(isRBCheckedThree(rg_q53, rb_q53, tv_q53));
+
+                 if (isRBCheckedThree(rg_q53, rb_q53, tv_q53).equals("")) {
+                     validation = false;
+                 } else {
+
+                     CRF4aActivity.formCrf5a.setQ53(isRBCheckedThree(rg_q53, rb_q53, tv_q53));
+                 }
+
+
+                 if (isRBCheckedThree(rg_q58, rb_q58, tv_q58).equals("")) {
+                     validation = false;
+                 } else {
+
+                     CRF4aActivity.formCrf5a.setQ58(isRBCheckedThree(rg_q58, rb_q58, tv_q58));
+                 }
+
              }
-
-
-             if (isRBCheckedThree(rg_q58, rb_q58, tv_q58).equals("")) {
-                 validation = false;
-             } else {
-
-                 CRF4aActivity.formCrf5a.setQ58(isRBCheckedThree(rg_q58, rb_q58, tv_q58));
-             }
-         }
+        }
 
      }
 

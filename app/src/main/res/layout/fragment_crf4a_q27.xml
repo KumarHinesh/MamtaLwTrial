@@ -1313,6 +1313,7 @@
                 <EditText
                     android:layout_gravity="center_vertical"
                     android:maxLength="4"
+                    android:inputType="number"
                     android:id="@+id/et_q43"
                     android:layout_weight="0.6"
                     android:layout_width="0dp"
@@ -1365,6 +1366,7 @@
                     android:layout_weight="0.1"/>
 
                 <EditText
+                    android:inputType="text"
                     android:layout_gravity="center_vertical"
                     android:id="@+id/et_q44"
                     android:layout_weight="0.6"
@@ -1754,7 +1756,6 @@
                 <EditText
                     android:id="@+id/et_q50"
                     android:layout_gravity="center_vertical"
-                    android:inputType="number"
                     android:layout_weight="0.6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />

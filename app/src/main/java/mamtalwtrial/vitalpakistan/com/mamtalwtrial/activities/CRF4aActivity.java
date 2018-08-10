@@ -11,9 +11,9 @@ import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4a_fragments.Crf4WomeninfoFragment;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4b_fragments.Crf4bQ20Fragment;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.DSSAddressDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupDetails;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf4.crf4a.FormCrf4aDTO;
@@ -23,12 +23,13 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf5.FormCrf5a;
 
 public class CRF4aActivity extends AppCompatActivity {
 
-
+    public static int position;
     public static FormCrf4aDTO formCrf4aDTO;
     public static FormCrf4bDTO formCrf4bDTO;
     public static FormCrf5a formCrf5a;
     public static List listOfq27Toq73;
-    public static FollowupDetails followupDetails;
+    public FollowupDetails followupDetails;
+    public static FollowupsDTO followupDto;
     public static int startHour = 0;
 
     @Override
@@ -45,13 +46,15 @@ public class CRF4aActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String followUpDetails = intent.getStringExtra("followupdetails");
 
+        position = intent.getIntExtra("position",-1);
         TeamDTO teamDTO = new TeamDTO();
 
         teamDTO.setId(getSharedPreferences("teamId",CRF1Activity.MODE_PRIVATE).getInt("id",-1));
 
-        formCrf4aDTO.setTeam(teamDTO);
 
-        followupDetails = new Gson().fromJson(followUpDetails, FollowupDetails.class);
+        followupDto = new Gson().fromJson(followUpDetails, FollowupsDTO.class);
+
+        followupDetails = followupDto.getFollowupDetails();
 
         PregnantWomanDTO pregnantWomanDTO = new PregnantWomanDTO();
         DSSAddressDTO dssAddressDTO = new DSSAddressDTO();
@@ -69,10 +72,24 @@ public class CRF4aActivity extends AppCompatActivity {
 
 
 
+        formCrf5a.setFollowupNumber(Integer.parseInt(followupDto.getFollowupDetails().getfNum()));
+        formCrf5a.setPregnantWoman(pregnantWomanDTO);
+        formCrf5a.setTeam(teamDTO);
+        formCrf5a.setFollowupId(followupDto.getId());
+
+        formCrf4aDTO.setFollowupNumber(Integer.parseInt(CRF4aActivity.followupDto.getFollowupDetails().getfNum()));
         formCrf4aDTO.setPregnantWoman(pregnantWomanDTO);
+        formCrf4aDTO.setTeam(teamDTO);
+        formCrf4aDTO.setFollowupId(followupDto.getId());
+
+        formCrf4bDTO.setFollowupNumber(Integer.parseInt(CRF4aActivity.followupDto.getFollowupDetails().getfNum()));
+        formCrf4bDTO.setPregnantWoman(pregnantWomanDTO);
+        formCrf4bDTO.setTeam(teamDTO);
+        formCrf4aDTO.setFollowupId(followupDto.getId());
 
         Crf4WomeninfoFragment fragment = new Crf4WomeninfoFragment();
-       // Crf4aCounselingQ79 crf4aCounselingQ79 = new Crf4aCounselingQ79();
+
+        // Crf4aCounselingQ79 crf4aCounselingQ79 = new Crf4aCounselingQ79();
 
      //   Crf4bQ20Fragment fragment = new Crf4bQ20Fragment();
 
@@ -84,5 +101,10 @@ public class CRF4aActivity extends AppCompatActivity {
                 .replace(R.id.frame_layout4a, fragment, fragment.getClass().getSimpleName()).addToBackStack(null).commit();
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
     }
 }

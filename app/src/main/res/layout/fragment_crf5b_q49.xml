@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.crf5b_fragment.Crf5bQ49Fragment">
+
+
+    <!--q49-->
+
+    <LinearLayout
+        android:layout_marginLeft="4dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginLeft="3dp"
+            android:orientation="vertical"
+            android:layout_weight="2.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_q49"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="asd"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crf5b_q49_urdu"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"></LinearLayout>
+
+        <RadioGroup
+            android:orientation="vertical"
+            android:id="@+id/rg_q96_p"
+            android:layout_weight="0.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rg_q96_p_a"
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="YES"
+                />
+
+            <RadioButton
+                android:tag="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="NO"
+                />
+
+            <RadioButton
+                android:tag="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text=""
+                />
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/et_q96_p"
+                android:hint="Enter Here"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

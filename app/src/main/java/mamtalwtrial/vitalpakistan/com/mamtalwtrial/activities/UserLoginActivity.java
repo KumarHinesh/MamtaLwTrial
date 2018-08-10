@@ -134,7 +134,7 @@ public class UserLoginActivity extends AppCompatActivity {
                 if(WifiConnectOrNot.haveNetworkConnection(UserLoginActivity.this)){
 
                     sendUserPassword(teamDTO);
-                    progressDialog.setTitle("Loging in..");
+                    progressDialog.setTitle("Logging in..");
                     progressDialog.setMessage("Wait");
                     progressDialog.show();
 
@@ -190,16 +190,19 @@ public class UserLoginActivity extends AppCompatActivity {
 
                             teamType = loginDTO.getTeamType();
 
+                            SharedPreferences.Editor editor = sharedpreferences.edit();
+                            editor.putBoolean("IsLogin",true);
+                            editor.commit();
+
+
+                            SharedPreferences.Editor editor7 = spreferencesTeamId5.edit();
+                            editor7.putString("val",loginDTO.getSite().toString());
+                            editor7.commit();
+
                             switch (loginDTO.getTeamType()){
 
                                 case "SCREENING":
 
-                                    SharedPreferences.Editor editor = sharedpreferences.edit();
-                                    editor.putBoolean("IsLogin",true);
-                                    editor.commit();
-                                    SharedPreferences.Editor editor7 = spreferencesTeamId5.edit();
-                                    editor7.putString("val",loginDTO.getSite().toString());
-                                    editor7.commit();
                                     startActivity(new Intent(UserLoginActivity.this,DashboardActivity.class).putExtra("site", loginDTO.getSite()));
                                     finish();
                                     break;

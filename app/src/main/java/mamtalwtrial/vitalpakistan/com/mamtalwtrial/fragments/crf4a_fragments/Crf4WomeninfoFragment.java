@@ -215,7 +215,7 @@ public class Crf4WomeninfoFragment extends Fragment {
 
                // CRF4aActivity.formCrf4bDTO.setQ64(SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance()));
 
-                //CRF4aActivity.formCrf4aDTO.setFollowupId(CRF4aActivity.followupDetails.get);
+              //  CRF4aActivity.formCrf4aDTO.setFollowupId(CRF4aActivity.followupDto.getId());
                 CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
                 CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
                 Crf4Complete crf4Complete = new Crf4Complete();

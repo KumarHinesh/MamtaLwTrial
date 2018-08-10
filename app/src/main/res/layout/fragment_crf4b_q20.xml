@@ -7786,6 +7786,7 @@
                 android:layout_weight="0.6">
 
                 <RadioButton
+                    android:id="@+id/yy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="1"
@@ -7793,6 +7794,7 @@
                     android:textColor="@color/black" />
 
                 <RadioButton
+                    android:id="@+id/rr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="2"

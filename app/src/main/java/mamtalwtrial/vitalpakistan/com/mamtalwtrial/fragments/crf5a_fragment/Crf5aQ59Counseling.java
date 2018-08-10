@@ -1,27 +1,28 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf5a_fragment;
 
-import android.content.Context;
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4a_fragments.Crf4aCounselingQ79;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf5b_fragment.Crf5bQ25Fragment;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf4.Crf4Complete;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf5.FormCrf5a;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,11 +32,18 @@ public class Crf5aQ59Counseling extends Fragment {
     ScrollView scrolView;
     Button btn_submit;
 
+    ProgressDialog progressDialog;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.fragment_crf5a_q59_counseling, container, false);
 
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setTitle("Sending...");
+        progressDialog.setMessage("Please Wait...");
+
+        CRF4aActivity.formCrf4aDTO.setCounsilStartTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
         scrolView = (ScrollView) view.findViewById(R.id.scrolView);
 
@@ -47,30 +55,61 @@ public class Crf5aQ59Counseling extends Fragment {
             public void onClick(View v) {
 
 
+               progressDialog.show();
                final APIService mAPIService = ApiUtils.getAPIService();
 
-                // CRF4aActivity.formCrf4bDTO.set(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance()));
-
-                //  CRF4aActivity.formCrf4aDTO.setCounsilEndTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance()));
-
+               CRF4aActivity.formCrf4aDTO.setCounsilEndTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
                 Crf4Complete crf4Complete = new Crf4Complete();
 
                 crf4Complete.setFormCrf4a(CRF4aActivity.formCrf4aDTO);
                 crf4Complete.setFormCrf4b(CRF4aActivity.formCrf4bDTO);
 
+                CRF4aActivity.formCrf5a.setFollowupStatus(Constants.COMPLETED);
+                CRF4aActivity.formCrf5a.setFormStatus(Constants.COMPLETED);
+
                 mAPIService.postCrf4Complete(crf4Complete).enqueue(new Callback<Crf4Complete>() {
                     @Override
                     public void onResponse(Call<Crf4Complete> call, Response<Crf4Complete> response) {
+
+                        if(response.code()==200){
+
+                            Log.d("0001010", "send Form 4Alll");
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<Crf4Complete> call, Throwable t) {
+
 
                         mAPIService.postCrf5a(CRF4aActivity.formCrf5a).enqueue(new Callback<FormCrf5a>() {
                             @Override
                             public void onResponse(Call<FormCrf5a> call, Response<FormCrf5a> response) {
 
+
+                                if(response.code()==200){
+
+
+
+                                }
+
+
+
                             }
 
                             @Override
                             public void onFailure(Call<FormCrf5a> call, Throwable t) {
+
+                                Log.d("0001010", "send Form 5Alll");
+
+                                progressDialog.dismiss();
+                                startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
+                                getActivity().finish();
+
+
+                                System.out.println(t.getMessage()+"000011");
 
                             }
                         });
@@ -78,15 +117,8 @@ public class Crf5aQ59Counseling extends Fragment {
 
 
                     }
-
-                    @Override
-                    public void onFailure(Call<Crf4Complete> call, Throwable t) {
-
-                    }
                 });
 
-                startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
-                getActivity().finish();
 
 
 

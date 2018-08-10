@@ -21,6 +21,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData
 
 public class CRF4And5Dashboard extends AppCompatActivity {
 
+
     ArrayList<FollowupsDTO> listOfFollowUps;
     ListView listView;
     TextView tv_site, tv_astId;
@@ -61,11 +62,18 @@ public class CRF4And5Dashboard extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent intent = new Intent(CRF4And5Dashboard.this,CRF4aActivity.class);
-                intent.putExtra("followupdetails",new Gson().toJson( listfollowUpDetails.get(position),FollowupDetails.class));
+                intent.putExtra("position",position);
+                intent.putExtra("followupdetails",new Gson().toJson( listOfFollowUps.get(position),FollowupsDTO.class));
                 startActivity(intent);
+                finish();
             }
         });
 
     }
 
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }

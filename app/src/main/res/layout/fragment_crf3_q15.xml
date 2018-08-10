@@ -39,6 +39,7 @@
             <EditText
                 android:id="@+id/et_q18"
                 android:maxLength="6"
+                android:inputType="textCapCharacters"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
                 android:hint="Enter Randomization Id"

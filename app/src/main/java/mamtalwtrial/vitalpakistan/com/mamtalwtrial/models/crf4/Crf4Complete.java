@@ -6,6 +6,16 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf4.crf4b.FormCrf4bDT
 
 public class Crf4Complete {
 
+    private String followUpNum;
+
+    public String getFollowUpNum() {
+        return followUpNum;
+    }
+
+    public void setFollowUpNum(String followUpNum) {
+        this.followUpNum = followUpNum;
+    }
+
     private FormCrf4aDTO formCrf4a;
     private FormCrf4bDTO formCrf4b;
 

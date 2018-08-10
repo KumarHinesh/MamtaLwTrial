@@ -24,7 +24,9 @@ import java.util.List;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4b_fragments.Crf4bQ20Fragment;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf4.crf4a.FormCrf4aDetailsDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 
 
 public class Crf4aQ27Fragment extends Fragment {
@@ -292,6 +294,9 @@ public class Crf4aQ27Fragment extends Fragment {
                 formCrf4aDetailsDTO.setQ27From(startTime);
                 formCrf4aDetailsDTO.setQ27To(endTime);
 
+                formCrf4aDetailsDTO.setQ27From(start+"");
+                formCrf4aDetailsDTO.setQ27To(end+"");
+
 
         btn_submit = (Button) view.findViewById(R.id.btn_submit);
         btn_submit.setText("Submit "+start+" TO "+end);
@@ -302,7 +307,12 @@ public class Crf4aQ27Fragment extends Fragment {
                 if(validation()){
 
                     if(CRF4aActivity.startHour==24){
-                    // if(CRF4aActivity.startHour==1){
+                   //  if(CRF4aActivity.startHour==1){
+
+
+                        CRF4aActivity.listOfq27Toq73.add(formCrf4aDetailsDTO);
+
+
 
 
                         CRF4aActivity.formCrf4aDTO.setDetails(CRF4aActivity.listOfq27Toq73);
@@ -313,6 +323,7 @@ public class Crf4aQ27Fragment extends Fragment {
                         fragmentTransaction.commit();
 
                     }else {
+
                         CRF4aActivity.listOfq27Toq73.add(formCrf4aDetailsDTO);
 
                         Crf4aQ27Fragment fragment = new Crf4aQ27Fragment();
@@ -903,17 +914,17 @@ public class Crf4aQ27Fragment extends Fragment {
                 } else {
                     formCrf4aDetailsDTO.setQ45(getTextFromField(et_q45, tv_q45));
                 }
+            }
 
+            if (isRBCheckedThree(rg_q46, rb_q46, tv_q46).equals("")) {
+                validation = false;
+            } else {
+                formCrf4aDetailsDTO.setQ46(isRBCheckedThree(rg_q46, rb_q46, tv_q46));
             }
 
             if(ll_q47_q57.getVisibility()==View.VISIBLE){
 
 
-                if (isRBCheckedThree(rg_q46, rb_q46, tv_q46).equals("")) {
-                    validation = false;
-                } else {
-                    formCrf4aDetailsDTO.setQ46(isRBCheckedThree(rg_q46, rb_q46, tv_q46));
-                }
 
                 if (isRBCheckedThree(rg_q47, rb_q47, tv_q47).equals("")) {
                     validation = false;
@@ -1157,6 +1168,15 @@ public class Crf4aQ27Fragment extends Fragment {
         } else {
             formCrf4aDetailsDTO.setQ73i(isRBCheckedThree(rg_q73_i, rb_q73_i, tv_q73_i));
         }
+
+
+        if (getEditText(rg_q73_j, rb_q73_j, et_q73_j, tv_q73_j, ContantsValues.YES,"","","","","").equals("")) {
+            validation = false;
+        } else {
+
+            formCrf4aDetailsDTO.setQ73j(getEditText(rg_q73_j, rb_q73_j, et_q73_j, tv_q73_j, ContantsValues.YES,"","","","",""));
+        }
+
 
     }
         return validation;

@@ -205,9 +205,8 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
                         b = true;
                     }
                 }, year, month, day);
+                mdiDialog.getDatePicker().setMaxDate(new Date().getTime());
                 mdiDialog.show();
-
-
 
 
             }

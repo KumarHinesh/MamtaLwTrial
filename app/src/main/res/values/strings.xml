@@ -707,6 +707,43 @@
     <string name="crf5b_q48_english">Amount used in gram</string>
     <string name="crf5b_q48_urdu">Midair likhain grams MA</string>
 
+    <string name="crf5b_q49_english">Does woman consume Gutka usually?</string>
+    <string name="crf5b_q49_urdu">Kiya khatoon Gutka khati hain</string>
+
+    <string name="crf5b_q50_english">Does woman consume Pan usually?</string>
+    <string name="crf5b_q50_urdu">Kiya Khatoon Pan khati hain</string>
+
+
+    <string name="crf5b_q51_english">Does woman consume cigarette usually?</string>
+    <string name="crf5b_q51_urdu">Kiya khatoon cigarette peeti hain</string>
+
+
+    <string name="crf5b_q52_english">Does woman consume chewed tobacco usually?</string>
+    <string name="crf5b_q52_urdu">Kiya khatoon Tambakoo khati hain</string>
+
+
+    <string name="crf5b_q53_english">Does woman consume cannabis usually?</string>
+    <string name="crf5b_q53_urdu">Kiya Khatoon Bhang peeti hain</string>
+
+
+    <string name="crf5b_q54_english">Does woman consume Hashish or Charas?</string>
+    <string name="crf5b_q54_urdu">kya khatoon Charas peeti h</string>
+
+
+    <string name="crf5b_q55_english">Does woman consume Herion?</string>
+    <string name="crf5b_q55_urdu">kya khatoon Herion peeti h</string>
+
+
+    <string name="crf5b_q56_english">Does woman consume Huqqa?</string>
+    <string name="crf5b_q56_urdu">kya khatoon Huqqa peeti h</string>
+
+
+    <string name="crf5b_q57_english">Any other substance abuse?</string>
+    <string name="crf5b_q57_urdu">kya khatoon or koi nasha karti h</string>
+
+    <string name="crf5b_q58_english"></string>
+    <string name="crf5b_q58_urdu"></string>
+
 
     <!--Crf4b-->
 

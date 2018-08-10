@@ -379,7 +379,7 @@ public class Crf3bQ72Fragment extends Fragment {
                 tv_q73_z.setError(null);
                 rb_q73_z = (RadioButton) view.findViewById(rg_q73_z.getCheckedRadioButtonId());
 
-                if(rb_q73_z.getTag().toString().equalsIgnoreCase("yes")){
+                if(rb_q73_z.getTag().toString().equalsIgnoreCase("1")){
                     et_q73_z.setVisibility(View.VISIBLE);
                 }else {
                     et_q73_z.setVisibility(View.INVISIBLE);

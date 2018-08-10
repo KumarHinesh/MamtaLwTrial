@@ -42,7 +42,6 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
 
 public class PwInfoFragment1 extends Fragment {
 
-
     boolean isDataFiled=false;
 
     String[] data;

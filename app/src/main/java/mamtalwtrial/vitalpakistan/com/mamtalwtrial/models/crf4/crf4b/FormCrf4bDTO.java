@@ -36,6 +36,8 @@ public class FormCrf4bDTO {
         this.formStatus = formStatus;
     }
 
+
+    private Integer followupNumber;
     private String q19;
     private String q20;
     private String q21a;
@@ -1746,5 +1748,13 @@ public class FormCrf4bDTO {
 
     public void setPregnantWoman(PregnantWomanDTO pregnantWoman) {
         this.pregnantWoman = pregnantWoman;
+    }
+
+    public Integer getFollowupNumber() {
+        return followupNumber;
+    }
+
+    public void setFollowupNumber(Integer followupNumber) {
+        this.followupNumber = followupNumber;
     }
 }

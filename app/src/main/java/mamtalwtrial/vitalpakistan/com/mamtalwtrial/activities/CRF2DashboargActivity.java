@@ -1,6 +1,7 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +36,8 @@ public class CRF2DashboargActivity extends AppCompatActivity {
     EditText et_site, et_para, et_block, et_structure;
     ImageButton btn_search;
     SearchResult searchResult;
+
+    String getSite;
 
     private APIService mAPIService;
 
@@ -162,6 +165,10 @@ public class CRF2DashboargActivity extends AppCompatActivity {
         et_block = (EditText) findViewById(R.id.et_block);
         et_structure = (EditText) findViewById(R.id.et_structure);
 
+        getSite = getSharedPreferences("site",CRF1Activity.MODE_PRIVATE).getString("val","null");
+
+        et_site.setText(getSite);
+        et_site.setTextColor(Color.BLACK);
     }
 
 
