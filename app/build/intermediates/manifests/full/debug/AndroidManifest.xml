@@ -51,6 +51,17 @@
         <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity" />
         <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.TestingActivity" />
         <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashBoardCrf2To3" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf2_fragments.MainActivity" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.TestingCrf5b" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingDataActivity" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.AnthroDashBoard" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.Crf6Activity" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingCrf3AllForms" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF5bActivity" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingCrf4AllAnd5aActivity" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingCrf5bActivity" />
+        <activity android:name="mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingCrf6Activity" />
     </application>
 
 </manifest>

@@ -438,9 +438,9 @@ public class Crf3cQ22WeightLW extends Fragment {
         if(turn>=3){ weightLwCrf3cDTOS.add(getWeightLwObject(3,et_r1_mauc3,et_r2_mauc3)); }
         if(turn>=4){ weightLwCrf3cDTOS.add(getWeightLwObject(4,et_r1_mauc4,et_r2_mauc4)); }
 
-        CRF3cActivity.formCrf3cDTO.setWeightLwCrf3c(weightLwCrf3cDTOS);
+        CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setWeightLwCrf3c(weightLwCrf3cDTOS);
 
-        CRF3cActivity.formCrf3cDTO.setQ23(avrageVal+"");
+        CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setQ23(avrageVal+"");
     }
 
     public float getTextFromField(EditText et){

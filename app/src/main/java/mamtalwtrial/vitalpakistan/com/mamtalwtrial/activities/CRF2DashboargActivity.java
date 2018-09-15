@@ -33,7 +33,7 @@ public class CRF2DashboargActivity extends AppCompatActivity {
 
     ListView lv_womanList;
     Button btn_randTeam_task, btnUploadData;
-    EditText et_site, et_para, et_block, et_structure;
+    EditText et_site, et_para, et_block, et_structure, et_refused2;
     ImageButton btn_search;
     SearchResult searchResult;
 
@@ -49,9 +49,10 @@ public class CRF2DashboargActivity extends AppCompatActivity {
         lv_womanList = (ListView) findViewById(R.id.lv_womanList);
 
 
-        a =  SaveAndReadInternalData.isDataAvailable(CRF2DashboargActivity.this);
+        a =  SaveAndReadInternalData.numOfCrf2And3AllForms(CRF2DashboargActivity.this);
 
         btnUploadData = (Button) findViewById(R.id.btnUploadData);
+        et_refused2 = (EditText) findViewById(R.id.et_refused2);
 
         if(a==-1){
 
@@ -67,18 +68,7 @@ public class CRF2DashboargActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(WifiConnectOrNot.haveNetworkConnection(getApplicationContext())){
-
-  //                  SaveAndReadInternalData.uploadData(DashboardActivity.this);
-    //                startActivity(new Intent(DashboardActivity.this,DashboardActivity.class));
-      //              finish();
-
-                }else {
-
-//                    SingleButtonDialog.singleBtnDialog(DashboardActivity.this,"First Connect With Internet","Pehle Internet Say Connect hpjai");
-
-                }
-
+                startActivity(new Intent(CRF2DashboargActivity.this,SendingCrf3AllForms.class));
             }
         });
 
@@ -194,6 +184,8 @@ public class CRF2DashboargActivity extends AppCompatActivity {
             b = false;
             et_structure.setError("Required");
         }
+
+
         return b;
     }
 

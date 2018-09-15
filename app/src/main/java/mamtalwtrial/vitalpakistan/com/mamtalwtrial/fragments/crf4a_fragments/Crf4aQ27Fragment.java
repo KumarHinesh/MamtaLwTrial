@@ -18,7 +18,9 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
@@ -74,7 +76,6 @@ public class Crf4aQ27Fragment extends Fragment {
     EditText et_q28, et_q29, et_q33, et_q35, et_q39, et_q42, et_q43, et_q44, et_q45, et_q48, et_q49, et_q50,
                 et_q51, et_q54, et_q55, et_q56, et_q57, et_q59, et_q60, et_q61, et_q62, et_q64, et_q65, et_q66,
                 et_q67, et_q69, et_q70, et_q71, et_q72;
-
 
 
     @Override
@@ -265,35 +266,24 @@ public class Crf4aQ27Fragment extends Fragment {
               start = CRF4aActivity.startHour-19;
               end = CRF4aActivity.startHour-18;
 
-
           }else {
-
               start = CRF4aActivity.startHour+5;
               end = CRF4aActivity.startHour+6;
-
-
           }
 
           if(end==24){
-
               end = 0;
           }
 
             if(start==24){
-
                 start=0;
-
-
             }
-
-
                 tv_startTime.setText(start+"");
                 tv_endTime.setText(end+"");
 
-
-                formCrf4aDetailsDTO.setQ27From(startTime);
+               /* formCrf4aDetailsDTO.setQ27From(startTime);
                 formCrf4aDetailsDTO.setQ27To(endTime);
-
+*/
                 formCrf4aDetailsDTO.setQ27From(start+"");
                 formCrf4aDetailsDTO.setQ27To(end+"");
 
@@ -307,14 +297,12 @@ public class Crf4aQ27Fragment extends Fragment {
                 if(validation()){
 
                     if(CRF4aActivity.startHour==24){
-                   //  if(CRF4aActivity.startHour==1){
-
 
                         CRF4aActivity.listOfq27Toq73.add(formCrf4aDetailsDTO);
 
-
-
-
+                        CRF4aActivity.startHour = 0;
+                        //need to make
+                        //CRF4aActivity.formCrf4aDTO.setCounsilStartTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
                         CRF4aActivity.formCrf4aDTO.setDetails(CRF4aActivity.listOfq27Toq73);
                         Crf4bQ20Fragment fragment = new Crf4bQ20Fragment();
                         FragmentManager fragmentManager = getFragmentManager();
@@ -323,6 +311,8 @@ public class Crf4aQ27Fragment extends Fragment {
                         fragmentTransaction.commit();
 
                     }else {
+
+
 
                         CRF4aActivity.listOfq27Toq73.add(formCrf4aDetailsDTO);
 
@@ -371,10 +361,8 @@ public class Crf4aQ27Fragment extends Fragment {
 
               }
 
-
             }
         });
-
 
         rg_q30.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -855,7 +843,6 @@ public class Crf4aQ27Fragment extends Fragment {
                 } else {
                     formCrf4aDetailsDTO.setQ39(getTextFromField(et_q39, tv_q39));
                 }
-
 
 
             }

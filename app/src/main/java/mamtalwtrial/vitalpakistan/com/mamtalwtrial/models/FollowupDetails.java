@@ -17,13 +17,27 @@ public class FollowupDetails {
     private String timeOfBirth;
     private String fNum;
 
+    private String pwd;
+    private String chd;
+
     private String wnum;
     private String stdyId;
     private String arm;
     private String age;
     private String lastVisit;
 
+    private String form;
     private String lmp; //CRF1 q26
+
+    private Vaccination vaccination;
+
+    public Vaccination getVaccination() {
+        return vaccination;
+    }
+
+    public void setVaccination(Vaccination vaccination) {
+        this.vaccination = vaccination;
+    }
 
     public String getLmp() {
         return lmp;
@@ -175,5 +189,29 @@ public class FollowupDetails {
 
     public void setLastVisit(String lastVisit) {
         this.lastVisit = lastVisit;
+    }
+
+    public String getForm() {
+        return form;
+    }
+
+    public void setForm(String form) {
+        this.form = form;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    public String getChd() {
+        return chd;
+    }
+
+    public void setChd(String chd) {
+        this.chd = chd;
     }
 }

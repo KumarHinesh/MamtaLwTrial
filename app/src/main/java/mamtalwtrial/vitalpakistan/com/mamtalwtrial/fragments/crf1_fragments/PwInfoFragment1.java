@@ -1,6 +1,7 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf1_fragments;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fasterxml.jackson.databind.node.POJONode;
@@ -28,17 +31,24 @@ import java.util.Calendar;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CounselingCRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingDataActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.adapter.StatusListAdapter;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.messageDialogBox.SingleButtonDialog;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.DSSAddressDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PwInfoFragment1 extends Fragment {
 
@@ -49,13 +59,14 @@ public class PwInfoFragment1 extends Fragment {
     int statusSite =-1;
     int statusPara =-1;
 
-    Context context;
+    ProgressDialog progressDialog;
 
     String[]  paraArray;
     Button btnCancel,btnConform;
 
     private APIService mAPIService;
 
+    Context context;
     Spinner spinner_para;
 
     String pwName, pwHusbandName, pwSite, pwPara,
@@ -81,8 +92,11 @@ public class PwInfoFragment1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pw_info_fragment1,
                 container, false);
 
+
+
         CRF1Activity.fragmentNo = 1;
         et_refuesd = (EditText) view.findViewById(R.id.et_refuesd);
+
 
         if(CRF1Activity.getSite.equalsIgnoreCase("AG")){
 
@@ -129,7 +143,7 @@ public class PwInfoFragment1 extends Fragment {
 
         context = getContext();
 
-
+        initilizePrograssDialog();
 
         //edit text all field
         etPwName = (EditText) view.findViewById(R.id.etPwName);
@@ -151,7 +165,6 @@ public class PwInfoFragment1 extends Fragment {
         }
 
         if( CRF1Activity.formCrf1DTO.getFollowupId()!=0 || isDataFiled){
-
 
             etPwName.setText(CRF1Activity.formCrf1DTO.getPregnantWoman().getName());
             etPwHusbandName.setText(CRF1Activity.formCrf1DTO.getPregnantWoman().getHusbandName());
@@ -220,23 +233,7 @@ public class PwInfoFragment1 extends Fragment {
                             fragmentTransaction.replace(R.id.fragment_frame, pwMuacAssessmentFragment2);
                             fragmentTransaction.commit();
 
-                        }else if(selectStatusItemIndex==3 || selectStatusItemIndex==4 || selectStatusItemIndex==5 || selectStatusItemIndex==6){
-
-                                CRF1Activity.formCrf1DTO.setFormStatus(Constants.COMPLETED);
-                                CRF1Activity.formCrf1DTO.setVisitStatus(selectStatusItemIndex);
-                                CRF1Activity.formCrf1DTO.setQ34( new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
-
-                                SharedPreferences sharedPreferences = context.getSharedPreferences("incomp",context.MODE_PRIVATE);
-                                int val = sharedPreferences.getInt("val", 0);
-
-                                val++;
-                                SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putInt("val",val);
-                                editor.commit();
-
-                                myCustomeDialog(null, false);
-
-                        }else {
+                        }else if(selectStatusItemIndex==1 || selectStatusItemIndex==2){
 
 
                             CRF1Activity.formCrf1DTO.setFormStatus(Constants.INCOMPLETE);
@@ -253,6 +250,23 @@ public class PwInfoFragment1 extends Fragment {
 
                             myCustomeDialog(null, false);
 
+
+                        }else {
+
+
+                            CRF1Activity.formCrf1DTO.setFormStatus(Constants.COMPLETED);
+                            CRF1Activity.formCrf1DTO.setVisitStatus(selectStatusItemIndex);
+                            CRF1Activity.formCrf1DTO.setQ34( new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                            SharedPreferences sharedPreferences = context.getSharedPreferences("incomp",context.MODE_PRIVATE);
+                            int val = sharedPreferences.getInt("val", 0);
+
+                            val++;
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putInt("val",val);
+                            editor.commit();
+
+                            myCustomeDialog(null, false);
 
 
                         }
@@ -288,9 +302,7 @@ public class PwInfoFragment1 extends Fragment {
             Toast.makeText(getContext(),"Please Enter para",Toast.LENGTH_SHORT).show();
 
             checkFieldStatus = false;
-
         }
-
 
 
         if(pwPara2!=null){
@@ -362,7 +374,6 @@ public class PwInfoFragment1 extends Fragment {
 
 
 
-
         if(TextUtils.isEmpty(strPwNumber)){
 
             etPwNumber.setError("Required(Isko bharay)");
@@ -406,27 +417,49 @@ public class PwInfoFragment1 extends Fragment {
             @Override
             public void onClick(View v) {
 
+                progressDialog.show();
                 if(WifiConnectOrNot.haveNetworkConnection(context)){
 
-                 //   P.show(getContext(),"Sending...","Sending Form To Server");
+                    APIService mAPIService = ApiUtils.getAPIService();
+                    mAPIService.sendCrf1Form(CRF1Activity.formCrf1DTO).enqueue(new Callback<FormCrf1DTO>() {
+                        @Override
+                        public void onResponse(Call<FormCrf1DTO> call, Response<FormCrf1DTO> response) {
 
-                    SendDataToServer.sendCrf1Form(CRF1Activity.formCrf1DTO);
+                            if(response.code()==200){
 
-                    if(CRF1Activity.formCrf1DTO.getFollowUpPositionInList()!=-1){
-                        SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF1Activity.formCrf1DTO.getFollowUpPositionInList());}
+                                progressDialog.dismiss();
+                                singleBtnDialog(context,CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Form submited...:)",CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Ka Form Send Hogaya h..:)");
+
+                            }else {
+
+                                Log.d("error2", response.code()+"");
+                                SaveAndReadInternalData.saveCrf1FormInternal(getContext(),CRF1Activity.formCrf1DTO);
+                                progressDialog.dismiss();
+                                singleBtnDialog(context,"Internet Connection is not Working properly "+ CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" form save Internel Storage","Internet Sahi nahi chal raha islia "+CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Ka Form Internal Storage m Save Kardia h");
+                            }
+                        }
+                        @Override
+                        public void onFailure(Call<FormCrf1DTO> call, Throwable t) {
+
+                            SaveAndReadInternalData.saveCrf1FormInternal(getContext(),CRF1Activity.formCrf1DTO);
+                            progressDialog.dismiss();
+                            singleBtnDialog(context,"Internet Connection is not Working properly "+ CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" form save Internel Storage","Internet Sahi nahi chal raha islia "+CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Ka Form Internal Storage m Save Kardia h");
+
+                        }
+                    });
 
 
                 }else {
 
-                    if(CRF1Activity.formCrf1DTO.getFollowUpPositionInList()!=-1){
-                        SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF1Activity.formCrf1DTO.getFollowUpPositionInList());}
-
-                    SaveAndReadInternalData.saveCrf1FormInternal(getContext(),new Gson().toJson(CRF1Activity.formCrf1DTO, FormCrf1DTO.class));
-
+                    Log.d("error2", "internet ka masla");
+                    SaveAndReadInternalData.saveCrf1FormInternal(getContext(),CRF1Activity.formCrf1DTO);
+                    progressDialog.dismiss();
+                    singleBtnDialog(context,"Internet Connection is not Working properly "+ CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" form save Internel Storage","Internet Sahi nahi chal raha islia "+CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Ka Form Internal Storage m Save Kardia h");
                 }
 
-                    startActivity(new Intent(getActivity(), DashboardActivity.class));
-                    getActivity().finish();
+                if(CRF1Activity.formCrf1DTO.getFollowUpPositionInList()!=-1){
+                    SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF1Activity.formCrf1DTO.getFollowUpPositionInList());}
+
             }
         });
 
@@ -470,18 +503,44 @@ public class PwInfoFragment1 extends Fragment {
         return pregnantWoman;
     }
 
-  /*  public boolean isAlphabet(String[] args) {
+ public void initilizePrograssDialog(){
+
+     progressDialog = new ProgressDialog(context);
+     progressDialog.setTitle("Sending..");
+     progressDialog.setMessage("Please Wait");
+     progressDialog.setCancelable(false);
+
+ }
 
 
+    public  void singleBtnDialog(Context context, String engMessage, String romanEng){
 
-        char c = '*';
+        Button btnConform;
+        TextView tv_engText, tv_RomanEngText;
 
-        if( (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-            System.out.println(c + " is an alphabet.");
-        else
-            System.out.println(c + " is not an alphabet.");
-    }*/
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.single_btn_dialog);
+        dialog.setCancelable(false);
 
+        btnConform = (Button) dialog.findViewById(R.id.btnok);
+
+        tv_engText = (TextView) dialog.findViewById(R.id.tv_engText);
+        tv_RomanEngText = (TextView) dialog.findViewById(R.id.tv_RomanEngText);
+
+        tv_engText.setText(engMessage);
+        tv_RomanEngText.setText(romanEng);
+
+        btnConform.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), DashboardActivity.class));
+                getActivity().finish();
+            }
+        });
+
+        dialog.show();
+    }
 
 }
 

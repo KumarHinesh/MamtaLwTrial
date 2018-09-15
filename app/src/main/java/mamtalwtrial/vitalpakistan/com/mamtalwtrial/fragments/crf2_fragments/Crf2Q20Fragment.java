@@ -1,6 +1,8 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf2_fragments;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,7 +22,15 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2DashboargActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf2_fragments.CRF2GetBabyBirthDateAndTimeFragment;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.FormCrf2DTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Crf2Q20Fragment extends Fragment {
 
@@ -30,6 +40,8 @@ public class Crf2Q20Fragment extends Fragment {
     TextView  tv_RomanEngText, tv_engText;
 
     int outcome_type_status =-1;
+    ProgressDialog progressDialog;
+    Context context;
 
 
     CheckBox cb_top_1, cb_top_2, cb_top_3;
@@ -49,7 +61,7 @@ public class Crf2Q20Fragment extends Fragment {
 
                 if(cb_top_1.isChecked()){
 
-                    CRF2Activity.formCrf2DTO.setQ20(outcome_type_status+"");
+                    CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ20(outcome_type_status+"");
                     CRF2GetBabyBirthDateAndTimeFragment crf2GetBabyBirthDateAndTimeFragment = new CRF2GetBabyBirthDateAndTimeFragment();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -144,12 +156,13 @@ public class Crf2Q20Fragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                CRF2Activity.formCrf2DTO.setQ20(outcome_type_status+"");
-                CRF2Activity.formCrf2DTO.setFormStatus(Constants.COMPLETED);
-                SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
+                CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ20(outcome_type_status+"");
+                CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setFormStatus(Constants.COMPLETED);
+                //SendDataToServer.sendCrf2Form(getContext() ,CRF2Activity.formCrf2DTO);
                 dialog.dismiss();
-                startActivity(new Intent(getContext(), CRF2DashboargActivity.class));
-                getActivity().finish();
+                sendDataToServer();
+                /*startActivity(new Intent(getContext(), CRF2DashboargActivity.class));
+                getActivity().finish();*/
             }
         });
 
@@ -162,6 +175,88 @@ public class Crf2Q20Fragment extends Fragment {
             }
         });
         dialog.show();
+
+    }
+
+    public void sendDataToServer(){
+
+        progressDialog.show();
+        APIService mAPIService = ApiUtils.getAPIService();
+
+        if(WifiConnectOrNot.haveNetworkConnection(getContext())){
+
+            mAPIService.postCrf2(CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO()).enqueue(new Callback<FormCrf2DTO>() {
+                @Override
+                public void onResponse(Call<FormCrf2DTO> call, Response<FormCrf2DTO> response) {
+
+                    progressDialog.dismiss();
+
+                    if(response.code()==200){
+
+                        singleBtnDialog(getContext(),CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() + "Form submited...:)",CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" Ka Form Send Hogaya h..:)");
+
+                    }else {
+
+                        singleBtnDialog(getContext(),"Internet Connection is not Working properly "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" form save Internel Storage","Internet Sahi nahi chal raha islia "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" Ka Form Internal Storage m Save Kardia h");
+                        SaveAndReadInternalData.saveCrf2And3AllForms(context,CRF2Activity.formsCrf2AndCrf3All);
+
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<FormCrf2DTO> call, Throwable t) {
+
+                    singleBtnDialog(getContext(),"Internet Connection is not Working properly "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" form save Internel Storage","Internet Sahi nahi chal raha islia "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" Ka Form Internal Storage m Save Kardia h");
+                    SaveAndReadInternalData.saveCrf2And3AllForms(context,CRF2Activity.formsCrf2AndCrf3All);
+
+                }
+            });
+
+        }else{
+
+            singleBtnDialog(getContext(),"Internet Connection is not Working properly "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" form save Internel Storage","Internet Sahi nahi chal raha islia "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" Ka Form Internal Storage m Save Kardia h");
+            SaveAndReadInternalData.saveCrf2And3AllForms(context,CRF2Activity.formsCrf2AndCrf3All);
+        }
+
+    }
+
+
+    public  void singleBtnDialog(Context context, String engMessage, String romanEng){
+
+        Button btnConform;
+        TextView tv_engText, tv_RomanEngText;
+
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.single_btn_dialog);
+        dialog.setCancelable(false);
+
+        btnConform = (Button) dialog.findViewById(R.id.btnok);
+
+        tv_engText = (TextView) dialog.findViewById(R.id.tv_engText);
+        tv_RomanEngText = (TextView) dialog.findViewById(R.id.tv_RomanEngText);
+
+        tv_engText.setText(engMessage);
+        tv_RomanEngText.setText(romanEng);
+
+        btnConform.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), CRF2DashboargActivity.class));
+                getActivity().finish();
+            }
+        });
+
+        dialog.show();
+    }
+
+    public void initilizePrograssDialog(){
+
+        progressDialog = new ProgressDialog(context);
+        progressDialog.setTitle("Sending..");
+        progressDialog.setMessage("Please Wait");
+        progressDialog.setCancelable(false);
 
     }
 

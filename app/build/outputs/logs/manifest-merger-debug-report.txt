@@ -1,38 +1,41 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-59:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\59df2c027ecf4c22f4cf19073be0dddb\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\82f7e027f1a4be351a986fb79593fa43\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\23518788a269a89f848285ba4c25cc71\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\27b0eda1981998cd5052ae19411809b7\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\b66fef228851405b6a51e67ec4120be0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8aad93ceb8876837aa761e62147663db\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d4cb748b4f0afb49455b373b197b5b10\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\20eb492b3b34867530f04d460be6d4fa\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\d8ae09e709cf67595a1a2ea240033b92\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\044d0ed7e04ad893e75d6d2cf563e514\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\098bacb94c75a6ba39429d48ec06c55d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\27c28f6bd3355c630becc75c71bd2fbc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\d627af4637e8f1b03a4d6e2ddf141a62\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\e936a24a93fedd4fdf350691d804a240\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\86807534c7ca7e38ea70054c591faf06\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\75120dc8f4bbf513f2495bcc2f7c0094\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\c85dda5e9245e96adfa1c68aa8a9d62b\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\e15ee7bd633128605bccc80640e86d71\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-59:12
 	package
 		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:3:5-58
 		INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml
 		INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml
-		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml
-		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:2:11-69
@@ -57,7 +60,7 @@ ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:9:5-67
 	android:name
 		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:9:22-64
 application
-ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:11:5-46:19
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:11:5-57:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\23518788a269a89f848285ba4c25cc71\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\23518788a269a89f848285ba4c25cc71\AndroidManifest.xml:9:5-20
 	android:supportsRtl
@@ -143,13 +146,59 @@ ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:44:9-64
 	android:name
 		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:44:19-61
 activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard
-ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:45:9-75
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:45:9-66
 	android:name
 		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:45:19-63
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashBoardCrf2To3
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:46:9-65
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:46:19-62
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf2_fragments.MainActivity
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:47:9-75
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:47:19-72
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.TestingCrf5b
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:48:9-61
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:48:19-58
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingDataActivity
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:49:9-68
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:49:19-65
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.AnthroDashBoard
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:50:9-64
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:50:19-61
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.Crf6Activity
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:51:9-61
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:51:19-58
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingCrf3AllForms
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:52:9-68
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:52:19-65
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF5bActivity
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:53:9-62
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:53:19-59
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingCrf4AllAnd5aActivity
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:54:9-76
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:54:19-73
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingCrf5bActivity
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:55:9-69
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:55:19-66
+activity#mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.SendingCrf6Activity
+ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:56:9-77
+	android:name
+		ADDED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml:56:19-65
 uses-sdk
 INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml
 INJECTED from D:\New code\MamtaLwTrial\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\59df2c027ecf4c22f4cf19073be0dddb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\59df2c027ecf4c22f4cf19073be0dddb\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\82f7e027f1a4be351a986fb79593fa43\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\82f7e027f1a4be351a986fb79593fa43\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\23518788a269a89f848285ba4c25cc71\AndroidManifest.xml:5:5-7:41
@@ -162,6 +211,8 @@ MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\DELL\.gradle\
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8aad93ceb8876837aa761e62147663db\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d4cb748b4f0afb49455b373b197b5b10\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d4cb748b4f0afb49455b373b197b5b10\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\20eb492b3b34867530f04d460be6d4fa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\20eb492b3b34867530f04d460be6d4fa\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\d8ae09e709cf67595a1a2ea240033b92\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\d8ae09e709cf67595a1a2ea240033b92\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\044d0ed7e04ad893e75d6d2cf563e514\AndroidManifest.xml:20:5-44
@@ -170,6 +221,8 @@ MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\DELL\.
 MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\098bacb94c75a6ba39429d48ec06c55d\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\27c28f6bd3355c630becc75c71bd2fbc\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\27c28f6bd3355c630becc75c71bd2fbc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\d627af4637e8f1b03a4d6e2ddf141a62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\d627af4637e8f1b03a4d6e2ddf141a62\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\e936a24a93fedd4fdf350691d804a240\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\e936a24a93fedd4fdf350691d804a240\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\DELL\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\86807534c7ca7e38ea70054c591faf06\AndroidManifest.xml:20:5-44

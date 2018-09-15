@@ -12,6 +12,8 @@ public class FormCrf4bDTO {
     private Integer followupId;
     private Integer formStatus;
 
+
+
     public Integer getFollowupStatus() {
         return followupStatus;
     }
@@ -38,6 +40,25 @@ public class FormCrf4bDTO {
 
 
     private Integer followupNumber;
+    private String q2;
+    private String q3;
+
+    public String getQ2() {
+        return q2;
+    }
+
+    public void setQ2(String q2) {
+        this.q2 = q2;
+    }
+
+    public String getQ3() {
+        return q3;
+    }
+
+    public void setQ3(String q3) {
+        this.q3 = q3;
+    }
+
     private String q19;
     private String q20;
     private String q21a;

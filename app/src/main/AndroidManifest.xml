@@ -42,7 +42,18 @@
         <activity android:name=".activities.CRF3cActivity" />
         <activity android:name=".activities.CRF4aActivity" />
         <activity android:name=".activities.TestingActivity" />
-        <activity android:name=".activities.CRF4And5Dashboard"></activity>
+        <activity android:name=".activities.CRF4And5Dashboard" />
+        <activity android:name=".activities.DashBoardCrf2To3" />
+        <activity android:name=".fragments.crf2_fragments.MainActivity" />
+        <activity android:name=".activities.TestingCrf5b" />
+        <activity android:name=".activities.SendingDataActivity" />
+        <activity android:name=".activities.AnthroDashBoard" />
+        <activity android:name=".activities.Crf6Activity" />
+        <activity android:name=".activities.SendingCrf3AllForms" />
+        <activity android:name=".activities.CRF5bActivity" />
+        <activity android:name=".activities.SendingCrf4AllAnd5aActivity" />
+        <activity android:name=".activities.SendingCrf5bActivity" />
+        <activity android:name=".activities.SendingCrf6Activity"></activity>
     </application>
 
 </manifest>

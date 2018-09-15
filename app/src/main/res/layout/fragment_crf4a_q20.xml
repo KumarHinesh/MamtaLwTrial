@@ -15,6 +15,7 @@
 
         //q20
         <LinearLayout
+            android:id="@+id/ll_q20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -293,19 +294,6 @@
             android:layout_marginTop="8dp"
             android:background="@color/black" />
 
-        <EditText
-            android:id="@+id/et_BabyName"
-            android:inputType="number"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:hint="ENTER BABY NAME"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            />
-
-
-
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
@@ -499,6 +487,16 @@
 
         </LinearLayout>
 
+
+        <EditText
+            android:id="@+id/et_BabyName"
+            android:inputType="number"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="ENTER BABY NAME"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
 
         <Button
             android:layout_gravity="center_horizontal"

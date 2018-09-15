@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf2_fragments.Crf2WomeninfoFragment1;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormsCrf2AndCrf3All;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.FormCrf2DTO;
@@ -16,7 +17,8 @@ public class CRF2Activity extends AppCompatActivity {
 
     public  static int fragmentNo = -1;
 
-    public static FormCrf2DTO formCrf2DTO;
+    FormCrf2DTO formCrf2DTO;
+    public static FormsCrf2AndCrf3All formsCrf2AndCrf3All;
     public static int babyHour;
     PregnantWomanDTO pregnantWomanDTO;
 
@@ -25,7 +27,11 @@ public class CRF2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crf2);
 
-        formCrf2DTO  = new Gson().fromJson(getIntent().getStringExtra("form"),FormCrf2DTO.class) ;
+       // formCrf2DTO  = new Gson().fromJson(getIntent().getStringExtra("form"),FormCrf2DTO.class) ;
+
+        formCrf2DTO = new FormCrf2DTO();
+
+        formsCrf2AndCrf3All = new FormsCrf2AndCrf3All();
 
          try{
 
@@ -50,6 +56,8 @@ public class CRF2Activity extends AppCompatActivity {
 
         formCrf2DTO.setTeam(teamDTO);
 
+        formsCrf2AndCrf3All.setCrf2Status(true);
+        formsCrf2AndCrf3All.setFormCrf2DTO(formCrf2DTO);
         /*
           if(pregnantWomanDTO != null){
 

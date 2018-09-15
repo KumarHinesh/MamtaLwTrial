@@ -67,17 +67,20 @@ public class Crf5aQ26Fragment extends Fragment {
 
     int year, month, day, min, hour;
 
+    View view;
+
     LinearLayout ll_q35, ll_q37, ll_q38, ll_q41_q58, ll_q42_q58, ll_q44_q49, ll_q43_q58, ll_q45, ll_q47, ll_q37_q38, ll_q52, ll_q53_q58;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_crf5a_q26, container, false);
+         view = inflater.inflate(R.layout.fragment_crf5a_q26, container, false);
 
-     //   CRF4aActivity.formCrf5a.setQ2(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
-     //   CRF4aActivity.formCrf5a.setQ3(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+        initializeViews();
 
-       // CRF4aActivity.formCrf5a.set
+        CRF4aActivity.formCrf5a.setQ02(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
+        CRF4aActivity.formCrf5a.setQ03(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
 
         scrolView = (ScrollView) view.findViewById(R.id.scrolView);
 
@@ -89,146 +92,6 @@ public class Crf5aQ26Fragment extends Fragment {
         min = (calendar.get(Calendar.MINUTE));
         hour = (calendar.get(Calendar.HOUR_OF_DAY));
 
-
-
-        tv_q54_kg = (TextView) view.findViewById(R.id.tv_q54_kg);
-        tv_q55_dose = (TextView) view.findViewById(R.id.tv_q55_dose);
-        tv_q56_ml = (TextView) view.findViewById(R.id.tv_q56_ml);
-
-
-        et_q54 = (EditText) view.findViewById(R.id.et_q54);
-        et_q33 = (EditText) view.findViewById(R.id.et_q33);
-        et_q30 = (EditText) view.findViewById(R.id.et_q30);
-        et_q31 = (EditText) view.findViewById(R.id.et_q31);
-        et_q32 = (EditText) view.findViewById(R.id.et_q32);
-        et_q35_h = (EditText) view.findViewById(R.id.et_q35_h);
-        et_q37_e = (EditText) view.findViewById(R.id.et_q37_e);
-        et_q38_k = (EditText) view.findViewById(R.id.et_q38_k);
-        et_q39 = (EditText) view.findViewById(R.id.et_q39);
-        et_q47_a = (EditText) view.findViewById(R.id.et_q47_a);
-        et_q47_b = (EditText) view.findViewById(R.id.et_q47_b);
-        et_q47_c = (EditText) view.findViewById(R.id.et_q47_c);
-        et_q47_d = (EditText) view.findViewById(R.id.et_q47_d);
-        et_q47_e = (EditText) view.findViewById(R.id.et_q47_e);
-        et_q47_f = (EditText) view.findViewById(R.id.et_q47_f);
-        et_q48 = (EditText) view.findViewById(R.id.et_q48);
-        et_q45_a = (EditText) view.findViewById(R.id.et_q45_a);
-        et_q45_b = (EditText) view.findViewById(R.id.et_q45_b);
-        et_q45_c = (EditText) view.findViewById(R.id.et_q45_c);
-        et_q45_d = (EditText) view.findViewById(R.id.et_q45_d);
-        et_q45_e = (EditText) view.findViewById(R.id.et_q45_e);
-        et_q45_f = (EditText) view.findViewById(R.id.et_q45_f);
-        et_q37_e = (EditText) view.findViewById(R.id.et_q37_e);
-
-        tv_q54_kg = (TextView) view.findViewById(R.id.tv_q54_kg);
-        tv_q55_dose = (TextView) view.findViewById(R.id.tv_q55_dose);
-        tv_q56_ml = (TextView) view.findViewById(R.id.tv_q56_ml);
-        tv_q26 = (TextView) view.findViewById(R.id.tv_q26);
-        tv_q27 = (TextView) view.findViewById(R.id.tv_q27);
-        tv_q28 = (TextView) view.findViewById(R.id.tv_q28);
-        tv_q29 = (TextView) view.findViewById(R.id.tv_q29);
-        tv_q30 = (TextView) view.findViewById(R.id.tv_q30);
-        tv_q31 = (TextView) view.findViewById(R.id.tv_q31);
-        tv_q32 = (TextView) view.findViewById(R.id.tv_q32);
-        tv_q33 = (TextView) view.findViewById(R.id.tv_q33);
-        tv_q34 = (TextView) view.findViewById(R.id.tv_q24);
-        tv_q35_a = (TextView) view.findViewById(R.id.tv_q35_a);
-        tv_q35_b = (TextView) view.findViewById(R.id.tv_q35_b);
-        tv_q35_c = (TextView) view.findViewById(R.id.tv_q35_c);
-        tv_q35_d = (TextView) view.findViewById(R.id.tv_q35_d);
-        tv_q35_e = (TextView) view.findViewById(R.id.tv_q35_e);
-        tv_q35_f = (TextView) view.findViewById(R.id.tv_q35_f);
-        tv_q35_g = (TextView) view.findViewById(R.id.tv_q35_g);
-        tv_q35_h = (TextView) view.findViewById(R.id.tv_q35_h);
-        tv_q36 = (TextView) view.findViewById(R.id.tv_q36);
-        tv_q37_a = (TextView) view.findViewById(R.id.tv_q37_a);
-        tv_q37_b = (TextView) view.findViewById(R.id.tv_q37_b);
-        tv_q37_c = (TextView) view.findViewById(R.id.tv_q37_c);
-        tv_q37_d = (TextView) view.findViewById(R.id.tv_q37_d);
-        tv_q37_e = (TextView) view.findViewById(R.id.tv_q37_e);
-        tv_q38_a = (TextView) view.findViewById(R.id.tv_q38_a);
-        tv_q38_b = (TextView) view.findViewById(R.id.tv_q38_b);
-        tv_q38_c = (TextView) view.findViewById(R.id.tv_q38_c);
-        tv_q38_d = (TextView) view.findViewById(R.id.tv_q38_d);
-        tv_q38_e = (TextView) view.findViewById(R.id.tv_q38_e);
-        tv_q38_f = (TextView) view.findViewById(R.id.tv_q38_f);
-        tv_q38_g = (TextView) view.findViewById(R.id.tv_q38_g);
-        tv_q38_h = (TextView) view.findViewById(R.id.tv_q38_h);
-        tv_q38_i = (TextView) view.findViewById(R.id.tv_q38_i);
-        tv_q38_j = (TextView) view.findViewById(R.id.tv_q38_j);
-        tv_q38_k = (TextView) view.findViewById(R.id.tv_q38_k);
-        tv_q39 = (TextView) view.findViewById(R.id.tv_q39);
-        tv_q40 = (TextView) view.findViewById(R.id.tv_q40);
-        tv_q41 = (TextView) view.findViewById(R.id.tv_q41);
-        tv_q42 = (TextView) view.findViewById(R.id.tv_q42);
-        tv_q43 = (TextView) view.findViewById(R.id.tv_q43);
-        tv_q44 = (TextView) view.findViewById(R.id.tv_q44);
-        tv_q45 = (TextView) view.findViewById(R.id.tv_q45);
-        tv_q46 = (TextView) view.findViewById(R.id.tv_q46);
-        tv_q47 = (TextView) view.findViewById(R.id.tv_q47);
-        tv_q48 = (TextView) view.findViewById(R.id.tv_q48);
-        tv_q49 = (TextView) view.findViewById(R.id.tv_q49);
-        tv_q50 = (TextView) view.findViewById(R.id.tv_q50);
-        tv_q51 = (TextView) view.findViewById(R.id.tv_q51);
-        tv_q53 = (TextView) view.findViewById(R.id.tv_q53);
-        tv_q58 = (TextView) view.findViewById(R.id.tv_q58);
-        tv_q52_getdate = (TextView) view.findViewById(R.id.tv_q52_getdate);
-
-
-        rg_q26 = (RadioGroup) view.findViewById(R.id.rg_q26);
-        rg_q28 = (RadioGroup) view.findViewById(R.id.rg_q28);
-        rg_q34 = (RadioGroup) view.findViewById(R.id.rg_q34);
-        rg_q35_a = (RadioGroup) view.findViewById(R.id.rg_q35_a);
-        rg_q35_b = (RadioGroup) view.findViewById(R.id.rg_q35_b);
-        rg_q35_c = (RadioGroup) view.findViewById(R.id.rg_q35_c);
-        rg_q35_d = (RadioGroup) view.findViewById(R.id.rg_q35_d);
-        rg_q35_e = (RadioGroup) view.findViewById(R.id.rg_q35_e);
-        rg_q35_f = (RadioGroup) view.findViewById(R.id.rg_q35_f);
-        rg_q35_g = (RadioGroup) view.findViewById(R.id.rg_q35_g);
-        rg_q35_h = (RadioGroup) view.findViewById(R.id.rg_q35_h);
-        rg_q36 = (RadioGroup) view.findViewById(R.id.rg_q36);
-        rg_q37_a = (RadioGroup) view.findViewById(R.id.rg_q37_a);
-        rg_q37_b = (RadioGroup) view.findViewById(R.id.rg_q37_b);
-        rg_q37_c = (RadioGroup) view.findViewById(R.id.rg_q37_c);
-        rg_q37_d = (RadioGroup) view.findViewById(R.id.rg_q37_d);
-        rg_q37_e = (RadioGroup) view.findViewById(R.id.rg_q37_e);
-        rg_q38_a = (RadioGroup) view.findViewById(R.id.rg_q38_a);
-        rg_q38_b = (RadioGroup) view.findViewById(R.id.rg_q38_b);
-        rg_q38_c = (RadioGroup) view.findViewById(R.id.rg_q38_c);
-        rg_q38_d = (RadioGroup) view.findViewById(R.id.rg_q38_d);
-        rg_q38_e = (RadioGroup) view.findViewById(R.id.rg_q38_e);
-        rg_q38_f = (RadioGroup) view.findViewById(R.id.rg_q38_f);
-        rg_q38_g = (RadioGroup) view.findViewById(R.id.rg_q38_g);
-        rg_q38_h = (RadioGroup) view.findViewById(R.id.rg_q38_h);
-        rg_q38_i = (RadioGroup) view.findViewById(R.id.rg_q38_i);
-        rg_q38_j = (RadioGroup) view.findViewById(R.id.rg_q38_j);
-        rg_q38_k = (RadioGroup) view.findViewById(R.id.rg_q38_k);
-        rg_q40 = (RadioGroup) view.findViewById(R.id.rg_q40);
-        rg_q41 = (RadioGroup) view.findViewById(R.id.rg_q41);
-        rg_q42 = (RadioGroup) view.findViewById(R.id.rg_q42);
-        rg_q43 = (RadioGroup) view.findViewById(R.id.rg_q43);
-        rg_q44 = (RadioGroup) view.findViewById(R.id.rg_q44);
-        rg_q46 = (RadioGroup) view.findViewById(R.id.rg_q46);
-     //   rg_q48 = (RadioGroup) view.findViewById(R.id.rg_q48);
-        rg_q49 = (RadioGroup) view.findViewById(R.id.rg_q49);
-        rg_q50 = (RadioGroup) view.findViewById(R.id.rg_q50);
-        rg_q51 = (RadioGroup) view.findViewById(R.id.rg_q51);
-        rg_q53 = (RadioGroup) view.findViewById(R.id.rg_q53);
-        rg_q58 = (RadioGroup) view.findViewById(R.id.rg_q58);
-
-
-        ll_q35 = (LinearLayout) view.findViewById(R.id.ll_q35);
-        ll_q37 = (LinearLayout) view.findViewById(R.id.ll_q37);
-        ll_q38 = (LinearLayout) view.findViewById(R.id.ll_q38);
-        ll_q41_q58 = (LinearLayout) view.findViewById(R.id.ll_q41_q58);
-        ll_q42_q58 = (LinearLayout) view.findViewById(R.id.ll_q42_q58);
-        ll_q44_q49 = (LinearLayout) view.findViewById(R.id.ll_q44_q49);
-        ll_q43_q58 = (LinearLayout) view.findViewById(R.id.ll_q43_q58);
-        ll_q45 = (LinearLayout) view.findViewById(R.id.ll_q45);
-        ll_q47 = (LinearLayout) view.findViewById(R.id.ll_q47);
-        ll_q37_q38 = (LinearLayout) view.findViewById(R.id.ll_q37_q38);
-        ll_q52 = (LinearLayout) view.findViewById(R.id.ll_q52);
-        ll_q53_q58 = (LinearLayout) view.findViewById(R.id.ll_q53_q58);
 
         et_q31.addTextChangedListener(new TextWatcher() {
             @Override
@@ -248,7 +111,7 @@ public class Crf5aQ26Fragment extends Fragment {
 
                     try{
 
-                        et_q33.setText(Integer.parseInt(et_q31.getText().toString())/Integer.parseInt(tv_q29.getText().toString())*100);
+                        et_q33.setText(Double.parseDouble(et_q31.getText().toString())/Double.parseDouble(tv_q29.getText().toString())*100+"%");
 
                     }catch (Exception e){
 
@@ -269,7 +132,6 @@ public class Crf5aQ26Fragment extends Fragment {
                 tv_q29.setHint("ITS YOUR 1ST FOLLOW UP");
 
         }else {
-
 
             if(CRF4aActivity.followupDto.getFollowupDetails().getLastVisit().isEmpty() ||
                     CRF4aActivity.followupDto.getFollowupDetails().getLastVisit().equalsIgnoreCase("error")){
@@ -292,7 +154,7 @@ public class Crf5aQ26Fragment extends Fragment {
 
                     long diffInMillies = Math.abs(today.getTime() - lastDate.getTime());
 
-                    diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.DAYS);
+                    diff = TimeUnit.MILLISECONDS.toDays(diffInMillies);
 
                     tv_q28.setText(diff + "");
                     tv_q29.setText((diff * 2) + "");
@@ -323,11 +185,8 @@ public class Crf5aQ26Fragment extends Fragment {
                 mdiDialog.getDatePicker();
                 mdiDialog.show();
 
-
-
             }
         });
-
 
 
         et_q54.addTextChangedListener(new TextWatcher() {
@@ -370,8 +229,20 @@ public class Crf5aQ26Fragment extends Fragment {
 
                 if(validation()){
 
-                    Crf4aCounselingQ79 fragment = new Crf4aCounselingQ79();
-                    //Crf5aQ59Counseling fragment = new Crf5aQ59Counseling();
+                    CRF4aActivity.formCrf5a.setQ60(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                    Fragment fragment = null;
+
+                    if (CRF4aActivity.followupDto.getFollowupDetails().getChd().equalsIgnoreCase("y")){
+
+                        fragment = new Crf5aQ59Counseling();
+
+                    }else {
+
+                        fragment = new Crf4aCounselingQ79();
+                    }
+
+
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frame_layout4a, fragment);
@@ -804,6 +675,11 @@ public class Crf5aQ26Fragment extends Fragment {
 
         boolean validation = true;
 
+        CRF4aActivity.formCrf5a.setQ27(tv_q27.getText().toString());
+        CRF4aActivity.formCrf5a.setQ28(tv_q28.getText().toString());
+        CRF4aActivity.formCrf5a.setQ29(tv_q29.getText().toString());
+        CRF4aActivity.formCrf5a.setQ33(et_q33.getText().toString());
+
         if (isRBCheckedThree(rg_q26, rb_q26, tv_q26).equals("")) {
             validation = false;
         } else {
@@ -950,6 +826,11 @@ public class Crf5aQ26Fragment extends Fragment {
             }
 
 
+
+
+        }
+
+
             if (isRBCheckedThree(rg_q38_a, rb_q38_a, tv_q38_a).equals("")) {
                 validation = false;
             } else {
@@ -963,8 +844,6 @@ public class Crf5aQ26Fragment extends Fragment {
 
                 CRF4aActivity.formCrf5a.setQ38b(isRBCheckedThree(rg_q38_b, rb_q38_b, tv_q38_b));
             }
-
-        }
 
             if (isRBCheckedThree(rg_q38_c, rb_q38_c, tv_q38_c).equals("")) {
                 validation = false;
@@ -1311,4 +1190,153 @@ public class Crf5aQ26Fragment extends Fragment {
             return et.getText().toString();
         }
     }
+
+
+    public void initializeViews(){
+
+
+
+        tv_q54_kg = (TextView) view.findViewById(R.id.tv_q54_kg);
+        tv_q55_dose = (TextView) view.findViewById(R.id.tv_q55_dose);
+        tv_q56_ml = (TextView) view.findViewById(R.id.tv_q56_ml);
+
+
+        et_q54 = (EditText) view.findViewById(R.id.et_q54);
+        et_q33 = (EditText) view.findViewById(R.id.et_q33);
+        et_q30 = (EditText) view.findViewById(R.id.et_q30);
+        et_q31 = (EditText) view.findViewById(R.id.et_q31);
+        et_q32 = (EditText) view.findViewById(R.id.et_q32);
+        et_q35_h = (EditText) view.findViewById(R.id.et_q35_h);
+        et_q37_e = (EditText) view.findViewById(R.id.et_q37_e);
+        et_q38_k = (EditText) view.findViewById(R.id.et_q38_k);
+        et_q39 = (EditText) view.findViewById(R.id.et_q39);
+        et_q47_a = (EditText) view.findViewById(R.id.et_q47_a);
+        et_q47_b = (EditText) view.findViewById(R.id.et_q47_b);
+        et_q47_c = (EditText) view.findViewById(R.id.et_q47_c);
+        et_q47_d = (EditText) view.findViewById(R.id.et_q47_d);
+        et_q47_e = (EditText) view.findViewById(R.id.et_q47_e);
+        et_q47_f = (EditText) view.findViewById(R.id.et_q47_f);
+        et_q48 = (EditText) view.findViewById(R.id.et_q48);
+        et_q45_a = (EditText) view.findViewById(R.id.et_q45_a);
+        et_q45_b = (EditText) view.findViewById(R.id.et_q45_b);
+        et_q45_c = (EditText) view.findViewById(R.id.et_q45_c);
+        et_q45_d = (EditText) view.findViewById(R.id.et_q45_d);
+        et_q45_e = (EditText) view.findViewById(R.id.et_q45_e);
+        et_q45_f = (EditText) view.findViewById(R.id.et_q45_f);
+        et_q37_e = (EditText) view.findViewById(R.id.et_q37_e);
+
+        tv_q54_kg = (TextView) view.findViewById(R.id.tv_q54_kg);
+        tv_q55_dose = (TextView) view.findViewById(R.id.tv_q55_dose);
+        tv_q56_ml = (TextView) view.findViewById(R.id.tv_q56_ml);
+        tv_q26 = (TextView) view.findViewById(R.id.tv_q26);
+        tv_q27 = (TextView) view.findViewById(R.id.tv_q27);
+        tv_q28 = (TextView) view.findViewById(R.id.tv_q28);
+        tv_q29 = (TextView) view.findViewById(R.id.tv_q29);
+        tv_q30 = (TextView) view.findViewById(R.id.tv_q30);
+        tv_q31 = (TextView) view.findViewById(R.id.tv_q31);
+        tv_q32 = (TextView) view.findViewById(R.id.tv_q32);
+        tv_q33 = (TextView) view.findViewById(R.id.tv_q33);
+        tv_q34 = (TextView) view.findViewById(R.id.tv_q24);
+        tv_q35_a = (TextView) view.findViewById(R.id.tv_q35_a);
+        tv_q35_b = (TextView) view.findViewById(R.id.tv_q35_b);
+        tv_q35_c = (TextView) view.findViewById(R.id.tv_q35_c);
+        tv_q35_d = (TextView) view.findViewById(R.id.tv_q35_d);
+        tv_q35_e = (TextView) view.findViewById(R.id.tv_q35_e);
+        tv_q35_f = (TextView) view.findViewById(R.id.tv_q35_f);
+        tv_q35_g = (TextView) view.findViewById(R.id.tv_q35_g);
+        tv_q35_h = (TextView) view.findViewById(R.id.tv_q35_h);
+        tv_q36 = (TextView) view.findViewById(R.id.tv_q36);
+        tv_q37_a = (TextView) view.findViewById(R.id.tv_q37_a);
+        tv_q37_b = (TextView) view.findViewById(R.id.tv_q37_b);
+        tv_q37_c = (TextView) view.findViewById(R.id.tv_q37_c);
+        tv_q37_d = (TextView) view.findViewById(R.id.tv_q37_d);
+        tv_q37_e = (TextView) view.findViewById(R.id.tv_q37_e);
+        tv_q38_a = (TextView) view.findViewById(R.id.tv_q38_a);
+        tv_q38_b = (TextView) view.findViewById(R.id.tv_q38_b);
+        tv_q38_c = (TextView) view.findViewById(R.id.tv_q38_c);
+        tv_q38_d = (TextView) view.findViewById(R.id.tv_q38_d);
+        tv_q38_e = (TextView) view.findViewById(R.id.tv_q38_e);
+        tv_q38_f = (TextView) view.findViewById(R.id.tv_q38_f);
+        tv_q38_g = (TextView) view.findViewById(R.id.tv_q38_g);
+        tv_q38_h = (TextView) view.findViewById(R.id.tv_q38_h);
+        tv_q38_i = (TextView) view.findViewById(R.id.tv_q38_i);
+        tv_q38_j = (TextView) view.findViewById(R.id.tv_q38_j);
+        tv_q38_k = (TextView) view.findViewById(R.id.tv_q38_k);
+        tv_q39 = (TextView) view.findViewById(R.id.tv_q39);
+        tv_q40 = (TextView) view.findViewById(R.id.tv_q40);
+        tv_q41 = (TextView) view.findViewById(R.id.tv_q41);
+        tv_q42 = (TextView) view.findViewById(R.id.tv_q42);
+        tv_q43 = (TextView) view.findViewById(R.id.tv_q43);
+        tv_q44 = (TextView) view.findViewById(R.id.tv_q44);
+        tv_q45 = (TextView) view.findViewById(R.id.tv_q45);
+        tv_q46 = (TextView) view.findViewById(R.id.tv_q46);
+        tv_q47 = (TextView) view.findViewById(R.id.tv_q47);
+        tv_q48 = (TextView) view.findViewById(R.id.tv_q48);
+        tv_q49 = (TextView) view.findViewById(R.id.tv_q49);
+        tv_q50 = (TextView) view.findViewById(R.id.tv_q50);
+        tv_q51 = (TextView) view.findViewById(R.id.tv_q51);
+        tv_q53 = (TextView) view.findViewById(R.id.tv_q53);
+        tv_q58 = (TextView) view.findViewById(R.id.tv_q58);
+        tv_q52_getdate = (TextView) view.findViewById(R.id.tv_q52_getdate);
+
+
+        rg_q26 = (RadioGroup) view.findViewById(R.id.rg_q26);
+        rg_q28 = (RadioGroup) view.findViewById(R.id.rg_q28);
+        rg_q34 = (RadioGroup) view.findViewById(R.id.rg_q34);
+        rg_q35_a = (RadioGroup) view.findViewById(R.id.rg_q35_a);
+        rg_q35_b = (RadioGroup) view.findViewById(R.id.rg_q35_b);
+        rg_q35_c = (RadioGroup) view.findViewById(R.id.rg_q35_c);
+        rg_q35_d = (RadioGroup) view.findViewById(R.id.rg_q35_d);
+        rg_q35_e = (RadioGroup) view.findViewById(R.id.rg_q35_e);
+        rg_q35_f = (RadioGroup) view.findViewById(R.id.rg_q35_f);
+        rg_q35_g = (RadioGroup) view.findViewById(R.id.rg_q35_g);
+        rg_q35_h = (RadioGroup) view.findViewById(R.id.rg_q35_h);
+        rg_q36 = (RadioGroup) view.findViewById(R.id.rg_q36);
+        rg_q37_a = (RadioGroup) view.findViewById(R.id.rg_q37_a);
+        rg_q37_b = (RadioGroup) view.findViewById(R.id.rg_q37_b);
+        rg_q37_c = (RadioGroup) view.findViewById(R.id.rg_q37_c);
+        rg_q37_d = (RadioGroup) view.findViewById(R.id.rg_q37_d);
+        rg_q37_e = (RadioGroup) view.findViewById(R.id.rg_q37_e);
+        rg_q38_a = (RadioGroup) view.findViewById(R.id.rg_q38_a);
+        rg_q38_b = (RadioGroup) view.findViewById(R.id.rg_q38_b);
+        rg_q38_c = (RadioGroup) view.findViewById(R.id.rg_q38_c);
+        rg_q38_d = (RadioGroup) view.findViewById(R.id.rg_q38_d);
+        rg_q38_e = (RadioGroup) view.findViewById(R.id.rg_q38_e);
+        rg_q38_f = (RadioGroup) view.findViewById(R.id.rg_q38_f);
+        rg_q38_g = (RadioGroup) view.findViewById(R.id.rg_q38_g);
+        rg_q38_h = (RadioGroup) view.findViewById(R.id.rg_q38_h);
+        rg_q38_i = (RadioGroup) view.findViewById(R.id.rg_q38_i);
+        rg_q38_j = (RadioGroup) view.findViewById(R.id.rg_q38_j);
+        rg_q38_k = (RadioGroup) view.findViewById(R.id.rg_q38_k);
+        rg_q40 = (RadioGroup) view.findViewById(R.id.rg_q40);
+        rg_q41 = (RadioGroup) view.findViewById(R.id.rg_q41);
+        rg_q42 = (RadioGroup) view.findViewById(R.id.rg_q42);
+        rg_q43 = (RadioGroup) view.findViewById(R.id.rg_q43);
+        rg_q44 = (RadioGroup) view.findViewById(R.id.rg_q44);
+        rg_q46 = (RadioGroup) view.findViewById(R.id.rg_q46);
+
+        rg_q49 = (RadioGroup) view.findViewById(R.id.rg_q49);
+        rg_q50 = (RadioGroup) view.findViewById(R.id.rg_q50);
+        rg_q51 = (RadioGroup) view.findViewById(R.id.rg_q51);
+        rg_q53 = (RadioGroup) view.findViewById(R.id.rg_q53);
+        rg_q58 = (RadioGroup) view.findViewById(R.id.rg_q58);
+
+
+        ll_q35 = (LinearLayout) view.findViewById(R.id.ll_q35);
+        ll_q37 = (LinearLayout) view.findViewById(R.id.ll_q37);
+        ll_q38 = (LinearLayout) view.findViewById(R.id.ll_q38);
+        ll_q41_q58 = (LinearLayout) view.findViewById(R.id.ll_q41_q58);
+        ll_q42_q58 = (LinearLayout) view.findViewById(R.id.ll_q42_q58);
+        ll_q44_q49 = (LinearLayout) view.findViewById(R.id.ll_q44_q49);
+        ll_q43_q58 = (LinearLayout) view.findViewById(R.id.ll_q43_q58);
+        ll_q45 = (LinearLayout) view.findViewById(R.id.ll_q45);
+        ll_q47 = (LinearLayout) view.findViewById(R.id.ll_q47);
+        ll_q37_q38 = (LinearLayout) view.findViewById(R.id.ll_q37_q38);
+        ll_q52 = (LinearLayout) view.findViewById(R.id.ll_q52);
+        ll_q53_q58 = (LinearLayout) view.findViewById(R.id.ll_q53_q58);
+
+
+
+    }
+
 }

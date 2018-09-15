@@ -56,13 +56,13 @@ public class Crf2BabyWeightFragment extends Fragment {
 
         tv_weekOfPregnancy = (TextView) view.findViewById(R.id.tv_weekOfPregnancy);
 
-        tv_weekOfPregnancy.setText(CRF2Activity.formCrf2DTO.getQ32());
+        tv_weekOfPregnancy.setText(CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getQ32());
         et_readerId_1 = (EditText) view.findViewById(R.id.et_readerId_1);
         et_readerId_2 = (EditText) view.findViewById(R.id.et_readerId_2);
 
-        et_readerId_1.setText(CRF2Activity.formCrf2DTO.getArmReadings().get(0).getReaderCode1());
+        et_readerId_1.setText(CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode1());
         et_readerId_1.setEnabled(false);
-        et_readerId_2.setText(CRF2Activity.formCrf2DTO.getArmReadings().get(0).getReaderCode2());
+        et_readerId_2.setText(CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().get(0).getReaderCode2());
         et_readerId_2.setEnabled(false);
 
         ll_weight1 = (LinearLayout) view.findViewById(R.id.ll_weight1);
@@ -189,10 +189,10 @@ public class Crf2BabyWeightFragment extends Fragment {
 
             if(avrageWeight>=1500){
                 tv_lessOrNot.setText("YES");
-                CRF2Activity.formCrf2DTO.setQ35(ContantsValues.YES);
+                CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ35(ContantsValues.YES);
             }else {
                 tv_lessOrNot.setText("NO");
-                CRF2Activity.formCrf2DTO.setQ35(ContantsValues.NO);
+                CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ35(ContantsValues.NO);
             }
         }
     }
@@ -328,8 +328,8 @@ public class Crf2BabyWeightFragment extends Fragment {
         if(turn>=3){ childWeightDTOSList.add(getChildWeightObject(3,et_r1_weight3,et_r2_weight3)); }
         if(turn>=4){ childWeightDTOSList.add(getChildWeightObject(4,et_r1_weight4,et_r2_weight4)); }
 
-        CRF2Activity.formCrf2DTO.setChildWeights(childWeightDTOSList);
-        CRF2Activity.formCrf2DTO.setQ34(avrageWeight+"");
+        CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setChildWeights(childWeightDTOSList);
+        CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ34(avrageWeight+"");
 
     }
     public float getTextFromField(EditText et){

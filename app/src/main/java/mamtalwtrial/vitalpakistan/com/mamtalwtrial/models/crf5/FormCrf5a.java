@@ -39,8 +39,12 @@ public class FormCrf5a {
         this.formStatus = formStatus;
     }
 
-    private Integer id;
+    private String counsilStartTime;
+    private String counsilEndTime;
 
+    private Integer id;
+    private String q02;
+    private String q03;
     private String q19;
     private String q20;
     private String q21;
@@ -122,7 +126,7 @@ public class FormCrf5a {
     private String q56;
     private String q57;
     private String q58;
-    private String q59a;
+    /*private String q59a;
     private String q59b;
     private String q59c;
     private String q59d;
@@ -133,7 +137,7 @@ public class FormCrf5a {
     private String q59i;
     private String q59j;
     private String q59k;
-    private String q59l;
+    private String q59l;*/
     private String q60;
 
     private TeamDTO team;
@@ -718,7 +722,7 @@ public class FormCrf5a {
         this.q58 = q58;
     }
 
-    public String getQ59a() {
+   /* public String getQ59a() {
         return q59a;
     }
 
@@ -812,7 +816,7 @@ public class FormCrf5a {
 
     public void setQ59l(String q59l) {
         this.q59l = q59l;
-    }
+    }*/
 
     public String getQ60() {
         return q60;
@@ -852,5 +856,37 @@ public class FormCrf5a {
 
     public void setFollowupNumber(Integer followupNumber) {
         this.followupNumber = followupNumber;
+    }
+
+    public String getQ02() {
+        return q02;
+    }
+
+    public void setQ02(String q02) {
+        this.q02 = q02;
+    }
+
+    public String getQ03() {
+        return q03;
+    }
+
+    public void setQ03(String q03) {
+        this.q03 = q03;
+    }
+
+    public String getCounsilStartTime() {
+        return counsilStartTime;
+    }
+
+    public void setCounsilStartTime(String counsilStartTime) {
+        this.counsilStartTime = counsilStartTime;
+    }
+
+    public String getCounsilEndTime() {
+        return counsilEndTime;
+    }
+
+    public void setCounsilEndTime(String counsilEndTime) {
+        this.counsilEndTime = counsilEndTime;
     }
 }

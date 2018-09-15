@@ -5,6 +5,8 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
 public class StudiesDTO {
     private String studyId;
 
+    private String studyCode;
+
     private PregnantWomanDTO pregnantWoman;
 
     public String getStudyId() {
@@ -21,5 +23,13 @@ public class StudiesDTO {
 
     public void setPregnantWoman(PregnantWomanDTO pregnantWoman) {
         this.pregnantWoman = pregnantWoman;
+    }
+
+    public String getStudyCode() {
+        return studyCode;
+    }
+
+    public void setStudyCode(String studyCode) {
+        this.studyCode = studyCode;
     }
 }

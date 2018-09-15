@@ -28,7 +28,7 @@
                 android:textColor="@color/black"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text=" Date of birth of child \n (Bachay k paiday honay k tareekh)"
+                android:text=" Date of death of child \n (Bachay k marny k tareekh)"
                 />
 
             <TextView
@@ -58,7 +58,7 @@
                 android:layout_width="0dp"
                 android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:text=" Time of birth of child \n (Bachay k paiday honay ka waqt)"
+                android:text=" Time of death of child \n (Bachay k marny  ka waqt)"
                 />
 
             <TextView

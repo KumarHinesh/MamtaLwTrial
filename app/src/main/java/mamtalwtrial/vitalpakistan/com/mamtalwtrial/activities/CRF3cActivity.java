@@ -20,7 +20,6 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 
 public class CRF3cActivity extends AppCompatActivity {
 
-    public static FormCrf3cDTO formCrf3cDTO;
     public static FormsCrf2AndCrf3All formsCrf2AndCrf3All;
 
     @Override
@@ -30,15 +29,12 @@ public class CRF3cActivity extends AppCompatActivity {
 
         formsCrf2AndCrf3All = new Gson().fromJson(getIntent().getStringExtra("forms"),FormsCrf2AndCrf3All.class) ;
 
-
-        formCrf3cDTO = new FormCrf3cDTO();
-
-        formCrf3cDTO.setPregnantWoman(formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman());
-        formCrf3cDTO.setTeam(formsCrf2AndCrf3All.getFormCrf3bDTO().getTeam());
+        formsCrf2AndCrf3All.getFormCrf3cDTO().setPregnantWoman(formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman());
+        formsCrf2AndCrf3All.getFormCrf3cDTO().setTeam(formsCrf2AndCrf3All.getFormCrf2DTO().getTeam());
 
 
-        formCrf3cDTO.setQ27(formsCrf2AndCrf3All.getFormCrf2DTO().getQ30());
-        formCrf3cDTO.setQ15(formsCrf2AndCrf3All.getFormCrf2DTO().getQ34());
+        formsCrf2AndCrf3All.getFormCrf3cDTO().setQ27(formsCrf2AndCrf3All.getFormCrf2DTO().getQ30());
+        formsCrf2AndCrf3All.getFormCrf3cDTO().setQ15(formsCrf2AndCrf3All.getFormCrf2DTO().getQ34());
 
 
         List<ChildWeightCrf3cDTO> list = new ArrayList<ChildWeightCrf3cDTO>();
@@ -59,7 +55,7 @@ public class CRF3cActivity extends AppCompatActivity {
 
         }
 
-        formCrf3cDTO.setChildWeightCrf3c(list);
+        formsCrf2AndCrf3All.getFormCrf3cDTO().setChildWeightCrf3c(list);
 
 
         for(int i =0; i<formsCrf2AndCrf3All.getFormCrf2DTO().getArmReadings().size(); i++){
@@ -77,11 +73,11 @@ public class CRF3cActivity extends AppCompatActivity {
 
         }
 
-        formCrf3cDTO.setMuacLwCrf3c(listMuac);
+        formsCrf2AndCrf3All.getFormCrf3cDTO().setMuacLwCrf3c(listMuac);
 
 
-        formCrf3cDTO.setQ2(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
-        formCrf3cDTO.setQ3(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+        formsCrf2AndCrf3All.getFormCrf3cDTO().setQ2(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
+        formsCrf2AndCrf3All.getFormCrf3cDTO().setQ3(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
 
 

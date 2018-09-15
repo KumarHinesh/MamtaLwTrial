@@ -1,6 +1,8 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -22,16 +24,24 @@ import java.util.Date;
 import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.messageDialogBox.SingleButtonDialog;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Crf1CounselingDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CounselingCRF1Activity extends AppCompatActivity {
 
+    Context context;
+    ProgressDialog progressDialog;
     boolean b =false;
     int isVisibleField =-1;
     CheckBox cb_counsling_Q2_2, cb_counsling_Q2_1;
@@ -63,12 +73,16 @@ public class CounselingCRF1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counseling_crf1);
 
-        Intent i = getIntent();
+
+
+         Intent i = getIntent();
          String s = i.getStringExtra("obj");
          formCrf1DTO = new Gson().fromJson(s, FormCrf1DTO.class);
 
          /////////////////
 
+
+        initilizePrograssDialog();
         llForhidden = (LinearLayout) findViewById(R.id.llForhidden);
 
 
@@ -690,8 +704,6 @@ public class CounselingCRF1Activity extends AppCompatActivity {
 
                 if(validation() && isVisibleField!=-1){
 
-                  /*
-*/
 
                     if(cb_counsling_Q1_1.isChecked()){
 
@@ -722,22 +734,7 @@ public class CounselingCRF1Activity extends AppCompatActivity {
                         formCrf1DTO.setCounselingStartDate(startTime);
                         formCrf1DTO.setCounselingEndDate(endTime);
                         formCrf1DTO.setFormStatus(Constants.COMPLETED);
-
-                        if(WifiConnectOrNot.haveNetworkConnection(CounselingCRF1Activity.this)){
-
-
-                            if(formCrf1DTO.getFollowUpPositionInList()!=-1){SaveAndReadInternalData.deleteFollowUpFromList(getApplicationContext(),formCrf1DTO.getFollowUpPositionInList());}
-                            SendDataToServer.sendCrf1Form(formCrf1DTO);
-                            startActivity(new Intent(CounselingCRF1Activity.this,DashboardActivity.class));
-                            finish();
-
-                        }else {
-                            if(formCrf1DTO.getFollowUpPositionInList()!=-1){SaveAndReadInternalData.deleteFollowUpFromList(getApplicationContext(),formCrf1DTO.getFollowUpPositionInList());}
-                            SaveAndReadInternalData.saveCrf1FormInternal(CounselingCRF1Activity.this,new Gson().toJson(formCrf1DTO, FormCrf1DTO.class));
-                            startActivity(new Intent(CounselingCRF1Activity.this,DashboardActivity.class));
-                            finish();
-                        }
-
+                        sendDataToServer();
                     }
                 }else if( cb_counsling_Q1_2.isChecked()){
 
@@ -967,25 +964,8 @@ public class CounselingCRF1Activity extends AppCompatActivity {
 
                 formCrf1DTO.setQ34(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
                 formCrf1DTO.setFormStatus(Constants.COMPLETED);
-                if(WifiConnectOrNot.haveNetworkConnection(CounselingCRF1Activity.this)){
-
-                    if(formCrf1DTO.getFollowUpPositionInList()!=-1){
-                        SaveAndReadInternalData.deleteFollowUpFromList(getApplicationContext(),formCrf1DTO.getFollowUpPositionInList());}
-                    SendDataToServer.sendCrf1Form(formCrf1DTO);
-                    startActivity(new Intent(CounselingCRF1Activity.this,DashboardActivity.class));
-                    finish();
-
-                }else {
-
-                    if(formCrf1DTO.getFollowUpPositionInList()!=-1){SaveAndReadInternalData.deleteFollowUpFromList(getApplicationContext(),formCrf1DTO.getFollowUpPositionInList());}
-                    SaveAndReadInternalData.saveCrf1FormInternal(CounselingCRF1Activity.this,new Gson().toJson(formCrf1DTO, FormCrf1DTO.class));
-                    startActivity(new Intent(CounselingCRF1Activity.this,DashboardActivity.class));
-                    finish();
-                }
-
-               /*dialog.dismiss();
-                startActivity(new Intent(CounselingCRF1Activity.this, DashboardActivity.class));
-                finish();*/
+                dialog.dismiss();
+                sendDataToServer();
             }
         });
 
@@ -1040,11 +1020,95 @@ public class CounselingCRF1Activity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-        if (b){
-
-
-        }
 
         dialog.show();
     }
+
+    public void sendDataToServer(){
+
+        progressDialog.show();
+
+        if(WifiConnectOrNot.haveNetworkConnection(CounselingCRF1Activity.this)){
+
+            APIService mAPIService = ApiUtils.getAPIService();
+            mAPIService.sendCrf1Form(formCrf1DTO).enqueue(new Callback<FormCrf1DTO>() {
+                @Override
+                public void onResponse(Call<FormCrf1DTO> call, Response<FormCrf1DTO> response) {
+
+                    if(response.code()==200){
+
+                        progressDialog.dismiss();
+                        singleBtnDialog(CounselingCRF1Activity.this,formCrf1DTO.getPregnantWoman().getName()+" Form submited...:)",formCrf1DTO.getPregnantWoman().getName()+" Ka Form Send Hogaya h..:)");
+                        startActivity(new Intent(CounselingCRF1Activity.this, DashboardActivity.class));
+                        finish();
+                    }else {
+
+                        SaveAndReadInternalData.saveCrf1FormInternal(CounselingCRF1Activity.this,formCrf1DTO);
+                        progressDialog.dismiss();
+                        singleBtnDialog(CounselingCRF1Activity.this,"Internet Connection is not Working properly "+ formCrf1DTO.getPregnantWoman().getName()+" form save Internel Storage","Internet Sahi nahi chal raha islia "+formCrf1DTO.getPregnantWoman().getName()+" Ka Form Internal Storage m Save Kardia h");
+                    }
+                }
+                @Override
+                public void onFailure(Call<FormCrf1DTO> call, Throwable t) {
+
+                    SaveAndReadInternalData.saveCrf1FormInternal(CounselingCRF1Activity.this,formCrf1DTO);
+                    progressDialog.dismiss();
+                    singleBtnDialog(CounselingCRF1Activity.this,"Internet Connection is not Working properly "+ formCrf1DTO.getPregnantWoman().getName()+" form save Internel Storage","Internet Sahi nahi chal raha islia "+formCrf1DTO.getPregnantWoman().getName()+" Ka Form Internal Storage m Save Kardia h");
+
+                }
+            });
+
+        }else {
+
+            SaveAndReadInternalData.saveCrf1FormInternal(CounselingCRF1Activity.this,formCrf1DTO);
+            progressDialog.dismiss();
+            singleBtnDialog(CounselingCRF1Activity.this,"Internet Connection is not Working properly "+ formCrf1DTO.getPregnantWoman().getName()+" form save Internel Storage","Internet Sahi nahi chal raha islia "+formCrf1DTO.getPregnantWoman().getName()+" Ka Form Internal Storage m Save Kardia h");
+
+        }
+
+        if(formCrf1DTO.getFollowUpPositionInList()!=-1){
+            SaveAndReadInternalData.deleteFollowUpFromList(CounselingCRF1Activity.this,formCrf1DTO.getFollowUpPositionInList());}
+
+
+    }
+
+    public  void singleBtnDialog(Context context, String engMessage, String romanEng){
+
+        Button btnConform;
+        TextView tv_engText, tv_RomanEngText;
+
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.single_btn_dialog);
+        dialog.setCancelable(false);
+
+        btnConform = (Button) dialog.findViewById(R.id.btnok);
+
+        tv_engText = (TextView) dialog.findViewById(R.id.tv_engText);
+        tv_RomanEngText = (TextView) dialog.findViewById(R.id.tv_RomanEngText);
+
+        tv_engText.setText(engMessage);
+        tv_RomanEngText.setText(romanEng);
+
+
+        btnConform.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CounselingCRF1Activity.this, DashboardActivity.class));
+                finish();
+            }
+        });
+
+        dialog.show();
+    }
+
+    public void initilizePrograssDialog(){
+
+        progressDialog = new ProgressDialog(CounselingCRF1Activity.this);
+        progressDialog.setTitle("Sending..");
+        progressDialog.setMessage("Please Wait");
+        progressDialog.setCancelable(false);
+
+    }
+
 }

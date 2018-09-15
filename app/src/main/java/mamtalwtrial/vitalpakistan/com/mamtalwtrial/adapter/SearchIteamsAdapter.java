@@ -15,6 +15,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.SearchResult;
 
 public class SearchIteamsAdapter extends BaseAdapter {
 
+
     SearchResult searchResult;
     Context context;
 
@@ -47,6 +48,10 @@ public class SearchIteamsAdapter extends BaseAdapter {
                     inflate(R.layout.task_list_item, parent, false);
         }
 
+        String[] statusListItem = {"Agree for screening (Screening k liya razamand)","Not at home (Ghar par mojoud nahi)","Refused (inkar kar diya)"
+                ,"Wrong information (Ghalt information of PW)","wrong DSS infromation(pw not found)","woman was never found pregnent","woman was pregnanat but recently develiverd (age of child greater then 7 dasys)","Shifted out of DSS (DSS sa bahir chali gay)","PW died before the visit (PW ka intiqaal ho gaya"
+                ,"Visitor (Mehman th and ab wapis chali gay)"};
+
         ImageView iv_1 = (ImageView) convertView.findViewById(R.id.iv_1);
 
         try{
@@ -66,9 +71,7 @@ public class SearchIteamsAdapter extends BaseAdapter {
         }catch (Exception e){}
 
         TextView tv_visitStatus = (TextView) convertView.findViewById(R.id.tv_visitStatus);
-        tv_visitStatus.setText(searchResult.getPregnantWomen().get(position).getVisitStatus()+"");
-
-
+        tv_visitStatus.setText(statusListItem[searchResult.getPregnantWomen().get(position).getVisitStatus()]+"");
 
         TextView tv_muac = (TextView) convertView.findViewById(R.id.tv_muac);
         LinearLayout linearLayout = (LinearLayout) convertView.findViewById(R.id.ll_muac);

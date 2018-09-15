@@ -8,4 +8,5 @@ public interface ContantsValues {
     String YES = "1";
     String NO = "2";
     String DONTKNOW = "9";
+
 }

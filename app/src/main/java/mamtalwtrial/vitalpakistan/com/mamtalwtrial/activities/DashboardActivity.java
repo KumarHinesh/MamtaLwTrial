@@ -1,5 +1,6 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -15,11 +16,19 @@ import java.util.ArrayList;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.messageDialogBox.SingleButtonDialog;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1CollectionDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class DashboardActivity extends AppCompatActivity {
 
+    ProgressDialog progressDialog;
 
     SharedPreferences sharedPreferences1, sharedPreferences2, sharedPreferences3, sharedPreferences4;
     int taskCount;
@@ -27,7 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     Button btnNewScreening, btn_task, btnUploadData, btnlogOut;
 
-    int a =0;
+    int a =-1;
 
     String getSite;
 
@@ -38,6 +47,9 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        progressDialog = new ProgressDialog(DashboardActivity.this);
+
 
         Intent intent = getIntent();
         getSite =  intent.getStringExtra("site");
@@ -74,7 +86,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
-        a =  SaveAndReadInternalData.isDataAvailable(DashboardActivity.this);
+        a =  SaveAndReadInternalData.numOfCrf1Forms(DashboardActivity.this);
 
         if(UserLoginActivity.strUser==null){
 
@@ -108,7 +120,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         btnUploadData = (Button) findViewById(R.id.btnUploadData);
 
-        if(a==-1){
+        if(a==-1 || a==0){
 
             btnUploadData.setBackgroundResource(R.drawable.button_shape_green);
             btnUploadData.setText("DataUploaded");
@@ -124,8 +136,7 @@ public class DashboardActivity extends AppCompatActivity {
 
                 if(WifiConnectOrNot.haveNetworkConnection(DashboardActivity.this)){
 
-                    SaveAndReadInternalData.uploadData(DashboardActivity.this);
-                    startActivity(new Intent(DashboardActivity.this,DashboardActivity.class));
+                    startActivity(new Intent(DashboardActivity.this, SendingDataActivity.class));
                     finish();
 
                 }else {
@@ -164,7 +175,13 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+
     }
 
+    @Override
+    protected void onResume() {
 
+        a = SaveAndReadInternalData.numOfCrf1Forms(DashboardActivity.this);
+        super.onResume();
+    }
 }

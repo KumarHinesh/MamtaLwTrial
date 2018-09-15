@@ -183,14 +183,6 @@ public class PwOtherDataFragment3 extends Fragment {
                         startActivity(i);
                         getActivity().finish();
 
-                    /*
-                        Gson gson = new Gson();
-
-                        SaveAndReadInternalData.saveCrf1FormInternal(context,gson.toJson(CRF1Activity.formCrf1DTO));
-                        startActivity(new Intent(getContext(), CounselingCRF1Activity.class));
-                        getActivity().finish();
-
-                    }*/
 
                 }else {
 
@@ -417,14 +409,6 @@ public class PwOtherDataFragment3 extends Fragment {
 
         double remainigDays =totaldays-currentDays;
 
-        //double totalWeeks = totaldays/7;
-        //double currentWeeks = currentDays/7;
-
-       // Log.d("Current Week","0777 "+diff / 1000 / 60 / 60 / 24 );
-        //Log.d("Current Week","07777 "+diff);
-
-           // System.out.println ("Days: " + diff / 1000 / 60 / 60 / 24);
-
 
         DecimalFormat f = new DecimalFormat("##");
 
@@ -438,20 +422,8 @@ public class PwOtherDataFragment3 extends Fragment {
 
         dv = dv*7;
 
-        //dv = Math.abs(dv);
 
         String s = f.format(dv);
-
-
-        /*String t = con+"."+dv;
-
-
-
-        String s =   f.format(Double.parseDouble(t));
-*/
-
-     //   double res = Double.parseDouble(dv);
-
 
 
         return  con+"."+s;
@@ -578,27 +550,9 @@ public class PwOtherDataFragment3 extends Fragment {
 
         if(cb1.isChecked()){return "yes";}
         else if(cb2.isChecked()){return "no";}
-        else {return "x";}
+        else {return "";}
 
     }
 
-    /*public void sendPost(String title, FormCrf1DTO body) {
-
-        //final FormCrf1DTO dto;
-        mAPIService.sendCrf1Form(body).enqueue(new Callback<FormCrf1DTO>() {
-
-
-            @Override
-            public void onResponse(Call<FormCrf1DTO> call, Response<FormCrf1DTO> response) {
-               // dto = response;
-                Log.e("Geting Responce", "Sucsesfulluy submited"+response);
-            }
-
-            @Override
-            public void onFailure(Call<FormCrf1DTO> call, Throwable t) {
-                Log.e("Geting Error", "Unable to submit post to API.");
-            }
-        });
-    }*/
 
 }

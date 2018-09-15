@@ -271,7 +271,7 @@ public class Crf3cQ16BabyLengthFragment extends Fragment {
                 float temp1 = (f1 + f2) / 2;
                 avrageVal = Double.parseDouble( new DecimalFormat("##.#").format(temp1));
                 tv_averageLength.setText(avrageVal + "");
-                CRF3cActivity.formCrf3cDTO.setQ17(avrageVal + "");
+                CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setQ17(avrageVal + "");
 
             } else {
 
@@ -432,9 +432,9 @@ public class Crf3cQ16BabyLengthFragment extends Fragment {
         if(turn>=4){ babyLengthCrf3cDTOS.add(getBabyLengthObject(4,et_r1_mauc4,et_r2_mauc4)); }
 
 
-        CRF3cActivity.formCrf3cDTO.setBabyLengthCrf3c(babyLengthCrf3cDTOS);
+        CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setBabyLengthCrf3c(babyLengthCrf3cDTOS);
 
-        CRF3cActivity.formCrf3cDTO.setQ17(avrageVal+"");
+        CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setQ17(avrageVal+"");
 
     }
 

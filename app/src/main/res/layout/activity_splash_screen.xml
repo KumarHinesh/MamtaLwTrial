@@ -16,7 +16,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="22sp"
-        android:text="Version \n   2.1"
+        android:text="Version \n   2.3"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

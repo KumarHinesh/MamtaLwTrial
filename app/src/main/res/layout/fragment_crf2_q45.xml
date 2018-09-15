@@ -19,36 +19,36 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical"
-                android:layout_weight="2.1"
+                android:layout_weight="2.0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q45"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Explain all trial procedures "/>
+                    android:text="@string/crf2_q45_english"/>
 
                 <TextView
-
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Trial ka tareeqa samjha diya gaya ha"/>
+                    android:text="@string/crf2_q45_urdu"/>
 
 
 
             </LinearLayout>
 
-            <LinearLayout
+            <TextView
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"></LinearLayout>
+                android:layout_height="wrap_content"/>
 
             <LinearLayout
                 android:layout_gravity="center_vertical"
@@ -62,48 +62,39 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <TextView
-                        android:textColor="@color/black"
+                    <RadioGroup
+                        android:orientation="vertical"
+                        android:id="@+id/rg_q45"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_Q45_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content">
 
 
+                        <RadioButton
+                            android:tag="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/yes"
+                            />
+                        <RadioButton
+                            android:tag="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no"
+                            />
+
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
-                <LinearLayout
 
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_Q45_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-
-
-                </LinearLayout>
 
             </LinearLayout>
 
 
         </LinearLayout>
 
-        <View
+        <TextView
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
@@ -117,36 +108,36 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical"
-                android:layout_weight="2.1"
+                android:layout_weight="2.0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q46"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Informed consent administered and explained in local language"/>
+                    android:text="@string/crf2_q46_english"/>
 
                 <TextView
-
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ijazat mana lay liya gaya ha LW sa us k apni zeban ma"/>
+                    android:text="@string/crf2_q46_urdu"/>
 
 
 
             </LinearLayout>
 
-            <LinearLayout
+            <TextView
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"></LinearLayout>
+                android:layout_height="wrap_content"/>
 
             <LinearLayout
                 android:layout_gravity="center_vertical"
@@ -160,41 +151,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <TextView
-                        android:textColor="@color/black"
+                    <RadioGroup
+                        android:orientation="vertical"
+                        android:id="@+id/rg_q46"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_Q46_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content">
 
 
+                        <RadioButton
+                            android:tag="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/yes"
+                            />
+                        <RadioButton
+                            android:tag="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no"
+                            />
+
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
-                <LinearLayout
 
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No"/>
-
-                    <CheckBox
-                        android:id="@+id/cb_Q46_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-
-
-                </LinearLayout>
 
             </LinearLayout>
 
@@ -202,7 +184,7 @@
         </LinearLayout>
 
 
-        <View
+        <TextView
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
@@ -216,41 +198,41 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical"
-                android:layout_weight="2.1"
+                android:layout_weight="2.0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_q47"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LW has given her consent to participate in the study"/>
+                    android:text="@string/crf2_q47_english"/>
 
                 <TextView
-
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LW razamand ha k wo trial ma hissa lay gee"/>
+                    android:text="@string/crf2_q47_urdu"/>
 
 
 
             </LinearLayout>
 
-            <LinearLayout
+            <TextView
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"></LinearLayout>
+                android:layout_height="wrap_content"/>
 
             <LinearLayout
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0.8"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
 
@@ -259,379 +241,329 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <RadioGroup
+                        android:orientation="vertical"
+                        android:id="@+id/rg_q47"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:textColor="@color/black"
+
+                        <RadioButton
+                            android:tag="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yes"/>
+                            android:text="@string/yes"
+                            />
+                        <RadioButton
+                            android:tag="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no"
+                            />
 
-                        <CheckBox
-                            android:id="@+id/cb_Q47_1"
+                        <EditText
+                            android:visibility="gone"
+                            android:id="@+id/et_q47"
+                            android:hint="Enter Reason"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
 
 
-
-                    </LinearLayout>
-
-                    <LinearLayout
-
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:textColor="@color/black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="No"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_Q47_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-
-
-                    </LinearLayout>
-
+                    </RadioGroup>
 
                 </LinearLayout>
 
-                <EditText
-                    android:visibility="gone"
-                    android:id="@+id/et_q47"
-                    android:hint="Enter Reason"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+
 
             </LinearLayout>
-
-
 
 
         </LinearLayout>
 
 
-        <View
+        <TextView
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="@color/black"/>
 
 
-        <LinearLayout
-            android:id="@+id/ll_forHide"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
 
-            <!--Q48-->
+
             <LinearLayout
-                android:orientation="horizontal"
-                android:weightSum="3"
+                android:id="@+id/ll_q48_q50"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+
+                <!--Q48-->
                 <LinearLayout
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical"
-                    android:layout_weight="2.1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="LW has agreed to give specimens for LW and infant?"/>
-
-                    <TextView
-
-                        android:layout_marginTop="5dp"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="LW razamand ha k wo apna and apnay bachay ka namoonay bh day gee"/>
-
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_weight="0.1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"></LinearLayout>
-
-                <LinearLayout
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="0.8"
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:layout_weight="2.0"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content">
 
+                        <TextView
+                            android:id="@+id/tv_q48"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/crf2_q48_english"/>
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/crf2_q48_urdu"/>
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_weight="0.1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.8"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
 
                         <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
-                            <TextView
-                                android:textColor="@color/black"
+                            <RadioGroup
+                                android:orientation="vertical"
+                                android:id="@+id/rg_q48"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Yes"/>
-
-                            <CheckBox
-                                android:id="@+id/cb_Q48_1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content">
 
 
+                                <RadioButton
+                                    android:tag="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/yes"
+                                    />
+                                <RadioButton
+                                    android:tag="2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/no"
+                                    />
+
+                                <EditText
+                                    android:visibility="gone"
+                                    android:id="@+id/et_q48"
+                                    android:hint="Enter Reason"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+                            </RadioGroup>
 
                         </LinearLayout>
 
-                        <LinearLayout
 
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/black"/>
+
+                <!--Q49-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:layout_weight="2.0"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_q49"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/crf2_q49_english"/>
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/crf2_q49_urdu"/>
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_weight="0.1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.8"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
-                            <TextView
-                                android:textColor="@color/black"
+                            <RadioGroup
+                                android:orientation="vertical"
+                                android:id="@+id/rg_q49"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="No"/>
-
-                            <CheckBox
-                                android:id="@+id/cb_Q48_2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content">
 
 
+                                <RadioButton
+                                    android:tag="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/yes"
+                                    />
+                                <RadioButton
+                                    android:tag="2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/no"
+                                    />
+
+
+                            </RadioGroup>
 
                         </LinearLayout>
 
 
+
                     </LinearLayout>
 
-                    <EditText
-                        android:visibility="gone"
-                        android:id="@+id/et_q48"
-                        android:hint="Enter Reason"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        />
 
                 </LinearLayout>
 
-
-            </LinearLayout>
-
-
-            <View
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/black"/>
-
-            <!--Q49-->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:weightSum="3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_marginLeft="10dp"
+                <TextView
                     android:layout_marginTop="10dp"
-                    android:orientation="vertical"
-                    android:layout_weight="2.1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/black"/>
 
-                    <TextView
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="LW has signed/given the thumb impression"/>
-
-                    <TextView
-
-                        android:layout_marginTop="5dp"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="LW na ijazat namay par dastakhat ya anghootay ka nishan bh day diya ha"/>
-
-
-
-                </LinearLayout>
-
+                <!--Q50-->
                 <LinearLayout
-                    android:layout_weight="0.1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"></LinearLayout>
-
-                <LinearLayout
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="0.8"
                     android:orientation="horizontal"
-                    android:layout_width="0dp"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:layout_weight="2.0"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/tv_q50"
                             android:textColor="@color/black"
+                            android:textSize="20sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yes"/>
+                            android:text="@string/crf2_q50_english"/>
 
-                        <CheckBox
-                            android:id="@+id/cb_Q49_1"
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:textSize="20sp"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/crf2_q50_urdu"/>
 
 
 
                     </LinearLayout>
-
-                    <LinearLayout
-
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:textColor="@color/black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="No"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_Q49_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/black"/>
-
-            <!--Q50-->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:weightSum="3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical"
-                    android:layout_weight="2.1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content">
 
                     <TextView
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Reconfirm from the LW that she understands all the procedures"/>
-
-                    <TextView
-
-                        android:layout_marginTop="5dp"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="LW sa aik dafa phir pochain k kya us ko trial ka tareeqa qar achi tarhan samaj a gaya ha"/>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_weight="0.1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"></LinearLayout>
-
-                <LinearLayout
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="0.8"
-                    android:orientation="horizontal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content">
+                        android:layout_weight="0.1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
 
                     <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.8"
                         android:orientation="horizontal"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:textColor="@color/black"
+                        <LinearLayout
+                            android:orientation="horizontal"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Yes"/>
+                            android:layout_height="wrap_content">
 
-                        <CheckBox
-                            android:id="@+id/cb_Q50_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            <RadioGroup
+                                android:orientation="vertical"
+                                android:id="@+id/rg_q50"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+
+                                <RadioButton
+                                    android:tag="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/yes"
+                                    />
+                                <RadioButton
+                                    android:tag="2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/no"
+                                    />
+
+
+                            </RadioGroup>
+
+                        </LinearLayout>
 
 
 
                     </LinearLayout>
 
-                    <LinearLayout
-
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:textColor="@color/black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="No"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_Q50_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-
-
-                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -639,9 +571,6 @@
             </LinearLayout>
 
 
-
-
-        </LinearLayout>
 
 
 

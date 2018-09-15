@@ -13,6 +13,7 @@ public class FormCrf2DTO {
     private String timeOfEnd;
     private Integer followupStatus;
     private Integer followupId;
+    private String refusedReason;
     
     private String q8;
     private String q17;
@@ -476,5 +477,13 @@ public class FormCrf2DTO {
 
     public void setFormStatus(Integer formStatus) {
         this.formStatus = formStatus;
+    }
+
+    public String getRefusedReason() {
+        return refusedReason;
+    }
+
+    public void setRefusedReason(String refusedReason) {
+        this.refusedReason = refusedReason;
     }
 }

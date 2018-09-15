@@ -8,10 +8,10 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.FormCrf3cDT
 public class FormsCrf2AndCrf3All {
 
 
-    private int crf2Status;
-    private int crf3aStatus;
-    private int crf3bStatus;
-    private int crf3cStatus;
+    private boolean crf2Status;
+    private boolean crf3aStatus;
+    private boolean crf3bStatus;
+    private boolean crf3cStatus;
 
     private FormCrf2DTO formCrf2DTO;
     private FormCrf3aDTO formCrf3aDTO;
@@ -19,35 +19,35 @@ public class FormsCrf2AndCrf3All {
     private FormCrf3cDTO formCrf3cDTO;
 
 
-    public int getCrf2Status() {
+    public boolean getCrf2Status() {
         return crf2Status;
     }
 
-    public void setCrf2Status(int crf2Status) {
+    public void setCrf2Status(boolean crf2Status) {
         this.crf2Status = crf2Status;
     }
 
-    public int getCrf3aStatus() {
+    public boolean getCrf3aStatus() {
         return crf3aStatus;
     }
 
-    public void setCrf3aStatus(int crf3aStatus) {
+    public void setCrf3aStatus(boolean crf3aStatus) {
         this.crf3aStatus = crf3aStatus;
     }
 
-    public int getCrf3bStatus() {
+    public boolean getCrf3bStatus() {
         return crf3bStatus;
     }
 
-    public void setCrf3bStatus(int crf3bStatus) {
+    public void setCrf3bStatus(boolean crf3bStatus) {
         this.crf3bStatus = crf3bStatus;
     }
 
-    public int getCrf3cStatus() {
+    public boolean getCrf3cStatus() {
         return crf3cStatus;
     }
 
-    public void setCrf3cStatus(int crf3cStatus) {
+    public void setCrf3cStatus(boolean crf3cStatus) {
         this.crf3cStatus = crf3cStatus;
     }
 

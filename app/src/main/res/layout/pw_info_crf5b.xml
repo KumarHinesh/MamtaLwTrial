@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvDummy"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:text="Woman Registration "
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/llWomenInfo"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tvDummy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etPwName"
+                android:inputType="textCapCharacters"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="WOMAN`S NAME"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+            <EditText
+                android:inputType="textCapCharacters"
+                android:id="@+id/etPwHusbandName"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="HUSBAND`S NAME"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:textColor="@color/black"
+                android:inputType="textCapCharacters"
+                android:id="@+id/et_site"
+                android:hint="YOUR SITE"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:textColor="@color/black"
+                android:inputType="textCapCharacters"
+                android:id="@+id/et_para"
+                android:hint="YOUR PARA"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+
+
+            <EditText
+                android:id="@+id/etPwBlock"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="BLOCK"
+                android:maxLength="2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:id="@+id/etPwStracture"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="STRUCTURE"
+                android:maxLength="3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:inputType="textCapCharacters"
+                android:id="@+id/etPwFamilyHousehold"
+                android:layout_marginTop="5dp"
+                android:maxLength="1"
+                android:layout_marginBottom="5dp"
+                android:hint="FAMILY / HOUSEHOLD"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <EditText
+                android:id="@+id/etPwNumber"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="WOMAN NUMBER"
+                android:layout_width="match_parent"
+                android:maxLength="1"
+                android:layout_height="50dp"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llWomenInfo"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <TextView
+                android:id="@+id/tvdummy1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Visit Status"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:nestedScrollingEnabled="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tvdummy1"
+                android:id="@+id/lvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"/>
+
+
+            <EditText
+                android:visibility="gone"
+                android:layout_below="@+id/lvStatus"
+                android:id="@+id/et_refuesd"
+                android:inputType="textCapCharacters"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="ENTER REASON"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                />
+
+
+            <Button
+                android:id="@+id/btnF1Register"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/lvStatus"
+                android:layout_centerHorizontal="true"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Register" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

@@ -41,15 +41,11 @@ public class Crf3PwInfoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_crf3_pw_info, container, false);
 
 
-
-
         final String[] statusListItem = {"Yes (G han)", "Withdraw consent ", "Postponed by LW (LW k taraf sa takheer hoi)"
                 , "Interrupted by Family (Ghar waloun k madakhalat)", "Baby is  sick unable to avoid the situation (Bacha beemar tha jis k waja sa rukna para)", "LW is sick, unable to avoid the situation (LW beemar ha jis k waja sa rukhan para)"
         };
 
-
         statusListAdapter = new StatusListAdapter(getContext(), statusListItem);
-
 
         //edit text all field
         etPwName = (EditText) view.findViewById(R.id.etPwName);
@@ -61,14 +57,14 @@ public class Crf3PwInfoFragment extends Fragment {
         etPwFamilyHousehold = (EditText) view.findViewById(R.id.etPwFamilyHousehold);
         etPwNumber = (EditText) view.findViewById(R.id.etPwNumber);
 
-        etPwName.setText(CRF3Activity.formCrf3aDTO.getPregnantWoman().getName());
-        etPwHusbandName.setText(CRF3Activity.formCrf3aDTO.getPregnantWoman().getHusbandName());
-        etPwSite.setText(CRF3Activity.formCrf3aDTO.getPregnantWoman().getDssAddress().getSite());
-        etPwPara.setText(CRF3Activity.formCrf3aDTO.getPregnantWoman().getDssAddress().getPara());
-        etPwBlock.setText(CRF3Activity.formCrf3aDTO.getPregnantWoman().getDssAddress().getBlock());
-        etPwStracture.setText(CRF3Activity.formCrf3aDTO.getPregnantWoman().getDssAddress().getStructure());
-        etPwFamilyHousehold.setText(CRF3Activity.formCrf3aDTO.getPregnantWoman().getDssAddress().getHouseholdOrFamily());
-        etPwNumber.setText(CRF3Activity.formCrf3aDTO.getPregnantWoman().getDssAddress().getWomanNumber()+"");
+        etPwName.setText(CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman().getName());
+        etPwHusbandName.setText(CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman().getHusbandName());
+        etPwSite.setText(CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman().getDssAddress().getSite());
+        etPwPara.setText(CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman().getDssAddress().getPara());
+        etPwBlock.setText(CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman().getDssAddress().getBlock());
+        etPwStracture.setText(CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman().getDssAddress().getStructure());
+        etPwFamilyHousehold.setText(CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman().getDssAddress().getHouseholdOrFamily());
+        etPwNumber.setText(CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman().getDssAddress().getWomanNumber()+"");
 
         listView = (ListView) view.findViewById(R.id.lvStatus);
 
@@ -96,8 +92,7 @@ public class Crf3PwInfoFragment extends Fragment {
 
                     if (selectStatusItemIndex == 0) {
 
-
-                        CRF3Activity.formCrf3aDTO.setQ14(selectStatusItemIndex+"");
+                        CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ14(selectStatusItemIndex+"");
                         Crf3Q15Fragment crf3Q15Fragment = new Crf3Q15Fragment();
 
                         FragmentManager fragmentManager = getFragmentManager();
@@ -106,9 +101,7 @@ public class Crf3PwInfoFragment extends Fragment {
                         fragmentTransaction.commit();
 
 
-
                     } else {
-
 
                         //  myCustomeDialog();
 
@@ -117,7 +110,6 @@ public class Crf3PwInfoFragment extends Fragment {
                 } else {
 
                     Toast.makeText(getContext(), "Please Fill All fields", Toast.LENGTH_LONG).show();
-
                 }
 
             }

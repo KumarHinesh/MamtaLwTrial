@@ -6,7 +6,8 @@ public class FormCrf5bDetails {
 
     private FormCrf5b form;
 
-    private String q25;
+    private String q25From;
+    private String q25To;
     private String q26;
     private String q27;
     private String q28;
@@ -46,14 +47,6 @@ public class FormCrf5bDetails {
 
     public void setForm(FormCrf5b form) {
         this.form = form;
-    }
-
-    public String getQ25() {
-        return q25;
-    }
-
-    public void setQ25(String q25) {
-        this.q25 = q25;
     }
 
     public String getQ26() {
@@ -246,5 +239,21 @@ public class FormCrf5bDetails {
 
     public void setQ49(String q49) {
         this.q49 = q49;
+    }
+
+    public String getQ25From() {
+        return q25From;
+    }
+
+    public void setQ25From(String q25From) {
+        this.q25From = q25From;
+    }
+
+    public String getQ25To() {
+        return q25To;
+    }
+
+    public void setQ25To(String q25To) {
+        this.q25To = q25To;
     }
 }

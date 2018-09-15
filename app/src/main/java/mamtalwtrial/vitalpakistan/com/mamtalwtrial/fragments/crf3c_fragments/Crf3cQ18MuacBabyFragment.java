@@ -372,11 +372,11 @@ public class Crf3cQ18MuacBabyFragment extends Fragment {
                 CRF1Activity.formCrf1DTO.setQ34( new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
                 if(WifiConnectOrNot.haveNetworkConnection(getContext())){
 
-                    SendDataToServer.sendCrf1Form(CRF1Activity.formCrf1DTO);
+              //      SendDataToServer.sendCrf1Form(CRF1Activity.formCrf1DTO);
 
                 }else {
 
-                    SaveAndReadInternalData.saveCrf1FormInternal(getContext(),new Gson().toJson(CRF1Activity.formCrf1DTO, FormCrf1DTO.class));
+//                    SaveAndReadInternalData.saveCrf1FormInternal(getContext(),new Gson().toJson(CRF1Activity.formCrf1DTO, FormCrf1DTO.class));
 
                 }
 
@@ -451,8 +451,8 @@ public class Crf3cQ18MuacBabyFragment extends Fragment {
         if(turn>=3){ muacBabyCrf3cDTOS.add(getBabyMuacObject(3,et_r1_mauc3,et_r2_mauc3)); }
         if(turn>=4){ muacBabyCrf3cDTOS.add(getBabyMuacObject(4,et_r1_mauc4,et_r2_mauc4)); }
 
-        CRF3cActivity.formCrf3cDTO.setMuacBabyCrf3c(muacBabyCrf3cDTOS);
-        CRF3cActivity.formCrf3cDTO.setQ19(avrageVal+"");
+        CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setMuacBabyCrf3c(muacBabyCrf3cDTOS);
+        CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setQ19(avrageVal+"");
     }
 
     public float getTextFromField(EditText et){

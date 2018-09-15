@@ -1,6 +1,8 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf1_fragments;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -18,7 +20,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -31,19 +32,27 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CounselingCRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.messageDialogBox.SingleButtonDialog;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.MuacAssesmentDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class PwMuacAssessmentFragment2 extends Fragment {
     //toolbar
     TextView tv_headingText;
 
+    Context context;
+    ProgressDialog progressDialog;
     boolean isDataFiled=false;
    //dialog
     Button btnCancel,btnConform;
@@ -70,8 +79,11 @@ public class PwMuacAssessmentFragment2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pw_muac_assessment_fragment2,
                 container, false);
 
+
+        context = getContext();
         CRF1Activity.fragmentNo = 2;
 
+        initilizePrograssDialog();
         tv_headingText = (TextView) view.findViewById(R.id.tv_headingText);
         tv_headingText.setText("MUAC ASSESMENT");
 
@@ -126,8 +138,7 @@ public class PwMuacAssessmentFragment2 extends Fragment {
 
                     }else {
 
-                    //    CRF1Activity.formCrf1DTO.setQ22("NO");
-                        dataInsertInForm();
+
                         myCustomeDialog(1);
 
                     }
@@ -304,7 +315,6 @@ public class PwMuacAssessmentFragment2 extends Fragment {
 
                 }
 
-
             }
 
         }
@@ -320,10 +330,6 @@ public class PwMuacAssessmentFragment2 extends Fragment {
         dialog.setContentView(R.layout.confromation_dialog);
         dialog.setCancelable(false);
 
-
-
-        // dialog = new Dialog(getContext());
-        //dialog.setContentView(R.layout.fragment_pw_info_fragment1);
         btnConform = (Button) dialog.findViewById(R.id.btnConform);
         btnCancel = (Button) dialog.findViewById(R.id.btnCancel);
 
@@ -350,8 +356,6 @@ public class PwMuacAssessmentFragment2 extends Fragment {
             tv_RomanEngText.setText("Average MUAC maamtaLw Trial k laiq nhi");
             tv_engText.setText("Average MUAC is not Valid");
 
-
-
         }
 
 
@@ -361,19 +365,47 @@ public class PwMuacAssessmentFragment2 extends Fragment {
 
                 CRF1Activity.formCrf1DTO.setFormStatus(Constants.COMPLETED);
                 CRF1Activity.formCrf1DTO.setQ34( new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                progressDialog.show();
                 if(WifiConnectOrNot.haveNetworkConnection(getContext())){
-                    if(CRF1Activity.formCrf1DTO.getFollowUpPositionInList()!=-1){SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF1Activity.formCrf1DTO.getFollowUpPositionInList());}
-                    SendDataToServer.sendCrf1Form(CRF1Activity.formCrf1DTO);
+
+                    APIService mAPIService = ApiUtils.getAPIService();
+                    mAPIService.sendCrf1Form(CRF1Activity.formCrf1DTO).enqueue(new Callback<FormCrf1DTO>() {
+                        @Override
+                        public void onResponse(Call<FormCrf1DTO> call, Response<FormCrf1DTO> response) {
+
+                            if(response.code()==200){
+
+                                progressDialog.dismiss();
+                                singleBtnDialog(context,CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Form submited...:)",CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Ka Form Send Hogaya h..:)");
+
+                            }else {
+
+                                SaveAndReadInternalData.saveCrf1FormInternal(getContext(),CRF1Activity.formCrf1DTO);
+                                progressDialog.dismiss();
+                                singleBtnDialog(context,"Internet Connection is not Working properly "+ CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" form save Internel Storage","Internet Sahi nahi chal raha islia "+CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Ka Form Internal Storage m Save Kardia h");
+                            }
+                        }
+                        @Override
+                        public void onFailure(Call<FormCrf1DTO> call, Throwable t) {
+
+                            SaveAndReadInternalData.saveCrf1FormInternal(getContext(),CRF1Activity.formCrf1DTO);
+                            progressDialog.dismiss();
+                            singleBtnDialog(context,"Internet Connection is not Working properly "+ CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" form save Internel Storage","Internet Sahi nahi chal raha islia "+CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Ka Form Internal Storage m Save Kardia h");
+
+                        }
+                    });
+
 
                 }else {
-                    if(CRF1Activity.formCrf1DTO.getFollowUpPositionInList()!=-1){SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF1Activity.formCrf1DTO.getFollowUpPositionInList());}
-                    SaveAndReadInternalData.saveCrf1FormInternal(getContext(),new Gson().toJson(CRF1Activity.formCrf1DTO, FormCrf1DTO.class));
+
+                    SaveAndReadInternalData.saveCrf1FormInternal(getContext(),CRF1Activity.formCrf1DTO);
+                    progressDialog.dismiss();
+                    singleBtnDialog(context,"Internet Connection is not Working properly "+ CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" form save Internel Storage","Internet Sahi nahi chal raha islia "+CRF1Activity.formCrf1DTO.getPregnantWoman().getName()+" Ka Form Internal Storage m Save Kardia h");
 
                 }
 
-                dialog.dismiss();
-                startActivity(new Intent(getContext(), DashboardActivity.class));
-                getActivity().finish();
+                if(CRF1Activity.formCrf1DTO.getFollowUpPositionInList()!=-1){SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF1Activity.formCrf1DTO.getFollowUpPositionInList());}
 
             }
         });
@@ -465,5 +497,45 @@ public class PwMuacAssessmentFragment2 extends Fragment {
 
         return muacAssesment;
     }
+
+    public void initilizePrograssDialog(){
+
+        progressDialog = new ProgressDialog(context);
+        progressDialog.setTitle("Sending..");
+        progressDialog.setMessage("Please Wait");
+        progressDialog.setCancelable(false);
+
+    }
+
+    public  void singleBtnDialog(Context context, String engMessage, String romanEng){
+
+        Button btnConform;
+        TextView tv_engText, tv_RomanEngText;
+
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.single_btn_dialog);
+        dialog.setCancelable(false);
+
+        btnConform = (Button) dialog.findViewById(R.id.btnok);
+
+        tv_engText = (TextView) dialog.findViewById(R.id.tv_engText);
+        tv_RomanEngText = (TextView) dialog.findViewById(R.id.tv_RomanEngText);
+
+        tv_engText.setText(engMessage);
+        tv_RomanEngText.setText(romanEng);
+
+        btnConform.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), DashboardActivity.class));
+                getActivity().finish();
+            }
+        });
+
+        dialog.show();
+    }
+
+
 
 }

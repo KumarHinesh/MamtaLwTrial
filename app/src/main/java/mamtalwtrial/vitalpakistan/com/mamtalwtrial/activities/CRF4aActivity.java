@@ -1,5 +1,6 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities;
 
+import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4a_fragments.Crf4WomeninfoFragment;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf5a_fragment.Crf5aQ26Fragment;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf5b_fragment.Crf5bQ19Fragmnet;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.DSSAddressDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupDetails;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
@@ -44,7 +47,7 @@ public class CRF4aActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        String followUpDetails = intent.getStringExtra("followupdetails");
+        String followUpDetail = intent.getStringExtra("followupdetails");
 
         position = intent.getIntExtra("position",-1);
         TeamDTO teamDTO = new TeamDTO();
@@ -52,7 +55,7 @@ public class CRF4aActivity extends AppCompatActivity {
         teamDTO.setId(getSharedPreferences("teamId",CRF1Activity.MODE_PRIVATE).getInt("id",-1));
 
 
-        followupDto = new Gson().fromJson(followUpDetails, FollowupsDTO.class);
+        followupDto = new Gson().fromJson(followUpDetail, FollowupsDTO.class);
 
         followupDetails = followupDto.getFollowupDetails();
 
@@ -71,7 +74,6 @@ public class CRF4aActivity extends AppCompatActivity {
         pregnantWomanDTO.setDssAddress(dssAddressDTO);
 
 
-
         formCrf5a.setFollowupNumber(Integer.parseInt(followupDto.getFollowupDetails().getfNum()));
         formCrf5a.setPregnantWoman(pregnantWomanDTO);
         formCrf5a.setTeam(teamDTO);
@@ -87,7 +89,28 @@ public class CRF4aActivity extends AppCompatActivity {
         formCrf4bDTO.setTeam(teamDTO);
         formCrf4aDTO.setFollowupId(followupDto.getId());
 
-        Crf4WomeninfoFragment fragment = new Crf4WomeninfoFragment();
+        Fragment fragment = null;
+
+        if (followupDto.getFollowupDetails().getChd() != null){
+
+            if (followupDto.getFollowupDetails().getChd().equalsIgnoreCase("y")){
+
+                fragment = new Crf5aQ26Fragment();
+
+
+            }else {
+
+                fragment = new Crf4WomeninfoFragment();
+
+            }
+
+
+        }else {
+
+            fragment = new Crf4WomeninfoFragment();
+        }
+
+
 
         // Crf4aCounselingQ79 crf4aCounselingQ79 = new Crf4aCounselingQ79();
 
@@ -99,6 +122,7 @@ public class CRF4aActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frame_layout4a, fragment, fragment.getClass().getSimpleName()).addToBackStack(null).commit();
+
 
 
     }

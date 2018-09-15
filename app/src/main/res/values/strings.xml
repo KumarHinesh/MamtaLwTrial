@@ -6,6 +6,7 @@
     <string name="_8_oral_folic_acid">8. Oral folic acid</string>
 
 
+    <string name="norespones">NO RESPONES</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
     <string name="dk">DON`T KNOW</string>
@@ -13,6 +14,28 @@
     <string name="left">LEFT</string>
     <string name="both">BOTh</string>
     <string name="unnecessary">Unnecessary</string>
+
+    <!--///////////////////////////- CRF2 Open -///////////////////////////////////-->
+
+    <string name="crf2_q45_english">Explain all trial procedures</string>
+    <string name="crf2_q45_urdu">Trial ka tareeqa samjha diya gaya ha</string>
+
+    <string name="crf2_q46_english">Informed consent administered and explained in local language</string>
+    <string name="crf2_q46_urdu">Ijazat mana lay liya gaya ha LW sa us k apni zeban ma</string>
+
+    <string name="crf2_q47_english">LW has given her consent to participate in the study?</string>
+    <string name="crf2_q47_urdu">LW razamand ha k wo trial ma hissa lay gee</string>
+
+    <string name="crf2_q48_english">LW has agreed to give specimens for LW and infant?</string>
+    <string name="crf2_q48_urdu">LW razamand ha k wo apna and apnay bachay ka namoonay bh day gee</string>
+
+    <string name="crf2_q49_english">LW has signed/given the thumb impression</string>
+    <string name="crf2_q49_urdu">LW na ijazat namay par dastakhat ya anghootay ka nishan bh day diya ha</string>
+
+    <string name="crf2_q50_english">Reconfirm from the LW that she understands all the procedures</string>
+    <string name="crf2_q50_urdu">LW sa aik dafa phir pochain k kya us ko trial ka tareeqa qar achi tarhan samaj a gaya ha</string>
+
+    <!--///////////////////////////- CRF2 End -///////////////////////////////////-->
 
 
     <string name="crf4a_q20_english">Is LW alive?</string>
@@ -453,10 +476,8 @@
     <string name="crf5a_q35_g_english">Neighbours</string>
     <string name="crf5a_q35_g_urdu">mohalaydar</string>
 
-
     <string name="crf5a_q36_english">Did you notice any side effects of Maamta since last visit?</string>
     <string name="crf5a_q36_urdu">Maamta sachet sa koi bh gair zarori side effect ya aalamat zahir hoi</string>
-
 
     <string name="crf5a_q37_english">If yes, what was/were the side effects?</string>
     <string name="crf5a_q37_urdu">Agar howa tu wo kya tha</string>
@@ -472,7 +493,6 @@
 
     <string name="crf5a_q37_d_english">Rashes</string>
     <string name="crf5a_q37_d_urdu">jisam pay laal nishan</string>
-
 
     <string name="crf5a_q38_english">What was/were the reasons of not using the supplement?</string>
     <string name="crf5a_q38_urdu">Agar LW na supplement use nahi kiya tu us ka reason kya tha</string>
@@ -506,7 +526,6 @@
 
     <string name="crf5a_q38_j_english">Not Applicable</string>
     <string name="crf5a_q38_j_urdu">ghair zarori (Orat shashey kha rahi h )</string>
-
 
     <string name="crf5a_q38_k_english">Other(Specify)</string>
     <string name="crf5a_q38_k_urdu">koi aur</string>
@@ -583,7 +602,6 @@
 
     <string name="crf5a_q59_english">Key messages</string>
 
-
     <string name="crf5a_q59_a_english">Maamta product is balance protein and energy supplement for lactating women. </string>
     <string name="crf5a_q59_a_urdu">Maamta sachet aik protein based balanced energy supplement ha jo khaas tor pay dhood pilanay wali maoun k liya ha</string>
 
@@ -605,14 +623,11 @@
     <string name="crf5a_q59_g_english">Do not share Maamta with anyone in the family, even in a small quantity</string>
     <string name="crf5a_q59_g_urdu">App ko jo sachet diya gaya ha us ko ghar ma kisi ko aur istimaal na karnay dain</string>
 
-
     <string name="crf5a_q59_h_english">You can eat Maamta directly from the sachet and save the remaining amount in a covered utensil or you may completely pour the sachet in a plate and eat it with spoon. Do not forget to cover the plate if amount is left over.</string>
     <string name="crf5a_q59_h_urdu">App Maamta sachet rookha bh kha sakti han, ya plate ma nikal k chamchay sa bh. Agar istimal k baad thori miqdar sacchay ma bach jay tu sachet ko bund kar k rakh lain ya phir plate ko dhak k rakhain</string>
 
-
     <string name="crf5a_q59_i_english">If you develop any type of rash, diarrhea, vomiting or any other unusual sign and symptoms, please immediately contact us</string>
     <string name="crf5a_q59_i_urdu">Agar maamta khanay k baad app ko kisi bh kisam ka masla ho maslan pait kharab, ulti, jisam pay laal nishan ana, tu foran hum sa rabta karain</string>
-
 
     <string name="crf5a_q59_j_english">Unused portion of Maamta sachet should be consumed within a day and save the empty sachet in a bag provided to you</string>
     <string name="crf5a_q59_j_urdu">Maamta sachay kholnay k baad aik din k andar andar istimaal kar laina chahiya, and istimal k baad khali sachet ko sambhal k rakahin appnay pass</string>
@@ -741,8 +756,8 @@
     <string name="crf5b_q57_english">Any other substance abuse?</string>
     <string name="crf5b_q57_urdu">kya khatoon or koi nasha karti h</string>
 
-    <string name="crf5b_q58_english"></string>
-    <string name="crf5b_q58_urdu"></string>
+    <string name="crf5b_q58_english">Any other substance abuse?</string>
+    <string name="crf5b_q58_urdu">koi or </string>
 
 
     <!--Crf4b-->
@@ -791,7 +806,7 @@
     <string name="crf4b_q21_k_urdu">Naaf wali jaga par laal nishan ya wahan sa khuch nikalna</string>
 
 
-    <string name="crf4b_q21_l_english">Vomiting</string>
+    <string name="crf4b_q21_l_english">persistent vomiting or vomit all feed</string>
     <string name="crf4b_q21_l_urdu">Ultian ana</string>
 
 
@@ -1130,6 +1145,8 @@
     <string name="crf4b_q60_english">Is this day 74 visit?</string>
     <string name="crf4b_q60_urdu">Follow up din 74 ko ha</string>
 
+    <string name="vaccination_eng_q">Were these injections/ oral drops received from VPT/AKU center</string>
+    <string name="vaccination_urdu_q">kaha s injection lagwaya aku s ya vpt</string>
 
     <string-array name="select_para">
 

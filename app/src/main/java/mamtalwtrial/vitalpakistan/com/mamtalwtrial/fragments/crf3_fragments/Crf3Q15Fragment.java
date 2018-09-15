@@ -27,6 +27,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3bActivity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3b_fragments.Crf3bQ44Fragment;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
@@ -101,11 +102,8 @@ public class Crf3Q15Fragment extends Fragment {
             public void onClick(View v) {
 
                 if(validation()){
-
                     myCustomeDialog();
-
                 }
-
 
             }
         });
@@ -137,54 +135,50 @@ public class Crf3Q15Fragment extends Fragment {
     public boolean validation(){
        boolean validation = true;
 
-        CRF3Activity.formCrf3aDTO.setQ15(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
-        CRF3Activity.formCrf3aDTO.setQ16(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+        CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ15(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
+        CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ16(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
 
         if (et_q17.getText().toString().equals("")) {
             validation = false;
         } else {
-            CRF3Activity.formCrf3aDTO.setQ17(et_q17.getText().toString());
+            CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ17(et_q17.getText().toString());
         }
 
         if (et_q18.getText().toString().equals("")) {
             validation = false;
         } else {
-            CRF3Activity.formCrf3aDTO.setQ18(et_q18.getText().toString().toUpperCase());
+            CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ18(et_q18.getText().toString().toUpperCase());
         }
-
 
         if (et_q26.getText().toString().equals("")) {
             validation = false;
         } else {
-            CRF3Activity.formCrf3aDTO.setQ26(et_q26.getText().toString().toUpperCase());
+            CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ26(et_q26.getText().toString().toUpperCase());
         }
 
         if (et_q27.getText().toString().equals("")) {
             validation = false;
         } else {
-            CRF3Activity.formCrf3aDTO.setQ27(et_q27.getText().toString().toUpperCase());
+            CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ27(et_q27.getText().toString().toUpperCase());
         }
-
-
 
         if (isRBCheckedThree(rg_q19, rb_q19, tv_q19).equals("")) {
             validation = false;
         } else {
-            CRF3Activity.formCrf3aDTO.setQ19(isRBCheckedThree(rg_q19, rb_q19, tv_q19));
+            CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ19(isRBCheckedThree(rg_q19, rb_q19, tv_q19));
         }
 
         if (isRBCheckedThree(rg_q20, rb_q20, tv_q20).equals("")) {
             validation = false;
         } else {
-            CRF3Activity.formCrf3aDTO.setQ20(isRBCheckedThree(rg_q20, rb_q20, tv_q20));
+            CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ20(isRBCheckedThree(rg_q20, rb_q20, tv_q20));
         }
-
 
         if (isRBCheckedThree(rg_q22, rb_q22, tv_q22).equals("")) {
             validation = false;
         } else {
-            CRF3Activity.formCrf3aDTO.setQ22(isRBCheckedThree(rg_q22, rb_q22, tv_q22));
+            CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ22(isRBCheckedThree(rg_q22, rb_q22, tv_q22));
         }
 
         if(ll_q23.getVisibility()==View.VISIBLE){
@@ -193,7 +187,7 @@ public class Crf3Q15Fragment extends Fragment {
                 validation = false;
             }else {
 
-                CRF3Activity.formCrf3aDTO.setQ23(getTextFromField(et_q23,tv_q23));
+                CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ23(getTextFromField(et_q23,tv_q23));
             }
 
         }
@@ -204,7 +198,7 @@ public class Crf3Q15Fragment extends Fragment {
                 validation = false;
             }else {
 
-                CRF3Activity.formCrf3aDTO.setQ24(getTextFromField(et_q24,tv_q24));
+                CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ24(getTextFromField(et_q24,tv_q24));
             }
 
         }
@@ -238,13 +232,11 @@ public class Crf3Q15Fragment extends Fragment {
             public void onClick(View v) {
 
 
+                CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ25(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format( Calendar.getInstance().getTime()));
+                CRF3Activity.formsCrf2AndCrf3All.getFormCrf3aDTO().setQ17(et_q17.getText().toString());
 
-
-                CRF3Activity.formCrf3aDTO.setQ25(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format( Calendar.getInstance().getTime()));
-                CRF3Activity.formCrf3aDTO.setQ17(et_q17.getText().toString());
-
-                CRF3Activity.formsCrf2AndCrf3All.setCrf3aStatus(Constants.COMPLETED);
-                CRF3Activity.formsCrf2AndCrf3All.setFormCrf3aDTO(CRF3Activity.formCrf3aDTO);
+                CRF3Activity.formsCrf2AndCrf3All.setCrf3aStatus(true);
+                //CRF3Activity.formsCrf2AndCrf3All.setFormCrf3aDTO(CRF3Activity.formCrf3aDTO);
                 //SendDataToServer.sendCrf3aForm(CRF3Activity.formCrf3aDTO);
 
                 startActivity(new Intent(getContext(), CRF3bActivity.class).putExtra("forms",new Gson().toJson(CRF3Activity.formsCrf2AndCrf3All)));
@@ -320,11 +312,5 @@ public class Crf3Q15Fragment extends Fragment {
             return et.getText().toString();
         }
     }
-
-
-
-
-
-
 
 }

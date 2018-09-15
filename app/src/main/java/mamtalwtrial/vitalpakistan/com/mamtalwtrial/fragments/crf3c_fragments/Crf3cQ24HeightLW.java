@@ -282,7 +282,7 @@ public class Crf3cQ24HeightLW extends Fragment {
                 avrageVal = Double.parseDouble( new DecimalFormat("##.#").format(temp1));
                 tv_averageMAUC.setText(avrageVal + "");
 
-                CRF3cActivity.formCrf3cDTO.setQ25(avrageVal + "");
+                CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setQ25(avrageVal + "");
 
             } else {
 
@@ -438,7 +438,7 @@ public class Crf3cQ24HeightLW extends Fragment {
         if(turn>=3){ heightLwCrf3cDTOS.add(getWeightLwObject(3,et_r1_mauc3,et_r2_mauc3)); }
         if(turn>=4){ heightLwCrf3cDTOS.add(getWeightLwObject(4,et_r1_mauc4,et_r2_mauc4)); }
 
-        CRF3cActivity.formCrf3cDTO.setHeightLwCrf3c(heightLwCrf3cDTOS);
+        CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setHeightLwCrf3c(heightLwCrf3cDTOS);
        // CRF3cActivity.formCrf3cDTO.setQ23(avrageVal+"");
     }
 

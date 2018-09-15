@@ -185,7 +185,7 @@ public class Crf3bQ29Fragment extends Fragment {
 
                 if(validation()){
 
-                  //  SendDataToServer.sendCrf3bForm(CRF3bActivity.formCrf3bDTO);
+                  //  SendDataToServer.sendCrf3bForm(CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO());
 
                     Crf3bQ44Fragment crf3bQ44Fragment = new Crf3bQ44Fragment();
                     FragmentManager fragmentManager = getFragmentManager();
@@ -553,7 +553,7 @@ public class Crf3bQ29Fragment extends Fragment {
 
                 }else {
                     et_q36_y.setVisibility(View.GONE);
-                    //CRF3bActivity.formCrf3bDTO.setQ36y(rb_q36_y.getTag().toString());
+                    //CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36y(rb_q36_y.getTag().toString());
                 }
 
             }
@@ -698,7 +698,7 @@ public class Crf3bQ29Fragment extends Fragment {
 
                 }else {
                     et_q39_j.setVisibility(View.GONE);
-                    CRF3bActivity.formCrf3bDTO.setQ39j(rb_q39_j.getTag().toString());
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39j(rb_q39_j.getTag().toString());
                 }
 
             }
@@ -889,7 +889,7 @@ public class Crf3bQ29Fragment extends Fragment {
 
                 }else {
                     et_q40_r.setVisibility(View.GONE);
-                    //CRF3bActivity.formCrf3bDTO.setQ36y(rb_q36_y.getTag().toString());
+                    //CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36y(rb_q36_y.getTag().toString());
                 }
 
 
@@ -944,7 +944,7 @@ public class Crf3bQ29Fragment extends Fragment {
                 }else {
 
                     ll_q43.setVisibility(View.VISIBLE);
-                    //CRF3bActivity.formCrf3bDTO.setQ36y(rb_q36_y.getTag().toString());
+                    //CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36y(rb_q36_y.getTag().toString());
                 }
             }
         });
@@ -957,7 +957,7 @@ public class Crf3bQ29Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q43_a = (RadioButton) view.findViewById(rg_q43_a.getCheckedRadioButtonId());
                 tv_q43_a.setError(null);
-                CRF3bActivity.formCrf3bDTO.setQ43a(rb_q43_a.getTag().toString());
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43a(rb_q43_a.getTag().toString());
             }
         });
 
@@ -967,7 +967,7 @@ public class Crf3bQ29Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q43_b = (RadioButton) view.findViewById(rg_q43_b.getCheckedRadioButtonId());
                 tv_q43_b.setError(null);
-                CRF3bActivity.formCrf3bDTO.setQ43b(rb_q43_b.getTag().toString());
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43b(rb_q43_b.getTag().toString());
             }
         });
 
@@ -977,7 +977,7 @@ public class Crf3bQ29Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q43_c = (RadioButton) view.findViewById(rg_q43_c.getCheckedRadioButtonId());
                 tv_q43_c.setError(null);
-                CRF3bActivity.formCrf3bDTO.setQ43c(rb_q43_c.getTag().toString());
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43c(rb_q43_c.getTag().toString());
             }
         });
 
@@ -987,7 +987,7 @@ public class Crf3bQ29Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q43_d = (RadioButton) view.findViewById(rg_q43_d.getCheckedRadioButtonId());
                 tv_q43_d.setError(null);
-                CRF3bActivity.formCrf3bDTO.setQ43d(rb_q43_d.getTag().toString());
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43d(rb_q43_d.getTag().toString());
             }
         });
 
@@ -997,7 +997,7 @@ public class Crf3bQ29Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q43_e = (RadioButton) view.findViewById(rg_q43_e.getCheckedRadioButtonId());
                 tv_q43_e.setError(null);
-                CRF3bActivity.formCrf3bDTO.setQ43e(rb_q43_e.getTag().toString());
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43e(rb_q43_e.getTag().toString());
             }
         });
 
@@ -1007,7 +1007,7 @@ public class Crf3bQ29Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q43_f = (RadioButton) view.findViewById(rg_q43_f.getCheckedRadioButtonId());
                 tv_q43_f.setError(null);
-                CRF3bActivity.formCrf3bDTO.setQ43f(rb_q43_f.getTag().toString());
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43f(rb_q43_f.getTag().toString());
             }
         });
 
@@ -1017,7 +1017,7 @@ public class Crf3bQ29Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q43_g = (RadioButton) view.findViewById(rg_q43_g.getCheckedRadioButtonId());
                 tv_q43_g.setError(null);
-                CRF3bActivity.formCrf3bDTO.setQ43g(rb_q43_g.getTag().toString());
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43g(rb_q43_g.getTag().toString());
             }
         });
 
@@ -1027,7 +1027,7 @@ public class Crf3bQ29Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q43_h = (RadioButton) view.findViewById(rg_q43_h.getCheckedRadioButtonId());
                 tv_q43_h.setError(null);
-                CRF3bActivity.formCrf3bDTO.setQ43h(rb_q43_h.getTag().toString());
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43h(rb_q43_h.getTag().toString());
             }
         });
 
@@ -1037,7 +1037,7 @@ public class Crf3bQ29Fragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 rb_q43_i = (RadioButton) view.findViewById(rg_q43_i.getCheckedRadioButtonId());
                 tv_q43_i.setError(null);
-                CRF3bActivity.formCrf3bDTO.setQ43i(rb_q43_i.getTag().toString());
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43i(rb_q43_i.getTag().toString());
             }
         });
 
@@ -1079,38 +1079,38 @@ public class Crf3bQ29Fragment extends Fragment {
         if (isRBCheckedThree(rg_q29_a, rb_q29_a, tv_q29_a).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ29a(isRBCheckedThree(rg_q29_a, rb_q29_a, tv_q29_a));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ29a(isRBCheckedThree(rg_q29_a, rb_q29_a, tv_q29_a));
         }
 
         if (isRBCheckedThree(rg_q29_b, rb_q29_b, tv_q29_b).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ29b(isRBCheckedThree(rg_q29_b, rb_q29_b, tv_q29_b));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ29b(isRBCheckedThree(rg_q29_b, rb_q29_b, tv_q29_b));
         }
 
         if (isRBCheckedThree(rg_q29_c, rb_q29_c, tv_q29_c).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ29c(isRBCheckedThree(rg_q29_c, rb_q29_c, tv_q29_c));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ29c(isRBCheckedThree(rg_q29_c, rb_q29_c, tv_q29_c));
         }
 
         if (isRBCheckedThree(rg_q29_d, rb_q29_d, tv_q29_d).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ29d(isRBCheckedThree(rg_q29_d, rb_q29_d, tv_q29_d));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ29d(isRBCheckedThree(rg_q29_d, rb_q29_d, tv_q29_d));
         }
 
         if(getEditText(rg_q29_e,rb_q29_e,et_q29_e,tv_q29_e,ContantsValues.YES,"","","").equals("")){
             validation = false;
         }else {
-            CRF3bActivity.formCrf3bDTO.setQ29e(getEditText(rg_q29_e,rb_q29_e,et_q29_e,tv_q29_e,ContantsValues.YES,"","",""));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ29e(getEditText(rg_q29_e,rb_q29_e,et_q29_e,tv_q29_e,ContantsValues.YES,"","",""));
         }
 
 
         if (isRBCheckedThree(rg_q30, rb_q30, tv_q30).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ30(isRBCheckedThree(rg_q30, rb_q30, tv_q30));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ30(isRBCheckedThree(rg_q30, rb_q30, tv_q30));
         }
 
         if(ll_q31.getVisibility()==View.VISIBLE){
@@ -1119,7 +1119,7 @@ public class Crf3bQ29Fragment extends Fragment {
             if(getEditText(rg_q31,rb_q31,et_q31,tv_q31,"6","7","9","").equals("")){
                 validation = false;
             }else {
-                CRF3bActivity.formCrf3bDTO.setQ31(getEditText(rg_q31,rb_q31,et_q31,tv_q31,"6","7","9",""));
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ31(getEditText(rg_q31,rb_q31,et_q31,tv_q31,"6","7","9",""));
             }
         }
 
@@ -1128,13 +1128,13 @@ public class Crf3bQ29Fragment extends Fragment {
                 if(getTextFromField(et_q32).equals("")){
                     validation = false;
                 }else {
-                    CRF3bActivity.formCrf3bDTO.setQ32(getTextFromField(et_q32));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ32(getTextFromField(et_q32));
                 }
 
                 if(getTextFromField(et_q33).equals("")){
                     validation = false;
                 }else {
-                    CRF3bActivity.formCrf3bDTO.setQ33(getTextFromField(et_q33));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ33(getTextFromField(et_q33));
                 }
 
         }
@@ -1143,7 +1143,7 @@ public class Crf3bQ29Fragment extends Fragment {
         if (isRBCheckedThree(rg_q34, rb_q34, tv_q34).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ34(isRBCheckedThree(rg_q34, rb_q34, tv_q34));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ34(isRBCheckedThree(rg_q34, rb_q34, tv_q34));
         }
 
         if(ll_q35.getVisibility()==View.VISIBLE){
@@ -1152,7 +1152,7 @@ public class Crf3bQ29Fragment extends Fragment {
             if(getTextFromField(et_q35).equals("")){
                 validation = false;
             }else {
-                CRF3bActivity.formCrf3bDTO.setQ35(getTextFromField(et_q35));
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ35(getTextFromField(et_q35));
             }
 
         }
@@ -1161,162 +1161,162 @@ public class Crf3bQ29Fragment extends Fragment {
         if (isRBCheckedThree(rg_q36_a, rb_q36_a, tv_q36_a).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36a(isRBCheckedThree(rg_q36_a, rb_q36_a, tv_q36_a));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36a(isRBCheckedThree(rg_q36_a, rb_q36_a, tv_q36_a));
         }
 
         if (isRBCheckedThree(rg_q36_b, rb_q36_b, tv_q36_b).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36b(isRBCheckedThree(rg_q36_b, rb_q36_b, tv_q36_b));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36b(isRBCheckedThree(rg_q36_b, rb_q36_b, tv_q36_b));
         }
 
         if (isRBCheckedThree(rg_q36_c, rb_q36_c, tv_q36_c).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36c(isRBCheckedThree(rg_q36_c, rb_q36_c, tv_q36_c));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36c(isRBCheckedThree(rg_q36_c, rb_q36_c, tv_q36_c));
         }
 
         if (isRBCheckedThree(rg_q36_d, rb_q36_d, tv_q36_d).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36d(isRBCheckedThree(rg_q36_d, rb_q36_d, tv_q36_d));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36d(isRBCheckedThree(rg_q36_d, rb_q36_d, tv_q36_d));
         }
 
 
         if (isRBCheckedThree(rg_q36_e, rb_q36_e, tv_q36_e).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36e(isRBCheckedThree(rg_q36_e, rb_q36_e, tv_q36_e));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36e(isRBCheckedThree(rg_q36_e, rb_q36_e, tv_q36_e));
         }
 
 
         if (isRBCheckedThree(rg_q36_f, rb_q36_f, tv_q36_f).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36f(isRBCheckedThree(rg_q36_f, rb_q36_f, tv_q36_f));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36f(isRBCheckedThree(rg_q36_f, rb_q36_f, tv_q36_f));
         }
 
         if (isRBCheckedThree(rg_q36_g, rb_q36_g, tv_q36_g).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36g(isRBCheckedThree(rg_q36_g, rb_q36_g, tv_q36_g));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36g(isRBCheckedThree(rg_q36_g, rb_q36_g, tv_q36_g));
         }
 
         if (isRBCheckedThree(rg_q36_h, rb_q36_h, tv_q36_h).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36h(isRBCheckedThree(rg_q36_h, rb_q36_h, tv_q36_h));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36h(isRBCheckedThree(rg_q36_h, rb_q36_h, tv_q36_h));
         }
 
         if (isRBCheckedThree(rg_q36_i, rb_q36_i, tv_q36_i).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36i(isRBCheckedThree(rg_q36_i, rb_q36_i, tv_q36_i));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36i(isRBCheckedThree(rg_q36_i, rb_q36_i, tv_q36_i));
         }
 
         if (isRBCheckedThree(rg_q36_j, rb_q36_j, tv_q36_j).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36j(isRBCheckedThree(rg_q36_j, rb_q36_j, tv_q36_j));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36j(isRBCheckedThree(rg_q36_j, rb_q36_j, tv_q36_j));
         }
 
         if (isRBCheckedThree(rg_q36_k, rb_q36_k, tv_q36_k).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36k(isRBCheckedThree(rg_q36_k, rb_q36_k, tv_q36_k));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36k(isRBCheckedThree(rg_q36_k, rb_q36_k, tv_q36_k));
         }
 
         if (isRBCheckedThree(rg_q36_l, rb_q36_l, tv_q36_l).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36l(isRBCheckedThree(rg_q36_l, rb_q36_l, tv_q36_l));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36l(isRBCheckedThree(rg_q36_l, rb_q36_l, tv_q36_l));
         }
 
         if (isRBCheckedThree(rg_q36_m, rb_q36_m, tv_q36_m).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36m(isRBCheckedThree(rg_q36_m, rb_q36_m, tv_q36_m));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36m(isRBCheckedThree(rg_q36_m, rb_q36_m, tv_q36_m));
         }
 
         if (isRBCheckedThree(rg_q36_n, rb_q36_n, tv_q36_n).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36n(isRBCheckedThree(rg_q36_n, rb_q36_n, tv_q36_n));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36n(isRBCheckedThree(rg_q36_n, rb_q36_n, tv_q36_n));
         }
 
         if (isRBCheckedThree(rg_q36_o, rb_q36_o, tv_q36_o).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36o(isRBCheckedThree(rg_q36_o, rb_q36_o, tv_q36_o));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36o(isRBCheckedThree(rg_q36_o, rb_q36_o, tv_q36_o));
         }
 
         if (isRBCheckedThree(rg_q36_p, rb_q36_p, tv_q36_p).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36p(isRBCheckedThree(rg_q36_p, rb_q36_p, tv_q36_p));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36p(isRBCheckedThree(rg_q36_p, rb_q36_p, tv_q36_p));
         }
 
         if (isRBCheckedThree(rg_q36_q, rb_q36_q, tv_q36_q).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36q(isRBCheckedThree(rg_q36_q, rb_q36_q, tv_q36_q));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36q(isRBCheckedThree(rg_q36_q, rb_q36_q, tv_q36_q));
         }
 
         if (isRBCheckedThree(rg_q36_r, rb_q36_r, tv_q36_r).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36r(isRBCheckedThree(rg_q36_r, rb_q36_r, tv_q36_r));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36r(isRBCheckedThree(rg_q36_r, rb_q36_r, tv_q36_r));
         }
 
         if (isRBCheckedThree(rg_q36_s, rb_q36_s, tv_q36_s).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36s(isRBCheckedThree(rg_q36_s, rb_q36_s, tv_q36_s));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36s(isRBCheckedThree(rg_q36_s, rb_q36_s, tv_q36_s));
         }
 
 
         if (isRBCheckedThree(rg_q36_t, rb_q36_t, tv_q36_t).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36t(isRBCheckedThree(rg_q36_t, rb_q36_t, tv_q36_t));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36t(isRBCheckedThree(rg_q36_t, rb_q36_t, tv_q36_t));
         }
 
         if (isRBCheckedThree(rg_q36_u, rb_q36_u, tv_q36_u).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36u(isRBCheckedThree(rg_q36_u, rb_q36_u, tv_q36_u));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36u(isRBCheckedThree(rg_q36_u, rb_q36_u, tv_q36_u));
         }
 
 
         if (isRBCheckedThree(rg_q36_v, rb_q36_v, tv_q36_v).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36v(isRBCheckedThree(rg_q36_v, rb_q36_v, tv_q36_v));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36v(isRBCheckedThree(rg_q36_v, rb_q36_v, tv_q36_v));
         }
 
 
         if (isRBCheckedThree(rg_q36_w, rb_q36_w, tv_q36_w).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36w(isRBCheckedThree(rg_q36_w, rb_q36_w, tv_q36_w));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36w(isRBCheckedThree(rg_q36_w, rb_q36_w, tv_q36_w));
         }
 
         if (isRBCheckedThree(rg_q36_x, rb_q36_x, tv_q36_x).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ36x(isRBCheckedThree(rg_q36_x, rb_q36_x, tv_q36_x));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36x(isRBCheckedThree(rg_q36_x, rb_q36_x, tv_q36_x));
         }
 
         if(getEditText(rg_q36_y,rb_q36_y,et_q36_y,tv_q36_y,ContantsValues.YES,"","","").equals("")){
             validation = false;
         }else {
-            CRF3bActivity.formCrf3bDTO.setQ36y(getEditText(rg_q36_y,rb_q36_y,et_q36_y,tv_q36_y,ContantsValues.YES,"","",""));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ36y(getEditText(rg_q36_y,rb_q36_y,et_q36_y,tv_q36_y,ContantsValues.YES,"","",""));
         }
 
         if (isRBCheckedThree(rg_q37, rb_q37, tv_q37).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ37(isRBCheckedThree(rg_q37, rb_q37, tv_q37));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ37(isRBCheckedThree(rg_q37, rb_q37, tv_q37));
         }
 
 
@@ -1326,7 +1326,7 @@ public class Crf3bQ29Fragment extends Fragment {
            if(getEditText(rg_q38,rb_q38,et_q38,tv_q38,"6","7","8","").equals("")){
                validation = false;
            }else {
-               CRF3bActivity.formCrf3bDTO.setQ38(getEditText(rg_q38,rb_q38,et_q38,tv_q38,"6","7","8",""));
+               CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ38(getEditText(rg_q38,rb_q38,et_q38,tv_q38,"6","7","8",""));
            }
 
            if(ll_q39.getVisibility()==View.VISIBLE){
@@ -1334,63 +1334,63 @@ public class Crf3bQ29Fragment extends Fragment {
                if (isRBCheckedThree(rg_q39_a, rb_q39_a, tv_q39_a).equals("")) {
                    validation = false;
                } else {
-                   CRF3bActivity.formCrf3bDTO.setQ39a(isRBCheckedThree(rg_q39_a, rb_q39_a, tv_q39_a));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39a(isRBCheckedThree(rg_q39_a, rb_q39_a, tv_q39_a));
                }
 
                if (isRBCheckedThree(rg_q39_b, rb_q39_b, tv_q39_b).equals("")) {
                    validation = false;
                } else {
-                   CRF3bActivity.formCrf3bDTO.setQ39b(isRBCheckedThree(rg_q39_b, rb_q39_b, tv_q39_b));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39b(isRBCheckedThree(rg_q39_b, rb_q39_b, tv_q39_b));
                }
 
                if (isRBCheckedThree(rg_q39_c, rb_q39_c, tv_q39_c).equals("")) {
                    validation = false;
                } else {
-                   CRF3bActivity.formCrf3bDTO.setQ39c(isRBCheckedThree(rg_q39_c, rb_q39_c, tv_q39_c));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39c(isRBCheckedThree(rg_q39_c, rb_q39_c, tv_q39_c));
                }
 
                if (isRBCheckedThree(rg_q39_d, rb_q39_d, tv_q39_d).equals("")) {
                    validation = false;
                } else {
-                   CRF3bActivity.formCrf3bDTO.setQ39d(isRBCheckedThree(rg_q39_d, rb_q39_d, tv_q39_d));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39d(isRBCheckedThree(rg_q39_d, rb_q39_d, tv_q39_d));
                }
 
 
                if (isRBCheckedThree(rg_q39_e, rb_q39_e, tv_q39_e).equals("")) {
                    validation = false;
                } else {
-                   CRF3bActivity.formCrf3bDTO.setQ39e(isRBCheckedThree(rg_q39_e, rb_q39_e, tv_q39_e));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39e(isRBCheckedThree(rg_q39_e, rb_q39_e, tv_q39_e));
                }
 
 
                if (isRBCheckedThree(rg_q39_f, rb_q39_f, tv_q39_f).equals("")) {
                    validation = false;
                } else {
-                   CRF3bActivity.formCrf3bDTO.setQ39f(isRBCheckedThree(rg_q39_f, rb_q39_f, tv_q39_f));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39f(isRBCheckedThree(rg_q39_f, rb_q39_f, tv_q39_f));
                }
 
                if (isRBCheckedThree(rg_q39_g, rb_q39_g, tv_q39_g).equals("")) {
                    validation = false;
                } else {
-                   CRF3bActivity.formCrf3bDTO.setQ39g(isRBCheckedThree(rg_q39_g, rb_q39_g, tv_q39_g));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39g(isRBCheckedThree(rg_q39_g, rb_q39_g, tv_q39_g));
                }
 
                if (isRBCheckedThree(rg_q39_h, rb_q39_h, tv_q39_h).equals("")) {
                    validation = false;
                } else {
-                   CRF3bActivity.formCrf3bDTO.setQ39h(isRBCheckedThree(rg_q39_h, rb_q39_h, tv_q39_h));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39h(isRBCheckedThree(rg_q39_h, rb_q39_h, tv_q39_h));
                }
 
                if (isRBCheckedThree(rg_q39_i, rb_q39_i, tv_q39_i).equals("")) {
                    validation = false;
                } else {
-                   CRF3bActivity.formCrf3bDTO.setQ39i(isRBCheckedThree(rg_q39_i, rb_q39_i, tv_q39_i));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39i(isRBCheckedThree(rg_q39_i, rb_q39_i, tv_q39_i));
                }
 
                if(getEditText(rg_q39_j,rb_q39_j,et_q39_j,tv_q39_j,ContantsValues.YES,"","","").equals("")){
                    validation = false;
                }else {
-                   CRF3bActivity.formCrf3bDTO.setQ39j(getEditText(rg_q36_y,rb_q36_y,et_q36_y,tv_q36_y,ContantsValues.YES,"","",""));
+                   CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ39j(getEditText(rg_q36_y,rb_q36_y,et_q36_y,tv_q36_y,ContantsValues.YES,"","",""));
                }
 
            }
@@ -1401,117 +1401,117 @@ public class Crf3bQ29Fragment extends Fragment {
         if (isRBCheckedThree(rg_q40_a, rb_q40_a, tv_q40_a).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40a(isRBCheckedThree(rg_q40_a, rb_q40_a, tv_q40_a));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40a(isRBCheckedThree(rg_q40_a, rb_q40_a, tv_q40_a));
         }
 
         if (isRBCheckedThree(rg_q40_b, rb_q40_b, tv_q40_b).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40b(isRBCheckedThree(rg_q40_b, rb_q40_b, tv_q40_b));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40b(isRBCheckedThree(rg_q40_b, rb_q40_b, tv_q40_b));
         }
 
         if (isRBCheckedThree(rg_q40_c, rb_q40_c, tv_q40_c).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40c(isRBCheckedThree(rg_q40_c, rb_q40_c, tv_q40_c));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40c(isRBCheckedThree(rg_q40_c, rb_q40_c, tv_q40_c));
         }
 
         if (isRBCheckedThree(rg_q40_d, rb_q40_d, tv_q40_d).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40d(isRBCheckedThree(rg_q40_d, rb_q40_d, tv_q40_d));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40d(isRBCheckedThree(rg_q40_d, rb_q40_d, tv_q40_d));
         }
 
 
         if (isRBCheckedThree(rg_q40_e, rb_q40_e, tv_q40_e).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40e(isRBCheckedThree(rg_q40_e, rb_q40_e, tv_q40_e));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40e(isRBCheckedThree(rg_q40_e, rb_q40_e, tv_q40_e));
         }
 
 
         if (isRBCheckedThree(rg_q40_f, rb_q40_f, tv_q40_f).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40f(isRBCheckedThree(rg_q40_f, rb_q40_f, tv_q40_f));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40f(isRBCheckedThree(rg_q40_f, rb_q40_f, tv_q40_f));
         }
 
         if (isRBCheckedThree(rg_q40_g, rb_q40_g, tv_q40_g).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40g(isRBCheckedThree(rg_q40_g, rb_q40_g, tv_q40_g));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40g(isRBCheckedThree(rg_q40_g, rb_q40_g, tv_q40_g));
         }
 
         if (isRBCheckedThree(rg_q40_h, rb_q40_h, tv_q40_h).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40h(isRBCheckedThree(rg_q40_h, rb_q40_h, tv_q40_h));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40h(isRBCheckedThree(rg_q40_h, rb_q40_h, tv_q40_h));
         }
 
         if (isRBCheckedThree(rg_q40_i, rb_q40_i, tv_q40_i).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40i(isRBCheckedThree(rg_q40_i, rb_q40_i, tv_q40_i));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40i(isRBCheckedThree(rg_q40_i, rb_q40_i, tv_q40_i));
         }
 
         if (isRBCheckedThree(rg_q40_j, rb_q40_j, tv_q40_j).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40j(isRBCheckedThree(rg_q40_j, rb_q40_j, tv_q40_j));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40j(isRBCheckedThree(rg_q40_j, rb_q40_j, tv_q40_j));
         }
 
         if (isRBCheckedThree(rg_q40_k, rb_q40_k, tv_q40_k).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40k(isRBCheckedThree(rg_q40_k, rb_q40_k, tv_q40_k));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40k(isRBCheckedThree(rg_q40_k, rb_q40_k, tv_q40_k));
         }
 
         if (isRBCheckedThree(rg_q40_l, rb_q40_l, tv_q40_l).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40l(isRBCheckedThree(rg_q40_l, rb_q40_l, tv_q40_l));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40l(isRBCheckedThree(rg_q40_l, rb_q40_l, tv_q40_l));
         }
 
         if (isRBCheckedThree(rg_q40_m, rb_q40_m, tv_q40_m).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40m(isRBCheckedThree(rg_q40_m, rb_q40_m, tv_q40_m));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40m(isRBCheckedThree(rg_q40_m, rb_q40_m, tv_q40_m));
         }
 
         if (isRBCheckedThree(rg_q40_n, rb_q40_n, tv_q40_n).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40n(isRBCheckedThree(rg_q40_n, rb_q40_n, tv_q40_n));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40n(isRBCheckedThree(rg_q40_n, rb_q40_n, tv_q40_n));
         }
 
         if (isRBCheckedThree(rg_q40_o, rb_q40_o, tv_q40_o).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40o(isRBCheckedThree(rg_q40_o, rb_q40_o, tv_q40_o));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40o(isRBCheckedThree(rg_q40_o, rb_q40_o, tv_q40_o));
         }
 
         if (isRBCheckedThree(rg_q40_p, rb_q40_p, tv_q40_p).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40p(isRBCheckedThree(rg_q40_p, rb_q40_p, tv_q40_p));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40p(isRBCheckedThree(rg_q40_p, rb_q40_p, tv_q40_p));
         }
 
         if (isRBCheckedThree(rg_q40_q, rb_q40_q, tv_q40_q).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ40q(isRBCheckedThree(rg_q40_q, rb_q40_q, tv_q40_q));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40q(isRBCheckedThree(rg_q40_q, rb_q40_q, tv_q40_q));
         }
 
         if(getEditText(rg_q40_r,rb_q40_r,et_q40_r,tv_q40_r,ContantsValues.YES,"","","").equals("")){
             validation = false;
         }else {
-            CRF3bActivity.formCrf3bDTO.setQ40r(getEditText(rg_q40_r,rb_q40_r,et_q40_r,tv_q40_r,ContantsValues.YES,"","",""));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ40r(getEditText(rg_q40_r,rb_q40_r,et_q40_r,tv_q40_r,ContantsValues.YES,"","",""));
         }
 
         if (isRBCheckedThree(rg_q41, rb_q41, tv_q41).equals("")) {
             validation = false;
         } else {
-            CRF3bActivity.formCrf3bDTO.setQ41(isRBCheckedThree(rg_q41, rb_q41, tv_q41));
+            CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ41(isRBCheckedThree(rg_q41, rb_q41, tv_q41));
         }
 
 
@@ -1521,7 +1521,7 @@ public class Crf3bQ29Fragment extends Fragment {
             if(getEditText(rg_q42,rb_q42,et_q42,tv_q42,"6","7","8","").equals("")){
                 validation = false;
             }else {
-                CRF3bActivity.formCrf3bDTO.setQ42(getEditText(rg_q42,rb_q42,et_q42,tv_q42,"6","7","8",""));
+                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ42(getEditText(rg_q42,rb_q42,et_q42,tv_q42,"6","7","8",""));
             }
 
             if(ll_q43.getVisibility()==View.VISIBLE){
@@ -1529,70 +1529,70 @@ public class Crf3bQ29Fragment extends Fragment {
                 if (isRBCheckedThree(rg_q43_a, rb_q43_a, tv_q43_a).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43a(isRBCheckedThree(rg_q43_a, rb_q43_a, tv_q43_a));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43a(isRBCheckedThree(rg_q43_a, rb_q43_a, tv_q43_a));
                 }
 
 
                 if (isRBCheckedThree(rg_q43_b, rb_q43_b, tv_q43_b).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43b(isRBCheckedThree(rg_q43_b, rb_q43_b, tv_q43_b));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43b(isRBCheckedThree(rg_q43_b, rb_q43_b, tv_q43_b));
                 }
 
                 if (isRBCheckedThree(rg_q43_c, rb_q43_c, tv_q43_c).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43c(isRBCheckedThree(rg_q43_c, rb_q43_c, tv_q43_c));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43c(isRBCheckedThree(rg_q43_c, rb_q43_c, tv_q43_c));
                 }
 
                 if (isRBCheckedThree(rg_q43_d, rb_q43_d, tv_q43_d).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43d(isRBCheckedThree(rg_q43_d, rb_q43_d, tv_q43_d));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43d(isRBCheckedThree(rg_q43_d, rb_q43_d, tv_q43_d));
                 }
 
 
                 if (isRBCheckedThree(rg_q43_e, rb_q43_e, tv_q43_e).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43e(isRBCheckedThree(rg_q43_e, rb_q43_e, tv_q43_e));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43e(isRBCheckedThree(rg_q43_e, rb_q43_e, tv_q43_e));
                 }
 
 
                 if (isRBCheckedThree(rg_q43_f, rb_q43_f, tv_q43_f).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43f(isRBCheckedThree(rg_q43_f, rb_q43_f, tv_q43_f));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43f(isRBCheckedThree(rg_q43_f, rb_q43_f, tv_q43_f));
                 }
 
                 if (isRBCheckedThree(rg_q43_g, rb_q43_g, tv_q43_g).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43g(isRBCheckedThree(rg_q43_g, rb_q43_g, tv_q43_g));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43g(isRBCheckedThree(rg_q43_g, rb_q43_g, tv_q43_g));
                 }
 
                 if (isRBCheckedThree(rg_q43_h, rb_q43_h, tv_q43_h).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43h(isRBCheckedThree(rg_q43_h, rb_q43_h, tv_q43_h));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43h(isRBCheckedThree(rg_q43_h, rb_q43_h, tv_q43_h));
                 }
 
                 if (isRBCheckedThree(rg_q43_i, rb_q43_i, tv_q43_i).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43i(isRBCheckedThree(rg_q43_i, rb_q43_i, tv_q43_i));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43i(isRBCheckedThree(rg_q43_i, rb_q43_i, tv_q43_i));
                 }
 
                 if (isRBCheckedThree(rg_q43_j, rb_q43_j, tv_q43_j).equals("")) {
                     validation = false;
                 } else {
-                    CRF3bActivity.formCrf3bDTO.setQ43j(isRBCheckedThree(rg_q43_j, rb_q43_j, tv_q43_j));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43j(isRBCheckedThree(rg_q43_j, rb_q43_j, tv_q43_j));
                 }
 
                 if(getEditText(rg_q43_k,rb_q43_k,et_q43_k,tv_q43_k,ContantsValues.YES,"","","").equals("")){
                     validation = false;
                 }else {
-                    CRF3bActivity.formCrf3bDTO.setQ43k(getEditText(rg_q43_k,rb_q43_k,et_q43_k,tv_q43_k,ContantsValues.YES,"","",""));
+                    CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3bDTO().setQ43k(getEditText(rg_q43_k,rb_q43_k,et_q43_k,tv_q43_k,ContantsValues.YES,"","",""));
                 }
 
 

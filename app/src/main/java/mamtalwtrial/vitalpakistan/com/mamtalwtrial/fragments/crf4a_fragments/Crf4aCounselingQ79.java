@@ -119,11 +119,11 @@ public class Crf4aCounselingQ79 extends Fragment {
 
                         if(validation){
 
-                        //    CRF4aActivity.formCrf4aDTO.setCounsilEndTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance()));
-
+                            CRF4aActivity.formCrf4aDTO.setCounsilEndTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
                             if(!CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a")){
 
+                                CRF4aActivity.startHour = 0;
                                 CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
                                 CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
 
@@ -140,7 +140,6 @@ public class Crf4aCounselingQ79 extends Fragment {
 
 
                                 progressDialog.show();
-
                                 final APIService mAPIService = ApiUtils.getAPIService();
 
                                 Crf4Complete crf4Complete = new Crf4Complete();
@@ -152,6 +151,7 @@ public class Crf4aCounselingQ79 extends Fragment {
                                     @Override
                                     public void onResponse(Call<Crf4Complete> call, Response<Crf4Complete> response) {
 
+                                        CRF4aActivity.startHour = 0;
                                         SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF4aActivity.position);
                                         startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
                                         getActivity().finish();
@@ -162,6 +162,7 @@ public class Crf4aCounselingQ79 extends Fragment {
                                     @Override
                                     public void onFailure(Call<Crf4Complete> call, Throwable t) {
 
+                                        CRF4aActivity.startHour = 0;
                                         startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
                                         getActivity().finish();
                                         SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF4aActivity.position);

@@ -21,9 +21,11 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3bActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4a_fragments.Crf4aCounselingQ79;
@@ -93,6 +95,8 @@ public class Crf4bQ20Fragment extends Fragment {
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_crf4b_q20, container, false);
 
+        CRF4aActivity.formCrf4bDTO.setQ2(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
+        CRF4aActivity.formCrf4bDTO.setQ3(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
         Calendar calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
@@ -100,6 +104,8 @@ public class Crf4bQ20Fragment extends Fragment {
         day = calendar.get(Calendar.DAY_OF_MONTH);
         min = (calendar.get(Calendar.MINUTE));
         hour = (calendar.get(Calendar.HOUR_OF_DAY));
+
+
 
         ll_q21 = (LinearLayout) view.findViewById(R.id.ll_q21);
         ll_q22 = (LinearLayout) view.findViewById(R.id.ll_q22);
@@ -408,6 +414,8 @@ public class Crf4bQ20Fragment extends Fragment {
                         CRF4aActivity.formCrf4bDTO.setFollowupStatus(Constants.COMPLETED);
                         CRF4aActivity.formCrf4bDTO.setFormStatus(Constants.COMPLETED);
 
+                        CRF4aActivity.formCrf4bDTO.setQ56(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
                         Crf4aCounselingQ79 fragment = new Crf4aCounselingQ79();
                         FragmentManager fragmentManager = getFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -418,7 +426,20 @@ public class Crf4bQ20Fragment extends Fragment {
                     }else {
 
 
-                        Crf5aQ26Fragment fragment = new Crf5aQ26Fragment();
+                        CRF4aActivity.formCrf4bDTO.setQ56(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                        Fragment fragment = null;
+
+                        if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equalsIgnoreCase("y")){
+
+                            fragment = new Crf4aCounselingQ79();
+
+                        }else {
+
+                            fragment = new Crf5aQ26Fragment();
+                        }
+
+
                         FragmentManager fragmentManager = getFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.frame_layout4a, fragment);
@@ -1746,7 +1767,6 @@ public class Crf4bQ20Fragment extends Fragment {
                     et_q55_l.setVisibility(View.VISIBLE);
 
                 }else {
-
                     et_q55_l.setVisibility(View.GONE);
 
                 }
@@ -2617,14 +2637,10 @@ public class Crf4bQ20Fragment extends Fragment {
                     if (getEditText(rg_q55_l, rb_q55_l, et_q55_l, tv_q55_l, ContantsValues.YES,"","","").equals("")) {
                         validation = false;
                     } else {
-                        CRF4aActivity.formCrf4bDTO.setQ50l(getEditText(rg_q55_l, rb_q55_l, et_q55_l, tv_q55_l, ContantsValues.YES,"","",""));
+                        CRF4aActivity.formCrf4bDTO.setQ55l(getEditText(rg_q55_l, rb_q55_l, et_q55_l, tv_q55_l, ContantsValues.YES,"","",""));
                     }
 
-
-
-
                 }
-
 
             }
 
@@ -2681,7 +2697,6 @@ public class Crf4bQ20Fragment extends Fragment {
 
                 return rb.getTag().toString();
             }
-
         }
     }
 
@@ -2696,6 +2711,5 @@ public class Crf4bQ20Fragment extends Fragment {
             return et.getText().toString();
         }
     }
-
 
 }

@@ -1,7 +1,11 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf2_fragments;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -26,8 +31,17 @@ import java.util.concurrent.TimeUnit;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2DashboargActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf2.FormCrf2DTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
 
@@ -36,7 +50,9 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
     int getMin = -1;
     int getMonth = -1;
     int getYear = -1;
+    Context context;
 
+    ProgressDialog progressDialog;
     String selectedDate ="";
     String selectedTime ="";
 
@@ -60,6 +76,7 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_crf2_get_baby_birth_date_and_time, container, false);
 
+        initializingView(view, getContext());
 
         calendar = Calendar.getInstance();
 
@@ -67,10 +84,6 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
-
-        sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm");
-
-        btn_DOB_next = (Button) view.findViewById(R.id.btn_DOB_next);
         btn_DOB_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,9 +95,7 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
 
                     String currentDate = day+"-"+month+"-"+year+" "+currentHour+":"+currentMin;
 
-
                     try {
-
 
                         Date d1 = sdf.parse(currentDate);
                         Date d2 = sdf.parse(getDay+"-"+getMonth+"-"+getYear+" "+getHour+":"+getMin);
@@ -96,14 +107,14 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
                         Log.d("Difference in minutes",diffHour+"  07777");
 
                         CRF2Activity.babyHour = (int) diffHour;
-                        CRF2Activity.formCrf2DTO.setQ26(diffHour+"");
-                        CRF2Activity.formCrf2DTO.setQ21(selectedDate);
-                        CRF2Activity.formCrf2DTO.setQ22(selectedTime);
+                        CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ26(diffHour+"");
+                        CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ21(selectedDate);
+                        CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ22(selectedTime);
 
                         try{
 
-                            Date lmpDate =  new SimpleDateFormat(ContantsValues.DATEFORMAT).parse(CRF2Activity.formCrf2DTO.getPregnantWoman().getLmp());
-                            Date dobDate =  new SimpleDateFormat(ContantsValues.DATEFORMAT).parse(CRF2Activity.formCrf2DTO.getQ21());
+                            Date lmpDate =  new SimpleDateFormat(ContantsValues.DATEFORMAT).parse(CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getLmp());
+                            Date dobDate =  new SimpleDateFormat(ContantsValues.DATEFORMAT).parse(CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getQ21());
 
                             long diffInMillies = Math.abs(dobDate.getTime() - lmpDate.getTime());
                             float diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
@@ -111,26 +122,22 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
                             int  remaingDays = (int) (diff%7);
                             int  weeks = (int) (diff/7);
 
-                            CRF2Activity.formCrf2DTO.setQ32(weeks+"."+remaingDays);
+                            CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ32(weeks+"."+remaingDays);
 
 
                         }catch (Exception e){
                             e.printStackTrace();
                         }
 
-
-
-
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
-
                 }
 
 
                 if(cb_DOB_1.isChecked()){
 
-                    CRF2Activity.formCrf2DTO.setQ23(ContantsValues.YES);
+                    CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ23(ContantsValues.YES);
                     Crf2Q26Fragment crf2Q26Fragment = new Crf2Q26Fragment();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -141,7 +148,7 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
                 }
                  else if(cb_DOB_2.isChecked()){
 
-                    CRF2Activity.formCrf2DTO.setQ23(ContantsValues.NO);
+                    CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().setQ23(ContantsValues.NO);
                     Crf2Q24_25Fragment crf2Q24_25Fragment = new Crf2Q24_25Fragment();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -248,6 +255,90 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
 
         return b;
     }
+
+    public void initializingView(View view, Context context){
+
+        progressDialog = new ProgressDialog(context);
+        sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+        btn_DOB_next = (Button) view.findViewById(R.id.btn_DOB_next);
+        this.context = context;
+
+    }
+
+
+    /*public void sendDataToServer(){
+
+        progressDialog.show();
+        APIService mAPIService = ApiUtils.getAPIService();
+
+        if(WifiConnectOrNot.haveNetworkConnection(getContext())){
+
+            mAPIService.postCrf2(CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO()).enqueue(new Callback<FormCrf2DTO>() {
+                @Override
+                public void onResponse(Call<FormCrf2DTO> call, Response<FormCrf2DTO> response) {
+
+                    progressDialog.dismiss();
+
+                    if(response.code()==200){
+
+                        singleBtnDialog(getContext(),CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() + "Form submited...:)",CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" Ka Form Send Hogaya h..:)");
+
+                    }else {
+
+                        singleBtnDialog(getContext(),"Internet Connection is not Working properly "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" form save Internel Storage","Internet Sahi nahi chal raha islia "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" Ka Form Internal Storage m Save Kardia h");
+                        SaveAndReadInternalData.saveCrf2And3AllForms(context,CRF2Activity.formsCrf2AndCrf3All);
+
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<FormCrf2DTO> call, Throwable t) {
+
+                    singleBtnDialog(getContext(),"Internet Connection is not Working properly "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" form save Internel Storage","Internet Sahi nahi chal raha islia "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" Ka Form Internal Storage m Save Kardia h");
+                    SaveAndReadInternalData.saveCrf2And3AllForms(context,CRF2Activity.formsCrf2AndCrf3All);
+
+                }
+            });
+
+        }else{
+
+            singleBtnDialog(getContext(),"Internet Connection is not Working properly "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" form save Internel Storage","Internet Sahi nahi chal raha islia "+ CRF2Activity.formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman().getName() +" Ka Form Internal Storage m Save Kardia h");
+            SaveAndReadInternalData.saveCrf2And3AllForms(context,CRF2Activity.formsCrf2AndCrf3All);
+        }
+
+    }
+
+
+    public  void singleBtnDialog(Context context, String engMessage, String romanEng){
+
+        Button btnConform;
+        TextView tv_engText, tv_RomanEngText;
+
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.single_btn_dialog);
+        dialog.setCancelable(false);
+
+        btnConform = (Button) dialog.findViewById(R.id.btnok);
+
+        tv_engText = (TextView) dialog.findViewById(R.id.tv_engText);
+        tv_RomanEngText = (TextView) dialog.findViewById(R.id.tv_RomanEngText);
+
+        tv_engText.setText(engMessage);
+        tv_RomanEngText.setText(romanEng);
+
+        btnConform.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), CRF2DashboargActivity.class));
+                getActivity().finish();
+            }
+        });
+
+        dialog.show();
+    }
+*/
 
 
 }

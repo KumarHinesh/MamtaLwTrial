@@ -17,6 +17,13 @@ public class FormCrf5b {
 
     private PregnantWomanDTO pregnantWoman;
 
+    private String dateOfAttempt;
+
+    private String timeOfAttempt;
+
+    private int followupNumber;
+
+
     private String q18;
     private String q19;
     private String q20;
@@ -24,6 +31,18 @@ public class FormCrf5b {
     private String q22;
     private String q23;
     private String q24;
+
+    private String q49;
+    private String q50;
+    private String q51;
+    private String q52;
+    private String q53;
+    private String q54;
+    private String q55;
+    private String q56;
+    private String q57;
+    private String q58;
+    private String q59;
 
     private List<FormCrf5bDetails> details;
 
@@ -122,4 +141,119 @@ public class FormCrf5b {
     public void setDetails(List<FormCrf5bDetails> details) {
         this.details = details;
     }
+
+    public String getQ49() {
+        return q49;
+    }
+
+    public void setQ49(String q49) {
+        this.q49 = q49;
+    }
+
+    public String getQ50() {
+        return q50;
+    }
+
+    public void setQ50(String q50) {
+        this.q50 = q50;
+    }
+
+    public String getQ51() {
+        return q51;
+    }
+
+    public void setQ51(String q51) {
+        this.q51 = q51;
+    }
+
+    public String getQ52() {
+        return q52;
+    }
+
+    public void setQ52(String q52) {
+        this.q52 = q52;
+    }
+
+    public String getQ53() {
+        return q53;
+    }
+
+    public void setQ53(String q53) {
+        this.q53 = q53;
+    }
+
+    public String getQ54() {
+        return q54;
+    }
+
+    public void setQ54(String q54) {
+        this.q54 = q54;
+    }
+
+    public String getQ55() {
+        return q55;
+    }
+
+    public void setQ55(String q55) {
+        this.q55 = q55;
+    }
+
+    public String getQ56() {
+        return q56;
+    }
+
+    public void setQ56(String q56) {
+        this.q56 = q56;
+    }
+
+    public String getQ57() {
+        return q57;
+    }
+
+    public void setQ57(String q57) {
+        this.q57 = q57;
+    }
+
+    public String getQ58() {
+        return q58;
+    }
+
+    public void setQ58(String q58) {
+        this.q58 = q58;
+    }
+
+    public String getDateOfAttempt() {
+        return dateOfAttempt;
+    }
+
+    public void setDateOfAttempt(String dateOfAttempt) {
+        this.dateOfAttempt = dateOfAttempt;
+    }
+
+    public String getTimeOfAttempt() {
+        return timeOfAttempt;
+    }
+
+    public void setTimeOfAttempt(String timeOfAttempt) {
+        this.timeOfAttempt = timeOfAttempt;
+    }
+
+    public int getFollowupNumber() {
+        return followupNumber;
+    }
+
+    public void setFollowupNumber(int followupNumber) {
+        this.followupNumber = followupNumber;
+    }
+
+
+    public String getQ59() {
+        return q59;
+    }
+
+    public void setQ59(String q59) {
+        this.q59 = q59;
+    }
 }
+
+

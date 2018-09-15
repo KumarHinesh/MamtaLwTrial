@@ -353,11 +353,11 @@ public class Crf3cQ26LwMuac extends Fragment {
 
                 if(WifiConnectOrNot.haveNetworkConnection(getContext())){
                     if(CRF1Activity.formCrf1DTO.getFollowUpPositionInList()!=-1){SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF1Activity.formCrf1DTO.getFollowUpPositionInList());}
-                    SendDataToServer.sendCrf1Form(CRF1Activity.formCrf1DTO);
+                    //SendDataToServer.sendCrf1Form(CRF1Activity.formCrf1DTO);
 
                 }else {
                     if(CRF1Activity.formCrf1DTO.getFollowUpPositionInList()!=-1){SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF1Activity.formCrf1DTO.getFollowUpPositionInList());}
-                    SaveAndReadInternalData.saveCrf1FormInternal(getContext(),new Gson().toJson(CRF1Activity.formCrf1DTO, FormCrf1DTO.class));
+                  //  SaveAndReadInternalData.saveCrf1FormInternal(getContext(),new Gson().toJson(CRF1Activity.formCrf1DTO, FormCrf1DTO.class));
 
                 }
 
@@ -431,8 +431,8 @@ public class Crf3cQ26LwMuac extends Fragment {
         if(turn>=3){ muacList.add(getMuacLwObject(3,et_r1_mauc3,et_r2_mauc3)); }
         if(turn>=4){ muacList.add(getMuacLwObject(4,et_r1_mauc4,et_r2_mauc4)); }
 
-        CRF3cActivity.formCrf3cDTO.setMuacLwCrf3c(muacList);
-        CRF3cActivity.formCrf3cDTO.setQ27(avrageVal+"");
+        CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setMuacLwCrf3c(muacList);
+        CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setQ27(avrageVal+"");
 
     }
 

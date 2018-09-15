@@ -35,6 +35,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/ll_week"
                     android:weightSum="2"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"

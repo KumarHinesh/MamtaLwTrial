@@ -24,6 +24,7 @@ import java.util.Set;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.messageDialogBox.SingleButtonDialog;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.LoginDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
@@ -60,8 +61,8 @@ public class UserLoginActivity extends AppCompatActivity {
    //     startActivity(new Intent(UserLoginActivity.this,CRF3bActivity.class));
         //startActivity(new Intent(UserLoginActivity.this,CRF2DashboargActivity.class));
        //startActivity(new Intent(UserLoginActivity.this,CRF3cActivity.class));
-     //   startActivity(new Intent(UserLoginActivity.this,CRF4aActivity.class));
-     //   this.finish();
+       // startActivity(new Intent(UserLoginActivity.this,Crf6Activity.class));
+      //  this.finish();
         spreferencesTeamId = getSharedPreferences("teamId",
                 UserLoginActivity.MODE_PRIVATE);
         sharedpreferences = getSharedPreferences("Values",
@@ -124,6 +125,7 @@ public class UserLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
+
                 TeamDTO teamDTO = new TeamDTO();
                 strUser = etUserName.getText().toString();
                 teamDTO.setUserName(etUserName.getText().toString().trim());
@@ -140,7 +142,10 @@ public class UserLoginActivity extends AppCompatActivity {
 
                 }else {
 
-                    SingleButtonDialog.singleBtnDialog(UserLoginActivity.this,"First Connect With Internet",
+
+
+
+                       SingleButtonDialog.singleBtnDialog(UserLoginActivity.this,"First Connect With Internet",
                             "Pehle Internet Say Connect hpjai");
                 }
             }
@@ -208,6 +213,8 @@ public class UserLoginActivity extends AppCompatActivity {
                                     break;
 
                                 case "ANTHRO":
+                                    startActivity(new Intent(UserLoginActivity.this,AnthroDashBoard.class));
+                                    finish();
                                     Toast.makeText(getApplicationContext(), "Anthro is not put ",Toast.LENGTH_LONG).show();
                                     //finish();
                                     break;
@@ -222,6 +229,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                     finish();
                                     Toast.makeText(getApplicationContext(), "New Born is not put",Toast.LENGTH_LONG).show();
                                     break;
+
 
                                 case "COMPLIANCE":
                                     Toast.makeText(getApplicationContext(), "compliance is not put",Toast.LENGTH_LONG).show();

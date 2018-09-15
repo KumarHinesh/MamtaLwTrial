@@ -32,6 +32,7 @@ public class Crf5aQ59Counseling extends Fragment {
     ScrollView scrolView;
     Button btn_submit;
 
+    APIService mAPIService;
     ProgressDialog progressDialog;
 
     @Override
@@ -39,11 +40,12 @@ public class Crf5aQ59Counseling extends Fragment {
                              Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.fragment_crf5a_q59_counseling, container, false);
 
+        mAPIService = ApiUtils.getAPIService();
+
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setTitle("Sending...");
         progressDialog.setMessage("Please Wait...");
 
-        CRF4aActivity.formCrf4aDTO.setCounsilStartTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
         scrolView = (ScrollView) view.findViewById(R.id.scrolView);
 
@@ -54,70 +56,68 @@ public class Crf5aQ59Counseling extends Fragment {
             @Override
             public void onClick(View v) {
 
-
                progressDialog.show();
-               final APIService mAPIService = ApiUtils.getAPIService();
-
-               CRF4aActivity.formCrf4aDTO.setCounsilEndTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
-
-                Crf4Complete crf4Complete = new Crf4Complete();
-
-                crf4Complete.setFormCrf4a(CRF4aActivity.formCrf4aDTO);
-                crf4Complete.setFormCrf4b(CRF4aActivity.formCrf4bDTO);
-
-                CRF4aActivity.formCrf5a.setFollowupStatus(Constants.COMPLETED);
-                CRF4aActivity.formCrf5a.setFormStatus(Constants.COMPLETED);
-
-                mAPIService.postCrf4Complete(crf4Complete).enqueue(new Callback<Crf4Complete>() {
-                    @Override
-                    public void onResponse(Call<Crf4Complete> call, Response<Crf4Complete> response) {
-
-                        if(response.code()==200){
-
-                            Log.d("0001010", "send Form 4Alll");
-
-                        }
-
-                    }
-
-                    @Override
-                    public void onFailure(Call<Crf4Complete> call, Throwable t) {
 
 
-                        mAPIService.postCrf5a(CRF4aActivity.formCrf5a).enqueue(new Callback<FormCrf5a>() {
-                            @Override
-                            public void onResponse(Call<FormCrf5a> call, Response<FormCrf5a> response) {
+               CRF4aActivity.formCrf5a.setCounsilEndTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
 
-                                if(response.code()==200){
+               if (CRF4aActivity.followupDto.getFollowupDetails().getChd().equalsIgnoreCase("y")){
 
 
 
-                                }
+               }else {
 
 
+                   Crf4Complete crf4Complete = new Crf4Complete();
 
-                            }
+                   crf4Complete.setFormCrf4a(CRF4aActivity.formCrf4aDTO);
+                   crf4Complete.setFormCrf4b(CRF4aActivity.formCrf4bDTO);
 
-                            @Override
-                            public void onFailure(Call<FormCrf5a> call, Throwable t) {
+                   CRF4aActivity.formCrf5a.setFollowupStatus(Constants.COMPLETED);
+                   CRF4aActivity.formCrf5a.setFormStatus(Constants.COMPLETED);
 
-                                Log.d("0001010", "send Form 5Alll");
+                   mAPIService.postCrf4Complete(crf4Complete).enqueue(new Callback<Crf4Complete>() {
+                       @Override
+                       public void onResponse(Call<Crf4Complete> call, Response<Crf4Complete> response) {
 
-                                progressDialog.dismiss();
-                                startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
-                                getActivity().finish();
+                           if(response.code()==200){
+                               Log.d("0001010", "send Form 4Alll");
+                           }
+
+                       }
+
+                       @Override
+                       public void onFailure(Call<Crf4Complete> call, Throwable t) {
+
+                           mAPIService.postCrf5a(CRF4aActivity.formCrf5a).enqueue(new Callback<FormCrf5a>() {
+                               @Override
+                               public void onResponse(Call<FormCrf5a> call, Response<FormCrf5a> response) {
+
+                                   if(response.code()==200){
+
+                                   }
+                               }
+
+                               @Override
+                               public void onFailure(Call<FormCrf5a> call, Throwable t) {
+
+                                   Log.d("0001010", "send Form 5Alll");
+                                   CRF4aActivity.startHour = 0;
+                                   progressDialog.dismiss();
+                                   startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
+                                   getActivity().finish();
+
+                                   System.out.println(t.getMessage()+"000011");
+
+                               }
+                           });
+
+                       }
+                   });
 
 
-                                System.out.println(t.getMessage()+"000011");
-
-                            }
-                        });
-
-
-
-                    }
-                });
+               }
 
 
 
@@ -148,5 +148,27 @@ public class Crf5aQ59Counseling extends Fragment {
             }
         });
     }
+
+
+    public void sendDataToServerOnly5a(){
+
+        mAPIService.postCrf5a(CRF4aActivity.formCrf5a).enqueue(new Callback<FormCrf5a>() {
+            @Override
+            public void onResponse(Call<FormCrf5a> call, Response<FormCrf5a> response) {
+
+
+
+            }
+
+            @Override
+            public void onFailure(Call<FormCrf5a> call, Throwable t) {
+
+            }
+        });
+
+
+
+    }
+
 
 }

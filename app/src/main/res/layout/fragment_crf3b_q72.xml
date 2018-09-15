@@ -7,7 +7,6 @@
     tools:context=".fragments.crf3b_fragments.Crf3bQ72Fragment">
 
 
-
     <LinearLayout
         android:layout_marginLeft="2dp"
         android:layout_marginTop="8dp"
@@ -1076,7 +1075,7 @@
                                 android:id="@+id/tv_q73_l"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="12. Vomiting"
+                                android:text="12. persistent vomiting or vomit all feed"
                                 android:textColor="@color/black"
                                 android:textSize="20sp" />
 
