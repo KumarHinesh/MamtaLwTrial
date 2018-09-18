@@ -1,5 +1,7 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf6_fragments;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,7 +15,14 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.AnthroDashBoard;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.Crf6Activity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf6.FormCrf6;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class Crf6Q17And18Fragment extends Fragment {
@@ -42,20 +51,38 @@ public class Crf6Q17And18Fragment extends Fragment {
 
                     Crf6Activity.formCrf6.setQ18(Integer.parseInt(rb_q18.getTag().toString()));
                     Crf6Activity.formCrf6.setQ17(Integer.parseInt(Crf6Activity.followupsDTO.getFollowupDetails().getAge()));
-                    Fragment fragment;
+                    Fragment fragment = null;
 
                     if(rb_q18.getTag().equals("1")){
+
                          fragment = new Crf6BabyWeightFragment();
+
                     }else {
-                        fragment = new Crf6_q28();
+
+                        if ((Crf6Activity.followupsDTO.getFollowupDetails().getPwd() != null &&
+                                Crf6Activity.followupsDTO.getFollowupDetails().getPwd().equalsIgnoreCase("N")) ||
+                                (Crf6Activity.followupsDTO.getFollowupDetails().getPwd() == null)){
+
+                            fragment = new Crf6_q28();
+
+                        }else {
+
+                            fragment = new VaccinationFragment();
+                        }
+
                     }
 
                     Crf6Activity.formCrf6.setQ18(Integer.parseInt(rb_q18.getTag().toString()));
 
-                    FragmentManager fragmentManager = getFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_layoutcrf6, fragment);
-                    fragmentTransaction.commit();
+                    if (fragment != null){
+
+                        FragmentManager fragmentManager = getFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layoutcrf6, fragment);
+                        fragmentTransaction.commit();
+
+                    }
+
                 }
             }
         });
@@ -68,6 +95,34 @@ public class Crf6Q17And18Fragment extends Fragment {
         });
 
         return view;
+    }
+
+    public void sendDataToServer(){
+
+        final ProgressDialog progressDialog = new ProgressDialog(getContext());
+        progressDialog.setMessage("Sending");
+        progressDialog.setTitle("Wait..");
+        progressDialog.show();
+
+        APIService mAPIService = ApiUtils.getAPIService();
+
+        mAPIService.postCrf6(Crf6Activity.formCrf6).enqueue(new Callback<FormCrf6>() {
+            @Override
+            public void onResponse(Call<FormCrf6> call, Response<FormCrf6> response) {
+                progressDialog.dismiss();
+                startActivity(new Intent(getActivity(), AnthroDashBoard.class));
+                getActivity().finish();
+            }
+
+            @Override
+            public void onFailure(Call<FormCrf6> call, Throwable t) {
+                progressDialog.dismiss();
+                startActivity(new Intent(getActivity(), AnthroDashBoard.class));
+                getActivity().finish();
+
+            }
+        });
+
     }
 
 }

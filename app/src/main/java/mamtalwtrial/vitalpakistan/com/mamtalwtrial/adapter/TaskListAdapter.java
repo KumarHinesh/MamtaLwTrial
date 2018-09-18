@@ -11,24 +11,25 @@ import java.util.ArrayList;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupDetails;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
 
 public class TaskListAdapter extends BaseAdapter {
 
-    private ArrayList<FollowupDetails> followupDetails;
+    private ArrayList<FollowupsDTO> followupsDTOS;
     private ArrayList<String> listOfAddres;
     private ArrayList<String> listOfAst;
     private ArrayList<String> listOfTask;
     private Context context;
     int checkedPosition =-1;
 
-    public TaskListAdapter(Context context, ArrayList<FollowupDetails> followupDetails) {
+    public TaskListAdapter(Context context, ArrayList<FollowupsDTO> followupDetails) {
         this.context = context;
-        this.followupDetails = followupDetails;
+        this.followupsDTOS = followupDetails;
     }
 
     @Override
     public int getCount() {
-        return followupDetails.size();
+        return followupsDTOS.size();
     }
 
     @Override
@@ -50,16 +51,18 @@ public class TaskListAdapter extends BaseAdapter {
         }
 
         TextView tv_showName = (TextView) convertView.findViewById(R.id.tv_showName);
-        tv_showName.setText(followupDetails.get(position).getName());
+        tv_showName.setText(followupsDTOS.get(position).getFollowupDetails().getName());
 
         TextView tv_astId = (TextView) convertView.findViewById(R.id.tv_astId);
-        tv_astId.setText(followupDetails.get(position).getAssistId());
+        tv_astId.setText(followupsDTOS.get(position).getFollowupDetails().getAssistId());
 
 
         TextView tv_site = (TextView) convertView.findViewById(R.id.tv_site);
-        tv_site.setText(followupDetails.get(position).getSite()+"-"+followupDetails.get(position).getPara()+"-"+
-                followupDetails.get(position).getBlock()+"-"+followupDetails.get(position).getStructure()+"-"+
-                followupDetails.get(position).getHouseholdOrFamily());
+        tv_site.setText(followupsDTOS.get(position).getFollowupDetails().getSite()+"-"+followupsDTOS.get(position).getFollowupDetails().getPara()+"-"+
+                followupsDTOS.get(position).getFollowupDetails().getBlock()+"-"+followupsDTOS.get(position).getFollowupDetails().getStructure()+"-"+
+                followupsDTOS.get(position).getFollowupDetails().getHouseholdOrFamily());
+
+        //TextView muac_dumy = (TEx)
 
         return convertView;
     }

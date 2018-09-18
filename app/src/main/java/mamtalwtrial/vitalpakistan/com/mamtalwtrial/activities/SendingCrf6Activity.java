@@ -19,7 +19,9 @@ import retrofit2.Response;
 
 public class SendingCrf6Activity extends AppCompatActivity {
 
+    int posit = -1;
     ListView list_view;
+    FormCRF6CollectionDTO formCRF6CollectionDTO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public class SendingCrf6Activity extends AppCompatActivity {
 
         list_view = (ListView) findViewById(R.id.list_view);
 
-        FormCRF6CollectionDTO formCRF6CollectionDTO = new FormCRF6CollectionDTO();
+        formCRF6CollectionDTO = new FormCRF6CollectionDTO();
         formCRF6CollectionDTO = SaveAndReadInternalData.getSavedCrf6FromsList(SendingCrf6Activity.this);
         SendingCrf6Adapter adapter = new SendingCrf6Adapter(SendingCrf6Activity.this, formCRF6CollectionDTO);
         list_view.setAdapter(adapter);
@@ -37,13 +39,15 @@ public class SendingCrf6Activity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                sendDataToServer(formCRF6CollectionDTO.getForms().get(position));
+                posit = position;
             }
+
         });
 
     }
 
     public void sendDataToServer(FormCrf6 formCrf6){
-
 
         APIService mAPIService = ApiUtils.getAPIService();
 

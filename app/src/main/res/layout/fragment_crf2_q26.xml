@@ -70,6 +70,7 @@
                 <EditText
                     android:id="@+id/et_readerId_1"
                     android:hint="Code of Reader 1"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
@@ -79,6 +80,7 @@
 
                 <EditText
                     android:id="@+id/et_readerId_2"
+                    android:inputType="number"
                     android:hint="Code of Reader 2"
                     android:layout_width="match_parent"
                     android:layout_marginTop="5dp"

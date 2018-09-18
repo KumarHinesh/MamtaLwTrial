@@ -23,6 +23,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf5.FormCrf5a;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -82,6 +83,7 @@ public class Crf5aQ59Counseling extends Fragment {
                        public void onResponse(Call<Crf4Complete> call, Response<Crf4Complete> response) {
 
                            if(response.code()==200){
+                               SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
                                Log.d("0001010", "send Form 4Alll");
                            }
 
@@ -95,13 +97,14 @@ public class Crf5aQ59Counseling extends Fragment {
                                public void onResponse(Call<FormCrf5a> call, Response<FormCrf5a> response) {
 
                                    if(response.code()==200){
-
+                                       SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
                                    }
                                }
 
                                @Override
                                public void onFailure(Call<FormCrf5a> call, Throwable t) {
 
+                                   SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
                                    Log.d("0001010", "send Form 5Alll");
                                    CRF4aActivity.startHour = 0;
                                    progressDialog.dismiss();

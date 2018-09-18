@@ -3,6 +3,7 @@ package mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf6;
 import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Vaccination;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3b.StudiesDTO;
 
 public class FormCrf6 {
@@ -12,6 +13,8 @@ public class FormCrf6 {
 
     private Integer followupId;
     private Integer followupStatus;
+
+    private String followUpNum;
 
     private TeamDTO team;
     private StudiesDTO studies;
@@ -234,5 +237,13 @@ public class FormCrf6 {
 
     public void setFollowupStatus(Integer followupStatus) {
         this.followupStatus = followupStatus;
+    }
+
+    public String getFollowUpNum() {
+        return followUpNum;
+    }
+
+    public void setFollowUpNum(String followUpNum) {
+        this.followUpNum = followUpNum;
     }
 }

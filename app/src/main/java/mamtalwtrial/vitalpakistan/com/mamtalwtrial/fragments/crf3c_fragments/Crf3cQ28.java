@@ -284,10 +284,6 @@ public class Crf3cQ28 extends Fragment {
 
             validation = true;
         }else{
-            //////////
-
-
-
 
             if (getTextFromField(et_q29, tv_q29).equals("")) {
                 validation = false;
@@ -379,7 +375,7 @@ public class Crf3cQ28 extends Fragment {
             if(isRBCheckedThree(rg_q32, rb_q32, tv_q32).equals("")){
                 validation = false;
             }else {
-                CRF3bActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setQ32(isRBCheckedThree(rg_q32, rb_q32, tv_q32));
+                CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setQ32(isRBCheckedThree(rg_q32, rb_q32, tv_q32));
             }
 
             if(ll_q33.getVisibility()==View.VISIBLE){
@@ -393,12 +389,7 @@ public class Crf3cQ28 extends Fragment {
             }
 
 
-
-
-            /////////////////
         }
-
-
 
 
       return   validation;

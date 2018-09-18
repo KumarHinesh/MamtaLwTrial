@@ -72,7 +72,6 @@ public class Sending2And3AllAdapter extends BaseAdapter {
                 pregnantWomanDTO = formCrf2toCrf3AllCollection.getForms().get(position).getFormCrf3cDTO().getPregnantWoman();
             }
 
-
         }
         if(!pregnantWomanDTO.getName().isEmpty()){
             tv_showName.setText(""+pregnantWomanDTO.getName()
@@ -88,13 +87,10 @@ public class Sending2And3AllAdapter extends BaseAdapter {
             /*if (formCrf2toCrf3AllCollection.getForms().get(position).getFormCrf3cDTO().getPregnantWoman().getContactNumbers()!=null)
                 tv_contact.setText(""+formCrf2toCrf3AllCollection.getForms().get(position).getFormCrf3cDTO().getContactNumbers().toArray());*/
         }
-
-
         return convertView;
     }
 
     public void refresh(){
-
         notifyDataSetChanged();
     }
 

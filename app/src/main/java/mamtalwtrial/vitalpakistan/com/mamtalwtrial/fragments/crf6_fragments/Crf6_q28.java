@@ -1,6 +1,7 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf6_fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,12 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.Crf6Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf6_fragments.Crf6WeightLW;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf6_fragments.VaccinationFragment;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf6.FormCrf6;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class Crf6_q28 extends Fragment {
@@ -70,14 +77,22 @@ public class Crf6_q28 extends Fragment {
                 if (rb_q28.getTag() != null){
 
                     Crf6Activity.formCrf6.setQ28(rb_q28.getTag().toString());
-                    Fragment fragment;
+                    Fragment fragment = null;
 
-                    if (rb_q28.getTag().equals("2")){
+                    if (rb_q28.getTag().equals("2") &&
+                            (Crf6Activity.followupsDTO.getFollowupDetails().getChd()
+                                    != null && Crf6Activity.followupsDTO.getFollowupDetails().getChd().equalsIgnoreCase("Y"))){
 
+                        // send Data to server
+
+                    }else if (rb_q28.getTag().equals("2") &&
+                            (Crf6Activity.followupsDTO.getFollowupDetails().getChd()
+                                    == null)){
                         fragment = new VaccinationFragment();
                     }else {
                         fragment = new Crf6WeightLW();
                     }
+
 
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -94,4 +109,28 @@ public class Crf6_q28 extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+
+    public void sendDataToServer(){
+
+        APIService mAPIService = ApiUtils.getAPIService();
+
+        mAPIService.postCrf6(Crf6Activity.formCrf6).enqueue(new Callback<FormCrf6>() {
+            @Override
+            public void onResponse(Call<FormCrf6> call, Response<FormCrf6> response) {
+
+                startActivity(new Intent(getActivity(), Crf6Activity.class));
+                getActivity().finish();
+            }
+
+            @Override
+            public void onFailure(Call<FormCrf6> call, Throwable t) {
+
+                startActivity(new Intent(getActivity(), Crf6Activity.class));
+                getActivity().finish();
+
+            }
+        });
+
+    }
+
 }

@@ -39,21 +39,21 @@ public class Crf5bTaskFragmnet extends Fragment {
 
         if(CRF4And5Dashboard.listOf5bFollowUps!=null && !CRF4And5Dashboard.listOf5bFollowUps.isEmpty()){
 
-            for(int i=0; i<CRF4And5Dashboard.listOf5bFollowUps.size(); i++){
 
-                listfollowUpDetails.add(CRF4And5Dashboard.listOf5bFollowUps.get(i).getFollowupDetails());
-
-            }
-
-            taskListAdapter = new TaskListAdapter(getContext(), listfollowUpDetails);
+            taskListAdapter = new TaskListAdapter(getContext(), CRF4And5Dashboard.listOf5bFollowUps);
             listView.setAdapter(taskListAdapter);
+
         }
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                startActivity(new Intent(getContext(), CRF5bActivity.class).putExtra("followupdetails",new Gson().toJson(CRF4And5Dashboard.listOf5bFollowUps.get(position))));
+                String[] data = new String[2];
+                data[0] = getPosition(position)+"";
+                data[1] = new Gson().toJson(CRF4And5Dashboard.listOf5bFollowUps.get(position));
+
+                startActivity(new Intent(getContext(), CRF5bActivity.class).putExtra("data", data));
 
             }
         });
@@ -61,5 +61,25 @@ public class Crf5bTaskFragmnet extends Fragment {
 
         return view;
     }
+
+    public int getPosition(int posi){
+
+        int posit = -1;
+
+        for (int i =0; i<CRF4And5Dashboard.listOfFollowUps.size(); i++){
+
+            if (CRF4And5Dashboard.listOfFollowUps.get(i).getFollowupDetails().
+                    getAssistId().equalsIgnoreCase(CRF4And5Dashboard.listOf5bFollowUps.get(posi).getFollowupDetails()
+                    .getAssistId())){
+
+                posit = i;
+
+                break;
+            }
+        }
+
+        return posit;
+    }
+
 
 }

@@ -25,9 +25,11 @@ import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CounselingCRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.Crf6Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Vaccination;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf6.OccipitoFrontalHeadCrf6;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
@@ -117,12 +119,26 @@ public class Crf6BabyHeadReading extends Fragment {
 
                     dataInsertInForm();
 
-                    Crf6_q28 fragment = new Crf6_q28();
-                    FragmentManager fragmentManager = getFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_layoutcrf6, fragment);
-                    fragmentTransaction.commit();
-                }
+                    if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() != null
+                            && CRF4aActivity.followupDto.getFollowupDetails().getPwd().equals("y")){
+
+                        VaccinationFragment vaccinationFragment = new VaccinationFragment();
+                        FragmentManager fragmentManager = getFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layoutcrf6, vaccinationFragment);
+                        fragmentTransaction.commit();
+
+                    }else {
+
+                        Crf6_q28 fragment = new Crf6_q28();
+                        FragmentManager fragmentManager = getFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layoutcrf6, fragment);
+                        fragmentTransaction.commit();
+                    }
+
+              }
+
 
             }
         });

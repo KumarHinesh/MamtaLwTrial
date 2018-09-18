@@ -42,7 +42,6 @@ public class CRF1Activity extends AppCompatActivity {
         getSite = getSharedPreferences("site",CRF1Activity.MODE_PRIVATE).getString("val","null");
         formCrf1DTO =   new Gson().fromJson(getIntent().getStringExtra("form"),FormCrf1DTO.class) ;
 
-
         try{
 
             b = formCrf1DTO.getPregnantWoman()!= null;

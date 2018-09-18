@@ -31,7 +31,8 @@ public class CRF3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_crf3);
 
         formsCrf2AndCrf3All = new Gson().fromJson(getIntent().getStringExtra("forms"),FormsCrf2AndCrf3All.class);
-
+        formsCrf2AndCrf3All.setCrf3aStatus(true);
+        formsCrf2AndCrf3All.setFormCrf3aDTO(new FormCrf3aDTO());
         formsCrf2AndCrf3All.getFormCrf3aDTO().setPregnantWoman(formsCrf2AndCrf3All.getFormCrf2DTO().getPregnantWoman());
         TeamDTO teamDTO = new TeamDTO();
         teamDTO.setId(getSharedPreferences("teamId",CRF3Activity.MODE_PRIVATE).getInt("id",-1));

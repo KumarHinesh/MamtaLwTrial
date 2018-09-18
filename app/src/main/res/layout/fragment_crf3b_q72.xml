@@ -4424,35 +4424,35 @@
                 <RadioButton
                     android:tag="1"
                     android:textColor="@color/black"
-                    android:text="Well baby (Sahi ha)"
+                    android:text="baby is healthy/well"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:tag="2"
                     android:textColor="@color/black"
-                    android:text="Recovered from illness (beemari dur ho gay)"
+                    android:text="Previously ill but now improved"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:tag="3"
                     android:textColor="@color/black"
-                    android:text="Still ill, but better than before (abhi bh beemar ha laikin pehlay sa behtar ha)"
+                    android:text="Baby is currently ill"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:tag="4"
                     android:textColor="@color/black"
-                    android:text="Condition has deteriorated (tabiyat aur kharan ho gay)"
+                    android:text="Baby is stil ill and no improvment or condition has deteriorated"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:tag="9"
                     android:textColor="@color/black"
-                    android:text="Don’t  know "
+                    android:text="Don’t  know"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 

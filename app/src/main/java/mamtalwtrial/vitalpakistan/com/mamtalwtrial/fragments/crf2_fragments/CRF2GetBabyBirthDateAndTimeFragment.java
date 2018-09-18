@@ -212,7 +212,11 @@ public class CRF2GetBabyBirthDateAndTimeFragment extends Fragment {
                         b = true;
                     }
                 }, year, month, day);
-                mdiDialog.getDatePicker().setMaxDate(new Date().getTime());
+
+
+                Calendar calendar1 = Calendar.getInstance();
+                calendar1.add(Calendar.DAY_OF_MONTH, -1);
+                mdiDialog.getDatePicker().setMaxDate(calendar1.getTimeInMillis());
                 mdiDialog.show();
 
 

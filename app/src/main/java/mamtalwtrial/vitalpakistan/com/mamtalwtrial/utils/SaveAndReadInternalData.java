@@ -290,9 +290,8 @@ public  class SaveAndReadInternalData {
         }
 
 
-
         try {
-            FileOutputStream outputStream = context.openFileOutput(CRF2_3ALL_FORMS_FILE_NAME, Context.MODE_APPEND);
+            FileOutputStream outputStream = context.openFileOutput(CRF2_3ALL_FORMS_FILE_NAME, Context.MODE_PRIVATE);
             outputStream.write((new Gson().toJson(formCrf2toCrf3AllCollection)).getBytes());
             outputStream.close();
 
@@ -354,7 +353,6 @@ public  class SaveAndReadInternalData {
 
             formsCrf2AndCrf3All =  formCrf2toCrf3AllCollection.getForms().remove(index);
 
-
             try {
                 FileOutputStream outputStream = context.openFileOutput(CRF2_3ALL_FORMS_FILE_NAME, Context.MODE_PRIVATE);
                 outputStream.write((new Gson().toJson(formCrf2toCrf3AllCollection)).getBytes());
@@ -365,7 +363,6 @@ public  class SaveAndReadInternalData {
             }
 
         }
-
 
 
         if(formsCrf2AndCrf3All!=null)
@@ -835,38 +832,10 @@ public  class SaveAndReadInternalData {
     }
 
     //perfect working followups saving
-    public static void saveFollowUpsInternal(Context context, FollowupsDTO followupsDTO){
-
-        FollowUpsCollectionDTO followUpsCollectionDTO = new FollowUpsCollectionDTO();
-
-        String[] stringArrayOfObject = null;
+    public static void saveFollowUpsInternal(Context context,  FollowUpsCollectionDTO followUpsCollectionDTO){
 
         try {
-            FileInputStream fin =  context.openFileInput(FOLLOWUPUS_FILE_NAME_NEW);
-            int c;
-            String temp="";
-            while( (c = fin.read()) != -1){
-                temp = temp + Character.toString((char)c);
-            }
 
-            followUpsCollectionDTO = new Gson().fromJson(temp,FollowUpsCollectionDTO.class);
-
-
-        }
-        catch(Exception e){
-        }
-
-        if(followUpsCollectionDTO.getFollowUpsCollection()!=null){
-            followUpsCollectionDTO.getFollowUpsCollection().add(followupsDTO);
-        }else {
-            ArrayList<FollowupsDTO> arrayList = new ArrayList<FollowupsDTO>();
-            arrayList.add(followupsDTO);
-            followUpsCollectionDTO.setFollowUpsCollection(arrayList);
-        }
-
-
-
-        try {
             FileOutputStream outputStream = context.openFileOutput(FOLLOWUPUS_FILE_NAME_NEW, Context.MODE_PRIVATE);
             outputStream.write((new Gson().toJson(followUpsCollectionDTO)).getBytes());
             outputStream.close();
@@ -874,7 +843,6 @@ public  class SaveAndReadInternalData {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     //perfect working followups getAll followups
@@ -925,7 +893,7 @@ public  class SaveAndReadInternalData {
 
         if(followUpsCollectionDTO!=null){
 
-            followupsDTO = followUpsCollectionDTO.getFollowUpsCollection().remove(index);
+//            followupsDTO = followUpsCollectionDTO.getFollowUpsCollection().remove(index);
 
             try {
                 FileOutputStream outputStream = context.openFileOutput(FOLLOWUPUS_FILE_NAME_NEW, Context.MODE_PRIVATE);
@@ -937,7 +905,6 @@ public  class SaveAndReadInternalData {
             }
 
         }
-
 
 
         if(followupsDTO!=null)

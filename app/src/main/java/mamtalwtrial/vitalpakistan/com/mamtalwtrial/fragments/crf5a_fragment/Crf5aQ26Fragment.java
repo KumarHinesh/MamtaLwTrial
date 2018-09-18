@@ -233,6 +233,26 @@ public class Crf5aQ26Fragment extends Fragment {
 
                     Fragment fragment = null;
 
+                    if (CRF4aActivity.followupDto.getFollowupDetails().getChd() != null){
+
+                        if (CRF4aActivity.followupDto.getFollowupDetails().getChd().equalsIgnoreCase("y")){
+                            fragment = new Crf5aQ59Counseling();
+                        }else if (CRF4aActivity.followupDto.getFollowupDetails().getChd().equalsIgnoreCase("n")){
+                            fragment = new Crf4aCounselingQ79();
+                        }
+
+                    }else if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() == null){
+
+                        if (CRF4aActivity.formCrf4bDTO.getQ20().equalsIgnoreCase("1")){
+                            fragment = new Crf4aCounselingQ79();
+                        }else if (CRF4aActivity.formCrf4bDTO.getQ20().equalsIgnoreCase("2")){
+
+                            fragment = new Crf4aCounselingQ79();
+                        }
+                    }
+
+
+                    ////
                     if (CRF4aActivity.followupDto.getFollowupDetails().getChd().equalsIgnoreCase("y")){
 
                         fragment = new Crf5aQ59Counseling();
@@ -1334,7 +1354,6 @@ public class Crf5aQ26Fragment extends Fragment {
         ll_q37_q38 = (LinearLayout) view.findViewById(R.id.ll_q37_q38);
         ll_q52 = (LinearLayout) view.findViewById(R.id.ll_q52);
         ll_q53_q58 = (LinearLayout) view.findViewById(R.id.ll_q53_q58);
-
 
 
     }

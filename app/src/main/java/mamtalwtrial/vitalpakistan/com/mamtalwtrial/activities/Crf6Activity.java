@@ -1,5 +1,6 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -7,17 +8,16 @@ import com.google.gson.Gson;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf6_fragments.PwInfoCrf6;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf6_fragments.VaccinationFragment;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.DSSAddressDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.TeamDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3b.StudiesDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf6.FormCrf6;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf6.Vaccination;
 
 public class Crf6Activity extends AppCompatActivity {
 
+    public static int selectedPosition = -1;
     public static FormCrf6 formCrf6;
     public static StudiesDTO studiesDTO;
     public static FollowupsDTO followupsDTO;
@@ -28,7 +28,13 @@ public class Crf6Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crf6);
 
-        followupsDTO = new Gson().fromJson(getIntent().getStringExtra("followupdetails"),FollowupsDTO.class);
+        Intent intent = getIntent();
+
+        String[] data = intent.getStringArrayExtra("data");
+
+        selectedPosition = Integer.parseInt(data[0]);
+        followupsDTO = new Gson().fromJson(data[1],FollowupsDTO.class);
+
 
         TeamDTO teamDTO = new TeamDTO();
 
@@ -43,6 +49,7 @@ public class Crf6Activity extends AppCompatActivity {
 
         formCrf6.setTeam(teamDTO);
 
+        formCrf6.setFollowUpNum(followupsDTO.getFollowupDetails().getfNum());
         formCrf6.setFollowupId(followupsDTO.getId());
 
         studiesDTO = new StudiesDTO();
@@ -74,4 +81,9 @@ public class Crf6Activity extends AppCompatActivity {
         return   pregnantWomanDTO;
     }
 
+
+    @Override
+    public void onBackPressed() {
+       //s super.onBackPressed();
+    }
 }

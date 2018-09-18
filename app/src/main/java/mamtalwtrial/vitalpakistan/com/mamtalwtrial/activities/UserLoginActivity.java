@@ -23,6 +23,7 @@ import java.util.Set;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.messageDialogBox.SingleButtonDialog;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowUpsCollectionDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.LoginDTO;
@@ -124,8 +125,6 @@ public class UserLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
                 TeamDTO teamDTO = new TeamDTO();
                 strUser = etUserName.getText().toString();
                 teamDTO.setUserName(etUserName.getText().toString().trim());
@@ -135,15 +134,12 @@ public class UserLoginActivity extends AppCompatActivity {
 
                 if(WifiConnectOrNot.haveNetworkConnection(UserLoginActivity.this)){
 
-                    sendUserPassword(teamDTO);
                     progressDialog.setTitle("Logging in..");
                     progressDialog.setMessage("Wait");
                     progressDialog.show();
+                    sendUserPassword(teamDTO);
 
                 }else {
-
-
-
 
                        SingleButtonDialog.singleBtnDialog(UserLoginActivity.this,"First Connect With Internet",
                             "Pehle Internet Say Connect hpjai");
@@ -166,6 +162,7 @@ public class UserLoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginDTO> call, Response<LoginDTO> response) {
 
                 ArrayList<String> jsonObjList = new ArrayList<String>();
+                ArrayList<FollowupsDTO> listOfFollowups = new ArrayList<>();
 
                     if(response.code()==404){
                         progressDialog.dismiss();
@@ -182,10 +179,15 @@ public class UserLoginActivity extends AppCompatActivity {
 
                                     Gson gson  =  new Gson();
 
+                                    listOfFollowups.add(loginDTO.getFollowups().get(i));
+
                                     jsonObjList.add(gson.toJson(loginDTO.getFollowups().get(i)));
+                                  //  SaveAndReadInternalData.saveFollowUpsInternal(UserLoginActivity.this, loginDTO.getFollowups().get(i));
 
                                 }
-
+                                FollowUpsCollectionDTO followUpsCollectionDTO = new FollowUpsCollectionDTO();
+                                followUpsCollectionDTO.setFollowUpsCollection(listOfFollowups);
+                                SaveAndReadInternalData.saveFollowUpsInternal(UserLoginActivity.this, followUpsCollectionDTO);
                                 SaveAndReadInternalData.saveFollowUpsList(UserLoginActivity.this,jsonObjList);
                             }
 

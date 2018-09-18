@@ -19,6 +19,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.adapter.FollowUpListAdapter;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.adapter.PageAdapter;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.adapter.TaskListAdapter;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowUpsCollectionDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupDetails;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
@@ -33,7 +34,7 @@ public class CRF4And5Dashboard extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
 
-    ArrayList<FollowupsDTO> listOfFollowUps;
+    public static ArrayList<FollowupsDTO> listOfFollowUps;
     ListView listView;
     TextView tv_site, tv_astId;
 
@@ -66,7 +67,6 @@ public class CRF4And5Dashboard extends AppCompatActivity {
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
-
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -97,17 +97,17 @@ public class CRF4And5Dashboard extends AppCompatActivity {
 
 
         listfollowUpDetails = new ArrayList<FollowupDetails>();
-       // list_item = (ListView) findViewById(R.id.list_item);
-        listOfFollowUps = SaveAndReadInternalData.getFollowUpsList(CRF4And5Dashboard.this);
+
+        //listOfFollowUps = SaveAndReadInternalData.getFollowUpsList(CRF4And5Dashboard.this);
+
+        FollowUpsCollectionDTO followUpsCollectionDTO = new FollowUpsCollectionDTO();
+
+        followUpsCollectionDTO = SaveAndReadInternalData.getSavedFollowUpsList(CRF4And5Dashboard.this);
+
+        listOfFollowUps = followUpsCollectionDTO.getFollowUpsCollection();
 
         if(listOfFollowUps !=null && !listOfFollowUps.isEmpty()){
-
             insertDataInLists(listOfFollowUps);
-            /* for(int i=0; i<listOfFollowUps.size(); i++){
-
-                listfollowUpDetails.add(listOfFollowUps.get(i).getFollowupDetails());
-
-            }*/
         }
 
 //        taskListAdapter = new TaskListAdapter(getApplicationContext(),listfollowUpDetails);
@@ -144,6 +144,8 @@ public class CRF4And5Dashboard extends AppCompatActivity {
             }
         }
     }
+
+
 
 
     @Override

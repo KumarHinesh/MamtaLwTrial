@@ -939,7 +939,7 @@
                     android:id="@+id/tv_q53"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="During labor, but before delivery, did you receive any kind of injection to increase the intensity of pain?"
+                    android:text="Was woman given any kind of vaginal injection to increase the intensity of pain before labor - induction?"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -947,7 +947,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Labor k doran ya bacha paida karnay sa pehlay kya kisi kisam ka teeka lagaya gaya maa ko dard barhanay ka liya"
+                    android:text="Labor se pehlay kya kisi kisam ka injection lagaya gaya dard barhanay k liya"
                     android:textSize="20sp" />
 
 
@@ -1026,7 +1026,7 @@
                     android:id="@+id/tv_q54"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="During labor, but before delivery, did you receive any kind of vaginal tablet to increase the intensity of pain?"
+                    android:text="Was woman given any kind of vaginal tablet to increase the intensity of pain before labor - induction?"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -1034,7 +1034,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Labor k doran ya bacha paida karnay sa pehlay kya kisi kisam k goli rakhi gay bachay dani ma dard barhanay ka liya"
+                    android:text="Labor se pehlay kya kisi kisam ki goli rakhi gai bachay dani ma dard barhanay k liya"
                     android:textSize="20sp" />
 
 

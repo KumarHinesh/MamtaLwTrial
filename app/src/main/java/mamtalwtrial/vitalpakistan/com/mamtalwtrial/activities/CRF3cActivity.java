@@ -28,10 +28,11 @@ public class CRF3cActivity extends AppCompatActivity {
         setContentView(R.layout.activity_crf3c);
 
         formsCrf2AndCrf3All = new Gson().fromJson(getIntent().getStringExtra("forms"),FormsCrf2AndCrf3All.class) ;
+        formsCrf2AndCrf3All.setCrf3cStatus(true);
+        formsCrf2AndCrf3All.setFormCrf3cDTO(new FormCrf3cDTO());
 
         formsCrf2AndCrf3All.getFormCrf3cDTO().setPregnantWoman(formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman());
         formsCrf2AndCrf3All.getFormCrf3cDTO().setTeam(formsCrf2AndCrf3All.getFormCrf2DTO().getTeam());
-
 
         formsCrf2AndCrf3All.getFormCrf3cDTO().setQ27(formsCrf2AndCrf3All.getFormCrf2DTO().getQ30());
         formsCrf2AndCrf3All.getFormCrf3cDTO().setQ15(formsCrf2AndCrf3All.getFormCrf2DTO().getQ34());
@@ -78,8 +79,6 @@ public class CRF3cActivity extends AppCompatActivity {
 
         formsCrf2AndCrf3All.getFormCrf3cDTO().setQ2(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
         formsCrf2AndCrf3All.getFormCrf3cDTO().setQ3(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
-
-
 
         Crf3cQ16BabyLengthFragment fragment4 = new Crf3cQ16BabyLengthFragment();
 

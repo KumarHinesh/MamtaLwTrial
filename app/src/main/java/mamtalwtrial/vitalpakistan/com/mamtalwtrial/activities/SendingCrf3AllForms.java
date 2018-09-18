@@ -34,7 +34,7 @@ public class SendingCrf3AllForms extends AppCompatActivity {
 
 
     ListView list_view_send;
-
+    int positionOfselectlist = -1;
     FormCrf2toCrf3AllCollection formCrf2toCrf3AllCollection;
     ProgressDialog progressDialog;
     Sending2And3AllAdapter sending2And3AllAdapter;
@@ -56,6 +56,8 @@ public class SendingCrf3AllForms extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                positionOfselectlist = position;
+                progressDialog.show();
                 if(formCrf2toCrf3AllCollection.getForms().get(position).getCrf2Status()){
                     sendCrf2Form(formCrf2toCrf3AllCollection.getForms().get(position));
                 }else if (formCrf2toCrf3AllCollection.getForms().get(position).getCrf3aStatus()){
@@ -93,14 +95,14 @@ public class SendingCrf3AllForms extends AppCompatActivity {
 
                 if(response.code()==200){
 
-                    CRF3cActivity.formsCrf2AndCrf3All.setCrf2Status(false);
-                    CRF3cActivity.formsCrf2AndCrf3All.setFormCrf2DTO(null);
+                    body.setCrf2Status(false);
+                    body.setFormCrf2DTO(null);
                     sendCrf3aForm(body);
                     progressDialog.setMessage("CRF3A Sending Wait..");
 
                 }else {
 
-                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, list_view_send.getSelectedItemPosition());
+                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, positionOfselectlist);
                     SaveAndReadInternalData.saveCrf2And3AllForms(SendingCrf3AllForms.this, body);
                     progressDialog.dismiss();
                     singleBtnDialog(SendingCrf3AllForms.this,"Internet Connection is not Working properly "+ CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().getPregnantWoman().getName()+" forms save Internel Storage", "Internet Sahi nahi chal raha islia "+CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().getPregnantWoman().getName()+"+Ka Form Internal Storage m Save Kardia h");
@@ -110,7 +112,7 @@ public class SendingCrf3AllForms extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<FormCrf2DTO> call, Throwable t) {
-                SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, list_view_send.getSelectedItemPosition());
+                SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, positionOfselectlist);
                 SaveAndReadInternalData.saveCrf2And3AllForms(SendingCrf3AllForms.this, body);
                 progressDialog.dismiss();
                 singleBtnDialog(SendingCrf3AllForms.this,"Internet Connection is not Working properly "+ CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().getPregnantWoman().getName()+" forms save Internel Storage", "Internet Sahi nahi chal raha islia "+CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().getPregnantWoman().getName()+"+Ka Form Internal Storage m Save Kardia h");
@@ -135,7 +137,7 @@ public class SendingCrf3AllForms extends AppCompatActivity {
                     sendCrf3bForm(body);
 
                 }else {
-                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, list_view_send.getSelectedItemPosition());
+                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, positionOfselectlist);
                     SaveAndReadInternalData.saveCrf2And3AllForms(SendingCrf3AllForms.this, body);
                     progressDialog.dismiss();
                     singleBtnDialog(SendingCrf3AllForms.this,"Internet Connection is not Working properly "+ body.getFormCrf3cDTO().getPregnantWoman().getName()+" forms save Internel Storage", "Internet Sahi nahi chal raha islia "+body.getFormCrf3cDTO().getPregnantWoman().getName()+"+Ka Form Internal Storage m Save Kardia h");
@@ -144,7 +146,7 @@ public class SendingCrf3AllForms extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<FormCrf3aDTO> call, Throwable t) {
-                SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, list_view_send.getSelectedItemPosition());
+                SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, positionOfselectlist);
                 SaveAndReadInternalData.saveCrf2And3AllForms(SendingCrf3AllForms.this, body);
                 progressDialog.dismiss();
                 singleBtnDialog(SendingCrf3AllForms.this,"Internet Connection is not Working properly "+ body.getFormCrf3cDTO().getPregnantWoman().getName()+" forms save Internel Storage", "Internet Sahi nahi chal raha islia "+body.getFormCrf3cDTO().getPregnantWoman().getName()+"+Ka Form Internal Storage m Save Kardia h");
@@ -170,7 +172,7 @@ public class SendingCrf3AllForms extends AppCompatActivity {
                     progressDialog.setMessage("CRF3C Sending Wait..");
 
                 }else {
-                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, list_view_send.getSelectedItemPosition());
+                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, positionOfselectlist);
                     SaveAndReadInternalData.saveCrf2And3AllForms(SendingCrf3AllForms.this, body);
                     progressDialog.dismiss();
                     openPopUp(body);
@@ -180,7 +182,7 @@ public class SendingCrf3AllForms extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<FormCrf3bDTO> call, Throwable t) {
-                SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, list_view_send.getSelectedItemPosition());
+                SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, positionOfselectlist);
                 SaveAndReadInternalData.saveCrf2And3AllForms(SendingCrf3AllForms.this, body);
                 progressDialog.dismiss();
                 openPopUp(body);
@@ -189,7 +191,7 @@ public class SendingCrf3AllForms extends AppCompatActivity {
 
     }
 
-    public   void sendCrf3cForm(final FormsCrf2AndCrf3All body){
+    public void sendCrf3cForm(final FormsCrf2AndCrf3All body){
 
         APIService mAPIService = ApiUtils.getAPIService();
 
@@ -199,12 +201,10 @@ public class SendingCrf3AllForms extends AppCompatActivity {
 
                 if(response.code()==200){
                     progressDialog.dismiss();
+                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, positionOfselectlist);
                     singleBtnDialog(SendingCrf3AllForms.this,body.getFormCrf3cDTO().getPregnantWoman().getName()+" Form submited...:)",body.getFormCrf3cDTO().getPregnantWoman().getName()+" Ka Form Send Hogaya h..:)");
-                    body.setFormCrf3cDTO(null);
-                    body.setCrf3cStatus(false);
-                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, list_view_send.getSelectedItemPosition());
                 }else {
-                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, list_view_send.getSelectedItemPosition());
+                    SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, positionOfselectlist);
                     SaveAndReadInternalData.saveCrf2And3AllForms(SendingCrf3AllForms.this, body);
                     progressDialog.dismiss();
                     openPopUp(body);
@@ -214,7 +214,7 @@ public class SendingCrf3AllForms extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<FormCrf3cDTO> call, Throwable t) {
-                SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, list_view_send.getSelectedItemPosition());
+                SaveAndReadInternalData.deleteCrf2And3AllFromIndex(SendingCrf3AllForms.this, positionOfselectlist);
                 SaveAndReadInternalData.saveCrf2And3AllForms(SendingCrf3AllForms.this, body);
                 progressDialog.dismiss();
                 openPopUp(body);
@@ -244,7 +244,9 @@ public class SendingCrf3AllForms extends AppCompatActivity {
         btnConform.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                list_view_send.setAdapter(new Sending2And3AllAdapter(SendingCrf3AllForms.this, SaveAndReadInternalData.getSavedCrf2toCrf3AllCollection(SendingCrf3AllForms.this)));
+                if (SaveAndReadInternalData.getSavedCrf2toCrf3AllCollection(SendingCrf3AllForms.this) != null){
+                    list_view_send.setAdapter(new Sending2And3AllAdapter(SendingCrf3AllForms.this, SaveAndReadInternalData.getSavedCrf2toCrf3AllCollection(SendingCrf3AllForms.this)));
+                }
             }
         });
         dialog.show();

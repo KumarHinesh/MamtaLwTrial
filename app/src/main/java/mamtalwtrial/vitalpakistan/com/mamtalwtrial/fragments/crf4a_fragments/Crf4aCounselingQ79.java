@@ -55,8 +55,6 @@ public class Crf4aCounselingQ79 extends Fragment {
         progressDialog.setTitle("Wait..");
         progressDialog.setMessage("Sending...");
         progressDialog.setCancelable(false);
-
-
         scrollView = (ScrollView) view.findViewById(R.id.scrollView);
 
 
@@ -90,7 +88,6 @@ public class Crf4aCounselingQ79 extends Fragment {
         }
 
 
-
         btn_submit.setOnClickListener(new View.OnClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.N)
                     @Override
@@ -121,6 +118,83 @@ public class Crf4aCounselingQ79 extends Fragment {
 
                             CRF4aActivity.formCrf4aDTO.setCounsilEndTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
+                            if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() != null){
+
+                                if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equals("y")){
+
+                                    CRF4aActivity.startHour = 0;
+                                    CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
+                                    CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
+
+
+                                    sendDataToServer();
+
+                                }else if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equals("n") &&
+                                        !CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a")){
+
+                                        CRF4aActivity.startHour = 0;
+                                        CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
+                                        CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
+
+                                        Crf5aQ59Counseling fragment = new Crf5aQ59Counseling();
+                                        FragmentManager fragmentManager = getFragmentManager();
+                                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                        fragmentTransaction.replace(R.id.frame_layout4a, fragment);
+                                        fragmentTransaction.commit();
+
+                                }else if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equals("n") &&
+                                        CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a")){
+
+                                    CRF4aActivity.startHour = 0;
+                                    CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
+                                    CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
+
+                                    sendDataToServer();
+
+                                }else if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equals("n") &&
+                                        !CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a") &&
+                                        CRF4aActivity.formCrf4aDTO.getQ20().equals("2")){
+
+                                    CRF4aActivity.startHour = 0;
+                                    CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
+                                    CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
+
+                                    sendDataToServer();
+
+
+                                }
+
+                            }else if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() == null){
+
+                                if (CRF4aActivity.formCrf4aDTO.getQ20().equals("2")){
+
+                                    CRF4aActivity.startHour = 0;
+                                    CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
+                                    CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
+
+
+                                    sendDataToServer();
+
+                                }else if (CRF4aActivity.formCrf4aDTO.getQ20().equals("1") && !CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a")){
+
+                                    CRF4aActivity.startHour = 0;
+                                    CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
+                                    CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
+
+                                    Crf5aQ59Counseling fragment = new Crf5aQ59Counseling();
+                                    FragmentManager fragmentManager = getFragmentManager();
+                                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                    fragmentTransaction.replace(R.id.frame_layout4a, fragment);
+                                    fragmentTransaction.commit();
+
+                                }else if (CRF4aActivity.formCrf4aDTO.getQ20().equals("2") && !CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a")){
+
+                                    sendDataToServer();
+                                }
+
+
+                            }
+                            ////////
                             if(!CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a")){
 
                                 CRF4aActivity.startHour = 0;
@@ -139,47 +213,13 @@ public class Crf4aCounselingQ79 extends Fragment {
                             }else {
 
 
-                                progressDialog.show();
-                                final APIService mAPIService = ApiUtils.getAPIService();
-
-                                Crf4Complete crf4Complete = new Crf4Complete();
-
-                                crf4Complete.setFormCrf4a(CRF4aActivity.formCrf4aDTO);
-                                crf4Complete.setFormCrf4b(CRF4aActivity.formCrf4bDTO);
-
-                                mAPIService.postCrf4Complete(crf4Complete).enqueue(new Callback<Crf4Complete>() {
-                                    @Override
-                                    public void onResponse(Call<Crf4Complete> call, Response<Crf4Complete> response) {
-
-                                        CRF4aActivity.startHour = 0;
-                                        SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF4aActivity.position);
-                                        startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
-                                        getActivity().finish();
-                                        progressDialog.dismiss();
-                                        System.out.println("Succesfully sended");
-                                    }
-
-                                    @Override
-                                    public void onFailure(Call<Crf4Complete> call, Throwable t) {
-
-                                        CRF4aActivity.startHour = 0;
-                                        startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
-                                        getActivity().finish();
-                                        SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF4aActivity.position);
-                                        progressDialog.dismiss();
-                                        System.out.println("UnSuccesfully sended but in error");
-                                    }
-                                });
 
                             }
 
 //                            Toast.makeText(getContext(),"Done",Toast.LENGTH_LONG).show();
                         }
-
-
                     }
                 });
-
 
 
         return view;
@@ -197,6 +237,59 @@ public class Crf4aCounselingQ79 extends Fragment {
                 scrollView.scrollTo(x,y); // these are your x and y coordinates
             }
         });
+    }
+
+    public void sendDataToServer(){
+
+
+        progressDialog.show();
+        progressDialog.setCancelable(false);
+        final APIService mAPIService = ApiUtils.getAPIService();
+
+        Crf4Complete crf4Complete = new Crf4Complete();
+
+        crf4Complete.setFormCrf4a(CRF4aActivity.formCrf4aDTO);
+        crf4Complete.setFormCrf4b(CRF4aActivity.formCrf4bDTO);
+
+        mAPIService.postCrf4Complete(crf4Complete).enqueue(new Callback<Crf4Complete>() {
+            @Override
+            public void onResponse(Call<Crf4Complete> call, Response<Crf4Complete> response) {
+
+                CRF4aActivity.startHour = 0;
+                //   SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF4aActivity.position);
+
+                if (response.code()==200){
+                    SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
+                    startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
+                    getActivity().finish();
+                    progressDialog.dismiss();
+                    System.out.println("Succesfully sended");
+
+                }else {
+
+                    SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Crf4Complete> call, Throwable t) {
+
+                SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
+                CRF4aActivity.startHour = 0;
+                startActivity(new Intent(getContext(), CRF4And5Dashboard.class));
+                getActivity().finish();
+                //SaveAndReadInternalData.deleteFollowUpFromList(getContext(),CRF4aActivity.position);
+                progressDialog.dismiss();
+                System.out.println("UnSuccesfully sended but in error");
+            }
+        });
+
+
+
+
+
+
+
     }
 
 

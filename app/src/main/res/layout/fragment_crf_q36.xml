@@ -633,18 +633,18 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Any known congenital anomaly in the baby"
+                android:text="does the child has Any (known) congenital anomaly or serious illness for which study physician has prescribed any antibiotic"
                 />
 
             <TextView
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\n Bachay ko koi pidaishi nuqs ya beemari"
+                android:text="\n Bachay ko koi pidaishi nuqs ya beemari k hamaray doctor nay btai ho jis ki wajha s bachay ko antibiotic mili h"
                 />
 
 
@@ -870,7 +870,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="3.  Hydrocephalus"/>
@@ -967,7 +967,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4.  Intestinal obstruction "/>
@@ -1065,7 +1065,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="5.  Down Syndrome "/>
@@ -1161,7 +1161,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="6.  Others"/>
@@ -1282,7 +1282,7 @@
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Was woman enrolled in Maamta PW trial in the past"/>
+                android:text="Was woman enrolled in Maamta PW trial or LW trial in the past"/>
 
             <TextView
 
@@ -1290,7 +1290,7 @@
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kya yah orat pehle Maamta Pw k trial m enrolled the"/>
+                android:text="kya yah orat pehle Maamta PW or LW k trial m enrolled the"/>
 
 
         </LinearLayout>
@@ -1380,7 +1380,7 @@
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Was woman enrolled in Maamta LW trial in the past"/>
+                android:text="Does the Woman has any known food allergy like with peanuts, lantils legume, chickpea, or dairy products?"/>
 
             <TextView
 
@@ -1388,7 +1388,7 @@
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kya yah orat pehle Maamta LW k trial m enrolled the"/>
+                android:text="kya khatoon ko kisi khanay ki cheez jasay k mung phali daal chanay or dodh ya dodh s bani kisi cheez s allergy h?"/>
 
 
         </LinearLayout>

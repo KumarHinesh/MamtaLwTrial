@@ -102,7 +102,7 @@
                 android:layout_weight="1.5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Birth weight greater or equal to 1500 gram "/>
+                android:text="Birth weight equal or greater then 1500 gram "/>
 
             <ImageView
                 android:id="@+id/iv_4"
@@ -176,7 +176,7 @@
                 android:textColor="@color/black"
                 android:layout_weight="1.5"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:text="LW is able to breastfeed her child and do not have any medical condition "/>
 
             <ImageView
@@ -202,7 +202,7 @@
                 android:layout_weight="1.5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="LW is not working outside the home, or if working, but able to breastfeed the child within 2 hours "/>
+                android:text="LW is not working outside the home, or if working, but able to breastfeed the child"/>
 
             <ImageView
                 android:id="@+id/iv_8"
@@ -252,7 +252,7 @@
                 android:layout_weight="1.5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Child do not have any known congenital anomaly "/>
+                android:text="Child do not have any known congenital anomaly or any illness"/>
 
             <ImageView
                 android:id="@+id/iv_10"
@@ -277,7 +277,7 @@
                 android:layout_weight="1.5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Woman was not enrolled in Maamta PW trial in the past "/>
+                android:text="Woman was not enrolled in Maamta PW or LW trial in the past "/>
 
             <ImageView
                 android:id="@+id/iv_11"
@@ -302,7 +302,7 @@
                 android:layout_weight="1.5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Woman was not enrolled in Maamta LW trial in the past "/>
+                android:text="Woman has any known food allergy like with peanuts, lantils legume, chickpea, or dairy products"/>
 
             <ImageView
                 android:id="@+id/iv_12"

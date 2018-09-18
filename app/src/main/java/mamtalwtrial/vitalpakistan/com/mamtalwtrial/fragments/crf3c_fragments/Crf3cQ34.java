@@ -33,6 +33,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -60,8 +61,16 @@ public class Crf3cQ34 extends Fragment {
                 CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setCounsilEndTime(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
                 CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().setQ40(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
                 CRF3cActivity.formsCrf2AndCrf3All.setCrf3cStatus(true);
+                progressDialog.show();
 
-                sendCrf2Form(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO());
+                if (WifiConnectOrNot.haveNetworkConnection(getContext())){
+                    sendCrf2Form(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf2DTO());
+                }else {
+                    SaveAndReadInternalData.saveCrf2And3AllForms(getContext(),CRF3cActivity.formsCrf2AndCrf3All);
+                    singleBtnDialog(context,"Internet Connection is not Working properly "+ CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().getPregnantWoman().getName()+" forms save Internel Storage", "Internet Sahi nahi chal raha islia "+CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO().getPregnantWoman().getName()+"+Ka Form Internal Storage m Save Kardia h");
+                }
+
+
 
             }
         });
@@ -71,7 +80,7 @@ public class Crf3cQ34 extends Fragment {
     }
 
 
-    public    void sendCrf2Form(FormCrf2DTO body){
+    public void sendCrf2Form(FormCrf2DTO body){
 
         progressDialog.setMessage("CRF2 Sending Wait..");
         APIService mAPIService = ApiUtils.getAPIService();
@@ -112,7 +121,7 @@ public class Crf3cQ34 extends Fragment {
     }
 
 
-    public    void sendCrf3aForm(FormCrf3aDTO body){
+    public void sendCrf3aForm(FormCrf3aDTO body){
         APIService mAPIService = ApiUtils.getAPIService();
         mAPIService.postCrf3a(body).enqueue(new Callback<FormCrf3aDTO>() {
             @Override
@@ -145,7 +154,7 @@ public class Crf3cQ34 extends Fragment {
     }
 
 
-    public    void sendCrf3bForm(FormCrf3bDTO body){
+    public void sendCrf3bForm(FormCrf3bDTO body){
 
         APIService mAPIService = ApiUtils.getAPIService();
 
@@ -159,8 +168,9 @@ public class Crf3cQ34 extends Fragment {
 
                     CRF3cActivity.formsCrf2AndCrf3All.setFormCrf3bDTO(null);
                     CRF3cActivity.formsCrf2AndCrf3All.setCrf3bStatus(false);
-                    sendCrf3cForm(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO());
                     progressDialog.setMessage("CRF3C Sending Wait..");
+                    sendCrf3cForm(CRF3cActivity.formsCrf2AndCrf3All.getFormCrf3cDTO());
+
 
                 }else {
                     SaveAndReadInternalData.saveCrf2And3AllForms(getContext(), CRF3cActivity.formsCrf2AndCrf3All);
@@ -222,11 +232,10 @@ public class Crf3cQ34 extends Fragment {
         progressDialog.setTitle("Uploding..");
         progressDialog.setMessage("Wait");
         progressDialog.setCancelable(false);
-        progressDialog.show();
+       // progressDialog.show();
 
 
     }
-
 
 
     public  void singleBtnDialog(Context context, String engMessage, String romanEng){

@@ -1,5 +1,6 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -24,6 +25,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
 
 public class CRF5bActivity extends AppCompatActivity {
 
+    public static int positionOfFollowup = -1;
     public static FormCrf5b formCrf5b;
     public static FormCrf5bDetails formCrf5bDetails;
     public static int startHour = 0;
@@ -36,13 +38,17 @@ public class CRF5bActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crf5b);
 
-
         TeamDTO teamDTO = new TeamDTO();
 
         teamDTO.setId(getSharedPreferences("teamId",CRF1Activity.MODE_PRIVATE).getInt("id",-1));
 
 
-        followupsDTO =  new Gson().fromJson(getIntent().getStringExtra("followupdetails"), FollowupsDTO.class);
+        Intent intent = getIntent();
+
+        String[] data =  intent.getStringArrayExtra("data");
+
+        positionOfFollowup =  Integer.parseInt(data[0]);
+        followupsDTO =  new Gson().fromJson(data[1], FollowupsDTO.class);
 
         listFormCrf5bDetails = new ArrayList<>();
         formCrf5bDetails = new FormCrf5bDetails();
@@ -53,10 +59,13 @@ public class CRF5bActivity extends AppCompatActivity {
 
         formCrf5b.setTeam(teamDTO);
 
+
         formCrf5b.setFollowupNumber(Integer.parseInt(followupsDTO.getFollowupDetails().getfNum()));
+
         formCrf5b.setDateOfAttempt(new SimpleDateFormat(ContantsValues.DATEFORMAT).format(Calendar.getInstance().getTime()));
         formCrf5b.setTimeOfAttempt(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
+        formCrf5b.setId(followupsDTO.getId());
 
 
         PwInfoCrf5bFragmnet pwInfoCrf5bFragmnet = new PwInfoCrf5bFragmnet();

@@ -942,10 +942,10 @@
 
     <string name="crf4b_q33_english">What is the state of the baby’s health according to the family?</string>
     <string name="crf4b_q33_urdu">Is waqt bachay k sehat kaisi ha</string>
-    <string name="crf4b_q33_option_1">Well baby (Bacha sehatmand h)</string>
-    <string name="crf4b_q33_option_2">Recovered from illness (beemari dur ho gai h)</string>
-    <string name="crf4b_q33_option_3">Still ill, but better than before (abhi bh beemar ha laikin pehlay sa behtar ha)</string>
-    <string name="crf4b_q33_option_4">Condition has deteriorated (tabiyat aur kharab ho gay)</string>
+    <string name="crf4b_q33_option_1">baby is healthy/well</string>
+    <string name="crf4b_q33_option_2">Previously ill but now improved</string>
+    <string name="crf4b_q33_option_3">Baby is currently ill</string>
+    <string name="crf4b_q33_option_4">Baby is stil ill and no improvment or condition has deteriorated</string>
     <!--<string name="crf4b_q33_option_5">Dont (tabiyat aur kharab ho gay)</string>-->
 
     <string name="crf4b_q34_english">Respiratory rate  (000 if refused)If the respiratory rate is 60 or more (if age is 59 days of less) OR 50 or more (if age is greater than 59 days), count again and note the second respiratory rate</string>

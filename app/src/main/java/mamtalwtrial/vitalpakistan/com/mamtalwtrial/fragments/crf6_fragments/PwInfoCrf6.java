@@ -131,17 +131,38 @@ public class PwInfoCrf6 extends Fragment {
 
                     Crf6Activity.formCrf6.setQ15(selectStatusItemIndex);
 
-                    Crf6Q17And18Fragment fragment = new Crf6Q17And18Fragment();
-                    FragmentManager fragmentManager = getFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_layoutcrf6, fragment);
-                    fragmentTransaction.commit();
+
+                    Fragment fragment = null;
+
+                    if(followupsDTO.getFollowupDetails().getChd() != null && followupsDTO.getFollowupDetails().getChd().equalsIgnoreCase("Y")){
+
+                        fragment = new Crf6_q28();
+
+                    }else if (followupsDTO.getFollowupDetails().getChd() == null &&  followupsDTO.getFollowupDetails().getPwd() == null){
+
+                        fragment = new Crf6Q17And18Fragment();
+
+                    }else if (followupsDTO.getFollowupDetails().getChd() != null && followupsDTO.getFollowupDetails().getChd().equalsIgnoreCase("n")){
+
+                        fragment = new Crf6Q17And18Fragment();
+
+                    }
+
+                  //  Crf6Q17And18Fragment fragment = new Crf6Q17And18Fragment();
+
+                    if (fragment != null){
+
+                        FragmentManager fragmentManager = getFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layoutcrf6, fragment);
+                        fragmentTransaction.commit();
+
+                    }
 
                 }else {
 
 
                 }
-
 
             }
         });
@@ -210,7 +231,7 @@ public class PwInfoCrf6 extends Fragment {
             etPwBlock.setText(followupDetails.getBlock());
             etPwHusbandName.setText(followupDetails.getHusbandName());
             etPwName.setText(followupDetails.getName());
-            etPwNumber.setText(followupDetails.getWomanNumber()+"");
+            etPwNumber.setText(followupsDTO.getFollowupDetails().getWnum()+"");
             etPwStracture.setText(followupDetails.getStructure());
             etPwFamilyHousehold.setText(followupDetails.getHouseholdOrFamily());
 
@@ -223,6 +244,7 @@ public class PwInfoCrf6 extends Fragment {
     public void sendDataToServer(){
 
         APIService mAPIService = ApiUtils.getAPIService();
+
         if(WifiConnectOrNot.haveNetworkConnection(context)){
 
             mAPIService.postCrf6(Crf6Activity.formCrf6).enqueue(new Callback<FormCrf6>() {
@@ -230,12 +252,13 @@ public class PwInfoCrf6 extends Fragment {
                 public void onResponse(Call<FormCrf6> call, Response<FormCrf6> response) {
 
                     if (response.code()==200){
-
+                        SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), Crf6Activity.selectedPosition);
                         startActivity(new Intent(getActivity(), AnthroDashBoard.class));
                         getActivity().finish();
 
                     }else {
-
+                        SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), Crf6Activity.selectedPosition);
+                        //SaveAndReadInternalData.saveCrf6FormInternal(getContext(), Crf6Activity.formCrf6);
                         Log.d("Error", "Sending error");
                         startActivity(new Intent(getActivity(), AnthroDashBoard.class));
                         getActivity().finish();
@@ -247,8 +270,9 @@ public class PwInfoCrf6 extends Fragment {
                 @Override
                 public void onFailure(Call<FormCrf6> call, Throwable t) {
 
+                    SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), Crf6Activity.selectedPosition);
+                    //SaveAndReadInternalData.saveCrf6FormInternal(getContext(), Crf6Activity.formCrf6);
                     singleBtnDialog(getContext(), "Sorry connection not working send later", "Sorry connection Work nahi kar raha");
-
                     startActivity(new Intent(getActivity(), AnthroDashBoard.class));
                     getActivity().finish();
 

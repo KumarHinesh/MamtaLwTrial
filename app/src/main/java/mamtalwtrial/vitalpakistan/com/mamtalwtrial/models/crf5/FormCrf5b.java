@@ -23,6 +23,7 @@ public class FormCrf5b {
 
     private int followupNumber;
 
+    private String refusedReason;
 
     private String q18;
     private String q19;
@@ -253,6 +254,15 @@ public class FormCrf5b {
 
     public void setQ59(String q59) {
         this.q59 = q59;
+    }
+
+
+    public String getRefusedReason() {
+        return refusedReason;
+    }
+
+    public void setRefusedReason(String refusedReason) {
+        this.refusedReason = refusedReason;
     }
 }
 

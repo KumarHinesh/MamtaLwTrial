@@ -28,6 +28,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3bActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF5bActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4a_fragments.Crf4aCounselingQ79;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf5a_fragment.Crf5aQ26Fragment;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
@@ -104,7 +105,6 @@ public class Crf4bQ20Fragment extends Fragment {
         day = calendar.get(Calendar.DAY_OF_MONTH);
         min = (calendar.get(Calendar.MINUTE));
         hour = (calendar.get(Calendar.HOUR_OF_DAY));
-
 
 
         ll_q21 = (LinearLayout) view.findViewById(R.id.ll_q21);
@@ -409,10 +409,90 @@ public class Crf4bQ20Fragment extends Fragment {
 
                 if(validation()){
 
-                    if(CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a")){
 
-                        CRF4aActivity.formCrf4bDTO.setFollowupStatus(Constants.COMPLETED);
-                        CRF4aActivity.formCrf4bDTO.setFormStatus(Constants.COMPLETED);
+                    if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() != null){
+
+                        if (!CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a") &&
+                                CRF4aActivity.followupDto.getFollowupDetails().getPwd().equalsIgnoreCase("y")){
+
+                            CRF4aActivity.formCrf4bDTO.setFollowupStatus(Constants.COMPLETED);
+                            CRF4aActivity.formCrf4bDTO.setFormStatus(Constants.COMPLETED);
+                            CRF4aActivity.formCrf4bDTO.setQ56(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                            Crf4aCounselingQ79 fragment = new Crf4aCounselingQ79();
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                            fragmentTransaction.replace(R.id.frame_layout4a, fragment);
+                            fragmentTransaction.commit();
+
+
+                        }else if (!CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a") &&
+                                CRF4aActivity.followupDto.getFollowupDetails().getPwd().equalsIgnoreCase("n")){
+
+                            CRF4aActivity.formCrf4bDTO.setFollowupStatus(Constants.COMPLETED);
+                            CRF4aActivity.formCrf4bDTO.setFormStatus(Constants.COMPLETED);
+                            CRF4aActivity.formCrf4bDTO.setQ56(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                            Crf5aQ26Fragment fragment = new Crf5aQ26Fragment();
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                            fragmentTransaction.replace(R.id.frame_layout4a, fragment);
+                            fragmentTransaction.commit();
+
+                        }
+
+
+                    }else if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() == null){
+
+                        if (CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a")){
+
+                            CRF4aActivity.formCrf4bDTO.setFollowupStatus(Constants.COMPLETED);
+                            CRF4aActivity.formCrf4bDTO.setFormStatus(Constants.COMPLETED);
+
+                            CRF4aActivity.formCrf4bDTO.setQ56(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                            Crf4aCounselingQ79 fragment = new Crf4aCounselingQ79();
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                            fragmentTransaction.replace(R.id.frame_layout4a, fragment);
+                            fragmentTransaction.commit();
+
+
+                        }else if (!CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a") && CRF4aActivity.formCrf4aDTO.getQ20().equals("1")){
+
+                            CRF4aActivity.formCrf4bDTO.setFollowupStatus(Constants.COMPLETED);
+                            CRF4aActivity.formCrf4bDTO.setFormStatus(Constants.COMPLETED);
+
+                            CRF4aActivity.formCrf4bDTO.setQ56(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                            Fragment fragment = new Crf5aQ26Fragment();
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                            fragmentTransaction.replace(R.id.frame_layout4a, fragment);
+                            fragmentTransaction.commit();
+
+                        }else if (!CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a") && CRF4aActivity.formCrf4aDTO.getQ20().equals("2")){
+
+                            CRF4aActivity.formCrf4bDTO.setFollowupStatus(Constants.COMPLETED);
+                            CRF4aActivity.formCrf4bDTO.setFormStatus(Constants.COMPLETED);
+
+                            CRF4aActivity.formCrf4bDTO.setQ56(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
+
+                            Crf4aCounselingQ79 fragment = new Crf4aCounselingQ79();
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                            fragmentTransaction.replace(R.id.frame_layout4a, fragment);
+                            fragmentTransaction.commit();
+
+
+                        }
+
+                    }
+
+
+
+                    /*if(CRF4aActivity.followupDto.getFollowupDetails().getArm().equals("a")){
+
 
                         CRF4aActivity.formCrf4bDTO.setQ56(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
@@ -425,19 +505,22 @@ public class Crf4bQ20Fragment extends Fragment {
 
                     }else {
 
-
                         CRF4aActivity.formCrf4bDTO.setQ56(new SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance().getTime()));
 
                         Fragment fragment = null;
 
-                        if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equalsIgnoreCase("y")){
+                        if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() != null){
 
-                            fragment = new Crf4aCounselingQ79();
+                            if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equalsIgnoreCase("y")){
 
-                        }else {
+                                fragment = new Crf4aCounselingQ79();
 
-                            fragment = new Crf5aQ26Fragment();
-                        }
+                            }else {
+
+                                fragment = new Crf5aQ26Fragment();
+                            }
+
+                        }else {}
 
 
                         FragmentManager fragmentManager = getFragmentManager();
@@ -448,7 +531,7 @@ public class Crf4bQ20Fragment extends Fragment {
 
                         //startActivity(new Intent(getActivity(), CRF4And5Dashboard.class));
                         //getActivity().finish();
-                    }
+                    }*/
 
                 }
 

@@ -104,7 +104,7 @@
                         android:id="@+id/tv_bcgo_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -575,7 +575,7 @@
                         android:id="@+id/tv_opv0_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -784,7 +784,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive OPVO "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -792,7 +792,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko OPVO lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1045,7 +1045,7 @@
                         android:id="@+id/tv_opv1_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -1228,7 +1228,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  OPV1"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -1254,7 +1254,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive OPV1 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1262,7 +1262,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko OPV1 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1515,7 +1515,7 @@
                         android:id="@+id/tv_penta1_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -1698,7 +1698,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  PENTA1"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -1724,7 +1724,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive PENTA1 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1732,7 +1732,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko PENTA1 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1986,7 +1986,7 @@
                         android:id="@+id/tv_pcv1_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -2169,7 +2169,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  PCV1"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -2195,7 +2195,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive PCV1 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2203,7 +2203,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko PCV1 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2454,7 +2454,7 @@
                         android:id="@+id/tv_rota1_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -2637,7 +2637,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  ROTA1"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -2663,7 +2663,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive ROTA1 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2671,7 +2671,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko ROTA1 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2923,7 +2923,7 @@
                         android:id="@+id/tv_opv2_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -3106,7 +3106,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  OPV2"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -3132,7 +3132,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive OPV2 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -3140,7 +3140,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko OPV2 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -3392,7 +3392,7 @@
                         android:id="@+id/tv_penta2_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -3575,7 +3575,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  PENTA2"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -3601,7 +3601,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive PENTA2 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -3609,7 +3609,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko PENTA2 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -3862,7 +3862,7 @@
                         android:id="@+id/tv_pcv2_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -4045,7 +4045,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  PCV2"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -4071,7 +4071,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive PCV2 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -4079,7 +4079,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko PCV2 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -4331,7 +4331,7 @@
                         android:id="@+id/tv_rota2_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -4501,7 +4501,7 @@
 
         </LinearLayout>
 
-        <!--Rota2 ShOW Layout-->
+        <!--ROTA2 ShOW Layout-->
         <LinearLayout
             android:visibility="gone"
             android:id="@+id/ll_rota2_show"
@@ -4514,7 +4514,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  ROTA2"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -4540,7 +4540,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive ROTA2 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -4548,7 +4548,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko ROTA2 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -4800,7 +4800,7 @@
                         android:id="@+id/tv_opv3_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -4982,7 +4982,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  OPV3"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -5008,7 +5008,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive OPV3 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -5016,7 +5016,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko OPV3 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -5268,7 +5268,7 @@
                         android:id="@+id/tv_penta3_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -5451,7 +5451,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  PENTA3"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -5477,7 +5477,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive PENTA3 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -5485,7 +5485,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko PENTA3 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -5737,7 +5737,7 @@
                         android:id="@+id/tv_pcv3_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -5920,7 +5920,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  PCV3"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -5946,7 +5946,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive PCV3 "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -5954,7 +5954,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko PCV3 lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -6207,7 +6207,7 @@
                         android:id="@+id/tv_ipv_date"
                         android:visibility="gone"
                         android:layout_marginTop="2dp"
-                        android:hint="99-9-9999"
+                        android:text="99-9-9999"
                         android:drawableLeft="@mipmap/calendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -6389,7 +6389,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:text="Vaccine  BCG0"
+                android:text="Vaccine  IPV"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -6415,7 +6415,7 @@
 
                     <TextView
                         android:textColor="@color/black"
-                        android:text="Did the baby receive BCG0 "
+                        android:text="Did the baby receive IPV "
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -6423,7 +6423,7 @@
 
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:text="Bachay ko BCGO lagi h"
+                        android:text="Bachay ko IPV lagi h"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2Activity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF2DashboargActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard;
@@ -34,6 +35,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf4.Crf4Complete;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SendDataToServer;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -229,7 +231,7 @@ public class Crf4WomeninfoFragment extends Fragment {
                     public void onResponse(Call<Crf4Complete> call, Response<Crf4Complete> response) {
 
                         if(response.code()==200){
-
+                            SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
                             Toast.makeText(getContext(),"Succesfully Sended",Toast.LENGTH_LONG).show();
                         }
 
@@ -237,7 +239,7 @@ public class Crf4WomeninfoFragment extends Fragment {
 
                     @Override
                     public void onFailure(Call<Crf4Complete> call, Throwable t) {
-
+                        SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
                         Toast.makeText(getContext(),"Error occur ",Toast.LENGTH_LONG).show();
                     }
                 });

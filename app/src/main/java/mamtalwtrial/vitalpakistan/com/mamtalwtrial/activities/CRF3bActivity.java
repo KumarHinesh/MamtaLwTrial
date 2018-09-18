@@ -38,6 +38,9 @@ public class CRF3bActivity extends AppCompatActivity {
 
         formsCrf2AndCrf3All  = new Gson().fromJson(getIntent().getStringExtra("forms"),FormsCrf2AndCrf3All.class);
 
+        formsCrf2AndCrf3All.setCrf3bStatus(true);
+        formsCrf2AndCrf3All.setFormCrf3bDTO(new FormCrf3bDTO());
+
         formsCrf2AndCrf3All.getFormCrf3bDTO().setPregnantWoman(formsCrf2AndCrf3All.getFormCrf3aDTO().getPregnantWoman());
         formsCrf2AndCrf3All.getFormCrf3bDTO().setTeam(formsCrf2AndCrf3All.getFormCrf3aDTO().getTeam());
 

@@ -28,6 +28,7 @@ import java.util.Calendar;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF5bActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.DashboardActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.adapter.StatusListAdapter;
@@ -38,6 +39,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupDetails;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FollowupsDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.FormCrf1DTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.PregnantWomanDTO;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf5.FormCrf5b;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
@@ -55,6 +57,8 @@ public class PwInfoCrf5bFragmnet extends Fragment {
     Context context;
 
     int selectStatusItemIndex=-1;
+
+    ProgressDialog progressDialog;
 
     EditText etPwName, etPwHusbandName, et_para, etPwBlock, etPwStracture, etPwFamilyHousehold, etPwNumber, et_site, et_refuesd;
     ListView listView;
@@ -81,11 +85,13 @@ public class PwInfoCrf5bFragmnet extends Fragment {
                                     ,"Household locked (ghar bund ha)","Permanent migration (mustaqil chali gay)","Child is adopted by someone else\n" +
                                     "(Bacha kisi aur ko gaoud day diya)"};
 
-
         statusListAdapter = new StatusListAdapter(getContext(),statusListItem);
 
-
         //edit text all field
+
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setTitle("Wait..");
+        progressDialog.setMessage("Sending Forms Crf-5b");
         etPwName = (EditText) view.findViewById(R.id.etPwName);
         etPwHusbandName = (EditText) view.findViewById(R.id.etPwHusbandName);
         etPwBlock = (EditText) view.findViewById(R.id.etPwBlock);
@@ -124,19 +130,23 @@ public class PwInfoCrf5bFragmnet extends Fragment {
 
                 if(validation()){
 
-                    Crf5bQ19Fragmnet fragment = new Crf5bQ19Fragmnet();
-                    FragmentManager fragmentManager = getFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_layout, fragment);
-                    fragmentTransaction.commit();
+                    if (selectStatusItemIndex==0){
 
+                        Crf5bQ19Fragmnet fragment = new Crf5bQ19Fragmnet();
+                        FragmentManager fragmentManager = getFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout, fragment);
+                        fragmentTransaction.commit();
+
+                    }else {
+
+
+                        progressDialog.show();
+                        sendDataToServer();
+                    }
 
 
                 }
-
-
-
-
             }
         });
 
@@ -159,18 +169,26 @@ public class PwInfoCrf5bFragmnet extends Fragment {
 
             if(selectStatusItemIndex==1){
 
-                et_refuesd.getText().toString();
-                CRF5bActivity.formCrf5b.setQ18(selectStatusItemIndex+"");
+                if (et_refuesd.getText().toString().equals("")){
 
+                    et_refuesd.setError("please Enter");
+                    validation = false;
+
+                }else {
+
+
+                    CRF5bActivity.formCrf5b.setRefusedReason(et_refuesd.getText().toString());
+                }
+
+
+            }else {
+
+                CRF5bActivity.formCrf5b.setQ18((selectStatusItemIndex+1)+"");
             }
-
         }
-
 
         return validation;
     }
-
-
 
 
     public  void singleBtnDialog(Context context, String engMessage, String romanEng){
@@ -214,13 +232,44 @@ public class PwInfoCrf5bFragmnet extends Fragment {
             etPwBlock.setText(followupDetails.getBlock());
             etPwHusbandName.setText(followupDetails.getHusbandName());
             etPwName.setText(followupDetails.getName());
-            etPwNumber.setText(followupDetails.getWomanNumber()+"");
+            etPwNumber.setText(followupDetails.getWnum()+"");
             etPwStracture.setText(followupDetails.getStructure());
             etPwFamilyHousehold.setText(followupDetails.getHouseholdOrFamily());
-
-
         }
 
+    }
+
+
+    public void sendDataToServer(){
+
+        APIService mAPIService = ApiUtils.getAPIService();
+
+        mAPIService.postCrf5b(CRF5bActivity.formCrf5b).enqueue(new Callback<FormCrf5b>() {
+            @Override
+            public void onResponse(Call<FormCrf5b> call, Response<FormCrf5b> response) {
+
+                if(response.code()==200){
+                    progressDialog.dismiss();
+                    Toast.makeText(context, "Data Sended Congrats",Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getContext(), CRF4And5Dashboard.class));
+                    getActivity().finish();
+                }else {
+                    progressDialog.dismiss();
+                    Toast.makeText(context, "Data not  Sended ",Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getContext(), CRF4And5Dashboard.class));
+                    getActivity().finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<FormCrf5b> call, Throwable t) {
+
+                progressDialog.dismiss();
+                startActivity(new Intent(getContext(), CRF4And5Dashboard.class));
+                getActivity().finish();
+
+            }
+        });
 
     }
 

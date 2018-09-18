@@ -30,14 +30,14 @@
                     android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PW is willing to stay or return in the catchment area soon after delivery so that  we will be able to capture the birth within 72 hours?
+                    android:text="PW is willing to stay or return in the catchment area soon after delivery so that  we will be able to capture the birth within 0 to 6 days?
                     "/>
                 <TextView
                     android:textSize="20sp"
                     android:layout_marginTop="3dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PW razamand ha k wo catchment area ma rahay gee ya wapis a jay gee delivery k baad takay hum paida honay walay bachay ko capture kar sakay pidaish k 72 hours k andar?
+                    android:text="PW razamand ha k wo catchment area ma rahay gee ya wapis a jay gee delivery k baad takay hum paida honay walay bachay ko capture kar sakay pidaish k 0 say 6 din k andar?
                      "/>
 
 
@@ -580,8 +580,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
 
 
 

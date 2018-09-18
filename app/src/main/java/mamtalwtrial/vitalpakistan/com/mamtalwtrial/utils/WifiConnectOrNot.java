@@ -24,5 +24,4 @@ public class WifiConnectOrNot  {
         }
         return haveConnectedWifi || haveConnectedMobile;
     }
-
 }

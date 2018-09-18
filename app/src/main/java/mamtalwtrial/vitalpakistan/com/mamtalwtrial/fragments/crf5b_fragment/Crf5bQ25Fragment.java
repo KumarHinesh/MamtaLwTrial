@@ -112,8 +112,6 @@ public class Crf5bQ25Fragment extends Fragment {
                             fragmentTransaction.commit();
                         }
 
-
-
                 }
 
             }
@@ -344,29 +342,34 @@ public class Crf5bQ25Fragment extends Fragment {
                 formCrf5bDetails.setQ34(isRBCheckedThree(rg_q34, rb_q34, tv_q34));
             }
 
-            if (getTextFromField(et_q35, tv_q35).equals("")) {
-                validation = false;
-            } else {
-                formCrf5bDetails.setQ35(getTextFromField(et_q35, tv_q35));
-            }
+            if (ll_q35_to_q38.getVisibility()==View.VISIBLE){
 
-            if (getTextFromField(et_q36, tv_q36).equals("")) {
-                validation = false;
-            } else {
-                formCrf5bDetails.setQ36(getTextFromField(et_q36, tv_q36));
-            }
 
-            if (getTextFromField(et_q37, tv_q37).equals("")) {
-                validation = false;
-            } else {
-                formCrf5bDetails.setQ37(getTextFromField(et_q37, tv_q37));
-            }
+                if (getTextFromField(et_q35, tv_q35).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf5bDetails.setQ35(getTextFromField(et_q35, tv_q35));
+                }
 
-            if (getTextFromField(et_q38, tv_q38).equals("")) {
-                validation = false;
-            } else {
-                formCrf5bDetails.setQ38(getTextFromField(et_q38, tv_q38));
-            }
+                if (getTextFromField(et_q36, tv_q36).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf5bDetails.setQ36(getTextFromField(et_q36, tv_q36));
+                }
+
+                if (getTextFromField(et_q37, tv_q37).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf5bDetails.setQ37(getTextFromField(et_q37, tv_q37));
+                }
+
+                if (getTextFromField(et_q38, tv_q38).equals("")) {
+                    validation = false;
+                } else {
+                    formCrf5bDetails.setQ38(getTextFromField(et_q38, tv_q38));
+                }
+
+            }// end of ll_q35_to_q38
 
         }// end of ll_q34_to_q38
 
@@ -441,10 +444,7 @@ public class Crf5bQ25Fragment extends Fragment {
 
     }// end of ll_q45_to_q48
 
-
     }// end of ll_q40_to_q48
-
-
 
 
         return validation;

@@ -171,18 +171,17 @@ public class PwOtherDataFragment3 extends Fragment {
             @Override
             public void onClick(View v) {
 
+
                 if(validation()){
 
-                    setDataInModels();
+                                setDataInModels();
 
-                    CRF1Activity.formCrf1DTO.setFormStatus(Constants.COMPLETED);
+                                CRF1Activity.formCrf1DTO.setFormStatus(Constants.COMPLETED);
 
-
-                        Intent i = new Intent(getContext(),CounselingCRF1Activity.class);
-                        i.putExtra("obj",new Gson().toJson(CRF1Activity.formCrf1DTO));
-                        startActivity(i);
-                        getActivity().finish();
-
+                                Intent i = new Intent(getContext(),CounselingCRF1Activity.class);
+                                i.putExtra("obj",new Gson().toJson(CRF1Activity.formCrf1DTO));
+                                startActivity(i);
+                                getActivity().finish();
 
                 }else {
 
@@ -466,11 +465,34 @@ public class PwOtherDataFragment3 extends Fragment {
                cb_Q5_1.setError("Check This (Isay Check kre)");
 
                b = false;
+           }else {
+
+               if (cb_Q5_1.isChecked()){
+
+                   if (!et_getUltraWeek.getText().toString().equalsIgnoreCase("")) {
+
+                       if (Integer.parseInt(et_getUltraWeek.getText().toString()) > 5 && Integer.parseInt(et_getUltraWeek.getText().toString()) < 43) {
+
+                           CRF1Activity.formCrf1DTO.setQ32(et_getUltraWeek.getText().toString());
+
+                       }else {
+                           b = false;
+                           et_getUltraWeek.setError("value should be grater then 5 and less then 43");
+                       }
+
+                   }else {
+                       b = false;
+
+                       et_getUltraWeek.setError("Required");
+                   }
+
+               }else if (cb_Q5_2.isChecked()){
+                    CRF1Activity.formCrf1DTO.setQ32(null);
+                   et_getUltraWeek.setText("");
+               }
+
            }
-
-
        }
-
 
         String tem1 = et_num1.getText().toString();
         String tem2 = et_num2.getText().toString();
@@ -478,13 +500,32 @@ public class PwOtherDataFragment3 extends Fragment {
         String tem4 = et_num4.getText().toString();
 
         if(TextUtils.isEmpty(tem1)){
-
             et_num1.setError("Atleast One Number required\nkam s kam 1 number le");
             b = false;
         }
         if(fDate==null){
             b = false;
         }
+
+
+        /*if (et_getUltraWeek.getText().toString() == null && CRF1Activity.formCrf1DTO.getQ30() != null ){
+
+            b = false;
+            et_getUltraWeek.setError("Please Enter week");
+        }else {
+
+            if (Integer.parseInt(et_getUltraWeek.getText().toString()) > 4 && Integer.parseInt(et_getUltraWeek.getText().toString())<43){
+
+                b = true;
+
+            }else {
+
+                Toast.makeText(getContext(),"value shou")
+            }
+
+
+
+        }*/
 
         return b;
     }
@@ -528,14 +569,42 @@ public class PwOtherDataFragment3 extends Fragment {
         //Q29
         CRF1Activity.formCrf1DTO.setQ29(getCheckBoxResult(cb_Q4_1,cb_Q4_2));
 
-        //Q30
-        CRF1Activity.formCrf1DTO.setQ30(getCheckBoxResult(cb_Q5_1,cb_Q5_2));
+        if (CRF1Activity.formCrf1DTO.getQ29() != null){
 
-        //Q31
-        CRF1Activity.formCrf1DTO.setQ31(ultraDate);
+            if (CRF1Activity.formCrf1DTO.getQ29().equalsIgnoreCase("no")){
 
-        //Q32
-        CRF1Activity.formCrf1DTO.setQ32(et_getUltraWeek.getText().toString());
+                CRF1Activity.formCrf1DTO.setQ30(null);
+                CRF1Activity.formCrf1DTO.setQ31(null);
+                CRF1Activity.formCrf1DTO.setQ32(null);
+
+            }else {
+
+                //Q30
+                CRF1Activity.formCrf1DTO.setQ30(getCheckBoxResult(cb_Q5_1,cb_Q5_2));
+
+                if (CRF1Activity.formCrf1DTO.getQ30() != null){
+
+                    if (CRF1Activity.formCrf1DTO.getQ30().equalsIgnoreCase("no")){
+
+                        CRF1Activity.formCrf1DTO.setQ31(null);
+
+                        //Q32
+                        CRF1Activity.formCrf1DTO.setQ32(null);
+                    }else {
+
+                        //Q31
+                        CRF1Activity.formCrf1DTO.setQ31(ultraDate);
+
+                        //Q32
+                        CRF1Activity.formCrf1DTO.setQ32(et_getUltraWeek.getText().toString());
+                    }
+
+                }
+
+            }
+
+        }
+
 
         Log.d("data","Q32"+CRF1Activity.formCrf1DTO.getQ32()+" Q31 "+CRF1Activity.formCrf1DTO.getQ31()
         +" Q30 "+CRF1Activity.formCrf1DTO.getQ30()+"Q29"+CRF1Activity.formCrf1DTO.getQ29());
@@ -553,6 +622,5 @@ public class PwOtherDataFragment3 extends Fragment {
         else {return "";}
 
     }
-
 
 }

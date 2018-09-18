@@ -1,6 +1,7 @@
 package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4a_fragments;
 
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
@@ -31,11 +33,13 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4And5Dashboard;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF4aActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf4b_fragments.Crf4bQ20Fragment;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf5a_fragment.Crf5aQ26Fragment;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.Constants;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf4.Crf4Complete;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -234,13 +238,109 @@ public class Crf4aQ20Fragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                Fragment fragment = null;
+                if (validation()){
 
-                validation();
+                    if (CRF4aActivity.followupDto.getFollowupDetails().getChd() != null){
+
+                        if (CRF4aActivity.followupDto.getFollowupDetails().getChd().equalsIgnoreCase("y")){
+
+                            if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() != null){
+
+                                if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equalsIgnoreCase("n") &&
+                                        !CRF4aActivity.followupDto.getFollowupDetails().getArm().equalsIgnoreCase("a")){
+                                    fragment = new Crf5aQ26Fragment();
+                                }else {
+                                    sendDataToServer();
+                                }
+
+                            }else if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() == null){
+
+                                if (!CRF4aActivity.followupDto.getFollowupDetails().getArm().equalsIgnoreCase("a")){
+                                    fragment = new Crf5aQ26Fragment();
+                                }else {
+                                    sendDataToServer();
+                                }
+
+                            }
+
+                        }else if (CRF4aActivity.followupDto.getFollowupDetails().getChd().equalsIgnoreCase("n")){
+
+                            if (CRF4aActivity.formCrf4aDTO.getQ23().equals("1")){
+
+                                fragment = new Crf4aQ27Fragment();
+
+                            }else if (CRF4aActivity.formCrf4aDTO.getQ23().equals("2")){
+
+                                if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equalsIgnoreCase("n") &&
+                                        !CRF4aActivity.followupDto.getFollowupDetails().getArm().equalsIgnoreCase("a")){
+                                    fragment = new Crf5aQ26Fragment();
+                                }else {
+                                    sendDataToServer();
+                                }
 
 
-                        if((ll_q20.getVisibility() == View.GONE && rb_q23.getTag().equals("2")) ||
-                                (ll_q23.getVisibility()==View.GONE && rb_q20.getTag().equals("2")) ||
-                                (rb_q20.getTag().toString().equals("2")  || rb_q23.getTag().toString().equals("2") )){
+                            }else {
+
+                                sendDataToServer();
+                            }
+                        }
+
+
+                    }else if (CRF4aActivity.followupDto.getFollowupDetails().getChd() == null){
+
+                     if (CRF4aActivity.formCrf4aDTO.getQ23().equalsIgnoreCase("1")){
+
+                          fragment = new Crf4aQ27Fragment();
+
+                     }else if (CRF4aActivity.formCrf4aDTO.getQ23().equalsIgnoreCase("2")){
+
+                         if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() != null){
+
+                             if (CRF4aActivity.followupDto.getFollowupDetails().getPwd().equalsIgnoreCase("n") && !CRF4aActivity.followupDto.getFollowupDetails().getArm().equalsIgnoreCase("a")){
+
+                                 fragment = new Crf5aQ26Fragment();
+                             }else {
+
+                                 sendDataToServer();
+                             }
+
+                         }else if (CRF4aActivity.followupDto.getFollowupDetails().getPwd() != null){
+
+                             if (CRF4aActivity.formCrf4aDTO.getQ20().equalsIgnoreCase("1") && !CRF4aActivity.followupDto.getFollowupDetails().getArm().equalsIgnoreCase("a")){
+
+                                 fragment = new Crf5aQ26Fragment();
+                             }else {
+
+                                 sendDataToServer();
+                             }
+
+
+                         }
+
+                     }
+
+                    }
+
+
+                    if (fragment != null){
+
+                        FragmentManager fragmentManager = getFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout4a, fragment);
+                        fragmentTransaction.commit();
+
+                    }
+
+
+                }
+
+
+
+                /////////
+
+                     /*   if((ll_q20.getVisibility() == View.GONE && rb_q23.getTag().equals("2")) ||
+                                (ll_q23.getVisibility()==View.GONE && rb_q20.getTag().equals("2"))){
 
                             APIService mAPIService = ApiUtils.getAPIService();
 
@@ -279,18 +379,17 @@ public class Crf4aQ20Fragment extends Fragment {
 
 
                             //->
+                        }else if ( (rb_q20 != null && rb_q23 != null) && rb_q23.getTag().equals("2") && rb_q20.getTag().equals("2")){
+
+
+
                         } else {
 
-                            Crf4aQ27Fragment fragment = new Crf4aQ27Fragment();
-                            FragmentManager fragmentManager = getFragmentManager();
-                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                            fragmentTransaction.replace(R.id.frame_layout4a, fragment);
-                            fragmentTransaction.commit();
+                           // Crf4aQ27Fragment fragment = new Crf4aQ27Fragment();
+
 
                         }
-
-
-
+*/
             }
         });
 
@@ -345,10 +444,7 @@ public class Crf4aQ20Fragment extends Fragment {
 
         }
 
-
-
         if (ll_q24.getVisibility() == View.VISIBLE) {
-
 
             if (tv_dod_babay.getText().toString().equals("")) {
                 Toast.makeText(getContext(), "Please Enter Date Of baby Death", Toast.LENGTH_LONG).show();
@@ -383,13 +479,9 @@ public class Crf4aQ20Fragment extends Fragment {
 
         }
 
-
-
         return validation;
 
-            }
-
-
+    }
 
 
     int x,y;
@@ -485,8 +577,56 @@ public class Crf4aQ20Fragment extends Fragment {
         tv_q23 = (TextView) view.findViewById(R.id.tv_q23);
         tv_babyDays = (TextView) view.findViewById(R.id.tv_babyDays);
 
+    }
 
+    public void sendDataToServer(){
+
+        final ProgressDialog progressDialog = new ProgressDialog(getContext());
+        progressDialog.setCancelable(false);
+        progressDialog.setTitle("Sending");
+        progressDialog.setMessage("please Wait");
+        progressDialog.show();
+
+        APIService mAPIService = ApiUtils.getAPIService();
+
+        // CRF4aActivity.formCrf4bDTO.setQ64(SimpleDateFormat(ContantsValues.TIMEFORMAT).format(Calendar.getInstance()));
+
+        CRF4aActivity.formCrf4aDTO.setFollowupStatus(Constants.COMPLETED);
+        CRF4aActivity.formCrf4aDTO.setFormStatus(Constants.COMPLETED);
+
+        Crf4Complete crf4Complete = new Crf4Complete();
+
+        crf4Complete.setFormCrf4a(CRF4aActivity.formCrf4aDTO);
+        crf4Complete.setFormCrf4b(CRF4aActivity.formCrf4bDTO);
+
+        mAPIService.postCrf4Complete(crf4Complete).enqueue(new Callback<Crf4Complete>() {
+            @Override
+            public void onResponse(Call<Crf4Complete> call, Response<Crf4Complete> response) {
+
+                if(response.code()==200){
+
+                    progressDialog.dismiss();
+                    CRF4aActivity.startHour = 0;
+                    SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
+                    startActivity(new Intent(getContext(), CRF4And5Dashboard.class));
+                    getActivity().finish();
+                    Toast.makeText(getContext(),"Succesfully Sended",Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Crf4Complete> call, Throwable t) {
+                SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF4aActivity.position);
+                progressDialog.dismiss();
+                CRF4aActivity.startHour = 0;
+                startActivity(new Intent(getContext(), CRF4And5Dashboard.class));
+                getActivity().finish();
+
+                Toast.makeText(getContext(),"Error occur ",Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
+
 
 }

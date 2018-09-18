@@ -47,15 +47,16 @@ public class CRF4aActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        String followUpDetail = intent.getStringExtra("followupdetails");
 
-        position = intent.getIntExtra("position",-1);
+        String[] data = intent.getStringArrayExtra("data");
+        position = Integer.parseInt(data[0]);
+        followupDto = new Gson().fromJson(data[1], FollowupsDTO.class) ;
+
         TeamDTO teamDTO = new TeamDTO();
 
         teamDTO.setId(getSharedPreferences("teamId",CRF1Activity.MODE_PRIVATE).getInt("id",-1));
 
-
-        followupDto = new Gson().fromJson(followUpDetail, FollowupsDTO.class);
+       // followupDto = new Gson().fromJson(followupDto, FollowupsDTO.class);
 
         followupDetails = followupDto.getFollowupDetails();
 
@@ -91,7 +92,10 @@ public class CRF4aActivity extends AppCompatActivity {
 
         Fragment fragment = null;
 
-        if (followupDto.getFollowupDetails().getChd() != null){
+
+        fragment = new Crf4WomeninfoFragment();
+
+       /* if (followupDto.getFollowupDetails().getChd() != null){
 
             if (followupDto.getFollowupDetails().getChd().equalsIgnoreCase("y")){
 
@@ -100,7 +104,7 @@ public class CRF4aActivity extends AppCompatActivity {
 
             }else {
 
-                fragment = new Crf4WomeninfoFragment();
+
 
             }
 
@@ -109,7 +113,7 @@ public class CRF4aActivity extends AppCompatActivity {
 
             fragment = new Crf4WomeninfoFragment();
         }
-
+*/
 
 
         // Crf4aCounselingQ79 crf4aCounselingQ79 = new Crf4aCounselingQ79();

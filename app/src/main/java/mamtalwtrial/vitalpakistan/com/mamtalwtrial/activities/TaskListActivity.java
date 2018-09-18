@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 
 import java.util.ArrayList;
 
@@ -50,13 +51,13 @@ public class TaskListActivity extends AppCompatActivity {
 */
 
           if(listOfFollowUps !=null && !listOfFollowUps.isEmpty()){
-                for(int i=0; i<listOfFollowUps.size(); i++){
+               /* for(int i=0; i<listOfFollowUps.size(); i++){
 
                     listfollowUpDetails.add(listOfFollowUps.get(i).getFollowupDetails());
-                }
+                }*/
           }
          listView = (ListView) findViewById(R.id.lv_task);
-        TaskListAdapter taskListAdapter = new TaskListAdapter(TaskListActivity.this,listfollowUpDetails);
+        TaskListAdapter taskListAdapter = new TaskListAdapter(TaskListActivity.this, listOfFollowUps);
 
         listView.setAdapter(taskListAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

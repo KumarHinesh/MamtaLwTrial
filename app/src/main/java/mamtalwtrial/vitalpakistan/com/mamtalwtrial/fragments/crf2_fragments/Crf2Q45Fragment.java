@@ -300,7 +300,7 @@ public class Crf2Q45Fragment extends Fragment {
                 //    formsCrf2AndCrf3All.setCrf2Status(Constants.COMPLETED);
                 //    formsCrf2AndCrf3All.setFormCrf2DTO(CRF2Activity.formCrf2DTO);
                     //  SendDataToServer.sendCrf2Form(CRF2Activity.formCrf2DTO);
-                    startActivity(new Intent(getContext(), CRF3Activity.class).putExtra("forms",new Gson().toJson(CRF2Activity.formsCrf2AndCrf3All)));
+                    startActivity(new Intent(getContext(), CRF3Activity.class).putExtra("forms",new Gson().toJson(CRF2Activity.formsCrf2AndCrf3All, FormsCrf2AndCrf3All.class)));
                     getActivity().finish();
 
                 }else {

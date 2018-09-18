@@ -10,7 +10,6 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -21,15 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.R;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF1Activity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.CRF3cActivity;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.activities.Crf6Activity;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf3c_fragments.Crf3cQ28;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf3.crf3c.MuacLwCrf3cDTO;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf6.MuacLwCrf6;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf6.Vaccination;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
-import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.WifiConnectOrNot;
 
 
 public class Crf6LwMuac extends Fragment {

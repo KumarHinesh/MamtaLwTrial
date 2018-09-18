@@ -2,6 +2,7 @@ package mamtalwtrial.vitalpakistan.com.mamtalwtrial.fragments.crf5b_fragment;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.net.Uri;
@@ -26,6 +27,7 @@ import mamtalwtrial.vitalpakistan.com.mamtalwtrial.models.crf6.FormCrf6;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.APIService;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.retrofit.ApiUtils;
 import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.ContantsValues;
+import mamtalwtrial.vitalpakistan.com.mamtalwtrial.utils.SaveAndReadInternalData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -68,7 +70,9 @@ public class Crf5bQ49Fragment extends Fragment {
 
                 if(validation()){
 
+                    progressDialog.show();
                     CRF5bActivity.formCrf5b.setQ59(new java.text.SimpleDateFormat(ContantsValues.TIMEFORMAT).format(java.util.Calendar.getInstance().getTime()));
+                    btn_submit.setEnabled(false);
                     sendDataToServer();
 
                 }
@@ -257,7 +261,7 @@ public class Crf5bQ49Fragment extends Fragment {
         if (getEditText(rg_q51, rb_q51, et_q51,tv_q51,"1", null, null, null, null, null).equals("")){
             validation = false;
         }else {
-            CRF5bActivity.formCrf5b.setQ51(getEditText(rg_q51, rb_q51, et_q49,tv_q51,"1", null, null, null, null, null));
+            CRF5bActivity.formCrf5b.setQ51(getEditText(rg_q51, rb_q51, et_q51,tv_q51,"1", null, null, null, null, null));
         }
 
         if (getEditText(rg_q52, rb_q52, et_q52,tv_q52,"1", null, null, null, null, null).equals("")){
@@ -374,6 +378,7 @@ public class Crf5bQ49Fragment extends Fragment {
 
     public void sendDataToServer(){
 
+
         APIService mAPIService = ApiUtils.getAPIService();
 
         mAPIService.postCrf5b(CRF5bActivity.formCrf5b).enqueue(new Callback<FormCrf5b>() {
@@ -381,15 +386,25 @@ public class Crf5bQ49Fragment extends Fragment {
             public void onResponse(Call<FormCrf5b> call, Response<FormCrf5b> response) {
 
                 if(response.code()==200){
+                    progressDialog.dismiss();
+                    SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF5bActivity.positionOfFollowup);
                     Toast.makeText(context, "Data Sended Congrats",Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getContext(),CRF4And5Dashboard.class));
+                    getActivity().finish();
                 }else {
-
+                    progressDialog.dismiss();
+                    SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF5bActivity.positionOfFollowup);
+                    startActivity(new Intent(getContext(),CRF4And5Dashboard.class));
+                    getActivity().finish();
                     Toast.makeText(context, "Data not  Sended ",Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<FormCrf5b> call, Throwable t) {
+                SaveAndReadInternalData.deleteFollowUpsByIndex(getContext(), CRF5bActivity.positionOfFollowup);
+                startActivity(new Intent(getContext(),CRF4And5Dashboard.class));
+                getActivity().finish();
 
             }
         });
@@ -400,6 +415,9 @@ public class Crf5bQ49Fragment extends Fragment {
 
         this.context = context;
         progressDialog = new ProgressDialog(context);
+        progressDialog.setTitle("Wait...");
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Sending Form Crf-5B");
 
         rg_q49 = (RadioGroup) view.findViewById(R.id.rg_q49);
         rg_q50 = (RadioGroup) view.findViewById(R.id.rg_q50);
